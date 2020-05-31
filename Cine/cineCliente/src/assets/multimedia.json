@@ -1,0 +1,26 @@
+[
+    {
+        "titulo": "Adú",
+        "portada": "assets/images/AdúPortada.jpg"
+    },
+    {
+        "titulo": "Frozen 2",
+        "portada": "assets/images/Frozen_II.jpg"
+    },
+    {
+        "titulo": "Parásitos",
+        "portada": "assets/images/parásitos.jpg"
+    },
+    {
+        "titulo": "Onward",
+        "portada": "assets/images/onward.jpg"
+    },
+    {
+        "titulo": "Las aventuras del Doctor Dolittle",
+        "portada": "assets/images/Las_aventuras_del_Doctor_Dolittle.jpg"
+    },
+    {
+        "titulo": "Jumanji: Siguiente nivel",
+        "portada": "assets/images/Jumanji2.jpg"
+    }
+]

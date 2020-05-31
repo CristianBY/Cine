@@ -1,0 +1,499 @@
+<h1 class="text-center mb-4">Administración</h1>
+<nav>
+    <div class="nav nav-tabs" id="nav-tab-admin" role="tablist">
+        <a class="nav-item nav-link active" id="nav-peliculas-tab" data-toggle="tab" href="#nav-peliculas" role="tab" aria-controls="nav-peliculas" aria-selected="true">Películas</a>
+        <a class="nav-item nav-link" id="nav-sesiones-tab" data-toggle="tab" href="#nav-sesiones" role="tab" aria-controls="nav-sesiones" aria-selected="false">Sesiones</a>
+        <a class="nav-item nav-link" id="nav-tarifas-tab" data-toggle="tab" href="#nav-tarifas" role="tab" aria-controls="nav-tarifas" aria-selected="false">Tarifas</a>
+    </div>
+</nav>
+<div class="tab-content" id="nav-tab-adminContent">
+
+    <!-- Administración de Películas -->
+    <div class="tab-pane fade show active" id="nav-peliculas" role="tabpanel" aria-labelledby="nav-peliculas-tab">
+        <div class="accordion col-md-6 mr-auto ml-auto mt-5" id="accordionPeliculas">
+            <!-- Comienzo de Añadir películas -->
+            <div class="card">
+                <div class="card-header" id="headingOnePeliculas">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOnePeliculas" aria-expanded="true" aria-controls="collapseOnePeliculas">
+                            Añadir
+                        </button>
+                    </h2>
+                </div>
+        
+                <div id="collapseOnePeliculas" class="collapse show" aria-labelledby="headingOnePeliculas" data-parent="#accordionPeliculas">
+                    <div class="card-body">
+                        <form [formGroup]="faddpelicula" (ngSubmit)="addPelicula()"><!--titulo, anyo, pais, genero, calificacion, duracion, estreno, sinopsis-->
+                            <div class="form-group">
+                                <label for="tituloPeliculaAP">Título</label>
+                                <input type="text" class="form-control" formControlName="tituloPeliculaAP" id="tituloPeliculaAP" required>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-4">
+                                    <label for="anyoPeliculaAP">Año</label>
+                                    <input type="text" class="form-control" formControlName="anyoPeliculaAP" id="anyoPeliculaAP" required>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="paisPeliculaAP">País</label>
+                                    <input type="text" class="form-control" formControlName="paisPeliculaAP" id="paisPeliculaAP" required>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="generoPeliculaAP">Género</label>
+                                    <select formControlName="generoPeliculaAP" id="generoPeliculaAP" class="form-control">
+                                        <option>Acción</option>
+                                        <option>Aventura</option>
+                                        <option>Comedia</option>
+                                        <option>Fantasía</option>
+                                        <option>Drama</option>
+                                        <option>Suspense</option>
+                                        <option>Infantil</option>
+                                        <option>Ciencia ficción</option>
+                                        <option>Miedo</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-4">
+                                    <label for="calificacionPeliculaAP">Calificación</label>
+                                    <select formControlName="calificacionPeliculaAP" id="calificacionPeliculaAP" class="form-control">
+                                        <option>TP</option>
+                                        <option>+7</option>
+                                        <option>+12</option>
+                                        <option>+16</option>
+                                        <option>+18</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="duracionPeliculaAP">Duración</label>
+                                    <input type="number" min="0" class="form-control" formControlName="duracionPeliculaAP" id="duracionPeliculaAP" required>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="estrenoPeliculaAP">Estreno</label>
+                                    <input type="date" class="form-control" formControlName="estrenoPeliculaAP" id="estrenoPeliculaAP" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="sinopsisPeliculaAP">Sinopsis</label>
+                                <textarea class="form-control" formControlName="sinopsisPeliculaAP" id="sinopsisPeliculaAP" rows="3" requied></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-success" id="botonAddPelicula">Añadir</button>
+                            <button class="btn btn-primary" type="button" id="botonAddPelicula2" disabled style="display: none;">
+                                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                                Añadiendo...
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!--Fin de Añadir Películas-->
+
+            <!-- Inicio Modificar películas -->
+            <div class="card">
+                <div class="card-header" id="headingTwoPeliculas">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwoPeliculas" aria-expanded="false" aria-controls="collapseTwoPeliculas">
+                            Modificar
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseTwoPeliculas" class="collapse" aria-labelledby="headingTwoPeliculas" data-parent="#accordionPeliculas">
+                    <div class="card-body">
+                        <form #fselectpelicula="ngForm" (ngSubmit)="selectPelicula(peliculaAModificar)">
+                            <div class="row mb-3 mx-auto">
+                                <select class="form-control col-4 mr-3" [(ngModel)]="peliculaAModificar" [ngModelOptions]="{standalone: true}" id="peliculaAModificar">
+                                    <option selected>--- Selecciona una película ---</option>
+                                    <option *ngFor="let item of listaPeliculas" >{{item.titulo}}</option>
+                                </select>
+                                <button type="submit" class="btn btn-info" id="selectPeliculaMod">Selecciona</button>
+                            </div>
+                        </form>
+                        <form [formGroup]="fmodpelicula" (ngSubmit)="modificaPelicula()" id="fmodpelicula" hidden><!--titulo, anyo, pais, genero, calificacion, duracion, estreno, sinopsis-->
+                            <div class="form-group">
+                                <label for="tituloPeliculaMP">Título</label>
+                                <input type="text" class="form-control" formControlName="tituloPeliculaMP" id="tituloPeliculaMP" value="{{this.pelicula.titulo}}" required>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-4">
+                                    <label for="anyoPeliculaMP">Año</label>
+                                    <input type="text" class="form-control" formControlName="anyoPeliculaMP" id="anyoPeliculaMP" value="{{this.pelicula.anyo}}" required>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="paisPeliculaMP">País</label>
+                                    <input type="text" class="form-control" formControlName="paisPeliculaMP" id="paisPeliculaMP" value="{{this.pelicula.pais}}" required>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="generoPeliculaMP">Género</label>
+                                    <select formControlName="generoPeliculaMP" id="generoPeliculaMP" value="{{this.pelicula.genero}}" class="form-control">
+                                        <option selected>Acción</option>
+                                        <option>Aventura</option>
+                                        <option>Comedia</option>
+                                        <option>Fantasía</option>
+                                        <option>Drama</option>
+                                        <option>Suspense</option>
+                                        <option>Infantil</option>
+                                        <option>Ciencia ficción</option>
+                                        <option>Miedo</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-4">
+                                    <label for="calificacionPeliculaMP">Calificación</label>
+                                    <select formControlName="calificacionPeliculaMP" id="calificacionPeliculaMP" class="form-control" value="{{this.pelicula.calificacion}}">
+                                        <option selected>TP</option>
+                                        <option>+7</option>
+                                        <option>+12</option>
+                                        <option>+16</option>
+                                        <option>+18</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="duracionPeliculaMP">Duración</label>
+                                    <input type="number" min="0" class="form-control" formControlName="duracionPeliculaMP" id="duracionPeliculaMP" value="{{this.pelicula.duracion}}" required>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="estrenoPeliculaMP">Estreno</label>
+                                    <input type="date" class="form-control" formControlName="estrenoPeliculaMP" id="estrenoPeliculaMP" value="{{this.pelicula.estreno | date:'yyyy-MM-dd'}}" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="sinopsisPeliculaMP">Sinopsis</label>
+                                <textarea class="form-control" formControlName="sinopsisPeliculaMP" id="sinopsisPeliculaMP" rows="3" value="{{this.pelicula.sinopsis}}" requied></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-warning" id="botonModificaPelicula">Modificar</button>
+                            <button class="btn btn-primary" type="button" id="botonModificaPelicula2" disabled style="display: none;">
+                                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                                Modificando...
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- Fin de Modificar Películas-->
+
+
+            <!-- Inicio de Borrar películas -->
+            <div class="card">
+                <div class="card-header" id="headingThreePeliculas">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThreePeliculas" aria-expanded="false" aria-controls="collapseThreePeliculas">
+                            Borrar
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseThreePeliculas" class="collapse" aria-labelledby="headingThreePeliculas" data-parent="#accordionPeliculas">
+                    <div class="card-body">
+                        <form (ngSubmit)="deletePelicula(peliculaBorrada)" #fborrapelicula="ngForm">
+                            <div class="row">
+                                <select class="form-control col-4 mr-3" [(ngModel)]="peliculaBorrada" [ngModelOptions]="{standalone: true}" id="borrarPelicula">
+                                    <option selected>-- Selecciona una película --</option>
+                                    <option *ngFor="let item of listaPeliculas" >{{item.titulo}}</option>
+                                </select>
+                                <button type="submit" class="btn btn-danger" id="botonBorraPelicula">Borrar</button>
+                                <button class="btn btn-primary" type="button" id="botonBorraPelicula2" disabled style="display: none;">
+                                    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                                    Borrando...
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- Fin de Borrar películas -->
+
+    <!-- Administracion de Sesiones -->
+    <div class="tab-pane fade" id="nav-sesiones" role="tabpanel" aria-labelledby="nav-sesiones-tab">
+        <div class="accordion col-md-6 mr-auto ml-auto mt-5" id="accordionSesiones">
+            <!-- Inicio añadir sesión/ proyección-->
+            <div class="card">
+              <div class="card-header" id="headingOneSesiones">
+                <h2 class="mb-0">
+                  <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOneSesiones" aria-expanded="true" aria-controls="collapseOneSesiones">
+                    Añadir
+                  </button>
+                </h2>
+              </div>
+          
+              <div id="collapseOneSesiones" class="collapse show" aria-labelledby="headingOneSesiones" data-parent="#accordionSesiones">
+                <div class="card-body">
+                    <form [formGroup]="faddsesion" (ngSubmit)="addSesion()"><!--fecha, hora, titulo, idSala, idTarifa-->
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <label for="fechaSesionAS">Fecha</label>
+                                <input type="date" class="form-control" formControlName="fechaSesionAS" id="fechaSesionAS" required>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="horaSesionAS">Hora</label>
+                                <input type="time" class="form-control" formControlName="horaSesionAS" id="horaSesionAS" required>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="tituloPeliculaAS">Título</label>
+                                <select formControlName="tituloPeliculaAS" id="tituloPeliculaAS" class="form-control">
+                                    <option selected>--Selecciona--</option>
+                                    <option *ngFor="let item of listaPeliculas" value="{{item.titulo}}">{{item.titulo}}</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <label for="salaSesionAS">Sala</label>
+                                <select formControlName="salaSesionAS" id="salaSesionAS" class="form-control">
+                                    <option selected>--Selecciona--</option>
+                                    <option *ngFor="let item of listaSalas" value="{{item.idSala}}">{{item.idSala}}</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="tarifaSesionAS">Tarifa</label>
+                                <select formControlName="tarifaSesionAS" id="tarifaSesionAS" class="form-control">
+                                    <option selected>--Selecciona--</option>
+                                    <option *ngFor="let item of listaTarifas" value="{{item.idTarifa}}">{{item.idTarifa+'.- '+item.nombre}}</option>
+                                </select>
+                            </div>    
+                        </div>
+                        <button type="submit" class="btn btn-success" id="botonAddSesion">Añadir</button>
+                        <button class="btn btn-primary" type="button" id="botonAddSesion2" disabled style="display: none;">
+                            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                            Añadiendo...
+                        </button>
+                    </form>
+                </div>
+              </div>
+            </div>
+            <!-- Fin añadir sesión -->
+
+            <!-- Inicio modificar sesión -->
+            <div class="card">
+              <div class="card-header" id="headingTwoSesiones">
+                <h2 class="mb-0">
+                  <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwoSesiones" aria-expanded="false" aria-controls="collapseTwoSesiones">
+                    Modificar
+                  </button>
+                </h2>
+              </div>
+              <div id="collapseTwoSesiones" class="collapse" aria-labelledby="headingTwoSesiones" data-parent="#accordionSesiones">
+                <div class="card-body">
+                    <form (ngSubmit)="seleccionaSesion()" #fselectsesion="ngForm">
+                        <div class="form-row">
+                            <div class="form-goup col-md-4">
+                                <label for="fechaSelectSesion">Fecha</label>
+                                <select class="form-control" [(ngModel)]="fechaSelectSesion" [ngModelOptions]="{standalone: true}" id="fechaSelectSesion" (ngModelChange)="muestraSesion(fechaSelectSesion)">
+                                    <option selected>--Selecciona una fecha--</option>
+                                    <option *ngFor="let item of listaFechaSesion" value="{{item}}">{{item | date : 'dd-MM-yyyy'}}</option>
+                                </select>
+                            </div>
+                            <div class="form-goup col-md-4">
+                                <label for="selectSesion">Sesión</label>
+                                <select class="form-control" [(ngModel)]="selectSesion" [ngModelOptions]="{standalone: true}" id="selectSesion">
+                                    <option selected>--Selecciona una sesión--</option>
+                                    <option *ngFor="let item of listaSesionDia" value="{{item.idProyeccion}}" >{{item.hora+'-'+item.titulo+'- Sala:'+item.idSala}}</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-info" id="BotonSelectSesion">Buscar</button>
+                    </form>
+
+                    <form [formGroup]="fmodsesion" (ngSubmit)="modificaSesion()" id="fmodsesion" hidden><!--fecha, hora, titulo, idSala, idTarifa-->
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <label for="fechaSesionMS">Fecha</label>
+                                <input type="date" class="form-control" formControlName="fechaSesionMS" id="fechaSesionMS" value="{{this.proyeccion.fecha | date : 'yyyy-MM-dd'}}" required>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="horaSesionMS">Hora</label>
+                                <input type="time" class="form-control" formControlName="horaSesionMS" id="horaSesionMS" value={{this.proyeccion.hora}} required>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="tituloPeliculaMS">Título</label>
+                                <select formControlName="tituloPeliculaMS" id="tituloPeliculaMS" class="form-control" value={{this.proyeccion.titulo}}>
+                                    <option selected>--Selecciona--</option>
+                                    <option *ngFor="let item of listaPeliculas" value="{{item.titulo}}">{{item.titulo}}</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <label for="salaSesionMS">Sala</label>
+                                <select formControlName="salaSesionMS" id="salaSesionMS" class="form-control" value={{this.proyeccion.idSala}}>
+                                    <option selected>--Selecciona--</option>
+                                    <option *ngFor="let item of listaSalas" value="{{item.idSala}}">{{item.idSala}}</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="tarifaSesionMS">Tarifa</label>
+                                <select formControlName="tarifaSesionMS" id="tarifaSesionMS" class="form-control" value={{this.proyeccion.idTarifa}}>
+                                    <option selected>--Selecciona--</option>
+                                    <option *ngFor="let item of listaTarifas" value="{{item.idTarifa}}">{{item.idTarifa+'.- '+item.nombre}}</option>
+                                </select>
+                            </div>    
+                        </div>
+                        <button type="submit" class="btn btn-warning" id="botonModificaSesion">Modificar</button>
+                        <button class="btn btn-primary" type="button" id="botonModificaSesion2" disabled style="display: none;">
+                            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                            Modificando...
+                        </button>
+                    </form>
+                </div>
+              </div>
+            </div>
+            <!-- Fin modificar sesión -->
+
+            <!-- Inicio borrar sesión -->
+            <div class="card">
+                <div class="card-header" id="headingThreeSesiones">
+                    <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThreeSesiones" aria-expanded="false" aria-controls="collapseThreeSesiones">
+                        Borrar
+                    </button>
+                    </h2>
+                </div>
+                <div id="collapseThreeSesiones" class="collapse" aria-labelledby="headingThreeSesiones" data-parent="#accordionSesiones">
+                    <div class="card-body">
+                        <form (ngSubmit)="deleteSesion()" #fborrasesion="ngForm">
+                            <div class="form-row">
+                                <div class="form-goup col-md-4">
+                                    <label for="fechaBorrarSesion">Selecciona una fecha</label>
+                                    <select class="form-control" [(ngModel)]="fechaBorrarSesion" [ngModelOptions]="{standalone: true}" id="fechaBorrarSesion" (ngModelChange)="muestraSesion(fechaBorrarSesion)">
+                                        <option selected>--Selecciona una fecha--</option>
+                                        <option *ngFor="let item of listaFechaSesion" value="{{item}}">{{item | date : 'dd-MM-yyyy'}}</option>
+                                    </select>
+                                </div>
+                                <div class="form-goup col-md-4">
+                                    <label for="borrarSesion">Selecciona una sesión</label>
+                                    <select class="form-control" [(ngModel)]="borrarSesion" [ngModelOptions]="{standalone: true}" id="borrarSesion">
+                                        <option selected>--Selecciona una sesión--</option>
+                                        <option *ngFor="let item of listaSesionDia" value="{{item.idProyeccion}}" >{{item['hora']+'-'+item['titulo']+'- Sala:'+item.idSala}}</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-danger" id="botonBorraSesion">Borrar</button>
+                            <button class="btn btn-primary" type="button" id="botonBorraSesion2" disabled style="display: none;">
+                                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                                Borrando...
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- Fin Borrar sesión-->
+          </div>  
+    </div>
+
+    <!-- Administracion de Tarifas -->
+    <div class="tab-pane fade" id="nav-tarifas" role="tabpanel" aria-labelledby="nav-tarifas-tab">
+        <div class="accordion col-md-6 mr-auto ml-auto mt-5" id="accordionTarifasAdmin">
+            <!-- Inicio Añadir tarifas-->
+            <div class="card">
+                <div class="card-header" id="headingOneTarifas">
+                    <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOneTarifas" aria-expanded="true" aria-controls="collapseOneTarifas">
+                        Añadir
+                    </button>
+                    </h2>
+                </div>
+          
+                <div id="collapseOneTarifas" class="collapse show" aria-labelledby="headingOneTarifas" data-parent="#accordionTarifasAdmin">
+                    <div class="card-body">
+                        <form [formGroup]="faddtarifa" (ngSubmit)="addTarifa()" id="faddtarifa"><!--nombre,descripcion,precio-->
+                            <div class="form-row">
+                                <div class="form-group col-md-4">
+                                    <label for="nombreTarifaAT">Nombre</label>
+                                    <input type="text" class="form-control" formControlName="nombreTarifaAT" id="nombreTarifaAT" required>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="descripcionTarifaAT">Descripción</label>
+                                    <input type="text" class="form-control" formControlName="descripcionTarifaAT" id="descripcionTarifaAT" required>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="precioTarifaAT">Precio</label>
+                                    <input type="number" min="0" class="form-control" formControlName="precioTarifaAT" id="precioTarifaAT" step="0.01" required>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-success" id="botonAddTarifa">Añadir</button>
+                            <button class="btn btn-primary" type="button" id="botonAddTarifa2" disabled style="display: none;">
+                                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                                Añadiendo...
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- Fin Añadir tarifas-->
+
+            <!-- Inicio Modificar tarifas-->
+            <div class="card">
+                <div class="card-header" id="headingTwoTarifas">
+                    <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwoTarifas" aria-expanded="false" aria-controls="collapseTwoTarifas">
+                        Modificar
+                    </button>
+                    </h2>
+                </div>
+                <div id="collapseTwoTarifas" class="collapse" aria-labelledby="headingTwoTarifas" data-parent="#accordionTarifasAdmin">
+                    <div class="card-body">
+                        <form #fselecttarifa="ngForm" (ngSubmit)="selectTarifa()">
+                            <div class="row mb-3 mx-auto">
+                                <select class="form-control col-4 mr-3" [(ngModel)]="tarifaSeleccionada" [ngModelOptions]="{standalone: true}" id="tarifaSeleccionada">
+                                    <option>--Selecciona una tarifa--</option>
+                                    <option *ngFor="let item of listaTarifas" value="{{item.idTarifa}}">{{item.nombre}}</option>
+                                </select>    
+                                <button type="submit" class="btn btn-info" id="botonSelectTarifa">Selecciona</button>
+                            </div>
+                        </form>
+                        <form [formGroup]="fmodtarifa" (ngSubmit)="modificaTarifa()" id="fmodtarifa" hidden><!--nombre,descripcion,precio-->
+                            <div class="form-row">
+                                <div class="form-group col-md-4">
+                                    <label for="nombreTarifaMT">Nombre</label>
+                                    <input type="text" class="form-control" formControlName="nombreTarifaMT" id="nombreTarifaMT" value="{{this.tarifa.nombre}}" required>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="descripcionTarifaMT">Descripción</label>
+                                    <input type="text" class="form-control" formControlName="descripcionTarifaMT" id="descripcionTarifaMT" value="{{this.tarifa.descripcion}}" required>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="precioTarifaMT">Precio</label>
+                                    <input type="number" min="0" class="form-control" formControlName="precioTarifaMT" id="precioTarifaMT" step="0.01" value="{{this.tarifa.precio}}" required>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-success" id="botonModTarifa">Añadir</button>
+                            <button class="btn btn-primary" type="button" id="botonModTarifa2" disabled style="display: none;">
+                                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                                Añadiendo...
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- Fin Modificar tarifas-->
+
+            <!-- Inicio Borrar tarifas-->
+            <div class="card">
+                <div class="card-header" id="headingThreeTarifas">
+                    <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThreeTarifas" aria-expanded="false" aria-controls="collapseThreeTarifas">
+                        Eliminar
+                    </button>
+                    </h2>
+                </div>
+                <div id="collapseThreeTarifas" class="collapse" aria-labelledby="headingThreeTarifas" data-parent="#accordionTarifasAdmin">
+                    <div class="card-body">
+                        <form (ngSubmit)="deleteTarifa()" #fborratarifa="ngForm">
+                            <div class="form-group">
+                                <label for="borrarTarifa">Tarifa</label>
+                                <select class="form-control col-4 mr-3" [(ngModel)]="tarifaBorrada" [ngModelOptions]="{standalone: true}" id="borrarTarifa">
+                                    <option *ngFor="let item of listaTarifas" value="{{item.idTarifa}}">{{item.nombre}}</option>
+                                </select>
+                            </div>    
+                            <button type="submit" class="btn btn-danger" id="botonBorraTarifa">Borrar</button>
+                            <button class="btn btn-primary" type="button" id="botonBorraTarifa2" disabled style="display: none;">
+                                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                                Borrando...
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- Fin Borrar tarifas-->
+        </div>
+    </div>
+</div>

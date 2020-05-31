@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>AppCine</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <nav class="nav navbar navbar-expand-lg navbar-light"> 
+    <button class="navbar-toggler" type='button' data-toggle='collapse' data-target='#navbarCine' aria-controls='navbarCine' aria-expanded='false' aria-label='Toggle navigation'>
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a href="/" class="navbar-brand"> Cine </a>
+    <div class="collapse navbar-collapse" id='navbarCine'>
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item m-1">
+          <a href="/cartelera">Cartelera</a>
+        </li>
+        <li class="nav-item m-1">
+          <a href="/tarifas">Tarifas</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav float-left">
+        <li class="nav-item m-1">
+          <a href="/iniciosesion" id="usuarioEnlaceHome"><button class="btn btn-outline-primary" id="usuarioSesion">Iniciar Sesión</button></a>
+        </li>
+        <li class="nav-item m-1">
+          <a href="/registro" id="usuarioEnlaceLog"><button class="btn btn-success" id="logueado">Regístrate</button></a>
+        </li>
+        <li class="nav-item m-3" >
+          <a href="/user" id="usuarioEnlaceHome2" style="display: none;"></a>
+        </li>
+        <li class="nav-item m-1">
+          <a href="/cierrasesion" id="usuarioEnlaceLogout"><button class="btn btn-outline-danger" id="deslogueado" style="display: none;">Log out</button></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <app-root></app-root>
+  <footer class="footer mt-auto py-3">
+    <div class="row mx-3">
+      <div class="direccion col">
+        <h4>Datos</h4>
+        <p>Nombre del cine</p> 
+        <p>Calle Falsa, 23</p>
+        <p>Sevilla</p>
+        <p>CP 41001</p>
+        <p>CIF 111111111B</p>
+      </div>
+      <div class="social col text-center">
+        <a class="fa fa-facebook" href="#"></a>
+        <a class="fa fa-twitter" href="#"></a>
+        <a class="fa fa-linkedin" href="#"></a>
+        <a class="fa fa-envelope" href="#"></a>
+      </div>
+      <div class="contacto col text-right">
+        <h4>Contacto</h4>
+        <p>
+          <a href="/contacto">Contacto</a>
+        </p>
+        <p>
+          <a target="_blank" href="https://www.google.es/maps/place/41001+Sevilla/@37.3863934,-5.9989636,16z/data=!4m5!3m4!1s0xd126c11669a416b:0x1c046400c8a768a0!8m2!3d37.3896172!4d-5.9978005">Ubicación</a>
+        </p>
+      </div>
+    </div>
+    <div class="text-center">
+      <span>Diseñado por <a href="https://www.linkedin.com/in/cristianby/" target="_blank">Cristian Baños Yelmo</a></span>
+    </div>
+  </footer>
+</body>
+</html>
+

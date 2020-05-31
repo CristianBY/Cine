@@ -1,0 +1,58 @@
+<h1 class="text-center">Tus Películas</h1>
+<div *ngFor="let item of listaReservasNoValoradas">
+    <div class="card mb-3 mx-auto" style="max-width: 800px;">
+        <div class="row no-gutters">
+            <div class="col-md-4">
+                <div *ngFor="let item2 of multimediaInfo">
+                    <div *ngIf="item.titulo == item2.titulo">
+                        <img src="{{item2.portada}}" class="card-img" alt="Portada de {{item2.titulo}}">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">{{item.titulo}}</h5>
+                    <div class="card-text">
+                        <ngb-rating [(rate)]="currentRate">
+                            <ng-template let-fill="fill" let-index="index">
+                            <span class="star" [class.filled]="fill === 100" [class.bad]="index < 4">&#9733;</span>
+                            </ng-template>
+                        </ngb-rating>
+                        <hr>
+                        <pre>Puntuación: <b>{{currentRate}}</b></pre>
+                    </div>
+                    <div class="card-text">
+                        <button class="btn btn-success" (click)="enviaValoracion(item.titulo)">Puntuar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div *ngFor="let item of listaReservasValoradas">
+    <div class="card mb-3 mx-auto" style="max-width: 800px;">
+        <div class="row no-gutters">
+            <div class="col-md-4">
+                <div *ngFor="let item2 of multimediaInfo">
+                    <div *ngIf="item.titulo == item2.titulo">
+                        <img src="{{item2.portada}}" class="card-img" alt="Portada de {{item2.titulo}}">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">{{item.titulo}}</h5>
+                    <div class="card-text">
+                        <div class="rating">
+                            <star-rating value="{{item.valoracion}}" totalstars="10" checkedcolor="black" uncheckedcolor="lightgray" size="24px" readonly="false"></star-rating>
+                        </div>
+                        <hr>
+                        <pre>Puntuación: <b>{{item['valoracion']}}</b></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
