@@ -127,4 +127,8 @@ export class PeticionesServicio {
         }
         return this.http.post(this.url+"/reserva",data);
     }
+
+    resevaServer(data):Observable<any>{
+        return this.http.post(this.url+"/reserva/reservado",data);
+    }
 }

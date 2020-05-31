@@ -1,2 +1,133 @@
-<h1 class="text-center">Proceso de compra</h1>
-<h3>{{this.reserva[0].titulo}}</h3>
+<h1 class="text-center mb-3">Proceso de compra</h1>
+<div class="row col-md-6 mx-auto">
+    <div class="col-md-3">
+        <div *ngFor="let item of this.multimediaInfo">
+            <div *ngIf="(item.titulo == this.reserva[0].titulo)">
+                <img class="col-12" src="{{item.portada}}" alt="'Portada de '+{{item.portada}}">
+            </div>
+        </div>
+    </div>
+    <div class="col-md-9">
+        <h3 class="mb-2">{{this.reserva[0].titulo}}</h3>
+        <p>Hora: {{this.reserva[0].hora.substring(0,5)}}</p>
+        <p>Sala {{this.reserva[0].idSala}}</p>
+        <div class="form-group mt-3">
+            <label for="butacaReservada" class="mt-5">Entradas</label>
+            <input class="form-control col-4" type="number" name="butacaReservada" id="butacaReservada" max="{{this.reserva[0].libre}}" min="1" value="1" (change)="mostrar(this.reserva[0].precio)">
+        </div>
+        
+        <div *ngIf="(this.reserva[0].libre > 10)">
+            <div class="alert alert-success" role="alert">
+                Disponibles <span>{{this.reserva[0].libre}}</span> entradas
+            </div>
+        </div>
+        <div *ngIf="(this.reserva[0].libre <= 10 && this.reserva[0].libre > 0)">
+            <div class="alert alert-warning" role="alert">
+                Disponibles <span>{{this.reserva[0].libre}}</span> entradas
+            </div>
+        </div>
+        <div *ngIf="(this.reserva[0].libre == 0)">
+            <div class="alert alert-danger" role="alert">
+                Disponibles <span>{{this.reserva[0].libre}}</span> entradas
+            </div>
+        </div>
+        
+        <p>Total Precio (IVA Incl.): <span id="precioTotal">{{this.entradas}}</span>€</p>
+
+    </div>
+    <div class="accordion col-md-12 my-3" id="accordionPago">
+        <div class="card">
+            <div class="card-header" id="headingOnePago">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOnePago" aria-expanded="true" aria-controls="collapseOnePago">
+                        Paypal <i class="fa fa-paypal ml-2" aria-hidden="true"></i>
+                    </button>
+                </h2>
+            </div>
+    
+            <div id="collapseOnePago" class="collapse show" aria-labelledby="headingOnePago" data-parent="#accordionPago">
+                <div class="card-body">
+                    <form [formGroup]="fpaypal" (ngSubmit)="procesoDePagoPaypal()" id="fpaypal" novalidate>
+                        <div class="form-group">
+                            <label for="usuarioPagoPP">Email</label>
+                            <input type="email" class="form-control" formControlName="usuarioPagoPP" id="usuarioPagoPP">
+                            <div class="invalid-feedback">Datos incorrectos</div>
+                            <div *ngIf="(fpaypal.get('usuarioPagoPP').touched && fpaypal.get('usuarioPagoPP').hasError('required'))">
+                                <small class="text-danger">Dato necesario</small>
+                            </div>
+                            <div *ngIf="(fpaypal.get('usuarioPagoPP').hasError('pattern'))">
+                                <small class="text-danger">Formato no válido</small>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="clavePP">Contraseña</label>
+                            <input type="password" class="form-control" formControlName="clavePP" id="clavePP">
+                            <div *ngIf="(fpaypal.get('clavePP').touched && fpaypal.get('clavePP').hasError('required'))">
+                                <small class="text-danger">Dato necesario</small>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-success" id="pagoPayPal">Proceder al pago</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingTwoPago">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwoPago" aria-expanded="false" aria-controls="collapseTwoPago">
+                        Tarjeta
+                        <i class="fa fa-cc-visa mx-2" aria-hidden="true"></i>
+                        <i class="fa fa-cc-mastercard mr-2" aria-hidden="true"></i> 
+                        <i class="fa fa-cc-amex" aria-hidden="true"></i>
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseTwoPago" class="collapse" aria-labelledby="headingTwoPago" data-parent="#accordionPago">
+                <div class="card-body">
+                    <form [formGroup]="ftarjeta" (ngSubmit)="procesoDePagoTarjeta()" id="ftarjeta">
+                            <div class="form-group mb-2">
+                                <label for="numCuenta">Número de cuenta</label>
+                                <input type="text" class="form-control col-8" formControlName="numCuenta" id="numCuenta" maxlength="16">
+                                <div class="invalid-feedback">Datos incorrectos</div>
+                                <div *ngIf="(ftarjeta.get('numCuenta').touched && ftarjeta.get('numCuenta').hasError('required'))">
+                                    <small class="text-danger">Dato necesario</small>
+                                </div>
+                                <div *ngIf="(ftarjeta.get('numCuenta').hasError('pattern'))">
+                                    <small class="text-danger">Formato inválido</small>
+                                </div>
+                            </div>
+                            <div class="form-row mb-2">
+                                <label for="mesCaducidad" class="col-2 mt-2">Caducidad</label>
+                                <select class="form-control col-1 mr-2" formControlName="mesCaducidad" id="mesCaducidad">
+                                    <option value="{{item}}" *ngFor="let item of this.listaMeses">{{item}}</option>
+                                </select>
+                                <div *ngIf="(ftarjeta.get('mesCaducidad').touched && ftarjeta.get('mesCaducidad').hasError('required'))">
+                                    <small class="text-danger">Dato necesario</small>
+                                </div>
+                                <p class="text-center mt-2">/</p>
+                                <select class="form-control col-1 ml-2" formControlName="anyoCaducidad" id="anyoCaducidad">
+                                    <option value="{{item}}" *ngFor="let item of this.listaAnyos">{{item}}</option>
+                                </select>
+                                <div *ngIf="(ftarjeta.get('anyoCaducidad').touched && ftarjeta.get('anyoCaducidad').hasError('required'))">
+                                    <small class="text-danger">Dato necesario</small>
+                                </div>
+                            </div>
+                            <div class="form-row mb-2">
+                                <label for="claveCVV" class="col-2 mt-2">CVV</label>
+                                <input type="text" class="form-control col-1" formControlName="claveCVV" id="claveCVV" maxlength="3">
+                                <div *ngIf="(ftarjeta.get('claveCVV').touched && ftarjeta.get('claveCVV').hasError('required'))">
+                                    <small class="text-danger">Dato necesario</small>
+                                </div>
+                                <div *ngIf="(ftarjeta.get('claveCVV').hasError('pattern'))">
+                                    <small class="text-danger">Formato inválido</small>
+                                </div>
+                            </div>
+                        <button type="submit" class="btn btn-success" id="pagoTarjeta">Proceder al pago</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+</div>

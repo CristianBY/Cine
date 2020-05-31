@@ -1,0 +1,19 @@
+.fa {
+	font-size: 33px;
+	text-align: center;
+	text-decoration: none;
+}
+
+.fa-paypal{
+    color: #169bd7;
+}
+
+.fa-cc-visa{
+    color: #3e5f8a ;
+}
+.fa-cc-mastercard{
+    color: #ff5f00;
+}
+.fa-cc-amex{
+    color:#2e7bb7;
+}
