@@ -4,8 +4,7 @@ import { LOCALE_ID, NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import localeEs  from '@angular/common/locales/es';
-
-
+import { ShowHidePasswordModule } from 'ngx-show-hide-password';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -46,7 +45,8 @@ registerLocaleData(localeEs, 'es');
     FormsModule,
     ReactiveFormsModule,
     NgbModule,
-    RatingModule
+    RatingModule,
+    ShowHidePasswordModule
   ],
   providers: [{ provide: LOCALE_ID, useValue: 'es' }],
   bootstrap: [AppComponent]

@@ -28,8 +28,8 @@ export class PagoComponent implements OnInit {
 
     this.ftarjeta = this.fb.group({
       numCuenta: ['',[Validators.required,Validators.pattern('^[0-9]{16}')]],
-      mesCaducidad: ['',Validators.required],
-      anyoCaducidad: ['',Validators.required],
+      mesCaducidad: [,Validators.required],
+      anyoCaducidad: [,Validators.required],
       claveCVV: ['',[Validators.required,Validators.pattern('^[0-9]{3}')]]
     });
   }
@@ -74,8 +74,16 @@ export class PagoComponent implements OnInit {
   procesoDePagoPaypal(){
     if (this.fpaypal.invalid) {
       this.fpaypal.reset();
-      document.getElementById('usuarioPagoPP').classList.add('is-invalid');
-      document.getElementById('clavePP').classList.add('is-invalid');
+      if (this.fpaypal.get('usuarioPagoPP').hasError('required') || this.fpaypal.get('usuarioPagoPP').hasError('pattern')){
+        document.getElementById('usuarioPagoPP').classList.add('is-invalid');
+        if (this.fpaypal.get('usuarioPagoPP').hasError('pattern')) {
+          document.getElementById('usuarioPagoPP').nextSibling.textContent='Formato no válido';
+        }
+      }
+      if (this.fpaypal.get('clavePP').hasError('required')){
+        document.getElementById('clavePP').classList.add('is-invalid');
+      }
+        
     }else{
       let butaca = (<HTMLInputElement>document.getElementById('butacaReservada')).value;
       let data = {
@@ -105,10 +113,19 @@ export class PagoComponent implements OnInit {
   procesoDePagoTarjeta(){
     if (this.ftarjeta.invalid) {
       this.ftarjeta.reset();
-      document.getElementById('numCuenta').classList.add('is-invalid');
-      document.getElementById('mesCaducidad').classList.add('is-invalid');
-      document.getElementById('anyoCaducidad').classList.add('is-invalid');
-      document.getElementById('claveCVV').classList.add('is-invalid');
+      if (this.ftarjeta.get('numCuenta').hasError('required') || this.ftarjeta.get('numCuenta').hasError('pattern')) {
+        document.getElementById('numCuenta').classList.add('is-invalid');
+      }
+      if (this.ftarjeta.get('mesCaducidad').hasError('required')) {
+        document.getElementById('mesCaducidad').classList.add('is-invalid');
+      }
+      if (this.ftarjeta.get('anyoCaducidad').hasError('required')) {
+        document.getElementById('anyoCaducidad').classList.add('is-invalid');
+      }
+
+      if (this.ftarjeta.get('claveCVV').hasError('required') || this.ftarjeta.get('claveCVV').hasError('pattern')) {
+        document.getElementById('claveCVV').classList.add('is-invalid');
+      }
     }else{
       let butaca = (<HTMLInputElement>document.getElementById('butacaReservada')).value;
       let data = {

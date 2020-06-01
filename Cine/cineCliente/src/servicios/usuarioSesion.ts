@@ -17,6 +17,9 @@ export class UsuarioSesion {
             document.getElementById("usuarioEnlaceHome2").style.display="inline";
             document.getElementById("deslogueado").style.display="inline";
         }
+        if(sessionStorage.getItem('role')=="true"){
+            
+        }
     }
 
     cierraSesion(){

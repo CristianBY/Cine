@@ -44,6 +44,19 @@ router.get('/', (req,res) => {
             res.end()
         }
     })
+    
+})
+
+router.post('/registro', (req,res) => {
+    let consulta = 'INSERT INTO Usuario (nombre, apellidos, psw, email, administrador) VALUES (?,?,?,?,?)'
+    connection.query(consulta,[req.body.nombre,req.body.apellidos,md5(req.body.password),req.body.email,req.body.administrador], (err,results,fields) => {
+        if (err) {
+            throw err
+        } else {
+            res.json(results)
+            res.end()
+        }
+    })
 })
 
 export default router

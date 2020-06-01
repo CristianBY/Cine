@@ -51,20 +51,12 @@
                         <div class="form-group">
                             <label for="usuarioPagoPP">Email</label>
                             <input type="email" class="form-control" formControlName="usuarioPagoPP" id="usuarioPagoPP">
-                            <div class="invalid-feedback">Datos incorrectos</div>
-                            <div *ngIf="(fpaypal.get('usuarioPagoPP').touched && fpaypal.get('usuarioPagoPP').hasError('required'))">
-                                <small class="text-danger">Dato necesario</small>
-                            </div>
-                            <div *ngIf="(fpaypal.get('usuarioPagoPP').hasError('pattern'))">
-                                <small class="text-danger">Formato no válido</small>
-                            </div>
+                            <div class="invalid-feedback">Dato necesario</div>
                         </div>
                         <div class="form-group">
                             <label for="clavePP">Contraseña</label>
                             <input type="password" class="form-control" formControlName="clavePP" id="clavePP">
-                            <div *ngIf="(fpaypal.get('clavePP').touched && fpaypal.get('clavePP').hasError('required'))">
-                                <small class="text-danger">Dato necesario</small>
-                            </div>
+                            <div class="invalid-feedback">Dato necesario</div>
                         </div>
                         <button type="submit" class="btn btn-success" id="pagoPayPal">Proceder al pago</button>
                     </form>
@@ -89,38 +81,23 @@
                                 <label for="numCuenta">Número de cuenta</label>
                                 <input type="text" class="form-control col-8" formControlName="numCuenta" id="numCuenta" maxlength="16">
                                 <div class="invalid-feedback">Datos incorrectos</div>
-                                <div *ngIf="(ftarjeta.get('numCuenta').touched && ftarjeta.get('numCuenta').hasError('required'))">
-                                    <small class="text-danger">Dato necesario</small>
-                                </div>
-                                <div *ngIf="(ftarjeta.get('numCuenta').hasError('pattern'))">
-                                    <small class="text-danger">Formato inválido</small>
-                                </div>
                             </div>
                             <div class="form-row mb-2">
                                 <label for="mesCaducidad" class="col-2 mt-2">Caducidad</label>
-                                <select class="form-control col-1 mr-2" formControlName="mesCaducidad" id="mesCaducidad">
+                                <select class="form-control col-1 mr-2" formControlName="mesCaducidad" id="mesCaducidad" [(ngModel)]=this.listaMeses[0]>
                                     <option value="{{item}}" *ngFor="let item of this.listaMeses">{{item}}</option>
                                 </select>
-                                <div *ngIf="(ftarjeta.get('mesCaducidad').touched && ftarjeta.get('mesCaducidad').hasError('required'))">
-                                    <small class="text-danger">Dato necesario</small>
-                                </div>
+                                <div class="invalid-feedback">Datos incorrectos</div>
                                 <p class="text-center mt-2">/</p>
-                                <select class="form-control col-1 ml-2" formControlName="anyoCaducidad" id="anyoCaducidad">
+                                <select class="form-control col-1 ml-2" formControlName="anyoCaducidad" id="anyoCaducidad" [(ngModel)]="this.listaAnyos[0]">
                                     <option value="{{item}}" *ngFor="let item of this.listaAnyos">{{item}}</option>
                                 </select>
-                                <div *ngIf="(ftarjeta.get('anyoCaducidad').touched && ftarjeta.get('anyoCaducidad').hasError('required'))">
-                                    <small class="text-danger">Dato necesario</small>
-                                </div>
+                                <div class="invalid-feedback">Datos incorrectos</div>
                             </div>
                             <div class="form-row mb-2">
                                 <label for="claveCVV" class="col-2 mt-2">CVV</label>
                                 <input type="text" class="form-control col-1" formControlName="claveCVV" id="claveCVV" maxlength="3">
-                                <div *ngIf="(ftarjeta.get('claveCVV').touched && ftarjeta.get('claveCVV').hasError('required'))">
-                                    <small class="text-danger">Dato necesario</small>
-                                </div>
-                                <div *ngIf="(ftarjeta.get('claveCVV').hasError('pattern'))">
-                                    <small class="text-danger">Formato inválido</small>
-                                </div>
+                                <div class="invalid-feedback">Datos incorrectos</div>
                             </div>
                         <button type="submit" class="btn btn-success" id="pagoTarjeta">Proceder al pago</button>
                     </form>

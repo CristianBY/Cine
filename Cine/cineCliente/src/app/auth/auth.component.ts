@@ -4,7 +4,7 @@ import { UsuarioSesion } from 'src/servicios/usuarioSesion';
 import { Pelicula } from '../model/Pelicula';
 import { Proyeccion } from '../model/Proyeccion';
 import { Tarifa } from '../model/Tarifa';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { FormGroup, Validators, FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -14,10 +14,12 @@ import { Router } from '@angular/router';
 })
 export class AuthComponent implements OnInit {
   public listaSalas:Array<any> = [];
+  public listaGenero = new Array('Acción','Aventura','Comedia','Fantasía','Drama','Suspense','Infantil','Ciencia ficción','Miedo');
+  public listaCalificacion = new Array('TP','+7','+12','+16','+18');
 
   // Gestión de Películas
   public listaPeliculas:Array<any> = [];
-  public pelicula= new Pelicula("","","","","","",new Date(),"");
+  public pelicula = new Pelicula("","","","","","",new Date(),"");
   public peliculaBorrada:string;
   public peliculaAModificar:string;
   public faddpelicula: FormGroup;
@@ -28,10 +30,10 @@ export class AuthComponent implements OnInit {
   public listaSesionDia:Array<any> = [];
   public listaFechaSesion:Array<any> = [];
   public proyeccion = new Proyeccion("",new Date(),"","","","");
-  public fechaSelectSesion:string = "--Selecciona una fecha--";
-  public selectSesion:string = "--Selecciona una sesión--";
-  public fechaBorrarSesion:string = "--Selecciona una fecha--";
-  public borrarSesion:string = "--Selecciona una sesión--";
+  public fechaSelectSesion:string;
+  public selectSesion:string;
+  public fechaBorrarSesion:string;
+  public borrarSesion:string;
   public faddsesion: FormGroup;
   public fmodsesion: FormGroup;
 
@@ -43,55 +45,55 @@ export class AuthComponent implements OnInit {
   public faddtarifa: FormGroup;
   public fmodtarifa: FormGroup;
 
-  constructor(private _peticionesServicio: PeticionesServicio,private _usuarioSesion: UsuarioSesion, private router:Router) {
-    this.faddpelicula = new FormGroup({
-      'tituloPeliculaAP': new FormControl(""),
-      'anyoPeliculaAP': new FormControl("2021"),
-      'paisPeliculaAP': new FormControl(),
-      'generoPeliculaAP': new FormControl('Acción'),
-      'calificacionPeliculaAP': new FormControl('TP'),
-      'duracionPeliculaAP': new FormControl(),
-      'estrenoPeliculaAP': new FormControl(),
-      'sinopsisPeliculaAP': new FormControl()
+  constructor(private _peticionesServicio: PeticionesServicio,private _usuarioSesion: UsuarioSesion, private router:Router, private fb: FormBuilder) {
+    this.faddpelicula = this.fb.group({
+      tituloPeliculaAP: ['',Validators.required],
+      anyoPeliculaAP: ['',[Validators.required,Validators.pattern('^19\d\d|20[0-2]\d|2030')]],
+      paisPeliculaAP: ['',Validators.required],
+      generoPeliculaAP: ['',Validators.required],
+      calificacionPeliculaAP: ['',Validators.required],
+      duracionPeliculaAP: ['',Validators.required],
+      estrenoPeliculaAP: ['',Validators.required],
+      sinopsisPeliculaAP: ['',Validators.required]
     });
 
-    this.fmodpelicula = new FormGroup({
-      'tituloPeliculaMP': new FormControl(),
-      'anyoPeliculaMP': new FormControl(),
-      'paisPeliculaMP': new FormControl(),
-      'generoPeliculaMP': new FormControl(),
-      'calificacionPeliculaMP': new FormControl(),
-      'duracionPeliculaMP': new FormControl(),
-      'estrenoPeliculaMP': new FormControl(),
-      'sinopsisPeliculaMP': new FormControl()
+    this.fmodpelicula = this.fb.group({
+      tituloPeliculaMP: ['',Validators.required],
+      anyoPeliculaMP: ['',Validators.required],
+      paisPeliculaMP: ['',Validators.required],
+      generoPeliculaMP: ['',Validators.required],
+      calificacionPeliculaMP: ['',Validators.required],
+      duracionPeliculaMP: ['',Validators.required],
+      estrenoPeliculaMP: ['',Validators.required],
+      sinopsisPeliculaMP: ['',Validators.required]
     });
 
-    this.faddsesion = new FormGroup({
-      'fechaSesionAS': new FormControl(),
-      'horaSesionAS': new FormControl(),
-      'tituloPeliculaAS': new FormControl(),
-      'salaSesionAS': new FormControl(),
-      'tarifaSesionAS': new FormControl()
+    this.faddsesion = this.fb.group({
+      fechaSesionAS: ['',Validators.required],
+      horaSesionAS: ['',Validators.required],
+      tituloPeliculaAS: ['',Validators.required],
+      salaSesionAS: ['',Validators.required],
+      tarifaSesionAS: ['',Validators.required]
     });
 
-    this.fmodsesion = new FormGroup({
-      'fechaSesionMS': new FormControl(),
-      'horaSesionMS': new FormControl(),
-      'tituloPeliculaMS': new FormControl(),
-      'salaSesionMS': new FormControl(),
-      'tarifaSesionMS': new FormControl()
+    this.fmodsesion = this.fb.group({
+      fechaSesionMS: ['',Validators.required],
+      horaSesionMS: ['',Validators.required],
+      tituloPeliculaMS: ['',Validators.required],
+      salaSesionMS: ['',Validators.required],
+      tarifaSesionMS: ['',Validators.required]
     });
 
-    this.faddtarifa = new FormGroup({
-      'nombreTarifaAT': new FormControl(),
-      'descripcionTarifaAT': new FormControl(),
-      'precioTarifaAT': new FormControl()
+    this.faddtarifa = this.fb.group({
+      nombreTarifaAT: ['',Validators.required],
+      descripcionTarifaAT: ['',Validators.required],
+      precioTarifaAT: ['',Validators.required]
     });
 
-    this.fmodtarifa = new FormGroup({
-      'nombreTarifaMT': new FormControl(),
-      'descripcionTarifaMT': new FormControl(),
-      'precioTarifaMT': new FormControl()
+    this.fmodtarifa = this.fb.group({
+      nombreTarifaMT: ['',Validators.required],
+      descripcionTarifaMT: ['',Validators.required],
+      precioTarifaMT: ['',Validators.required]
     });
   }
 
@@ -127,23 +129,49 @@ export class AuthComponent implements OnInit {
   }
 
   addPelicula(){
-    let data ={
-      'titulo' : this.faddpelicula.value.tituloPeliculaAP,
-      'anyo' : this.faddpelicula.value.anyoPeliculaAP,
-      'pais' : this.faddpelicula.value.paisPeliculaAP,
-      'genero' : this.faddpelicula.value.generoPeliculaAP,
-      'calificacion' : this.faddpelicula.value.calificacionPeliculaAP,
-      'duracion' : this.faddpelicula.value.duracionPeliculaAP,
-      'estreno' : this.faddpelicula.value.estrenoPeliculaAP,
-      'sinopsis' : this.faddpelicula.value.sinopsisPeliculaAP
-    }
-    this._peticionesServicio.addPeliculaServer(data).subscribe();
-    document.getElementById("botonAddPelicula").style.display="none";
-    document.getElementById("botonAddPelicula2").style.display="inline";
+    if (this.faddpelicula.invalid) {
+      if(this.faddpelicula.get('tituloPeliculaAP').hasError('required')){
+        document.getElementById('tituloPeliculaAP').classList.add('is-invalid');
+      }
+      if(this.faddpelicula.get('anyoPeliculaAP').hasError('required') || this.faddpelicula.get('anyoPeliculaAP').hasError('pattern')){
+        document.getElementById('anyoPeliculaAP').classList.add('is-invalid');
+        if (this.faddpelicula.get('anyoPeliculaAP').hasError('pattern')) {
+          document.getElementById('anyoPeliculaAP').nextSibling.textContent='Año no válido';
+        }
+      }
+      if(this.faddpelicula.get('paisPeliculaAP').hasError('required')){
+        document.getElementById('paisPeliculaAP').classList.add('is-invalid');
+      }
+      if(this.faddpelicula.get('generoPeliculaAP').hasError('required')){
+        document.getElementById('generoPeliculaAP').classList.add('is-invalid');
+      }
+      if(this.faddpelicula.get('calificacionPeliculaAP').hasError('required')){
+        document.getElementById('calificacionPeliculaAP').classList.add('is-invalid');
+      }
+      if(this.faddpelicula.get('duracionPeliculaAP').hasError('required')){
+        document.getElementById('duracionPeliculaAP').classList.add('is-invalid');
+      }
+      if(this.faddpelicula.get('estrenoPeliculaAP').hasError('required')){
+        document.getElementById('estrenoPeliculaAP').classList.add('is-invalid');
+      }
+      if(this.faddpelicula.get('sinopsisPeliculaAP').hasError('required')){
+        document.getElementById('sinopsisPeliculaAP').classList.add('is-invalid');
+      }
+    }else {  
+      let data ={
+        'titulo' : this.faddpelicula.value.tituloPeliculaAP,
+        'anyo' : this.faddpelicula.value.anyoPeliculaAP,
+        'pais' : this.faddpelicula.value.paisPeliculaAP,
+        'genero' : this.faddpelicula.value.generoPeliculaAP,
+        'calificacion' : this.faddpelicula.value.calificacionPeliculaAP,
+        'duracion' : this.faddpelicula.value.duracionPeliculaAP,
+        'estreno' : this.faddpelicula.value.estrenoPeliculaAP,
+        'sinopsis' : this.faddpelicula.value.sinopsisPeliculaAP
+      }
+      this._peticionesServicio.addPeliculaServer(data).subscribe();
 
-    setInterval(() => {
-      window.location.reload();
-    },2000);
+      this.refrescar("botonAddPelicula","botonAddPelicula2");
+    }  
   }
 
   /**
@@ -154,13 +182,7 @@ export class AuthComponent implements OnInit {
   deletePelicula(peliculaBorrada){
     this._peticionesServicio.deletePeliculaServer(peliculaBorrada).subscribe(data=>{});
 
-    document.getElementById("botonBorraPelicula").style.display="none";
-    document.getElementById("botonBorraPelicula2").style.display="inline";
-
-    setInterval(() => {
-      window.location.reload();
-    },2000);
-    
+    this.refrescar("botonBorraPelicula","botonBorraPelicula2");
   }
   /**
    * Modifica una película
@@ -168,32 +190,53 @@ export class AuthComponent implements OnInit {
    * @returns recarga la página cuando actualiza la película
    */
   modificaPelicula(){
-    if (this.fmodpelicula.value.tituloPeliculaMP == null ) this.fmodpelicula.value.tituloPeliculaMP = this.pelicula.titulo;
-    if (this.fmodpelicula.value.anyoPeliculaMP == null ) this.fmodpelicula.value.anyoPeliculaMP = this.pelicula.anyo;
-    if (this.fmodpelicula.value.paisPeliculaMP == null ) this.fmodpelicula.value.paisPeliculaMP = this.pelicula.pais;
-    if (this.fmodpelicula.value.generoPeliculaMP == null ) this.fmodpelicula.value.generoPeliculaMP = this.pelicula.genero;
-    if (this.fmodpelicula.value.calificacionPeliculaMP == null ) this.fmodpelicula.value.calificacionPeliculaMP = this.pelicula.calificacion;
-    if (this.fmodpelicula.value.duracionPeliculaMP == null ) this.fmodpelicula.value.duracionPeliculaMP = this.pelicula.duracion;
-    if (this.fmodpelicula.value.estrenoPeliculaMP == null ) this.fmodpelicula.value.estrenoPeliculaMP = this.pelicula.estreno;
-    if (this.fmodpelicula.value.sinopsisPeliculaMP == null ) this.fmodpelicula.value.sinopsisPeliculaMP = this.pelicula.sinopsis;
-    let data ={
-      'titulo' : this.peliculaAModificar,
-      'tituloNuevo' : this.fmodpelicula.value.tituloPeliculaMP,
-      'anyo' : this.fmodpelicula.value.anyoPeliculaMP,
-      'pais' : this.fmodpelicula.value.paisPeliculaMP,
-      'genero' : this.fmodpelicula.value.generoPeliculaMP,
-      'calificacion' : this.fmodpelicula.value.calificacionPeliculaMP,
-      'duracion' : this.fmodpelicula.value.duracionPeliculaMP,
-      'estreno' : this.fmodpelicula.value.estrenoPeliculaMP,
-      'sinopsis' : this.fmodpelicula.value.sinopsisPeliculaMP
-    }
-    this._peticionesServicio.modificaPeliculaServer(data).subscribe();
-    document.getElementById("botonModificaPelicula").style.display="none";
-    document.getElementById("botonModificaPelicula2").style.display="inline";
 
-    setInterval(() => {
-      window.location.reload();
-    },2000);
+    if (this.fmodpelicula.invalid) {
+      if(this.fmodpelicula.get('tituloPeliculaMP').hasError('required')){
+        this.fmodpelicula.value.tituloPeliculaMP = this.pelicula.titulo;
+      }
+      if(this.fmodpelicula.get('anyoPeliculaMP').hasError('required') || this.fmodpelicula.get('anyoPeliculaMP').hasError('pattern')){
+        this.fmodpelicula.value.anyoPeliculaMP = this.pelicula.anyo;
+        if (this.fmodpelicula.get('anyoPeliculaMP').hasError('pattern')) {
+          document.getElementById('anyoPeliculaMP').classList.add('is-invalid');
+        }
+      }
+      if(this.fmodpelicula.get('paisPeliculaMP').hasError('required')){
+        this.fmodpelicula.value.paisPeliculaMP = this.pelicula.pais;
+      }
+      if(this.fmodpelicula.get('generoPeliculaMP').hasError('required')){
+        this.fmodpelicula.value.generoPeliculaMP = this.pelicula.genero;
+      }
+      if(this.fmodpelicula.get('calificacionPeliculaMP').hasError('required')){
+        this.fmodpelicula.value.calificacionPeliculaMP = this.pelicula.calificacion;
+      }
+      if(this.fmodpelicula.get('duracionPeliculaMP').hasError('required')){
+        this.fmodpelicula.value.duracionPeliculaMP = this.pelicula.duracion;
+      }
+      if(this.fmodpelicula.get('estrenoPeliculaMP').hasError('required')){
+        this.fmodpelicula.value.estrenoPeliculaMP = this.pelicula.estreno;
+      }
+      if(this.fmodpelicula.get('sinopsisPeliculaMP').hasError('required')){
+        this.fmodpelicula.value.sinopsisPeliculaMP = this.pelicula.sinopsis;
+      }
+    }
+    if (!this.fmodpelicula.get('anyoPeliculaMP').hasError('pattern')) {
+      let data ={
+        'titulo' : this.peliculaAModificar,
+        'tituloNuevo' : this.fmodpelicula.value.tituloPeliculaMP,
+        'anyo' : this.fmodpelicula.value.anyoPeliculaMP,
+        'pais' : this.fmodpelicula.value.paisPeliculaMP,
+        'genero' : this.fmodpelicula.value.generoPeliculaMP,
+        'calificacion' : this.fmodpelicula.value.calificacionPeliculaMP,
+        'duracion' : this.fmodpelicula.value.duracionPeliculaMP,
+        'estreno' : this.fmodpelicula.value.estrenoPeliculaMP,
+        'sinopsis' : this.fmodpelicula.value.sinopsisPeliculaMP
+      }
+      this._peticionesServicio.modificaPeliculaServer(data).subscribe();
+
+      this.refrescar("botonModificaPelicula","botonModificaPelicula2");
+    }
+
   }
 
   /**
@@ -244,28 +287,56 @@ export class AuthComponent implements OnInit {
   } //Selecciona la sesion a modificar
 
   addSesion(){
-    let data ={
-      'titulo' : this.faddsesion.value.tituloPeliculaAS,
-      'fecha' : this.faddsesion.value.fechaSesionAS,
-      'hora' : this.faddsesion.value.horaSesionAS,
-      'idSala' : this.faddsesion.value.salaSesionAS,
-      'idTarifa' : this.faddsesion.value.tarifaSesionAS
-    }
-    this._peticionesServicio.addSesionServer(data).subscribe();
-    document.getElementById("botonAddSesion").style.display="none";
-    document.getElementById("botonAddSesion2").style.display="inline";
+    if (this.faddsesion.invalid) {
+      if(this.faddsesion.get('tituloPeliculaAS').hasError('required')){
+        document.getElementById('tituloPeliculaAS').classList.add('is-invalid');
+      }
+      if(this.faddsesion.get('fechaSesionAS').hasError('required')){
+        document.getElementById('fechaSesionAS').classList.add('is-invalid');
+      }
+      if(this.faddsesion.get('horaSesionAS').hasError('required')){
+        document.getElementById('horaSesionAS').classList.add('is-invalid');
+      }
+      if(this.faddsesion.get('salaSesionAS').hasError('required')){
+        document.getElementById('salaSesionAS').classList.add('is-invalid');
+      }
+      if(this.faddsesion.get('tarifaSesionAS').hasError('required')){
+        document.getElementById('tarifaSesionAS').classList.add('is-invalid');
+      }
 
-    setInterval(() => {
-      window.location.reload();
-    },2000);
+    }else {
+      let data ={
+        'titulo' : this.faddsesion.value.tituloPeliculaAS,
+        'fecha' : this.faddsesion.value.fechaSesionAS,
+        'hora' : this.faddsesion.value.horaSesionAS,
+        'idSala' : this.faddsesion.value.salaSesionAS,
+        'idTarifa' : this.faddsesion.value.tarifaSesionAS
+      }
+      this._peticionesServicio.addSesionServer(data).subscribe();
+
+      this.refrescar("botonAddSesion","botonAddSesion2");
+    }
   }
 
   modificaSesion(){
-    if (this.fmodsesion.value.tituloPeliculaMS == null ) this.fmodsesion.value.tituloPeliculaMS = this.proyeccion.titulo;
-    if (this.fmodsesion.value.fechaSesionMS == null ) this.fmodsesion.value.fechaSesionMS = this.proyeccion.fecha;
-    if (this.fmodsesion.value.horaSesionMS == null ) this.fmodsesion.value.horaSesionMS = this.proyeccion.hora;
-    if (this.fmodsesion.value.salaSesionMS == null ) this.fmodsesion.value.salaSesionMS = this.proyeccion.idSala;
-    if (this.fmodsesion.value.tarifaSesionMS == null ) this.fmodsesion.value.tarifaSesionMS = this.proyeccion.idTarifa;
+    if (this.faddsesion.invalid) {
+      if(this.faddsesion.get('tituloPeliculaMS').hasError('required')){
+        this.fmodpelicula.value.tituloPeliculaMS = this.proyeccion.titulo;
+      }
+      if(this.faddsesion.get('fechaSesionMS').hasError('required')){
+        this.fmodpelicula.value.fechaSesionMS = this.proyeccion.fecha;
+      }
+      if(this.faddsesion.get('horaSesionMS').hasError('required')){
+        this.fmodpelicula.value.horaSesionMS = this.proyeccion.hora;
+      }
+      if(this.faddsesion.get('salaSesionMS').hasError('required')){
+        this.fmodpelicula.value.salaSesionMS = this.proyeccion.idSala;
+      }
+      if(this.faddsesion.get('tarifaSesionMS').hasError('required')){
+        this.fmodpelicula.value.tarifaSesionMS = this.proyeccion.idTarifa;
+      }
+
+    }
     let data ={
       'idProyeccion' : this.proyeccion.idProyeccion,
       'titulo' : this.fmodsesion.value.tituloPeliculaMS,
@@ -275,22 +346,15 @@ export class AuthComponent implements OnInit {
       'idTarifa' : this.fmodsesion.value.idTarifaMS
     }
     this._peticionesServicio.modificaSesionServer(data).subscribe();
-    document.getElementById("botonModificaSesion").style.display="none";
-    document.getElementById("botonModificaSesion2").style.display="inline";
 
-    setInterval(() => {
-      window.location.reload();
-    },2000);
+    this.refrescar("botonModificaSesion","botonModificaSesion2");
+
   }
 
   deleteSesion(){
     this._peticionesServicio.deleteSesionServer(this.borrarSesion).subscribe();
-    document.getElementById("botonBorraSesion").style.display="none";
-    document.getElementById("botonBorraSesion2").style.display="inline";
 
-    setInterval(() => {
-      window.location.reload();
-    },2000);
+    this.refrescar("botonBorraSesion","botonBorraSesion2");
   }
 
   // Tarifas
@@ -312,24 +376,41 @@ export class AuthComponent implements OnInit {
   }
 
   addTarifa(){
-    let data ={
-      'nombre' : this.faddtarifa.value.nombreTarifaAT,
-      'descripcion' : this.faddtarifa.value.descripcionTarifaAT,
-      'precio' : this.faddtarifa.value.precioTarifaAT
-    }
-    this._peticionesServicio.addTarifaServer(data).subscribe();
-    document.getElementById("botonAddTarifa").style.display="none";
-    document.getElementById("botonAddTarifa2").style.display="inline";
+    if (this.faddtarifa.invalid) {
+      if(this.faddtarifa.get('nombreTarifaAT').hasError('required')){
+        document.getElementById('nombreTarifaAT').classList.add('is-invalid');
+      }
+      if(this.faddtarifa.get('descripcionTarifaAT').hasError('required')){
+        document.getElementById('descripcionTarifaAT').classList.add('is-invalid');
+      }
+      if(this.faddtarifa.get('precioTarifaAT').hasError('required')){
+        document.getElementById('precioTarifaAT').classList.add('is-invalid');
+      }
+      
+    }else {
+      let data ={
+        'nombre' : this.faddtarifa.value.nombreTarifaAT,
+        'descripcion' : this.faddtarifa.value.descripcionTarifaAT,
+        'precio' : this.faddtarifa.value.precioTarifaAT
+      }
+      this._peticionesServicio.addTarifaServer(data).subscribe();
 
-    setInterval(() => {
-      window.location.reload();
-    },2000);
+      this.refrescar("botonAddTarifa","botonAddTarifa2");
+    }
   }
 
   modificaTarifa(){
-    if (this.fmodtarifa.value.nombreTarifaMT == null ) this.fmodtarifa.value.nombreTarifaMT = this.tarifa.nombre;
-    if (this.fmodtarifa.value.descripcionTarifaMT == null ) this.fmodtarifa.value.descripcionTarifaMT = this.tarifa.descripcion;
-    if (this.fmodtarifa.value.precioTarifaMT == null ) this.fmodtarifa.value.precioTarifaMT = this.tarifa.precio;
+    if (this.faddtarifa.invalid) {
+      if(this.faddtarifa.get('nombreTarifaAT').hasError('required')){
+        this.fmodtarifa.value.nombreTarifaMT = this.tarifa.nombre;
+      }
+      if(this.faddtarifa.get('descripcionTarifaAT').hasError('required')){
+        this.fmodtarifa.value.descripcionTarifaMT = this.tarifa.descripcion;
+      }
+      if(this.faddtarifa.get('precioTarifaAT').hasError('required')){
+        this.fmodtarifa.value.precioTarifaMT = this.tarifa.precio;
+      }    
+    }
     let data ={
       'nombre' : this.fmodtarifa.value.nombreTarifaMT,
       'descripcion' : this.fmodtarifa.value.descripcionTarifaMT,
@@ -337,22 +418,22 @@ export class AuthComponent implements OnInit {
       'idTarifa' : this.tarifa.idTarifa
     }
     this._peticionesServicio.modificaTarifaServer(data).subscribe();
-    document.getElementById("botonModTarifa").style.display="none";
-    document.getElementById("botonModTarifa2").style.display="inline";
 
-    setInterval(() => {
-      window.location.reload();
-    },2000);
+    this.refrescar("botonModTarifa","botonModTarifa2");
+
   }
   
   deleteTarifa(){
     this._peticionesServicio.deleteTarifaServer(this.tarifaBorrada).subscribe();
-    document.getElementById("botonBorraTarifa").style.display="none";
-    document.getElementById("botonBorraTarifa2").style.display="inline";
+    
+    this.refrescar("botonBorraTarifa","botonBorraTarifa2");
+  }
 
+  refrescar(boton,boton2){
+    document.getElementById(boton).style.display="none";
+    document.getElementById(boton2).style.display="inline";
     setInterval(() => {
       window.location.reload();
     },2000);
   }
-
 }

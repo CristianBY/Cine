@@ -26,55 +26,51 @@
                         <form [formGroup]="faddpelicula" (ngSubmit)="addPelicula()"><!--titulo, anyo, pais, genero, calificacion, duracion, estreno, sinopsis-->
                             <div class="form-group">
                                 <label for="tituloPeliculaAP">Título</label>
-                                <input type="text" class="form-control" formControlName="tituloPeliculaAP" id="tituloPeliculaAP" required>
+                                <input type="text" class="form-control" formControlName="tituloPeliculaAP" id="tituloPeliculaAP">
+                                <div class="invalid-feedback">Rellene el campo</div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-md-4">
                                     <label for="anyoPeliculaAP">Año</label>
-                                    <input type="text" class="form-control" formControlName="anyoPeliculaAP" id="anyoPeliculaAP" required>
+                                    <input type="text" class="form-control" formControlName="anyoPeliculaAP" id="anyoPeliculaAP" maxlength="4">
+                                    <div class="invalid-feedback">Rellene el campo</div>
                                 </div>
                                 <div class="form-group col-md-4">
                                     <label for="paisPeliculaAP">País</label>
-                                    <input type="text" class="form-control" formControlName="paisPeliculaAP" id="paisPeliculaAP" required>
+                                    <input type="text" class="form-control" formControlName="paisPeliculaAP" id="paisPeliculaAP">
+                                    <div class="invalid-feedback">Rellene el campo</div>
                                 </div>
                                 <div class="form-group col-md-4">
                                     <label for="generoPeliculaAP">Género</label>
                                     <select formControlName="generoPeliculaAP" id="generoPeliculaAP" class="form-control">
-                                        <option>Acción</option>
-                                        <option>Aventura</option>
-                                        <option>Comedia</option>
-                                        <option>Fantasía</option>
-                                        <option>Drama</option>
-                                        <option>Suspense</option>
-                                        <option>Infantil</option>
-                                        <option>Ciencia ficción</option>
-                                        <option>Miedo</option>
+                                        <option *ngFor="let item of this.listaGenero" value='{{item}}'>{{item}}</option>
                                     </select>
+                                    <div class="invalid-feedback">Seleccione un campo</div>
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-md-4">
                                     <label for="calificacionPeliculaAP">Calificación</label>
                                     <select formControlName="calificacionPeliculaAP" id="calificacionPeliculaAP" class="form-control">
-                                        <option>TP</option>
-                                        <option>+7</option>
-                                        <option>+12</option>
-                                        <option>+16</option>
-                                        <option>+18</option>
+                                        <option *ngFor="let item of this.listaCalificacion" value='{{item}}'>{{item}}</option>
                                     </select>
+                                    <div class="invalid-feedback">Seleccione un campo</div>
                                 </div>
                                 <div class="form-group col-md-4">
                                     <label for="duracionPeliculaAP">Duración</label>
-                                    <input type="number" min="0" class="form-control" formControlName="duracionPeliculaAP" id="duracionPeliculaAP" required>
+                                    <input type="number" min="0" class="form-control" formControlName="duracionPeliculaAP" id="duracionPeliculaAP">
+                                    <div class="invalid-feedback">Rellene el campo</div>
                                 </div>
                                 <div class="form-group col-md-4">
                                     <label for="estrenoPeliculaAP">Estreno</label>
-                                    <input type="date" class="form-control" formControlName="estrenoPeliculaAP" id="estrenoPeliculaAP" required>
+                                    <input type="date" class="form-control" formControlName="estrenoPeliculaAP" id="estrenoPeliculaAP">
+                                    <div class="invalid-feedback">Rellene el campo</div>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="sinopsisPeliculaAP">Sinopsis</label>
                                 <textarea class="form-control" formControlName="sinopsisPeliculaAP" id="sinopsisPeliculaAP" rows="3" requied></textarea>
+                                <div class="invalid-feedback">Rellene el campo</div>
                             </div>
                             <button type="submit" class="btn btn-success" id="botonAddPelicula">Añadir</button>
                             <button class="btn btn-primary" type="button" id="botonAddPelicula2" disabled style="display: none;">
@@ -110,29 +106,22 @@
                         <form [formGroup]="fmodpelicula" (ngSubmit)="modificaPelicula()" id="fmodpelicula" hidden><!--titulo, anyo, pais, genero, calificacion, duracion, estreno, sinopsis-->
                             <div class="form-group">
                                 <label for="tituloPeliculaMP">Título</label>
-                                <input type="text" class="form-control" formControlName="tituloPeliculaMP" id="tituloPeliculaMP" value="{{this.pelicula.titulo}}" required>
+                                <input type="text" class="form-control" formControlName="tituloPeliculaMP" id="tituloPeliculaMP" value="{{this.pelicula.titulo}}">
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-md-4">
                                     <label for="anyoPeliculaMP">Año</label>
-                                    <input type="text" class="form-control" formControlName="anyoPeliculaMP" id="anyoPeliculaMP" value="{{this.pelicula.anyo}}" required>
+                                    <input type="text" class="form-control" formControlName="anyoPeliculaMP" id="anyoPeliculaMP" value="{{this.pelicula.anyo}}">
+                                    <div class="invalid-feedback">Año no válido</div>
                                 </div>
                                 <div class="form-group col-md-4">
                                     <label for="paisPeliculaMP">País</label>
-                                    <input type="text" class="form-control" formControlName="paisPeliculaMP" id="paisPeliculaMP" value="{{this.pelicula.pais}}" required>
+                                    <input type="text" class="form-control" formControlName="paisPeliculaMP" id="paisPeliculaMP" value="{{this.pelicula.pais}}">
                                 </div>
                                 <div class="form-group col-md-4">
                                     <label for="generoPeliculaMP">Género</label>
                                     <select formControlName="generoPeliculaMP" id="generoPeliculaMP" value="{{this.pelicula.genero}}" class="form-control">
-                                        <option selected>Acción</option>
-                                        <option>Aventura</option>
-                                        <option>Comedia</option>
-                                        <option>Fantasía</option>
-                                        <option>Drama</option>
-                                        <option>Suspense</option>
-                                        <option>Infantil</option>
-                                        <option>Ciencia ficción</option>
-                                        <option>Miedo</option>
+                                        <option *ngFor="let item of this.listaGenero" value='{{item}}'>{{item}}</option>
                                     </select>
                                 </div>
                             </div>
@@ -140,20 +129,16 @@
                                 <div class="form-group col-md-4">
                                     <label for="calificacionPeliculaMP">Calificación</label>
                                     <select formControlName="calificacionPeliculaMP" id="calificacionPeliculaMP" class="form-control" value="{{this.pelicula.calificacion}}">
-                                        <option selected>TP</option>
-                                        <option>+7</option>
-                                        <option>+12</option>
-                                        <option>+16</option>
-                                        <option>+18</option>
+                                        <option *ngFor="let item of this.listaCalificacion" value='{{item}}'>{{item}}</option>
                                     </select>
                                 </div>
                                 <div class="form-group col-md-4">
                                     <label for="duracionPeliculaMP">Duración</label>
-                                    <input type="number" min="0" class="form-control" formControlName="duracionPeliculaMP" id="duracionPeliculaMP" value="{{this.pelicula.duracion}}" required>
+                                    <input type="number" min="0" class="form-control" formControlName="duracionPeliculaMP" id="duracionPeliculaMP" value="{{this.pelicula.duracion}}">
                                 </div>
                                 <div class="form-group col-md-4">
                                     <label for="estrenoPeliculaMP">Estreno</label>
-                                    <input type="date" class="form-control" formControlName="estrenoPeliculaMP" id="estrenoPeliculaMP" value="{{this.pelicula.estreno | date:'yyyy-MM-dd'}}" required>
+                                    <input type="date" class="form-control" formControlName="estrenoPeliculaMP" id="estrenoPeliculaMP" value="{{this.pelicula.estreno | date:'yyyy-MM-dd'}}">
                                 </div>
                             </div>
                             <div class="form-group">
@@ -221,34 +206,36 @@
                         <div class="form-row">
                             <div class="form-group col-md-4">
                                 <label for="fechaSesionAS">Fecha</label>
-                                <input type="date" class="form-control" formControlName="fechaSesionAS" id="fechaSesionAS" required>
+                                <input type="date" class="form-control" formControlName="fechaSesionAS" id="fechaSesionAS">
+                                <div class="invalid-feedback">Rellene el campo</div>
                             </div>
                             <div class="form-group col-md-4">
                                 <label for="horaSesionAS">Hora</label>
-                                <input type="time" class="form-control" formControlName="horaSesionAS" id="horaSesionAS" required>
+                                <input type="time" class="form-control" formControlName="horaSesionAS" id="horaSesionAS">
+                                <div class="invalid-feedback">Rellene el campo</div>
                             </div>
                             <div class="form-group col-md-4">
                                 <label for="tituloPeliculaAS">Título</label>
                                 <select formControlName="tituloPeliculaAS" id="tituloPeliculaAS" class="form-control">
-                                    <option selected>--Selecciona--</option>
                                     <option *ngFor="let item of listaPeliculas" value="{{item.titulo}}">{{item.titulo}}</option>
                                 </select>
+                                <div class="invalid-feedback">Rellene el campo</div>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-4">
                                 <label for="salaSesionAS">Sala</label>
                                 <select formControlName="salaSesionAS" id="salaSesionAS" class="form-control">
-                                    <option selected>--Selecciona--</option>
                                     <option *ngFor="let item of listaSalas" value="{{item.idSala}}">{{item.idSala}}</option>
                                 </select>
+                                <div class="invalid-feedback">Rellene el campo</div>
                             </div>
                             <div class="form-group col-md-4">
                                 <label for="tarifaSesionAS">Tarifa</label>
                                 <select formControlName="tarifaSesionAS" id="tarifaSesionAS" class="form-control">
-                                    <option selected>--Selecciona--</option>
                                     <option *ngFor="let item of listaTarifas" value="{{item.idTarifa}}">{{item.idTarifa+'.- '+item.nombre}}</option>
                                 </select>
+                                <div class="invalid-feedback">Rellene el campo</div>
                             </div>    
                         </div>
                         <button type="submit" class="btn btn-success" id="botonAddSesion">Añadir</button>
@@ -278,14 +265,12 @@
                             <div class="form-goup col-md-4">
                                 <label for="fechaSelectSesion">Fecha</label>
                                 <select class="form-control" [(ngModel)]="fechaSelectSesion" [ngModelOptions]="{standalone: true}" id="fechaSelectSesion" (ngModelChange)="muestraSesion(fechaSelectSesion)">
-                                    <option selected>--Selecciona una fecha--</option>
                                     <option *ngFor="let item of listaFechaSesion" value="{{item}}">{{item | date : 'dd-MM-yyyy'}}</option>
                                 </select>
                             </div>
                             <div class="form-goup col-md-4">
                                 <label for="selectSesion">Sesión</label>
                                 <select class="form-control" [(ngModel)]="selectSesion" [ngModelOptions]="{standalone: true}" id="selectSesion">
-                                    <option selected>--Selecciona una sesión--</option>
                                     <option *ngFor="let item of listaSesionDia" value="{{item.idProyeccion}}" >{{item.hora+'-'+item.titulo+'- Sala:'+item.idSala}}</option>
                                 </select>
                             </div>
@@ -297,16 +282,15 @@
                         <div class="form-row">
                             <div class="form-group col-md-4">
                                 <label for="fechaSesionMS">Fecha</label>
-                                <input type="date" class="form-control" formControlName="fechaSesionMS" id="fechaSesionMS" value="{{this.proyeccion.fecha | date : 'yyyy-MM-dd'}}" required>
+                                <input type="date" class="form-control" formControlName="fechaSesionMS" id="fechaSesionMS" value="{{this.proyeccion.fecha | date : 'yyyy-MM-dd'}}">
                             </div>
                             <div class="form-group col-md-4">
                                 <label for="horaSesionMS">Hora</label>
-                                <input type="time" class="form-control" formControlName="horaSesionMS" id="horaSesionMS" value={{this.proyeccion.hora}} required>
+                                <input type="time" class="form-control" formControlName="horaSesionMS" id="horaSesionMS" value={{this.proyeccion.hora}}>
                             </div>
                             <div class="form-group col-md-4">
                                 <label for="tituloPeliculaMS">Título</label>
                                 <select formControlName="tituloPeliculaMS" id="tituloPeliculaMS" class="form-control" value={{this.proyeccion.titulo}}>
-                                    <option selected>--Selecciona--</option>
                                     <option *ngFor="let item of listaPeliculas" value="{{item.titulo}}">{{item.titulo}}</option>
                                 </select>
                             </div>
@@ -315,14 +299,12 @@
                             <div class="form-group col-md-4">
                                 <label for="salaSesionMS">Sala</label>
                                 <select formControlName="salaSesionMS" id="salaSesionMS" class="form-control" value={{this.proyeccion.idSala}}>
-                                    <option selected>--Selecciona--</option>
                                     <option *ngFor="let item of listaSalas" value="{{item.idSala}}">{{item.idSala}}</option>
                                 </select>
                             </div>
                             <div class="form-group col-md-4">
                                 <label for="tarifaSesionMS">Tarifa</label>
                                 <select formControlName="tarifaSesionMS" id="tarifaSesionMS" class="form-control" value={{this.proyeccion.idTarifa}}>
-                                    <option selected>--Selecciona--</option>
                                     <option *ngFor="let item of listaTarifas" value="{{item.idTarifa}}">{{item.idTarifa+'.- '+item.nombre}}</option>
                                 </select>
                             </div>    
@@ -354,14 +336,12 @@
                                 <div class="form-goup col-md-4">
                                     <label for="fechaBorrarSesion">Selecciona una fecha</label>
                                     <select class="form-control" [(ngModel)]="fechaBorrarSesion" [ngModelOptions]="{standalone: true}" id="fechaBorrarSesion" (ngModelChange)="muestraSesion(fechaBorrarSesion)">
-                                        <option selected>--Selecciona una fecha--</option>
                                         <option *ngFor="let item of listaFechaSesion" value="{{item}}">{{item | date : 'dd-MM-yyyy'}}</option>
                                     </select>
                                 </div>
                                 <div class="form-goup col-md-4">
                                     <label for="borrarSesion">Selecciona una sesión</label>
                                     <select class="form-control" [(ngModel)]="borrarSesion" [ngModelOptions]="{standalone: true}" id="borrarSesion">
-                                        <option selected>--Selecciona una sesión--</option>
                                         <option *ngFor="let item of listaSesionDia" value="{{item.idProyeccion}}" >{{item['hora']+'-'+item['titulo']+'- Sala:'+item.idSala}}</option>
                                     </select>
                                 </div>
@@ -398,15 +378,18 @@
                             <div class="form-row">
                                 <div class="form-group col-md-4">
                                     <label for="nombreTarifaAT">Nombre</label>
-                                    <input type="text" class="form-control" formControlName="nombreTarifaAT" id="nombreTarifaAT" required>
+                                    <input type="text" class="form-control" formControlName="nombreTarifaAT" id="nombreTarifaAT">
+                                    <div class="invalid-feedback">Rellene el campo</div>
                                 </div>
                                 <div class="form-group col-md-4">
                                     <label for="descripcionTarifaAT">Descripción</label>
-                                    <input type="text" class="form-control" formControlName="descripcionTarifaAT" id="descripcionTarifaAT" required>
+                                    <input type="text" class="form-control" formControlName="descripcionTarifaAT" id="descripcionTarifaAT">
+                                    <div class="invalid-feedback">Rellene el campo</div>
                                 </div>
                                 <div class="form-group col-md-4">
                                     <label for="precioTarifaAT">Precio</label>
-                                    <input type="number" min="0" class="form-control" formControlName="precioTarifaAT" id="precioTarifaAT" step="0.01" required>
+                                    <input type="number" min="0" class="form-control" formControlName="precioTarifaAT" id="precioTarifaAT" step="0.01">
+                                    <div class="invalid-feedback">Rellene el campo</div>
                                 </div>
                             </div>
                             <button type="submit" class="btn btn-success" id="botonAddTarifa">Añadir</button>
@@ -434,7 +417,6 @@
                         <form #fselecttarifa="ngForm" (ngSubmit)="selectTarifa()">
                             <div class="row mb-3 mx-auto">
                                 <select class="form-control col-4 mr-3" [(ngModel)]="tarifaSeleccionada" [ngModelOptions]="{standalone: true}" id="tarifaSeleccionada">
-                                    <option>--Selecciona una tarifa--</option>
                                     <option *ngFor="let item of listaTarifas" value="{{item.idTarifa}}">{{item.nombre}}</option>
                                 </select>    
                                 <button type="submit" class="btn btn-info" id="botonSelectTarifa">Selecciona</button>
@@ -444,15 +426,15 @@
                             <div class="form-row">
                                 <div class="form-group col-md-4">
                                     <label for="nombreTarifaMT">Nombre</label>
-                                    <input type="text" class="form-control" formControlName="nombreTarifaMT" id="nombreTarifaMT" value="{{this.tarifa.nombre}}" required>
+                                    <input type="text" class="form-control" formControlName="nombreTarifaMT" id="nombreTarifaMT" value="{{this.tarifa.nombre}}">
                                 </div>
                                 <div class="form-group col-md-4">
                                     <label for="descripcionTarifaMT">Descripción</label>
-                                    <input type="text" class="form-control" formControlName="descripcionTarifaMT" id="descripcionTarifaMT" value="{{this.tarifa.descripcion}}" required>
+                                    <input type="text" class="form-control" formControlName="descripcionTarifaMT" id="descripcionTarifaMT" value="{{this.tarifa.descripcion}}">
                                 </div>
                                 <div class="form-group col-md-4">
                                     <label for="precioTarifaMT">Precio</label>
-                                    <input type="number" min="0" class="form-control" formControlName="precioTarifaMT" id="precioTarifaMT" step="0.01" value="{{this.tarifa.precio}}" required>
+                                    <input type="number" min="0" class="form-control" formControlName="precioTarifaMT" id="precioTarifaMT" step="0.01" value="{{this.tarifa.precio}}">
                                 </div>
                             </div>
                             <button type="submit" class="btn btn-success" id="botonModTarifa">Añadir</button>

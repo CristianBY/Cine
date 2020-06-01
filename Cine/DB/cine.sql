@@ -78,11 +78,11 @@ ALTER TABLE Proyeccion ADD CONSTRAINT Proyeccion_Sala_FK FOREIGN KEY ( idSala ) 
 
 ALTER TABLE Proyeccion ADD CONSTRAINT Proyeccion_Tarifa_FK FOREIGN KEY ( idTarifa ) REFERENCES Tarifa ( idTarifa ) ON DELETE CASCADE ON UPDATE CASCADE;
 
-ALTER TABLE Reserva ADD CONSTRAINT Reserva_Proyeccion_FK FOREIGN KEY ( idProyeccion ) REFERENCES Proyeccion ( idProyeccion );
+ALTER TABLE Reserva ADD CONSTRAINT Reserva_Proyeccion_FK FOREIGN KEY ( idProyeccion ) REFERENCES Proyeccion ( idProyeccion ) ON DELETE CASCADE ON UPDATE CASCADE;
 
 ALTER TABLE Reserva ADD CONSTRAINT Reserva_Usuario_FK FOREIGN KEY ( idUsuario ) REFERENCES Usuario ( idUsuario ) ON DELETE CASCADE ON UPDATE CASCADE;
 
-ALTER TABLE Valoracion ADD CONSTRAINT Valoracion_Pelicula_FK FOREIGN KEY ( titulo ) REFERENCES Pelicula ( titulo );
+ALTER TABLE Valoracion ADD CONSTRAINT Valoracion_Pelicula_FK FOREIGN KEY ( titulo ) REFERENCES Pelicula ( titulo ) ON DELETE CASCADE ON UPDATE CASCADE;
 
 ALTER TABLE Valoracion ADD CONSTRAINT Valoracion_Usuario_FK FOREIGN KEY ( idUsuario ) REFERENCES Usuario ( idUsuario ) ON DELETE CASCADE ON UPDATE CASCADE;
 

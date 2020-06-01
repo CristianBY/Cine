@@ -2,8 +2,9 @@ export class Usuario {
     constructor(
         public idUsuario :number,
         public nombre:string,
-        public apellidos:number,
+        public apellidos:string,
         public email:string,
+        public password:string,
         public administrador:boolean
     )
     {}

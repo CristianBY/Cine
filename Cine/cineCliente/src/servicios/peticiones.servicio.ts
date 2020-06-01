@@ -43,6 +43,11 @@ export class PeticionesServicio {
         return this.http.get(this.url+"/sesion/sala");
     }
 
+    //Registro de Usuarios
+    addUsuarioServer(nuevoUsuario): Observable<any> {
+        return this.http.post(this.url+"/usuarios/registro",nuevoUsuario);
+    }
+
     //Peticiones de la parte de Administración
     //Peliculas
     addPeliculaServer(data): Observable<any> {

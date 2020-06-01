@@ -1,1 +1,33 @@
-<p>registro works!</p>
+<h1 class="text-center mb-3">Registro</h1>
+
+<form [formGroup]="fregistro" (ngSubmit)="registraUsuario()" id="fregistro" class="mx-auto col-md-4">
+    <div class="form-row">
+        <div class="form-group md-form col-5">
+            <label for="nombreRegistro">Nombre</label>
+            <input type="text" class="form-control" formControlName="nombreRegistro" id="nombreRegistro" maxlength="50">
+            <div class="invalid-feedback">Rellene el campo</div>
+        </div>
+        <div class="form-group col-7">
+            <label for="apellidosRegistro">Apellidos</label>
+            <input type="text" class="form-control" formControlName="apellidosRegistro" id="apellidosRegistro" maxlength="50">
+            <div class="invalid-feedback">Rellene el campo</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="emailRegistro">Email</label>
+        <input type="email" class="form-control" formControlName="emailRegistro" autocomplete="username" id="emailRegistro">
+        <div class="invalid-feedback">Rellene el campo</div>
+    </div>
+    <div class="form-group">
+        <label for="passwordRegistro1">Contraseña</label>
+        <input type="password" class="form-control" formControlName="passwordRegistro1" autocomplete="new-password" id="passwordRegistro1">
+        <div class="invalid-feedback">Rellene el campo</div>
+    </div>
+    <div class="form-group">
+        <label for="passwordRegistro2">Verifica Contraseña</label>
+        <input type="password" class="form-control" formControlName="passwordRegistro2" autocomplete="new-password" id="passwordRegistro2">
+        <div class="invalid-feedback">Rellene el campo</div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Registrarse</button>
+</form>
