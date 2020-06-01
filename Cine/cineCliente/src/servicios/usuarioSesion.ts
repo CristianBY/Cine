@@ -18,7 +18,7 @@ export class UsuarioSesion {
             document.getElementById("deslogueado").style.display="inline";
         }
         if(sessionStorage.getItem('role')=="true"){
-            
+            document.getElementById("usuarioEnlaceHome2").setAttribute('href','/auth') ;
         }
     }
 

@@ -55,7 +55,6 @@ export class CarteleraComponent implements OnInit {
 
   getCarteleraDia(){
     let dia = new Date();
-    
     let sesion;
     let sesiones = new Array();
     let carteleraDelDia = new Array();
