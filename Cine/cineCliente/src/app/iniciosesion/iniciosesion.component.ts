@@ -24,7 +24,7 @@ export class IniciosesionComponent implements OnInit {
   }
 
   getUsuario(passwordIni,username){ 
-    this._peticionesServicio.getUsuariosJSON(passwordIni,username).subscribe(data=>{
+    this._peticionesServicio.getUsuariosJSON(passwordIni,username.toLowerCase()).subscribe(data=>{
       if (data.token != "No") {
         sessionStorage.setItem('token',data.token);
         sessionStorage.setItem('idUsuario',data.idUsuario);

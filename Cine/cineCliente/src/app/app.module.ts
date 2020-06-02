@@ -21,6 +21,7 @@ import { RatingModule } from 'ng-starrating';
 import { registerLocaleData } from '@angular/common';
 import { CierrasesionComponent } from './cierrasesion/cierrasesion.component';
 import { PagoComponent } from './pago/pago.component';
+import { FotoComponent } from './foto/foto.component';
 
 registerLocaleData(localeEs, 'es');
 
@@ -36,7 +37,8 @@ registerLocaleData(localeEs, 'es');
     AuthComponent,
     UserComponent,
     CierrasesionComponent,
-    PagoComponent
+    PagoComponent,
+    FotoComponent
   ],
   imports: [
     BrowserModule,

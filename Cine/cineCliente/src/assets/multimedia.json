@@ -1,26 +1,80 @@
 [
     {
         "titulo": "Adú",
-        "portada": "assets/images/AdúPortada.jpg"
+        "portada": "assets/images/AdúPortada.jpg",
+        "imagenes": [
+            "assets/images/Adú/Adú-2.jpg",
+            "assets/images/Adú/Adú-3.jpg",
+            "assets/images/Adú/adu.jpg",
+            "assets/images/Adú/Equipo.jpg",
+            "assets/images/Adú/luis_ana.jpeg",
+            "assets/images/Adú/pelicula-Adu-imagen-8.jpg"
+        ],
+        "trailer": "https://www.youtube.com/watch?v=FxQ7Y3mgfec"
     },
     {
         "titulo": "Frozen 2",
-        "portada": "assets/images/Frozen_II.jpg"
+        "portada": "assets/images/Frozen_II.jpg",
+        "imagenes": [
+            "assets/images/Frozen2/taquilla-frozen-2.jpg",
+            "assets/images/Frozen2/frozen.jpg",
+            "assets/images/Frozen2/f-3.jpg",
+            "assets/images/Frozen2/f-2.jpg",
+            "assets/images/Frozen2/Elsa.jpg",
+            "assets/images/Frozen2/bruni.jpg"
+        ],
+        "trailer":"https://www.youtube.com/watch?v=I-oJ5QjrX9M"
     },
     {
         "titulo": "Parásitos",
-        "portada": "assets/images/parásitos.jpg"
+        "portada": "assets/images/parásitos.jpg",
+        "imagenes": [
+            "assets/images/Parásitos/1366_2000.jpeg",
+            "assets/images/Parásitos/429240.jpg",
+            "assets/images/Parásitos/fotograma-pelicula-parasitos-1571841930777.jpg",
+            "assets/images/Parásitos/p-1.jpg",
+            "assets/images/Parásitos/parasitos-pelicula-curiosidades.jpg",
+            "assets/images/Parásitos/zentauroepp51510636-icult-parasitos191228201345-1577560603469.jpg"
+        ],
+        "trailer":"https://www.youtube.com/watch?v=Z7SiFLgoFQM"
     },
     {
         "titulo": "Onward",
-        "portada": "assets/images/onward.jpg"
+        "portada": "assets/images/onward.jpg",
+        "imagenes": [
+            "assets/images/Onward/13742_Onward2.jpg",
+            "assets/images/Onward/disney-pixar-onward.jpeg",
+            "assets/images/Onward/Fotos-Onward.jpg",
+            "assets/images/Onward/onward-e1583283887602.jpg",
+            "assets/images/Onward/Onward-lo-nuevo-de-Pixar.jpg",
+            "assets/images/Onward/onwardpixar.jpg"
+        ],
+        "trailer":"https://www.youtube.com/watch?v=I8JTARGhwtY"
     },
     {
         "titulo": "Las aventuras del Doctor Dolittle",
-        "portada": "assets/images/Las_aventuras_del_Doctor_Dolittle.jpg"
+        "portada": "assets/images/Las_aventuras_del_Doctor_Dolittle.jpg",
+        "imagenes": [
+            "assets/images/DoctorDolittle/3538002.jpg",
+            "assets/images/DoctorDolittle/5032543.jpg",
+            "assets/images/DoctorDolittle/banderas.jpg",
+            "assets/images/DoctorDolittle/doctor-dolittle.jpg",
+            "assets/images/DoctorDolittle/Dr-Dolittle-Robert-Downey-Jr_1431467621_115811023_1536x1024.jpg",
+            "assets/images/DoctorDolittle/Robert-Downey-Jr.-En-Dr.-Dolittle-Foto-Archivo.jpg"
+        ],
+        "trailer":"https://www.youtube.com/watch?v=2nRmhSKYItE"
     },
     {
         "titulo": "Jumanji: Siguiente nivel",
-        "portada": "assets/images/Jumanji2.jpg"
+        "portada": "assets/images/Jumanji2.jpg",
+        "imagenes": [
+            "assets/images/Jumanji2/0_k6a2osNcFeTjB5Hi.jpg",
+            "assets/images/Jumanji2/97822_ppl.jpg",
+            "assets/images/Jumanji2/3613494-jumanji-next-level.jpg",
+            "assets/images/Jumanji2/jumanji-2-siguiente-nivel.jpg",
+            "assets/images/Jumanji2/Jumanji-the-next-level-1200x676.jpg",
+            "assets/images/Jumanji2/jumanji-the-next-level-portada-web.jpg"
+        ],
+        "trailer":"https://www.youtube.com/watch?v=YOpySpo2Kig"
     }
 ]

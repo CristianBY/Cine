@@ -10,6 +10,7 @@ import { AuthComponent } from './auth/auth.component';
 import { UserComponent } from './user/user.component';
 import { CierrasesionComponent } from './cierrasesion/cierrasesion.component';
 import { PagoComponent } from './pago/pago.component';
+import { FotoComponent } from './foto/foto.component';
 
 
 const routes: Routes = [
@@ -52,6 +53,14 @@ const routes: Routes = [
   {
     path: 'pago',
     component: PagoComponent
+  },
+  {
+    path: 'foto',
+    component: FotoComponent
+  },
+  {
+    path: '**',
+    component: IndexComponent
   }
 
 ];

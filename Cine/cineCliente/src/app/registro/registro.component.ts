@@ -56,7 +56,7 @@ export class RegistroComponent implements OnInit {
     }    
     
     if (!this.fregistro.invalid) {
-      let nuevoUsuario = new Usuario(0,this.fregistro.value.nombreRegistro,this.fregistro.value.apellidosRegistro,this.fregistro.value.emailRegistro,this.fregistro.value.passwordRegistro1,false);
+      let nuevoUsuario = new Usuario(0,this.fregistro.value.nombreRegistro,this.fregistro.value.apellidosRegistro,this.fregistro.value.emailRegistro.toLowerCase(),this.fregistro.value.passwordRegistro1,false);
 
       this._peticionesServicio.addUsuarioServer(nuevoUsuario).subscribe(data=>{
         sessionStorage.clear();

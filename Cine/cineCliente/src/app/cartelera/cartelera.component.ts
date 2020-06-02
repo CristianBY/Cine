@@ -103,4 +103,13 @@ export class CarteleraComponent implements OnInit {
     this.router.navigate(['pago']);
   }
 
+  foto(titulo){
+    sessionStorage.setItem('foto',titulo);
+    this.router.navigate(['foto']);
+  }
+
+  trailer(titulo){
+    sessionStorage.setItem('video',titulo);
+    this.router.navigate(['trailer']);
+  }
 }
