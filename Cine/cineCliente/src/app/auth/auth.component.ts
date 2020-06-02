@@ -12,6 +12,7 @@ import { Router } from '@angular/router';
   templateUrl: './auth.component.html',
   styleUrls: ['./auth.component.css']
 })
+
 export class AuthComponent implements OnInit {
   public listaSalas:Array<any> = [];
   public listaGenero = new Array('Acción','Aventura','Comedia','Fantasía','Drama','Suspense','Infantil','Ciencia ficción','Miedo');
@@ -45,6 +46,13 @@ export class AuthComponent implements OnInit {
   public faddtarifa: FormGroup;
   public fmodtarifa: FormGroup;
 
+  /**
+   * Constructor
+   * @param _peticionesServicio 
+   * @param _usuarioSesion 
+   * @param router 
+   * @param fb 
+   */
   constructor(private _peticionesServicio: PeticionesServicio,private _usuarioSesion: UsuarioSesion, private router:Router, private fb: FormBuilder) {
     this.faddpelicula = this.fb.group({
       tituloPeliculaAP: ['',Validators.required],
@@ -111,6 +119,11 @@ export class AuthComponent implements OnInit {
     }
   }
 
+  /**
+   *  Obtiene todas las salas
+   *  @param sin parámetros
+   *  @returns  devuelve una lista con todas las salas
+   */
   getTodasSalas(){
     this._peticionesServicio.getSalasJSON().subscribe(data=>{
       this.listaSalas = data;
@@ -128,6 +141,11 @@ export class AuthComponent implements OnInit {
     });  
   }
 
+  /**
+   *  Envía la información necesaria para crear una película en la base de datos
+   *  @param sin parámetros
+   *  @returns  No devuelve nada
+   */
   addPelicula(){
     if (this.faddpelicula.invalid) {
       if(this.faddpelicula.get('tituloPeliculaAP').hasError('required')){
@@ -255,6 +273,12 @@ export class AuthComponent implements OnInit {
   }
 
   // Sesiones - Proyección
+
+  /**
+   * Crea una lista con la fecha de todas las proyecciones
+   * @param sin parámetros
+   * @returns lista con la fecha de todas las proyecciones
+   */
   getTodasSesiones(){
     this._peticionesServicio.getSesionesJSON().subscribe(data=>{
       this.listaSesion = data;
@@ -266,6 +290,11 @@ export class AuthComponent implements OnInit {
     });
   }
 
+  /**
+   * Crea una lista con las sesiones de ese día
+   * @param fecha
+   * @returns no devuelve nada 
+   */
   muestraSesion(fecha){
     this.listaSesionDia=[]; //Refresco de lista para el cambio del día
     Date.parse(fecha);
@@ -274,9 +303,13 @@ export class AuthComponent implements OnInit {
         this.listaSesionDia.push(element);
       }
     });
-
   }
 
+  /**
+   * Selecciona la sesión que quieres modificar, para rellenar los campos del formulario y modificar lo que desees
+   * @param sin parámetros
+   * @returns
+   */
   seleccionaSesion(){ 
     this.listaSesion.forEach(element => {
       if (element['idProyeccion'] == this.selectSesion ) {
@@ -284,8 +317,11 @@ export class AuthComponent implements OnInit {
         document.getElementById("fmodsesion").removeAttribute("hidden"); // muestra el formulario una vez a sido seleccionada la sesion a modificar
       }
     });
-  } //Selecciona la sesion a modificar
-
+  } 
+  /**
+   * Envía la información necesaria para crear una sesión en la base de datos
+   * @param sin parametros
+   */
   addSesion(){
     if (this.faddsesion.invalid) {
       if(this.faddsesion.get('tituloPeliculaAS').hasError('required')){
@@ -317,7 +353,10 @@ export class AuthComponent implements OnInit {
       this.refrescar("botonAddSesion","botonAddSesion2");
     }
   }
-
+  /**
+   * Envía la información necesaria para modificar una sesión en la base de datos
+   * @param sin parametros
+   */
   modificaSesion(){
     if (this.faddsesion.invalid) {
       if(this.faddsesion.get('tituloPeliculaMS').hasError('required')){
@@ -351,6 +390,10 @@ export class AuthComponent implements OnInit {
 
   }
 
+  /**
+   * Envía la información necesaria para borrar una sesión en la base de datos
+   * @param sin parametros
+   */
   deleteSesion(){
     this._peticionesServicio.deleteSesionServer(this.borrarSesion).subscribe();
 
@@ -358,7 +401,10 @@ export class AuthComponent implements OnInit {
   }
 
   // Tarifas
-
+  /**
+   * Obtiene todas las tarifas y las carga en una lista
+   * @param sin parametros
+   */
   getTodasTarifas(){
     this._peticionesServicio.getTarifasJSON().subscribe(data=>{
       this.listaTarifas = data;
@@ -366,6 +412,10 @@ export class AuthComponent implements OnInit {
 
   }
 
+  /**
+   * Selecciona una tarifa y carga una lista con los datos para ser cargados en un formulario
+   * @param sin parametros
+   */
   selectTarifa() {
     this.listaTarifas.forEach(element => {
       if (element['idTarifa'] == this.tarifaSeleccionada ) {
@@ -375,6 +425,10 @@ export class AuthComponent implements OnInit {
     });
   }
 
+  /**
+   * Envía la información necesaria para añadir una tarifa en la base de datos
+   * @param sin parametros
+   */
   addTarifa(){
     if (this.faddtarifa.invalid) {
       if(this.faddtarifa.get('nombreTarifaAT').hasError('required')){
@@ -399,6 +453,10 @@ export class AuthComponent implements OnInit {
     }
   }
 
+  /**
+   * Envía la información necesaria para modificar una tarifa en la base de datos
+   * @param sin parametros
+   */
   modificaTarifa(){
     if (this.faddtarifa.invalid) {
       if(this.faddtarifa.get('nombreTarifaAT').hasError('required')){
@@ -423,12 +481,21 @@ export class AuthComponent implements OnInit {
 
   }
   
+  /**
+   * Envía la información necesaria para eliminar una tarifa en la base de datos
+   * @param sin parametros
+   */
   deleteTarifa(){
     this._peticionesServicio.deleteTarifaServer(this.tarifaBorrada).subscribe();
     
     this.refrescar("botonBorraTarifa","botonBorraTarifa2");
   }
 
+  /**
+   * Genera un refresco de pantalla cuando hemos realizado una acción CRUD
+   * @param boton 
+   * @param boton2 
+   */
   refrescar(boton,boton2){
     document.getElementById(boton).style.display="none";
     document.getElementById(boton2).style.display="inline";

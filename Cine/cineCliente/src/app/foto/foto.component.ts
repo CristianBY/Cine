@@ -20,6 +20,9 @@ export class FotoComponent implements OnInit {
     }
   }
 
+  /**
+   * Pide el fichero JSON que contiene las direcciones de las fotos
+   */
   getMultimedia(){
     this._peticionesServicio.getMultimediaJSON().subscribe(data=>{
       let titulo = sessionStorage.getItem('foto');

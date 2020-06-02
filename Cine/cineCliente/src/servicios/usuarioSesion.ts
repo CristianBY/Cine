@@ -9,6 +9,9 @@ export class UsuarioSesion {
 
     }
 
+    /**
+     * Comprueba si se ha iniciado sesión con un usuario
+     */
     comprobarSesion(){
         if(sessionStorage.getItem('token')!=null){
             document.getElementById("usuarioSesion").style.display="none";
@@ -22,6 +25,9 @@ export class UsuarioSesion {
         }
     }
 
+    /**
+     * Cierra la sesión del usuario cuando se hace click en el botón Log out
+     */
     cierraSesion(){
         setInterval(()=>{
             sessionStorage.clear();

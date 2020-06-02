@@ -31,6 +31,9 @@ export class RegistroComponent implements OnInit {
   }
 
 
+  /**
+   * Recoge la información necesaria para registrar un nuevo cliente
+   */
   registraUsuario(){
   
     if(this.fregistro.get('nombreRegistro').hasError('required')){

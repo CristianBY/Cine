@@ -1,0 +1,1238 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Cine Luna</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/postmark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">Cine Luna</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Escribe para buscar"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Componentes</li>
+  <li>PagoComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>Fichero</h3>
+</p>
+<p class="comment">
+    <code>src/app/pago/pago.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implementa</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Meta datos</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-pago</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./pago.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./pago.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Índice</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Propiedades</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#entradas">entradas</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#fpaypal">fpaypal</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#ftarjeta">ftarjeta</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#listaAnyos">listaAnyos</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#listaMeses">listaMeses</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#multimediaInfo">multimediaInfo</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#reserva">reserva</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Métodos</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#cargarAnyos">cargarAnyos</a>
+                            </li>
+                            <li>
+                                <a href="#getMultimedia">getMultimedia</a>
+                            </li>
+                            <li>
+                                <a href="#getReserva">getReserva</a>
+                            </li>
+                            <li>
+                                <a href="#mostrar">mostrar</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#procesoDePagoPaypal">procesoDePagoPaypal</a>
+                            </li>
+                            <li>
+                                <a href="#procesoDePagoTarjeta">procesoDePagoTarjeta</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(_peticionesServicio: <a href="../injectables/PeticionesServicio.html">PeticionesServicio</a>, _usuarioSesion: <a href="../injectables/UsuarioSesion.html">UsuarioSesion</a>, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>, fb: <a href="https://angular.io/api/forms/FormBuilder" target="_blank">FormBuilder</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="19" class="link-to-prism">src/app/pago/pago.component.ts:19</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parámetros :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Nombre</td>
+                                                    <td>Tipo</td>
+                                                <td>Opcional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>_peticionesServicio</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/PeticionesServicio.html" target="_self" >PeticionesServicio</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>_usuarioSesion</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/UsuarioSesion.html" target="_self" >UsuarioSesion</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>fb</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/forms/FormBuilder" target="_blank" >FormBuilder</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Métodos
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="cargarAnyos"></a>
+                    <span class="name">
+                        <b>
+                            cargarAnyos
+                        </b>
+                        <a href="#cargarAnyos"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>cargarAnyos()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="51"
+                            class="link-to-prism">src/app/pago/pago.component.ts:51</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Crea una lista con los siguientes 6 años para la verificación de la tarjeta de crédito</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getMultimedia"></a>
+                    <span class="name">
+                        <b>
+                            getMultimedia
+                        </b>
+                        <a href="#getMultimedia"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getMultimedia()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="61"
+                            class="link-to-prism">src/app/pago/pago.component.ts:61</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Obtiene el JSON multimedia de assets</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getReserva"></a>
+                    <span class="name">
+                        <b>
+                            getReserva
+                        </b>
+                        <a href="#getReserva"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getReserva()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="70"
+                            class="link-to-prism">src/app/pago/pago.component.ts:70</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Pide la información de una reserva para generar la página (butacas disponibles, nombre película, hora, ..)</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="mostrar"></a>
+                    <span class="name">
+                        <b>
+                            mostrar
+                        </b>
+                        <a href="#mostrar"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>mostrar(precio)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="81"
+                            class="link-to-prism">src/app/pago/pago.component.ts:81</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Según las entradas seleccionadas modifica el precio </p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parámetros :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Nombre</td>
+                                    <td>Opcional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>precio</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="36"
+                            class="link-to-prism">src/app/pago/pago.component.ts:36</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="procesoDePagoPaypal"></a>
+                    <span class="name">
+                        <b>
+                            procesoDePagoPaypal
+                        </b>
+                        <a href="#procesoDePagoPaypal"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>procesoDePagoPaypal()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="89"
+                            class="link-to-prism">src/app/pago/pago.component.ts:89</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Formulario para el pago por paypal si todo va bien muestra una ventana simulando el pago y la conexión a Paypal</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="procesoDePagoTarjeta"></a>
+                    <span class="name">
+                        <b>
+                            procesoDePagoTarjeta
+                        </b>
+                        <a href="#procesoDePagoTarjeta"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>procesoDePagoTarjeta()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="131"
+                            class="link-to-prism">src/app/pago/pago.component.ts:131</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Formulario de pago con tarjeta</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Propiedades
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="entradas"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            entradas</b>
+                            <a href="#entradas"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Tipo : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definido en <a href="" data-line="15" class="link-to-prism">src/app/pago/pago.component.ts:15</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="fpaypal"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            fpaypal</b>
+                            <a href="#fpaypal"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Tipo : </i>        <code><a href="https://angular.io/api/forms/FormGroup" target="_blank" >FormGroup</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definido en <a href="" data-line="16" class="link-to-prism">src/app/pago/pago.component.ts:16</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ftarjeta"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            ftarjeta</b>
+                            <a href="#ftarjeta"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Tipo : </i>        <code><a href="https://angular.io/api/forms/FormGroup" target="_blank" >FormGroup</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definido en <a href="" data-line="17" class="link-to-prism">src/app/pago/pago.component.ts:17</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="listaAnyos"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            listaAnyos</b>
+                            <a href="#listaAnyos"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Valor por defecto : </i><code>new Array()</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definido en <a href="" data-line="19" class="link-to-prism">src/app/pago/pago.component.ts:19</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="listaMeses"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            listaMeses</b>
+                            <a href="#listaMeses"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Valor por defecto : </i><code>new Array(&#x27;01&#x27;,&#x27;02&#x27;,&#x27;03&#x27;,&#x27;04&#x27;,&#x27;05&#x27;,&#x27;06&#x27;,&#x27;07&#x27;,&#x27;08&#x27;,&#x27;09&#x27;,&#x27;10&#x27;,&#x27;11&#x27;,&#x27;12&#x27;)</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definido en <a href="" data-line="18" class="link-to-prism">src/app/pago/pago.component.ts:18</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="multimediaInfo"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            multimediaInfo</b>
+                            <a href="#multimediaInfo"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Tipo : </i>    <code>Array&lt;any&gt;</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Valor por defecto : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definido en <a href="" data-line="13" class="link-to-prism">src/app/pago/pago.component.ts:13</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="reserva"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            reserva</b>
+                            <a href="#reserva"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Tipo : </i>    <code>Array&lt;any&gt;</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Valor por defecto : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definido en <a href="" data-line="14" class="link-to-prism">src/app/pago/pago.component.ts:14</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import { PeticionesServicio } from &#x27;src/servicios/peticiones.servicio&#x27;;
+import { UsuarioSesion } from &#x27;src/servicios/usuarioSesion&#x27;;
+import { Router } from &#x27;@angular/router&#x27;;
+import { FormGroup, Validators, FormBuilder } from &#x27;@angular/forms&#x27;;
+
+@Component({
+  selector: &#x27;app-pago&#x27;,
+  templateUrl: &#x27;./pago.component.html&#x27;,
+  styleUrls: [&#x27;./pago.component.css&#x27;]
+})
+export class PagoComponent implements OnInit {
+  public multimediaInfo:Array&lt;any&gt; &#x3D; [];
+  public reserva:Array&lt;any&gt; &#x3D; [];
+  public entradas: number;
+  public fpaypal: FormGroup;
+  public ftarjeta: FormGroup;
+  public listaMeses &#x3D; new Array(&#x27;01&#x27;,&#x27;02&#x27;,&#x27;03&#x27;,&#x27;04&#x27;,&#x27;05&#x27;,&#x27;06&#x27;,&#x27;07&#x27;,&#x27;08&#x27;,&#x27;09&#x27;,&#x27;10&#x27;,&#x27;11&#x27;,&#x27;12&#x27;);
+  public listaAnyos &#x3D; new Array();
+
+  constructor(private _peticionesServicio: PeticionesServicio, private _usuarioSesion: UsuarioSesion, private router:Router, private fb: FormBuilder) 
+  {
+    this.fpaypal &#x3D; this.fb.group({
+      usuarioPagoPP: [&#x27;&#x27;,[Validators.required,Validators.pattern(&#x27;[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}&#x27;)]],
+      clavePP: [&#x27;&#x27;,Validators.required]
+    });
+
+    this.ftarjeta &#x3D; this.fb.group({
+      numCuenta: [&#x27;&#x27;,[Validators.required,Validators.pattern(&#x27;^[0-9]{16}&#x27;)]],
+      mesCaducidad: [,Validators.required],
+      anyoCaducidad: [,Validators.required],
+      claveCVV: [&#x27;&#x27;,[Validators.required,Validators.pattern(&#x27;^[0-9]{3}&#x27;)]]
+    });
+  }
+
+  ngOnInit(): void {
+    this.getMultimedia();
+    this.getReserva();
+    this.cargarAnyos();
+    if (sessionStorage.getItem(&#x27;token&#x27;) !&#x3D; &quot;No&quot; &amp;&amp; sessionStorage.getItem(&#x27;token&#x27;) !&#x3D; null) {
+      this._usuarioSesion.comprobarSesion();
+    } else {
+      this.router.navigate([&#x27;&#x27;]);
+    }
+    
+  }
+
+  /**
+   * Crea una lista con los siguientes 6 años para la verificación de la tarjeta de crédito
+   */
+  cargarAnyos(){
+    let year &#x3D; new Date().getFullYear();
+    for (let i &#x3D; 0; i &lt; 6; i++) {
+      this.listaAnyos.push(year+i);
+    }
+  }
+
+  /**
+   * Obtiene el JSON multimedia de assets
+   */
+  getMultimedia(){
+    this._peticionesServicio.getMultimediaJSON().subscribe(data&#x3D;&gt;{
+      this.multimediaInfo &#x3D; data;
+    });
+  }
+
+  /**
+   * Pide la información de una reserva para generar la página (butacas disponibles, nombre película, hora, ..)
+   */
+  getReserva() {
+    let idProyeccion &#x3D; sessionStorage.getItem(&#x27;compra&#x27;);
+    this._peticionesServicio.getReservaJSON(idProyeccion).subscribe(data&#x3D;&gt;{
+      this.reserva &#x3D; data;
+    });
+  }
+
+  /**
+   * Según las entradas seleccionadas modifica el precio 
+   * @param precio 
+   */
+  mostrar(precio){
+    this.entradas &#x3D; parseInt((&lt;HTMLInputElement&gt;document.getElementById(&#x27;butacaReservada&#x27;)).value); //parse en TypeScript el de JS no funciopna
+    this.entradas *&#x3D; parseInt(precio); 
+  }
+
+  /**
+   * Formulario para el pago por paypal si todo va bien muestra una ventana simulando el pago y la conexión a Paypal
+   */
+  procesoDePagoPaypal(){
+    if (this.fpaypal.invalid) {
+      this.fpaypal.reset();
+      if (this.fpaypal.get(&#x27;usuarioPagoPP&#x27;).hasError(&#x27;required&#x27;) || this.fpaypal.get(&#x27;usuarioPagoPP&#x27;).hasError(&#x27;pattern&#x27;)){
+        document.getElementById(&#x27;usuarioPagoPP&#x27;).classList.add(&#x27;is-invalid&#x27;);
+        if (this.fpaypal.get(&#x27;usuarioPagoPP&#x27;).hasError(&#x27;pattern&#x27;)) {
+          document.getElementById(&#x27;usuarioPagoPP&#x27;).nextSibling.textContent&#x3D;&#x27;Formato no válido&#x27;;
+        }
+      }
+      if (this.fpaypal.get(&#x27;clavePP&#x27;).hasError(&#x27;required&#x27;)){
+        document.getElementById(&#x27;clavePP&#x27;).classList.add(&#x27;is-invalid&#x27;);
+      }
+        
+    }else{
+      let butaca &#x3D; (&lt;HTMLInputElement&gt;document.getElementById(&#x27;butacaReservada&#x27;)).value;
+      let data &#x3D; {
+        &#x27;butaca&#x27; : butaca,
+        &#x27;idProyeccion&#x27; : sessionStorage.getItem(&#x27;compra&#x27;),
+        &#x27;idUsuario&#x27; : sessionStorage.getItem(&#x27;idUsuario&#x27;)
+      }
+      this._peticionesServicio.resevaServer(data).subscribe(data&#x3D;&gt;{
+        let altura&#x3D;380;
+        let anchura &#x3D; 630;
+        let y&#x3D;(window.screen.height/2)-(altura/2);
+        let x&#x3D;(window.screen.width/2)-(anchura/2);
+        let w &#x3D; window.open(&#x27;&#x27;,&#x27;&#x27;,&#x27;width&#x3D;&#x27;+anchura+&#x27;,height&#x3D;&#x27;+altura+&#x27;,top&#x3D;&#x27;+y+&#x27;,left&#x3D;&#x27;+x+&#x27;,toolbar&#x3D;no,location&#x3D;no,status&#x3D;no,menubar&#x3D;no,scrollbars&#x3D;no,directories&#x3D;no,resizable&#x3D;no&#x27;);
+        w.document.write(&#x27;Conectando con Paypal ...&#x27;);
+        w.focus();
+        setTimeout(()&#x3D;&gt;{
+          w.close();
+        }, 1500);
+        
+        setTimeout(()&#x3D;&gt;{
+          this.router.navigate([&#x27;&#x27;]);
+        },1600);
+      });
+    }
+  }
+
+  /**
+   * Formulario de pago con tarjeta
+   */
+  procesoDePagoTarjeta(){
+    if (this.ftarjeta.invalid) {
+      this.ftarjeta.reset();
+      if (this.ftarjeta.get(&#x27;numCuenta&#x27;).hasError(&#x27;required&#x27;) || this.ftarjeta.get(&#x27;numCuenta&#x27;).hasError(&#x27;pattern&#x27;)) {
+        document.getElementById(&#x27;numCuenta&#x27;).classList.add(&#x27;is-invalid&#x27;);
+      }
+      if (this.ftarjeta.get(&#x27;mesCaducidad&#x27;).hasError(&#x27;required&#x27;)) {
+        document.getElementById(&#x27;mesCaducidad&#x27;).classList.add(&#x27;is-invalid&#x27;);
+      }
+      if (this.ftarjeta.get(&#x27;anyoCaducidad&#x27;).hasError(&#x27;required&#x27;)) {
+        document.getElementById(&#x27;anyoCaducidad&#x27;).classList.add(&#x27;is-invalid&#x27;);
+      }
+
+      if (this.ftarjeta.get(&#x27;claveCVV&#x27;).hasError(&#x27;required&#x27;) || this.ftarjeta.get(&#x27;claveCVV&#x27;).hasError(&#x27;pattern&#x27;)) {
+        document.getElementById(&#x27;claveCVV&#x27;).classList.add(&#x27;is-invalid&#x27;);
+      }
+    }else{
+      let butaca &#x3D; (&lt;HTMLInputElement&gt;document.getElementById(&#x27;butacaReservada&#x27;)).value;
+      let data &#x3D; {
+        &#x27;butaca&#x27; : butaca,
+        &#x27;idProyeccion&#x27; : sessionStorage.getItem(&#x27;compra&#x27;),
+        &#x27;idUsuario&#x27; : sessionStorage.getItem(&#x27;idUsuario&#x27;)
+      }
+      this._peticionesServicio.resevaServer(data).subscribe(data&#x3D;&gt;{
+        let altura&#x3D;380;
+        let anchura &#x3D; 630;
+        let y&#x3D;(window.screen.height/2)-(altura/2);
+        let x&#x3D;(window.screen.width/2)-(anchura/2);
+        let w &#x3D; window.open(&#x27;&#x27;,&#x27;&#x27;,&#x27;width&#x3D;&#x27;+anchura+&#x27;,height&#x3D;&#x27;+altura+&#x27;,top&#x3D;&#x27;+y+&#x27;,left&#x3D;&#x27;+x+&#x27;,toolbar&#x3D;no,location&#x3D;no,status&#x3D;no,menubar&#x3D;no,scrollbars&#x3D;no,directories&#x3D;no,resizable&#x3D;no&#x27;);
+        w.document.write(&#x27;Conectando con el Banco ...&#x27;);
+        w.focus();
+        setTimeout(()&#x3D;&gt;{
+          w.close();
+        }, 1500);
+        
+        setTimeout(()&#x3D;&gt;{
+          this.router.navigate([&#x27;&#x27;]);
+        },1600);
+      });
+    }
+  }
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;h1 class&#x3D;&quot;text-center mb-3&quot;&gt;Proceso de compra&lt;/h1&gt;
+&lt;div class&#x3D;&quot;row col-md-6 mx-auto&quot;&gt;
+    &lt;div class&#x3D;&quot;col-md-3&quot;&gt;
+        &lt;div *ngFor&#x3D;&quot;let item of this.multimediaInfo&quot;&gt;
+            &lt;div *ngIf&#x3D;&quot;(item.titulo &#x3D;&#x3D; this.reserva[0].titulo)&quot;&gt;
+                &lt;img class&#x3D;&quot;col-12&quot; src&#x3D;&quot;{{item.portada}}&quot; alt&#x3D;&quot;&#x27;Portada de &#x27;+{{item.portada}}&quot;&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;col-md-9&quot;&gt;
+        &lt;h3 class&#x3D;&quot;mb-2&quot;&gt;{{this.reserva[0].titulo}}&lt;/h3&gt;
+        &lt;p&gt;Hora: {{this.reserva[0].hora.substring(0,5)}}&lt;/p&gt;
+        &lt;p&gt;Sala {{this.reserva[0].idSala}}&lt;/p&gt;
+        &lt;div class&#x3D;&quot;form-group mt-3&quot;&gt;
+            &lt;label for&#x3D;&quot;butacaReservada&quot; class&#x3D;&quot;mt-5&quot;&gt;Entradas&lt;/label&gt;
+            &lt;input class&#x3D;&quot;form-control col-4&quot; type&#x3D;&quot;number&quot; name&#x3D;&quot;butacaReservada&quot; id&#x3D;&quot;butacaReservada&quot; max&#x3D;&quot;{{this.reserva[0].libre}}&quot; min&#x3D;&quot;1&quot; value&#x3D;&quot;1&quot; (change)&#x3D;&quot;mostrar(this.reserva[0].precio)&quot;&gt;
+        &lt;/div&gt;
+        
+        &lt;div *ngIf&#x3D;&quot;(this.reserva[0].libre &gt; 10)&quot;&gt;
+            &lt;div class&#x3D;&quot;alert alert-success&quot; role&#x3D;&quot;alert&quot;&gt;
+                Disponibles &lt;span&gt;{{this.reserva[0].libre}}&lt;/span&gt; entradas
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div *ngIf&#x3D;&quot;(this.reserva[0].libre &lt;&#x3D; 10 &amp;&amp; this.reserva[0].libre &gt; 0)&quot;&gt;
+            &lt;div class&#x3D;&quot;alert alert-warning&quot; role&#x3D;&quot;alert&quot;&gt;
+                Disponibles &lt;span&gt;{{this.reserva[0].libre}}&lt;/span&gt; entradas
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div *ngIf&#x3D;&quot;(this.reserva[0].libre &#x3D;&#x3D; 0)&quot;&gt;
+            &lt;div class&#x3D;&quot;alert alert-danger&quot; role&#x3D;&quot;alert&quot;&gt;
+                Disponibles &lt;span&gt;{{this.reserva[0].libre}}&lt;/span&gt; entradas
+            &lt;/div&gt;
+        &lt;/div&gt;
+        
+        &lt;p&gt;Total Precio (IVA Incl.): &lt;span id&#x3D;&quot;precioTotal&quot;&gt;{{this.entradas}}&lt;/span&gt;€&lt;/p&gt;
+
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;accordion col-md-12 my-3&quot; id&#x3D;&quot;accordionPago&quot;&gt;
+        &lt;div class&#x3D;&quot;card&quot;&gt;
+            &lt;div class&#x3D;&quot;card-header&quot; id&#x3D;&quot;headingOnePago&quot;&gt;
+                &lt;h2 class&#x3D;&quot;mb-0&quot;&gt;
+                    &lt;button class&#x3D;&quot;btn btn-link btn-block text-left&quot; type&#x3D;&quot;button&quot; data-toggle&#x3D;&quot;collapse&quot; data-target&#x3D;&quot;#collapseOnePago&quot; aria-expanded&#x3D;&quot;true&quot; aria-controls&#x3D;&quot;collapseOnePago&quot;&gt;
+                        Paypal &lt;i class&#x3D;&quot;fa fa-paypal ml-2&quot; aria-hidden&#x3D;&quot;true&quot;&gt;&lt;/i&gt;
+                    &lt;/button&gt;
+                &lt;/h2&gt;
+            &lt;/div&gt;
+    
+            &lt;div id&#x3D;&quot;collapseOnePago&quot; class&#x3D;&quot;collapse show&quot; aria-labelledby&#x3D;&quot;headingOnePago&quot; data-parent&#x3D;&quot;#accordionPago&quot;&gt;
+                &lt;div class&#x3D;&quot;card-body&quot;&gt;
+                    &lt;form [formGroup]&#x3D;&quot;fpaypal&quot; (ngSubmit)&#x3D;&quot;procesoDePagoPaypal()&quot; id&#x3D;&quot;fpaypal&quot; novalidate&gt;
+                        &lt;div class&#x3D;&quot;form-group&quot;&gt;
+                            &lt;label for&#x3D;&quot;usuarioPagoPP&quot;&gt;Email&lt;/label&gt;
+                            &lt;input type&#x3D;&quot;email&quot; class&#x3D;&quot;form-control&quot; formControlName&#x3D;&quot;usuarioPagoPP&quot; id&#x3D;&quot;usuarioPagoPP&quot;&gt;
+                            &lt;div class&#x3D;&quot;invalid-feedback&quot;&gt;Dato necesario&lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class&#x3D;&quot;form-group&quot;&gt;
+                            &lt;label for&#x3D;&quot;clavePP&quot;&gt;Contraseña&lt;/label&gt;
+                            &lt;input type&#x3D;&quot;password&quot; class&#x3D;&quot;form-control&quot; formControlName&#x3D;&quot;clavePP&quot; id&#x3D;&quot;clavePP&quot;&gt;
+                            &lt;div class&#x3D;&quot;invalid-feedback&quot;&gt;Dato necesario&lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;button type&#x3D;&quot;submit&quot; class&#x3D;&quot;btn btn-success&quot; id&#x3D;&quot;pagoPayPal&quot;&gt;Proceder al pago&lt;/button&gt;
+                    &lt;/form&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;card&quot;&gt;
+            &lt;div class&#x3D;&quot;card-header&quot; id&#x3D;&quot;headingTwoPago&quot;&gt;
+                &lt;h2 class&#x3D;&quot;mb-0&quot;&gt;
+                    &lt;button class&#x3D;&quot;btn btn-link btn-block text-left collapsed&quot; type&#x3D;&quot;button&quot; data-toggle&#x3D;&quot;collapse&quot; data-target&#x3D;&quot;#collapseTwoPago&quot; aria-expanded&#x3D;&quot;false&quot; aria-controls&#x3D;&quot;collapseTwoPago&quot;&gt;
+                        Tarjeta
+                        &lt;i class&#x3D;&quot;fa fa-cc-visa mx-2&quot; aria-hidden&#x3D;&quot;true&quot;&gt;&lt;/i&gt;
+                        &lt;i class&#x3D;&quot;fa fa-cc-mastercard mr-2&quot; aria-hidden&#x3D;&quot;true&quot;&gt;&lt;/i&gt; 
+                        &lt;i class&#x3D;&quot;fa fa-cc-amex&quot; aria-hidden&#x3D;&quot;true&quot;&gt;&lt;/i&gt;
+                    &lt;/button&gt;
+                &lt;/h2&gt;
+            &lt;/div&gt;
+            &lt;div id&#x3D;&quot;collapseTwoPago&quot; class&#x3D;&quot;collapse&quot; aria-labelledby&#x3D;&quot;headingTwoPago&quot; data-parent&#x3D;&quot;#accordionPago&quot;&gt;
+                &lt;div class&#x3D;&quot;card-body&quot;&gt;
+                    &lt;form [formGroup]&#x3D;&quot;ftarjeta&quot; (ngSubmit)&#x3D;&quot;procesoDePagoTarjeta()&quot; id&#x3D;&quot;ftarjeta&quot;&gt;
+                            &lt;div class&#x3D;&quot;form-group mb-2&quot;&gt;
+                                &lt;label for&#x3D;&quot;numCuenta&quot;&gt;Número de cuenta&lt;/label&gt;
+                                &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control col-8&quot; formControlName&#x3D;&quot;numCuenta&quot; id&#x3D;&quot;numCuenta&quot; maxlength&#x3D;&quot;16&quot;&gt;
+                                &lt;div class&#x3D;&quot;invalid-feedback&quot;&gt;Datos incorrectos&lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class&#x3D;&quot;form-row mb-2&quot;&gt;
+                                &lt;label for&#x3D;&quot;mesCaducidad&quot; class&#x3D;&quot;col-2 mt-2&quot;&gt;Caducidad&lt;/label&gt;
+                                &lt;select class&#x3D;&quot;form-control col-1 mr-2&quot; formControlName&#x3D;&quot;mesCaducidad&quot; id&#x3D;&quot;mesCaducidad&quot; [(ngModel)]&#x3D;this.listaMeses[0]&gt;
+                                    &lt;option value&#x3D;&quot;{{item}}&quot; *ngFor&#x3D;&quot;let item of this.listaMeses&quot;&gt;{{item}}&lt;/option&gt;
+                                &lt;/select&gt;
+                                &lt;div class&#x3D;&quot;invalid-feedback&quot;&gt;Datos incorrectos&lt;/div&gt;
+                                &lt;p class&#x3D;&quot;text-center mt-2&quot;&gt;/&lt;/p&gt;
+                                &lt;select class&#x3D;&quot;form-control col-1 ml-2&quot; formControlName&#x3D;&quot;anyoCaducidad&quot; id&#x3D;&quot;anyoCaducidad&quot; [(ngModel)]&#x3D;&quot;this.listaAnyos[0]&quot;&gt;
+                                    &lt;option value&#x3D;&quot;{{item}}&quot; *ngFor&#x3D;&quot;let item of this.listaAnyos&quot;&gt;{{item}}&lt;/option&gt;
+                                &lt;/select&gt;
+                                &lt;div class&#x3D;&quot;invalid-feedback&quot;&gt;Datos incorrectos&lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class&#x3D;&quot;form-row mb-2&quot;&gt;
+                                &lt;label for&#x3D;&quot;claveCVV&quot; class&#x3D;&quot;col-2 mt-2&quot;&gt;CVV&lt;/label&gt;
+                                &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control col-1&quot; formControlName&#x3D;&quot;claveCVV&quot; id&#x3D;&quot;claveCVV&quot; maxlength&#x3D;&quot;3&quot;&gt;
+                                &lt;div class&#x3D;&quot;invalid-feedback&quot;&gt;Datos incorrectos&lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;button type&#x3D;&quot;submit&quot; class&#x3D;&quot;btn btn-success&quot; id&#x3D;&quot;pagoTarjeta&quot;&gt;Proceder al pago&lt;/button&gt;
+                    &lt;/form&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    
+    
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./pago.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">.fa {
+	font-size: 33px;
+	text-align: center;
+	text-decoration: none;
+}
+
+.fa-paypal{
+    color: #169bd7;
+}
+
+.fa-cc-visa{
+    color: #3e5f8a ;
+}
+.fa-cc-mastercard{
+    color: #ff5f00;
+}
+.fa-cc-amex{
+    color:#2e7bb7;
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Leyenda</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Elemento Html</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Componente</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Elemento Html con directiva</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><h1 class="text-center mb-3">Proceso de compra</h1><div class="row col-md-6 mx-auto">    <div class="col-md-3">        <div *ngFor="let item of this.multimediaInfo">            <div *ngIf="(item.titulo == this.reserva[0].titulo)">                <img class="col-12" src="{{item.portada}}" alt="\'Portada de \'+{{item.portada}}">            </div>        </div>    </div>    <div class="col-md-9">        <h3 class="mb-2">{{this.reserva[0].titulo}}</h3>        <p>Hora: {{this.reserva[0].hora.substring(0,5)}}</p>        <p>Sala {{this.reserva[0].idSala}}</p>        <div class="form-group mt-3">            <label for="butacaReservada" class="mt-5">Entradas</label>            <input class="form-control col-4" type="number" name="butacaReservada" id="butacaReservada" max="{{this.reserva[0].libre}}" min="1" value="1" (change)="mostrar(this.reserva[0].precio)">        </div>                <div *ngIf="(this.reserva[0].libre > 10)">            <div class="alert alert-success" role="alert">                Disponibles <span>{{this.reserva[0].libre}}</span> entradas            </div>        </div>        <div *ngIf="(this.reserva[0].libre <= 10 && this.reserva[0].libre > 0)">            <div class="alert alert-warning" role="alert">                Disponibles <span>{{this.reserva[0].libre}}</span> entradas            </div>        </div>        <div *ngIf="(this.reserva[0].libre == 0)">            <div class="alert alert-danger" role="alert">                Disponibles <span>{{this.reserva[0].libre}}</span> entradas            </div>        </div>                <p>Total Precio (IVA Incl.): <span id="precioTotal">{{this.entradas}}</span>€</p>    </div>    <div class="accordion col-md-12 my-3" id="accordionPago">        <div class="card">            <div class="card-header" id="headingOnePago">                <h2 class="mb-0">                    <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOnePago" aria-expanded="true" aria-controls="collapseOnePago">                        Paypal <i class="fa fa-paypal ml-2" aria-hidden="true"></i>                    </button>                </h2>            </div>                <div id="collapseOnePago" class="collapse show" aria-labelledby="headingOnePago" data-parent="#accordionPago">                <div class="card-body">                    <form [formGroup]="fpaypal" (ngSubmit)="procesoDePagoPaypal()" id="fpaypal" novalidate>                        <div class="form-group">                            <label for="usuarioPagoPP">Email</label>                            <input type="email" class="form-control" formControlName="usuarioPagoPP" id="usuarioPagoPP">                            <div class="invalid-feedback">Dato necesario</div>                        </div>                        <div class="form-group">                            <label for="clavePP">Contraseña</label>                            <input type="password" class="form-control" formControlName="clavePP" id="clavePP">                            <div class="invalid-feedback">Dato necesario</div>                        </div>                        <button type="submit" class="btn btn-success" id="pagoPayPal">Proceder al pago</button>                    </form>                </div>            </div>        </div>        <div class="card">            <div class="card-header" id="headingTwoPago">                <h2 class="mb-0">                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwoPago" aria-expanded="false" aria-controls="collapseTwoPago">                        Tarjeta                        <i class="fa fa-cc-visa mx-2" aria-hidden="true"></i>                        <i class="fa fa-cc-mastercard mr-2" aria-hidden="true"></i>                         <i class="fa fa-cc-amex" aria-hidden="true"></i>                    </button>                </h2>            </div>            <div id="collapseTwoPago" class="collapse" aria-labelledby="headingTwoPago" data-parent="#accordionPago">                <div class="card-body">                    <form [formGroup]="ftarjeta" (ngSubmit)="procesoDePagoTarjeta()" id="ftarjeta">                            <div class="form-group mb-2">                                <label for="numCuenta">Número de cuenta</label>                                <input type="text" class="form-control col-8" formControlName="numCuenta" id="numCuenta" maxlength="16">                                <div class="invalid-feedback">Datos incorrectos</div>                            </div>                            <div class="form-row mb-2">                                <label for="mesCaducidad" class="col-2 mt-2">Caducidad</label>                                <select class="form-control col-1 mr-2" formControlName="mesCaducidad" id="mesCaducidad" [(ngModel)]=this.listaMeses[0]>                                    <option value="{{item}}" *ngFor="let item of this.listaMeses">{{item}}</option>                                </select>                                <div class="invalid-feedback">Datos incorrectos</div>                                <p class="text-center mt-2">/</p>                                <select class="form-control col-1 ml-2" formControlName="anyoCaducidad" id="anyoCaducidad" [(ngModel)]="this.listaAnyos[0]">                                    <option value="{{item}}" *ngFor="let item of this.listaAnyos">{{item}}</option>                                </select>                                <div class="invalid-feedback">Datos incorrectos</div>                            </div>                            <div class="form-row mb-2">                                <label for="claveCVV" class="col-2 mt-2">CVV</label>                                <input type="text" class="form-control col-1" formControlName="claveCVV" id="claveCVV" maxlength="3">                                <div class="invalid-feedback">Datos incorrectos</div>                            </div>                        <button type="submit" class="btn btn-success" id="pagoTarjeta">Proceder al pago</button>                    </form>                </div>            </div>        </div>    </div>        </div></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AuthComponent', 'selector': 'app-auth'},{'name': 'CarteleraComponent', 'selector': 'app-cartelera'},{'name': 'CierrasesionComponent', 'selector': 'app-cierrasesion'},{'name': 'ContactoComponent', 'selector': 'app-contacto'},{'name': 'FotoComponent', 'selector': 'app-foto'},{'name': 'IndexComponent', 'selector': 'app-index'},{'name': 'IniciosesionComponent', 'selector': 'app-iniciosesion'},{'name': 'PagoComponent', 'selector': 'app-pago'},{'name': 'RegistroComponent', 'selector': 'app-registro'},{'name': 'TarifasComponent', 'selector': 'app-tarifas'},{'name': 'UserComponent', 'selector': 'app-user'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'PagoComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No hay resultados que coincidan "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'PagoComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

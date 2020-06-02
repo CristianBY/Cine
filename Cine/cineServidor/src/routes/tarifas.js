@@ -1,6 +1,9 @@
 import express from 'express'
 import connection from '../config/connectDB'
 
+/**
+ * @type {express}
+ */
 const router = express.Router()
 
 router.get('/', (req,res) => {

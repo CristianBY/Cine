@@ -1,0 +1,982 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Cine Luna</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/postmark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">Cine Luna</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Escribe para buscar"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Componentes</li>
+  <li>UserComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>Fichero</h3>
+</p>
+<p class="comment">
+    <code>src/app/user/user.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implementa</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Meta datos</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-user</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./user.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./user.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Índice</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Propiedades</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#currentRate">currentRate</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#idUsuario">idUsuario</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#listaPeliculasNoValoradas">listaPeliculasNoValoradas</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#listaReservasNoValoradas">listaReservasNoValoradas</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#listaReservasValoradas">listaReservasValoradas</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#multimediaInfo">multimediaInfo</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Métodos</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#enviaValoracion">enviaValoracion</a>
+                            </li>
+                            <li>
+                                <a href="#getMultimedia">getMultimedia</a>
+                            </li>
+                            <li>
+                                <a href="#getReservasNoValoradas">getReservasNoValoradas</a>
+                            </li>
+                            <li>
+                                <a href="#getReservasValoradas">getReservasValoradas</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(_peticionesServicio: <a href="../injectables/PeticionesServicio.html">PeticionesServicio</a>, _usuarioSesion: <a href="../injectables/UsuarioSesion.html">UsuarioSesion</a>, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="20" class="link-to-prism">src/app/user/user.component.ts:20</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parámetros :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Nombre</td>
+                                                    <td>Tipo</td>
+                                                <td>Opcional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>_peticionesServicio</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/PeticionesServicio.html" target="_self" >PeticionesServicio</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>_usuarioSesion</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/UsuarioSesion.html" target="_self" >UsuarioSesion</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Métodos
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="enviaValoracion"></a>
+                    <span class="name">
+                        <b>
+                            enviaValoracion
+                        </b>
+                        <a href="#enviaValoracion"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>enviaValoracion(titulo)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="69"
+                            class="link-to-prism">src/app/user/user.component.ts:69</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Envía una valoración a la base de datos</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parámetros :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Nombre</td>
+                                    <td>Opcional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>titulo</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getMultimedia"></a>
+                    <span class="name">
+                        <b>
+                            getMultimedia
+                        </b>
+                        <a href="#getMultimedia"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getMultimedia()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="41"
+                            class="link-to-prism">src/app/user/user.component.ts:41</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Pide la información del multimedia.json de assets</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getReservasNoValoradas"></a>
+                    <span class="name">
+                        <b>
+                            getReservasNoValoradas
+                        </b>
+                        <a href="#getReservasNoValoradas"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getReservasNoValoradas()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="59"
+                            class="link-to-prism">src/app/user/user.component.ts:59</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Pide las reservas no valoradas por el usuario</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getReservasValoradas"></a>
+                    <span class="name">
+                        <b>
+                            getReservasValoradas
+                        </b>
+                        <a href="#getReservasValoradas"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getReservasValoradas()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="50"
+                            class="link-to-prism">src/app/user/user.component.ts:50</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Pide las reservas valoradas por el usuario</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="26"
+                            class="link-to-prism">src/app/user/user.component.ts:26</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Propiedades
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="currentRate"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            currentRate</b>
+                            <a href="#currentRate"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Tipo : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Valor por defecto : </i><code>5</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definido en <a href="" data-line="15" class="link-to-prism">src/app/user/user.component.ts:15</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="idUsuario"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            idUsuario</b>
+                            <a href="#idUsuario"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Tipo : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Valor por defecto : </i><code>sessionStorage.getItem(&quot;idUsuario&quot;)</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definido en <a href="" data-line="16" class="link-to-prism">src/app/user/user.component.ts:16</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="listaPeliculasNoValoradas"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            listaPeliculasNoValoradas</b>
+                            <a href="#listaPeliculasNoValoradas"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Tipo : </i>    <code>Array&lt;any&gt;</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Valor por defecto : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definido en <a href="" data-line="19" class="link-to-prism">src/app/user/user.component.ts:19</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="listaReservasNoValoradas"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            listaReservasNoValoradas</b>
+                            <a href="#listaReservasNoValoradas"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Tipo : </i>    <code>Array&lt;any&gt;</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Valor por defecto : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definido en <a href="" data-line="18" class="link-to-prism">src/app/user/user.component.ts:18</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="listaReservasValoradas"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            listaReservasValoradas</b>
+                            <a href="#listaReservasValoradas"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Tipo : </i>    <code>Array&lt;any&gt;</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Valor por defecto : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definido en <a href="" data-line="17" class="link-to-prism">src/app/user/user.component.ts:17</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="multimediaInfo"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            multimediaInfo</b>
+                            <a href="#multimediaInfo"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Tipo : </i>    <code>Array&lt;any&gt;</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Valor por defecto : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definido en <a href="" data-line="20" class="link-to-prism">src/app/user/user.component.ts:20</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import { PeticionesServicio } from &#x27;../../servicios/peticiones.servicio&#x27;;
+import { UsuarioSesion } from &#x27;../../servicios/usuarioSesion&#x27;;
+import { NgbRatingConfig } from &#x27;@ng-bootstrap/ng-bootstrap&#x27;;
+import { StarRatingComponent } from &#x27;ng-starrating&#x27;;
+import { Router } from &#x27;@angular/router&#x27;;
+
+
+@Component({
+  selector: &#x27;app-user&#x27;,
+  templateUrl: &#x27;./user.component.html&#x27;,
+  styleUrls: [&#x27;./user.component.css&#x27;]
+})
+export class UserComponent implements OnInit {
+  public currentRate:number &#x3D; 5;
+  public idUsuario:string &#x3D; sessionStorage.getItem(&quot;idUsuario&quot;);
+  public listaReservasValoradas:Array&lt;any&gt; &#x3D; []; 
+  public listaReservasNoValoradas:Array&lt;any&gt; &#x3D; [];
+  public listaPeliculasNoValoradas:Array&lt;any&gt; &#x3D; [];
+  public multimediaInfo:Array&lt;any&gt; &#x3D; [];
+
+  constructor(private _peticionesServicio: PeticionesServicio, private _usuarioSesion: UsuarioSesion, private router:Router) { 
+
+  }
+
+  ngOnInit(): void {
+    if (sessionStorage.getItem(&#x27;token&#x27;) !&#x3D; &quot;No&quot; &amp;&amp; sessionStorage.getItem(&#x27;token&#x27;) !&#x3D; null) {
+      this.getReservasValoradas();
+      this.getReservasNoValoradas();
+      this.getMultimedia();
+      this._usuarioSesion.comprobarSesion();
+    } else {
+      this.router.navigate([&#x27;&#x27;]);
+    }
+  }
+
+
+  /**
+   * Pide la información del multimedia.json de assets
+   */
+  getMultimedia(){
+    this._peticionesServicio.getMultimediaJSON().subscribe(data&#x3D;&gt;{
+      this.multimediaInfo &#x3D; data;
+    });
+  }
+
+  /**
+   * Pide las reservas valoradas por el usuario
+   */
+  getReservasValoradas(){
+    this._peticionesServicio.getReservasValoradasJSON(this.idUsuario).subscribe(data&#x3D;&gt;{
+      this.listaReservasValoradas &#x3D; data;
+    });
+  }
+
+  /**
+   * Pide las reservas no valoradas por el usuario
+   */
+  getReservasNoValoradas(){
+    this._peticionesServicio.getReservasNoValoradasJSON(this.idUsuario).subscribe(data&#x3D;&gt;{
+      this.listaReservasNoValoradas &#x3D; data;
+    });
+  }
+
+  /**
+   * Envía una valoración a la base de datos
+   * @param titulo 
+   */
+  enviaValoracion(titulo){
+    let data &#x3D; {
+      &#x27;titulo&#x27; : titulo,
+      &#x27;valoracion&#x27; : this.currentRate,
+      &#x27;idUsuario&#x27; : this.idUsuario
+    }
+    this._peticionesServicio.enviaValoracionServer(data).subscribe(data&#x3D;&gt;{});
+    this.router.navigate([&#x27;&#x27;]);
+  }
+  
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;h1 class&#x3D;&quot;text-center&quot;&gt;Tus Películas&lt;/h1&gt;
+&lt;div *ngFor&#x3D;&quot;let item of listaReservasNoValoradas&quot;&gt;
+    &lt;div class&#x3D;&quot;card mb-3 mx-auto&quot; style&#x3D;&quot;max-width: 800px;&quot;&gt;
+        &lt;div class&#x3D;&quot;row no-gutters&quot;&gt;
+            &lt;div class&#x3D;&quot;col-md-4&quot;&gt;
+                &lt;div *ngFor&#x3D;&quot;let item2 of multimediaInfo&quot;&gt;
+                    &lt;div *ngIf&#x3D;&quot;item.titulo &#x3D;&#x3D; item2.titulo&quot;&gt;
+                        &lt;img src&#x3D;&quot;{{item2.portada}}&quot; class&#x3D;&quot;card-img&quot; alt&#x3D;&quot;Portada de {{item2.titulo}}&quot;&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;col-md-8&quot;&gt;
+                &lt;div class&#x3D;&quot;card-body&quot;&gt;
+                    &lt;h5 class&#x3D;&quot;card-title&quot;&gt;{{item.titulo}}&lt;/h5&gt;
+                    &lt;div class&#x3D;&quot;card-text&quot;&gt;
+                        &lt;ngb-rating [(rate)]&#x3D;&quot;currentRate&quot;&gt;
+                            &lt;ng-template let-fill&#x3D;&quot;fill&quot; let-index&#x3D;&quot;index&quot;&gt;
+                            &lt;span class&#x3D;&quot;star&quot; [class.filled]&#x3D;&quot;fill &#x3D;&#x3D;&#x3D; 100&quot; [class.bad]&#x3D;&quot;index &lt; 4&quot;&gt;&amp;#9733;&lt;/span&gt;
+                            &lt;/ng-template&gt;
+                        &lt;/ngb-rating&gt;
+                        &lt;hr&gt;
+                        &lt;pre&gt;Puntuación: &lt;b&gt;{{currentRate}}&lt;/b&gt;&lt;/pre&gt;
+                    &lt;/div&gt;
+                    &lt;div class&#x3D;&quot;card-text&quot;&gt;
+                        &lt;button class&#x3D;&quot;btn btn-success&quot; (click)&#x3D;&quot;enviaValoracion(item.titulo)&quot;&gt;Puntuar&lt;/button&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div *ngFor&#x3D;&quot;let item of listaReservasValoradas&quot;&gt;
+    &lt;div class&#x3D;&quot;card mb-3 mx-auto&quot; style&#x3D;&quot;max-width: 800px;&quot;&gt;
+        &lt;div class&#x3D;&quot;row no-gutters&quot;&gt;
+            &lt;div class&#x3D;&quot;col-md-4&quot;&gt;
+                &lt;div *ngFor&#x3D;&quot;let item2 of multimediaInfo&quot;&gt;
+                    &lt;div *ngIf&#x3D;&quot;item.titulo &#x3D;&#x3D; item2.titulo&quot;&gt;
+                        &lt;img src&#x3D;&quot;{{item2.portada}}&quot; class&#x3D;&quot;card-img&quot; alt&#x3D;&quot;Portada de {{item2.titulo}}&quot;&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;col-md-8&quot;&gt;
+                &lt;div class&#x3D;&quot;card-body&quot;&gt;
+                    &lt;h5 class&#x3D;&quot;card-title&quot;&gt;{{item.titulo}}&lt;/h5&gt;
+                    &lt;div class&#x3D;&quot;card-text&quot;&gt;
+                        &lt;div class&#x3D;&quot;rating&quot;&gt;
+                            &lt;star-rating value&#x3D;&quot;{{item.valoracion}}&quot; totalstars&#x3D;&quot;10&quot; checkedcolor&#x3D;&quot;black&quot; uncheckedcolor&#x3D;&quot;lightgray&quot; size&#x3D;&quot;24px&quot; readonly&#x3D;&quot;false&quot;&gt;&lt;/star-rating&gt;
+                        &lt;/div&gt;
+                        &lt;hr&gt;
+                        &lt;pre&gt;Puntuación: &lt;b&gt;{{item[&#x27;valoracion&#x27;]}}&lt;/b&gt;&lt;/pre&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./user.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">
+/****************/
+/**Rating Stars**/
+/****************/
+
+.star {
+    font-size: 1.5rem;
+    color: #b0c4de;
+}
+.filled {
+    color: #1e90ff;
+}
+.bad {
+    color: #deb0b0;
+}
+.filled.bad {
+    color: #ff1e1e;
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Leyenda</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Elemento Html</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Componente</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Elemento Html con directiva</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><h1 class="text-center">Tus Películas</h1><div *ngFor="let item of listaReservasNoValoradas">    <div class="card mb-3 mx-auto" style="max-width: 800px;">        <div class="row no-gutters">            <div class="col-md-4">                <div *ngFor="let item2 of multimediaInfo">                    <div *ngIf="item.titulo == item2.titulo">                        <img src="{{item2.portada}}" class="card-img" alt="Portada de {{item2.titulo}}">                    </div>                </div>            </div>            <div class="col-md-8">                <div class="card-body">                    <h5 class="card-title">{{item.titulo}}</h5>                    <div class="card-text">                        <ngb-rating [(rate)]="currentRate">                            <ng-template let-fill="fill" let-index="index">                            <span class="star" [class.filled]="fill === 100" [class.bad]="index < 4">&#9733;</span>                            </ng-template>                        </ngb-rating>                        <hr>                        <pre>Puntuación: <b>{{currentRate}}</b></pre>                    </div>                    <div class="card-text">                        <button class="btn btn-success" (click)="enviaValoracion(item.titulo)">Puntuar</button>                    </div>                </div>            </div>        </div>    </div></div><div *ngFor="let item of listaReservasValoradas">    <div class="card mb-3 mx-auto" style="max-width: 800px;">        <div class="row no-gutters">            <div class="col-md-4">                <div *ngFor="let item2 of multimediaInfo">                    <div *ngIf="item.titulo == item2.titulo">                        <img src="{{item2.portada}}" class="card-img" alt="Portada de {{item2.titulo}}">                    </div>                </div>            </div>            <div class="col-md-8">                <div class="card-body">                    <h5 class="card-title">{{item.titulo}}</h5>                    <div class="card-text">                        <div class="rating">                            <star-rating value="{{item.valoracion}}" totalstars="10" checkedcolor="black" uncheckedcolor="lightgray" size="24px" readonly="false"></star-rating>                        </div>                        <hr>                        <pre>Puntuación: <b>{{item[\'valoracion\']}}</b></pre>                    </div>                </div>            </div>        </div>    </div></div></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AuthComponent', 'selector': 'app-auth'},{'name': 'CarteleraComponent', 'selector': 'app-cartelera'},{'name': 'CierrasesionComponent', 'selector': 'app-cierrasesion'},{'name': 'ContactoComponent', 'selector': 'app-contacto'},{'name': 'FotoComponent', 'selector': 'app-foto'},{'name': 'IndexComponent', 'selector': 'app-index'},{'name': 'IniciosesionComponent', 'selector': 'app-iniciosesion'},{'name': 'PagoComponent', 'selector': 'app-pago'},{'name': 'RegistroComponent', 'selector': 'app-registro'},{'name': 'TarifasComponent', 'selector': 'app-tarifas'},{'name': 'UserComponent', 'selector': 'app-user'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'UserComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No hay resultados que coincidan "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'UserComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

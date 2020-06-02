@@ -3,8 +3,15 @@ import connection from '../config/connectDB'
 import md5 from 'md5'
 import jwt from 'jsonwebtoken'
 
+/**
+ * @type {express}
+ */
 const router = express.Router()
 
+/**
+ * Comprueba que el usuario está registrado
+ * @returns Devuelve JSON con la verificación mediante JWT
+ */
 router.post('/', (req,res) => {
     connection.query('SELECT * FROM Usuario WHERE email=? AND psw=?', [req.body.username,md5(req.body.password)], (err,rows) => {
         if (err) {
@@ -34,6 +41,10 @@ router.post('/', (req,res) => {
     })
 })
 
+/**
+ * Obtiene la información de un usuario
+ * @returns Devuelve la información de un usuario
+ */
 router.get('/', (req,res) => {
     
     connection.query('SELECT * FROM Usuario', (err,rows) => {
@@ -47,6 +58,9 @@ router.get('/', (req,res) => {
     
 })
 
+/**
+ * Inserta un nuevo usuario en la BD
+ */
 router.post('/registro', (req,res) => {
     let consulta = 'INSERT INTO Usuario (nombre, apellidos, psw, email, administrador) VALUES (?,?,?,?,?)'
     connection.query(consulta,[req.body.nombre,req.body.apellidos,md5(req.body.password),req.body.email,req.body.administrador], (err,results,fields) => {

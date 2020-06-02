@@ -1,0 +1,3179 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Cine Luna</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/postmark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">Cine Luna</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Escribe para buscar"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Componentes</li>
+  <li>AuthComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>Fichero</h3>
+</p>
+<p class="comment">
+    <code>src/app/auth/auth.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implementa</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Meta datos</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-auth</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./auth.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./auth.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Índice</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Propiedades</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#borrarSesion">borrarSesion</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#faddpelicula">faddpelicula</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#faddsesion">faddsesion</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#faddtarifa">faddtarifa</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#fechaBorrarSesion">fechaBorrarSesion</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#fechaSelectSesion">fechaSelectSesion</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#fmodpelicula">fmodpelicula</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#fmodsesion">fmodsesion</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#fmodtarifa">fmodtarifa</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#listaCalificacion">listaCalificacion</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#listaFechaSesion">listaFechaSesion</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#listaGenero">listaGenero</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#listaPeliculas">listaPeliculas</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#listaSalas">listaSalas</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#listaSesion">listaSesion</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#listaSesionDia">listaSesionDia</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#listaTarifas">listaTarifas</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#pelicula">pelicula</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#peliculaAModificar">peliculaAModificar</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#peliculaBorrada">peliculaBorrada</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#proyeccion">proyeccion</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#selectSesion">selectSesion</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#tarifa">tarifa</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#tarifaBorrada">tarifaBorrada</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#tarifaSeleccionada">tarifaSeleccionada</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Métodos</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#addPelicula">addPelicula</a>
+                            </li>
+                            <li>
+                                <a href="#addSesion">addSesion</a>
+                            </li>
+                            <li>
+                                <a href="#addTarifa">addTarifa</a>
+                            </li>
+                            <li>
+                                <a href="#deletePelicula">deletePelicula</a>
+                            </li>
+                            <li>
+                                <a href="#deleteSesion">deleteSesion</a>
+                            </li>
+                            <li>
+                                <a href="#deleteTarifa">deleteTarifa</a>
+                            </li>
+                            <li>
+                                <a href="#getTodasPeliculas">getTodasPeliculas</a>
+                            </li>
+                            <li>
+                                <a href="#getTodasSalas">getTodasSalas</a>
+                            </li>
+                            <li>
+                                <a href="#getTodasSesiones">getTodasSesiones</a>
+                            </li>
+                            <li>
+                                <a href="#getTodasTarifas">getTodasTarifas</a>
+                            </li>
+                            <li>
+                                <a href="#modificaPelicula">modificaPelicula</a>
+                            </li>
+                            <li>
+                                <a href="#modificaSesion">modificaSesion</a>
+                            </li>
+                            <li>
+                                <a href="#modificaTarifa">modificaTarifa</a>
+                            </li>
+                            <li>
+                                <a href="#muestraSesion">muestraSesion</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#refrescar">refrescar</a>
+                            </li>
+                            <li>
+                                <a href="#seleccionaSesion">seleccionaSesion</a>
+                            </li>
+                            <li>
+                                <a href="#selectPelicula">selectPelicula</a>
+                            </li>
+                            <li>
+                                <a href="#selectTarifa">selectTarifa</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(_peticionesServicio: <a href="../injectables/PeticionesServicio.html">PeticionesServicio</a>, _usuarioSesion: <a href="../injectables/UsuarioSesion.html">UsuarioSesion</a>, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>, fb: <a href="https://angular.io/api/forms/FormBuilder" target="_blank">FormBuilder</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="47" class="link-to-prism">src/app/auth/auth.component.ts:47</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Constructor</p>
+</div>
+                            <div>
+                                    <b>Parámetros :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Nombre</td>
+                                                    <td>Tipo</td>
+                                                <td>Opcional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>_peticionesServicio</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/PeticionesServicio.html" target="_self" >PeticionesServicio</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>_usuarioSesion</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/UsuarioSesion.html" target="_self" >UsuarioSesion</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>fb</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/forms/FormBuilder" target="_blank" >FormBuilder</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Métodos
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addPelicula"></a>
+                    <span class="name">
+                        <b>
+                            addPelicula
+                        </b>
+                        <a href="#addPelicula"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>addPelicula()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="149"
+                            class="link-to-prism">src/app/auth/auth.component.ts:149</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Envía la información necesaria para crear una película en la base de datos</p>
+</div>
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>No devuelve nada</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addSesion"></a>
+                    <span class="name">
+                        <b>
+                            addSesion
+                        </b>
+                        <a href="#addSesion"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>addSesion()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="325"
+                            class="link-to-prism">src/app/auth/auth.component.ts:325</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Envía la información necesaria para crear una sesión en la base de datos</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addTarifa"></a>
+                    <span class="name">
+                        <b>
+                            addTarifa
+                        </b>
+                        <a href="#addTarifa"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>addTarifa()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="432"
+                            class="link-to-prism">src/app/auth/auth.component.ts:432</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Envía la información necesaria para añadir una tarifa en la base de datos</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="deletePelicula"></a>
+                    <span class="name">
+                        <b>
+                            deletePelicula
+                        </b>
+                        <a href="#deletePelicula"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>deletePelicula(peliculaBorrada)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="200"
+                            class="link-to-prism">src/app/auth/auth.component.ts:200</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Borra una película</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parámetros :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Nombre</td>
+                                    <td>Opcional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>peliculaBorrada</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>recarga la página cuando borra la película</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="deleteSesion"></a>
+                    <span class="name">
+                        <b>
+                            deleteSesion
+                        </b>
+                        <a href="#deleteSesion"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>deleteSesion()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="397"
+                            class="link-to-prism">src/app/auth/auth.component.ts:397</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Envía la información necesaria para borrar una sesión en la base de datos</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="deleteTarifa"></a>
+                    <span class="name">
+                        <b>
+                            deleteTarifa
+                        </b>
+                        <a href="#deleteTarifa"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>deleteTarifa()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="488"
+                            class="link-to-prism">src/app/auth/auth.component.ts:488</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Envía la información necesaria para eliminar una tarifa en la base de datos</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getTodasPeliculas"></a>
+                    <span class="name">
+                        <b>
+                            getTodasPeliculas
+                        </b>
+                        <a href="#getTodasPeliculas"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getTodasPeliculas()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="138"
+                            class="link-to-prism">src/app/auth/auth.component.ts:138</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Obtiene todas las películas</p>
+</div>
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>devuelve una lista con todas las películas</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getTodasSalas"></a>
+                    <span class="name">
+                        <b>
+                            getTodasSalas
+                        </b>
+                        <a href="#getTodasSalas"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getTodasSalas()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="127"
+                            class="link-to-prism">src/app/auth/auth.component.ts:127</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Obtiene todas las salas</p>
+</div>
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>devuelve una lista con todas las salas</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getTodasSesiones"></a>
+                    <span class="name">
+                        <b>
+                            getTodasSesiones
+                        </b>
+                        <a href="#getTodasSesiones"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getTodasSesiones()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="282"
+                            class="link-to-prism">src/app/auth/auth.component.ts:282</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Crea una lista con la fecha de todas las proyecciones</p>
+</div>
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>lista con la fecha de todas las proyecciones</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getTodasTarifas"></a>
+                    <span class="name">
+                        <b>
+                            getTodasTarifas
+                        </b>
+                        <a href="#getTodasTarifas"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getTodasTarifas()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="408"
+                            class="link-to-prism">src/app/auth/auth.component.ts:408</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Obtiene todas las tarifas y las carga en una lista</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="modificaPelicula"></a>
+                    <span class="name">
+                        <b>
+                            modificaPelicula
+                        </b>
+                        <a href="#modificaPelicula"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>modificaPelicula()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="210"
+                            class="link-to-prism">src/app/auth/auth.component.ts:210</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Modifica una película</p>
+</div>
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>recarga la página cuando actualiza la película</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="modificaSesion"></a>
+                    <span class="name">
+                        <b>
+                            modificaSesion
+                        </b>
+                        <a href="#modificaSesion"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>modificaSesion()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="360"
+                            class="link-to-prism">src/app/auth/auth.component.ts:360</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Envía la información necesaria para modificar una sesión en la base de datos</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="modificaTarifa"></a>
+                    <span class="name">
+                        <b>
+                            modificaTarifa
+                        </b>
+                        <a href="#modificaTarifa"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>modificaTarifa()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="460"
+                            class="link-to-prism">src/app/auth/auth.component.ts:460</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Envía la información necesaria para modificar una tarifa en la base de datos</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="muestraSesion"></a>
+                    <span class="name">
+                        <b>
+                            muestraSesion
+                        </b>
+                        <a href="#muestraSesion"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>muestraSesion(fecha)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="298"
+                            class="link-to-prism">src/app/auth/auth.component.ts:298</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Crea una lista con las sesiones de ese día</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parámetros :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Nombre</td>
+                                    <td>Opcional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>fecha</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>no devuelve nada </p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="108"
+                            class="link-to-prism">src/app/auth/auth.component.ts:108</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="refrescar"></a>
+                    <span class="name">
+                        <b>
+                            refrescar
+                        </b>
+                        <a href="#refrescar"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>refrescar(boton, boton2)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="499"
+                            class="link-to-prism">src/app/auth/auth.component.ts:499</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Genera un refresco de pantalla cuando hemos realizado una acción CRUD</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parámetros :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Nombre</td>
+                                    <td>Opcional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>boton</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>boton2</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="seleccionaSesion"></a>
+                    <span class="name">
+                        <b>
+                            seleccionaSesion
+                        </b>
+                        <a href="#seleccionaSesion"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>seleccionaSesion()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="313"
+                            class="link-to-prism">src/app/auth/auth.component.ts:313</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Selecciona la sesión que quieres modificar, para rellenar los campos del formulario y modificar lo que desees</p>
+</div>
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="selectPelicula"></a>
+                    <span class="name">
+                        <b>
+                            selectPelicula
+                        </b>
+                        <a href="#selectPelicula"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>selectPelicula(peliculaAModificar)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="265"
+                            class="link-to-prism">src/app/auth/auth.component.ts:265</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Devuelve un objeto película que se usa paara cargar el formulario de modificación rellenando los datos</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parámetros :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Nombre</td>
+                                    <td>Opcional</td>
+                                    <td>Descripción</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>peliculaAModificar</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>titulo de la pelicula que se desea modificar</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>pelicula  Objeto del tipo Pelicula</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="selectTarifa"></a>
+                    <span class="name">
+                        <b>
+                            selectTarifa
+                        </b>
+                        <a href="#selectTarifa"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>selectTarifa()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="419"
+                            class="link-to-prism">src/app/auth/auth.component.ts:419</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Selecciona una tarifa y carga una lista con los datos para ser cargados en un formulario</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Propiedades
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="borrarSesion"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            borrarSesion</b>
+                            <a href="#borrarSesion"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Tipo : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definido en <a href="" data-line="37" class="link-to-prism">src/app/auth/auth.component.ts:37</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="faddpelicula"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            faddpelicula</b>
+                            <a href="#faddpelicula"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Tipo : </i>        <code><a href="https://angular.io/api/forms/FormGroup" target="_blank" >FormGroup</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definido en <a href="" data-line="26" class="link-to-prism">src/app/auth/auth.component.ts:26</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="faddsesion"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            faddsesion</b>
+                            <a href="#faddsesion"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Tipo : </i>        <code><a href="https://angular.io/api/forms/FormGroup" target="_blank" >FormGroup</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definido en <a href="" data-line="38" class="link-to-prism">src/app/auth/auth.component.ts:38</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="faddtarifa"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            faddtarifa</b>
+                            <a href="#faddtarifa"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Tipo : </i>        <code><a href="https://angular.io/api/forms/FormGroup" target="_blank" >FormGroup</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definido en <a href="" data-line="46" class="link-to-prism">src/app/auth/auth.component.ts:46</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="fechaBorrarSesion"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            fechaBorrarSesion</b>
+                            <a href="#fechaBorrarSesion"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Tipo : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definido en <a href="" data-line="36" class="link-to-prism">src/app/auth/auth.component.ts:36</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="fechaSelectSesion"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            fechaSelectSesion</b>
+                            <a href="#fechaSelectSesion"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Tipo : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definido en <a href="" data-line="34" class="link-to-prism">src/app/auth/auth.component.ts:34</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="fmodpelicula"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            fmodpelicula</b>
+                            <a href="#fmodpelicula"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Tipo : </i>        <code><a href="https://angular.io/api/forms/FormGroup" target="_blank" >FormGroup</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definido en <a href="" data-line="27" class="link-to-prism">src/app/auth/auth.component.ts:27</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="fmodsesion"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            fmodsesion</b>
+                            <a href="#fmodsesion"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Tipo : </i>        <code><a href="https://angular.io/api/forms/FormGroup" target="_blank" >FormGroup</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definido en <a href="" data-line="39" class="link-to-prism">src/app/auth/auth.component.ts:39</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="fmodtarifa"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            fmodtarifa</b>
+                            <a href="#fmodtarifa"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Tipo : </i>        <code><a href="https://angular.io/api/forms/FormGroup" target="_blank" >FormGroup</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definido en <a href="" data-line="47" class="link-to-prism">src/app/auth/auth.component.ts:47</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="listaCalificacion"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            listaCalificacion</b>
+                            <a href="#listaCalificacion"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Valor por defecto : </i><code>new Array(&#x27;TP&#x27;,&#x27;+7&#x27;,&#x27;+12&#x27;,&#x27;+16&#x27;,&#x27;+18&#x27;)</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definido en <a href="" data-line="19" class="link-to-prism">src/app/auth/auth.component.ts:19</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="listaFechaSesion"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            listaFechaSesion</b>
+                            <a href="#listaFechaSesion"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Tipo : </i>    <code>Array&lt;any&gt;</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Valor por defecto : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definido en <a href="" data-line="32" class="link-to-prism">src/app/auth/auth.component.ts:32</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="listaGenero"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            listaGenero</b>
+                            <a href="#listaGenero"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Valor por defecto : </i><code>new Array(&#x27;Acción&#x27;,&#x27;Aventura&#x27;,&#x27;Comedia&#x27;,&#x27;Fantasía&#x27;,&#x27;Drama&#x27;,&#x27;Suspense&#x27;,&#x27;Infantil&#x27;,&#x27;Ciencia ficción&#x27;,&#x27;Miedo&#x27;)</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definido en <a href="" data-line="18" class="link-to-prism">src/app/auth/auth.component.ts:18</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="listaPeliculas"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            listaPeliculas</b>
+                            <a href="#listaPeliculas"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Tipo : </i>    <code>Array&lt;any&gt;</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Valor por defecto : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definido en <a href="" data-line="22" class="link-to-prism">src/app/auth/auth.component.ts:22</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="listaSalas"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            listaSalas</b>
+                            <a href="#listaSalas"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Tipo : </i>    <code>Array&lt;any&gt;</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Valor por defecto : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definido en <a href="" data-line="17" class="link-to-prism">src/app/auth/auth.component.ts:17</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="listaSesion"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            listaSesion</b>
+                            <a href="#listaSesion"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Tipo : </i>    <code>Array&lt;any&gt;</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Valor por defecto : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definido en <a href="" data-line="30" class="link-to-prism">src/app/auth/auth.component.ts:30</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="listaSesionDia"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            listaSesionDia</b>
+                            <a href="#listaSesionDia"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Tipo : </i>    <code>Array&lt;any&gt;</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Valor por defecto : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definido en <a href="" data-line="31" class="link-to-prism">src/app/auth/auth.component.ts:31</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="listaTarifas"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            listaTarifas</b>
+                            <a href="#listaTarifas"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Tipo : </i>    <code>Array&lt;any&gt;</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Valor por defecto : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definido en <a href="" data-line="42" class="link-to-prism">src/app/auth/auth.component.ts:42</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="pelicula"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            pelicula</b>
+                            <a href="#pelicula"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Valor por defecto : </i><code>new Pelicula(&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,new Date(),&quot;&quot;)</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definido en <a href="" data-line="23" class="link-to-prism">src/app/auth/auth.component.ts:23</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="peliculaAModificar"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            peliculaAModificar</b>
+                            <a href="#peliculaAModificar"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Tipo : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definido en <a href="" data-line="25" class="link-to-prism">src/app/auth/auth.component.ts:25</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="peliculaBorrada"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            peliculaBorrada</b>
+                            <a href="#peliculaBorrada"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Tipo : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definido en <a href="" data-line="24" class="link-to-prism">src/app/auth/auth.component.ts:24</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="proyeccion"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            proyeccion</b>
+                            <a href="#proyeccion"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Valor por defecto : </i><code>new Proyeccion(&quot;&quot;,new Date(),&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;)</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definido en <a href="" data-line="33" class="link-to-prism">src/app/auth/auth.component.ts:33</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="selectSesion"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            selectSesion</b>
+                            <a href="#selectSesion"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Tipo : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definido en <a href="" data-line="35" class="link-to-prism">src/app/auth/auth.component.ts:35</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="tarifa"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            tarifa</b>
+                            <a href="#tarifa"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Valor por defecto : </i><code>new Tarifa(&quot;&quot;,&quot;&quot;,&quot;&quot;,-1)</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definido en <a href="" data-line="43" class="link-to-prism">src/app/auth/auth.component.ts:43</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="tarifaBorrada"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            tarifaBorrada</b>
+                            <a href="#tarifaBorrada"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Tipo : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definido en <a href="" data-line="44" class="link-to-prism">src/app/auth/auth.component.ts:44</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="tarifaSeleccionada"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            tarifaSeleccionada</b>
+                            <a href="#tarifaSeleccionada"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Tipo : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definido en <a href="" data-line="45" class="link-to-prism">src/app/auth/auth.component.ts:45</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import { PeticionesServicio } from &#x27;../../servicios/peticiones.servicio&#x27;;
+import { UsuarioSesion } from &#x27;src/servicios/usuarioSesion&#x27;;
+import { Pelicula } from &#x27;../model/Pelicula&#x27;;
+import { Proyeccion } from &#x27;../model/Proyeccion&#x27;;
+import { Tarifa } from &#x27;../model/Tarifa&#x27;;
+import { FormGroup, Validators, FormBuilder } from &#x27;@angular/forms&#x27;;
+import { Router } from &#x27;@angular/router&#x27;;
+
+@Component({
+  selector: &#x27;app-auth&#x27;,
+  templateUrl: &#x27;./auth.component.html&#x27;,
+  styleUrls: [&#x27;./auth.component.css&#x27;]
+})
+
+export class AuthComponent implements OnInit {
+  public listaSalas:Array&lt;any&gt; &#x3D; [];
+  public listaGenero &#x3D; new Array(&#x27;Acción&#x27;,&#x27;Aventura&#x27;,&#x27;Comedia&#x27;,&#x27;Fantasía&#x27;,&#x27;Drama&#x27;,&#x27;Suspense&#x27;,&#x27;Infantil&#x27;,&#x27;Ciencia ficción&#x27;,&#x27;Miedo&#x27;);
+  public listaCalificacion &#x3D; new Array(&#x27;TP&#x27;,&#x27;+7&#x27;,&#x27;+12&#x27;,&#x27;+16&#x27;,&#x27;+18&#x27;);
+
+  // Gestión de Películas
+  public listaPeliculas:Array&lt;any&gt; &#x3D; [];
+  public pelicula &#x3D; new Pelicula(&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,new Date(),&quot;&quot;);
+  public peliculaBorrada:string;
+  public peliculaAModificar:string;
+  public faddpelicula: FormGroup;
+  public fmodpelicula: FormGroup;
+
+  // Gestión de proyecciones
+  public listaSesion:Array&lt;any&gt; &#x3D; [];
+  public listaSesionDia:Array&lt;any&gt; &#x3D; [];
+  public listaFechaSesion:Array&lt;any&gt; &#x3D; [];
+  public proyeccion &#x3D; new Proyeccion(&quot;&quot;,new Date(),&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;);
+  public fechaSelectSesion:string;
+  public selectSesion:string;
+  public fechaBorrarSesion:string;
+  public borrarSesion:string;
+  public faddsesion: FormGroup;
+  public fmodsesion: FormGroup;
+
+  // Gestión de tarifas
+  public listaTarifas:Array&lt;any&gt; &#x3D; [];
+  public tarifa &#x3D; new Tarifa(&quot;&quot;,&quot;&quot;,&quot;&quot;,-1);
+  public tarifaBorrada:string;
+  public tarifaSeleccionada:string;
+  public faddtarifa: FormGroup;
+  public fmodtarifa: FormGroup;
+
+  /**
+   * Constructor
+   * @param _peticionesServicio 
+   * @param _usuarioSesion 
+   * @param router 
+   * @param fb 
+   */
+  constructor(private _peticionesServicio: PeticionesServicio,private _usuarioSesion: UsuarioSesion, private router:Router, private fb: FormBuilder) {
+    this.faddpelicula &#x3D; this.fb.group({
+      tituloPeliculaAP: [&#x27;&#x27;,Validators.required],
+      anyoPeliculaAP: [&#x27;&#x27;,[Validators.required,Validators.pattern(&#x27;^19\d\d|20[0-2]\d|2030&#x27;)]],
+      paisPeliculaAP: [&#x27;&#x27;,Validators.required],
+      generoPeliculaAP: [&#x27;&#x27;,Validators.required],
+      calificacionPeliculaAP: [&#x27;&#x27;,Validators.required],
+      duracionPeliculaAP: [&#x27;&#x27;,Validators.required],
+      estrenoPeliculaAP: [&#x27;&#x27;,Validators.required],
+      sinopsisPeliculaAP: [&#x27;&#x27;,Validators.required]
+    });
+
+    this.fmodpelicula &#x3D; this.fb.group({
+      tituloPeliculaMP: [&#x27;&#x27;,Validators.required],
+      anyoPeliculaMP: [&#x27;&#x27;,Validators.required],
+      paisPeliculaMP: [&#x27;&#x27;,Validators.required],
+      generoPeliculaMP: [&#x27;&#x27;,Validators.required],
+      calificacionPeliculaMP: [&#x27;&#x27;,Validators.required],
+      duracionPeliculaMP: [&#x27;&#x27;,Validators.required],
+      estrenoPeliculaMP: [&#x27;&#x27;,Validators.required],
+      sinopsisPeliculaMP: [&#x27;&#x27;,Validators.required]
+    });
+
+    this.faddsesion &#x3D; this.fb.group({
+      fechaSesionAS: [&#x27;&#x27;,Validators.required],
+      horaSesionAS: [&#x27;&#x27;,Validators.required],
+      tituloPeliculaAS: [&#x27;&#x27;,Validators.required],
+      salaSesionAS: [&#x27;&#x27;,Validators.required],
+      tarifaSesionAS: [&#x27;&#x27;,Validators.required]
+    });
+
+    this.fmodsesion &#x3D; this.fb.group({
+      fechaSesionMS: [&#x27;&#x27;,Validators.required],
+      horaSesionMS: [&#x27;&#x27;,Validators.required],
+      tituloPeliculaMS: [&#x27;&#x27;,Validators.required],
+      salaSesionMS: [&#x27;&#x27;,Validators.required],
+      tarifaSesionMS: [&#x27;&#x27;,Validators.required]
+    });
+
+    this.faddtarifa &#x3D; this.fb.group({
+      nombreTarifaAT: [&#x27;&#x27;,Validators.required],
+      descripcionTarifaAT: [&#x27;&#x27;,Validators.required],
+      precioTarifaAT: [&#x27;&#x27;,Validators.required]
+    });
+
+    this.fmodtarifa &#x3D; this.fb.group({
+      nombreTarifaMT: [&#x27;&#x27;,Validators.required],
+      descripcionTarifaMT: [&#x27;&#x27;,Validators.required],
+      precioTarifaMT: [&#x27;&#x27;,Validators.required]
+    });
+  }
+
+  ngOnInit(): void {
+    if (sessionStorage.getItem(&#x27;role&#x27;)&#x3D;&#x3D;&quot;true&quot;) {
+      this.getTodasPeliculas();
+      this.getTodasSesiones();
+      this.getTodasTarifas();
+      this.getTodasSalas();
+    } else {
+      this.router.navigate([&#x27;&#x27;]);
+    }
+    if (sessionStorage.getItem(&#x27;token&#x27;) !&#x3D; &quot;No&quot; &amp;&amp; sessionStorage.getItem(&#x27;token&#x27;) !&#x3D; null) {
+      this._usuarioSesion.comprobarSesion();
+    }
+  }
+
+  /**
+   *  Obtiene todas las salas
+   *  @param sin parámetros
+   *  @returns  devuelve una lista con todas las salas
+   */
+  getTodasSalas(){
+    this._peticionesServicio.getSalasJSON().subscribe(data&#x3D;&gt;{
+      this.listaSalas &#x3D; data;
+    });
+  }
+
+  /**
+   *  Obtiene todas las películas
+   *  @param sin parámetros
+   *  @returns  devuelve una lista con todas las películas
+   */
+  getTodasPeliculas(){
+    this._peticionesServicio.getPeliculaJSON().subscribe(data&#x3D;&gt;{
+      this.listaPeliculas &#x3D; data;
+    });  
+  }
+
+  /**
+   *  Envía la información necesaria para crear una película en la base de datos
+   *  @param sin parámetros
+   *  @returns  No devuelve nada
+   */
+  addPelicula(){
+    if (this.faddpelicula.invalid) {
+      if(this.faddpelicula.get(&#x27;tituloPeliculaAP&#x27;).hasError(&#x27;required&#x27;)){
+        document.getElementById(&#x27;tituloPeliculaAP&#x27;).classList.add(&#x27;is-invalid&#x27;);
+      }
+      if(this.faddpelicula.get(&#x27;anyoPeliculaAP&#x27;).hasError(&#x27;required&#x27;) || this.faddpelicula.get(&#x27;anyoPeliculaAP&#x27;).hasError(&#x27;pattern&#x27;)){
+        document.getElementById(&#x27;anyoPeliculaAP&#x27;).classList.add(&#x27;is-invalid&#x27;);
+        if (this.faddpelicula.get(&#x27;anyoPeliculaAP&#x27;).hasError(&#x27;pattern&#x27;)) {
+          document.getElementById(&#x27;anyoPeliculaAP&#x27;).nextSibling.textContent&#x3D;&#x27;Año no válido&#x27;;
+        }
+      }
+      if(this.faddpelicula.get(&#x27;paisPeliculaAP&#x27;).hasError(&#x27;required&#x27;)){
+        document.getElementById(&#x27;paisPeliculaAP&#x27;).classList.add(&#x27;is-invalid&#x27;);
+      }
+      if(this.faddpelicula.get(&#x27;generoPeliculaAP&#x27;).hasError(&#x27;required&#x27;)){
+        document.getElementById(&#x27;generoPeliculaAP&#x27;).classList.add(&#x27;is-invalid&#x27;);
+      }
+      if(this.faddpelicula.get(&#x27;calificacionPeliculaAP&#x27;).hasError(&#x27;required&#x27;)){
+        document.getElementById(&#x27;calificacionPeliculaAP&#x27;).classList.add(&#x27;is-invalid&#x27;);
+      }
+      if(this.faddpelicula.get(&#x27;duracionPeliculaAP&#x27;).hasError(&#x27;required&#x27;)){
+        document.getElementById(&#x27;duracionPeliculaAP&#x27;).classList.add(&#x27;is-invalid&#x27;);
+      }
+      if(this.faddpelicula.get(&#x27;estrenoPeliculaAP&#x27;).hasError(&#x27;required&#x27;)){
+        document.getElementById(&#x27;estrenoPeliculaAP&#x27;).classList.add(&#x27;is-invalid&#x27;);
+      }
+      if(this.faddpelicula.get(&#x27;sinopsisPeliculaAP&#x27;).hasError(&#x27;required&#x27;)){
+        document.getElementById(&#x27;sinopsisPeliculaAP&#x27;).classList.add(&#x27;is-invalid&#x27;);
+      }
+    }else {  
+      let data &#x3D;{
+        &#x27;titulo&#x27; : this.faddpelicula.value.tituloPeliculaAP,
+        &#x27;anyo&#x27; : this.faddpelicula.value.anyoPeliculaAP,
+        &#x27;pais&#x27; : this.faddpelicula.value.paisPeliculaAP,
+        &#x27;genero&#x27; : this.faddpelicula.value.generoPeliculaAP,
+        &#x27;calificacion&#x27; : this.faddpelicula.value.calificacionPeliculaAP,
+        &#x27;duracion&#x27; : this.faddpelicula.value.duracionPeliculaAP,
+        &#x27;estreno&#x27; : this.faddpelicula.value.estrenoPeliculaAP,
+        &#x27;sinopsis&#x27; : this.faddpelicula.value.sinopsisPeliculaAP
+      }
+      this._peticionesServicio.addPeliculaServer(data).subscribe();
+
+      this.refrescar(&quot;botonAddPelicula&quot;,&quot;botonAddPelicula2&quot;);
+    }  
+  }
+
+  /**
+   *  Borra una película
+   *  @param peliculaBorrada
+   *  @returns  recarga la página cuando borra la película
+   */
+  deletePelicula(peliculaBorrada){
+    this._peticionesServicio.deletePeliculaServer(peliculaBorrada).subscribe(data&#x3D;&gt;{});
+
+    this.refrescar(&quot;botonBorraPelicula&quot;,&quot;botonBorraPelicula2&quot;);
+  }
+  /**
+   * Modifica una película
+   * @param sin parámetros
+   * @returns recarga la página cuando actualiza la película
+   */
+  modificaPelicula(){
+
+    if (this.fmodpelicula.invalid) {
+      if(this.fmodpelicula.get(&#x27;tituloPeliculaMP&#x27;).hasError(&#x27;required&#x27;)){
+        this.fmodpelicula.value.tituloPeliculaMP &#x3D; this.pelicula.titulo;
+      }
+      if(this.fmodpelicula.get(&#x27;anyoPeliculaMP&#x27;).hasError(&#x27;required&#x27;) || this.fmodpelicula.get(&#x27;anyoPeliculaMP&#x27;).hasError(&#x27;pattern&#x27;)){
+        this.fmodpelicula.value.anyoPeliculaMP &#x3D; this.pelicula.anyo;
+        if (this.fmodpelicula.get(&#x27;anyoPeliculaMP&#x27;).hasError(&#x27;pattern&#x27;)) {
+          document.getElementById(&#x27;anyoPeliculaMP&#x27;).classList.add(&#x27;is-invalid&#x27;);
+        }
+      }
+      if(this.fmodpelicula.get(&#x27;paisPeliculaMP&#x27;).hasError(&#x27;required&#x27;)){
+        this.fmodpelicula.value.paisPeliculaMP &#x3D; this.pelicula.pais;
+      }
+      if(this.fmodpelicula.get(&#x27;generoPeliculaMP&#x27;).hasError(&#x27;required&#x27;)){
+        this.fmodpelicula.value.generoPeliculaMP &#x3D; this.pelicula.genero;
+      }
+      if(this.fmodpelicula.get(&#x27;calificacionPeliculaMP&#x27;).hasError(&#x27;required&#x27;)){
+        this.fmodpelicula.value.calificacionPeliculaMP &#x3D; this.pelicula.calificacion;
+      }
+      if(this.fmodpelicula.get(&#x27;duracionPeliculaMP&#x27;).hasError(&#x27;required&#x27;)){
+        this.fmodpelicula.value.duracionPeliculaMP &#x3D; this.pelicula.duracion;
+      }
+      if(this.fmodpelicula.get(&#x27;estrenoPeliculaMP&#x27;).hasError(&#x27;required&#x27;)){
+        this.fmodpelicula.value.estrenoPeliculaMP &#x3D; this.pelicula.estreno;
+      }
+      if(this.fmodpelicula.get(&#x27;sinopsisPeliculaMP&#x27;).hasError(&#x27;required&#x27;)){
+        this.fmodpelicula.value.sinopsisPeliculaMP &#x3D; this.pelicula.sinopsis;
+      }
+    }
+    if (!this.fmodpelicula.get(&#x27;anyoPeliculaMP&#x27;).hasError(&#x27;pattern&#x27;)) {
+      let data &#x3D;{
+        &#x27;titulo&#x27; : this.peliculaAModificar,
+        &#x27;tituloNuevo&#x27; : this.fmodpelicula.value.tituloPeliculaMP,
+        &#x27;anyo&#x27; : this.fmodpelicula.value.anyoPeliculaMP,
+        &#x27;pais&#x27; : this.fmodpelicula.value.paisPeliculaMP,
+        &#x27;genero&#x27; : this.fmodpelicula.value.generoPeliculaMP,
+        &#x27;calificacion&#x27; : this.fmodpelicula.value.calificacionPeliculaMP,
+        &#x27;duracion&#x27; : this.fmodpelicula.value.duracionPeliculaMP,
+        &#x27;estreno&#x27; : this.fmodpelicula.value.estrenoPeliculaMP,
+        &#x27;sinopsis&#x27; : this.fmodpelicula.value.sinopsisPeliculaMP
+      }
+      this._peticionesServicio.modificaPeliculaServer(data).subscribe();
+
+      this.refrescar(&quot;botonModificaPelicula&quot;,&quot;botonModificaPelicula2&quot;);
+    }
+
+  }
+
+  /**
+   *  Devuelve un objeto película que se usa paara cargar el formulario de modificación rellenando los datos
+   *  @param peliculaAModificar titulo de la pelicula que se desea modificar
+   *  @returns  pelicula  Objeto del tipo Pelicula
+   */
+  selectPelicula(peliculaAModificar){
+    this.listaPeliculas.forEach(element &#x3D;&gt; {
+      if (element[&#x27;titulo&#x27;] &#x3D;&#x3D; peliculaAModificar ) {
+        this.pelicula &#x3D; new Pelicula(element[&#x27;titulo&#x27;],element[&#x27;anyo&#x27;],element[&#x27;pais&#x27;],element[&#x27;genero&#x27;],element[&#x27;calificacion&#x27;],element[&#x27;duracion&#x27;],element[&#x27;estreno&#x27;],element[&#x27;sinopsis&#x27;]);
+        document.getElementById(&quot;fmodpelicula&quot;).removeAttribute(&quot;hidden&quot;); // muestra el formulario una vez a sido seleccionada la película a modificar
+      }
+    });
+
+  }
+
+  // Sesiones - Proyección
+
+  /**
+   * Crea una lista con la fecha de todas las proyecciones
+   * @param sin parámetros
+   * @returns lista con la fecha de todas las proyecciones
+   */
+  getTodasSesiones(){
+    this._peticionesServicio.getSesionesJSON().subscribe(data&#x3D;&gt;{
+      this.listaSesion &#x3D; data;
+      this.listaSesion.forEach(element &#x3D;&gt; {
+        if (!this.listaFechaSesion.includes(element[&#x27;fecha&#x27;])) {
+          this.listaFechaSesion.push(element[&#x27;fecha&#x27;]);
+        }
+      });
+    });
+  }
+
+  /**
+   * Crea una lista con las sesiones de ese día
+   * @param fecha
+   * @returns no devuelve nada 
+   */
+  muestraSesion(fecha){
+    this.listaSesionDia&#x3D;[]; //Refresco de lista para el cambio del día
+    Date.parse(fecha);
+    this.listaSesion.forEach(element &#x3D;&gt; {
+      if(element[&#x27;fecha&#x27;]  &#x3D;&#x3D; fecha){
+        this.listaSesionDia.push(element);
+      }
+    });
+  }
+
+  /**
+   * Selecciona la sesión que quieres modificar, para rellenar los campos del formulario y modificar lo que desees
+   * @param sin parámetros
+   * @returns
+   */
+  seleccionaSesion(){ 
+    this.listaSesion.forEach(element &#x3D;&gt; {
+      if (element[&#x27;idProyeccion&#x27;] &#x3D;&#x3D; this.selectSesion ) {
+        this.proyeccion &#x3D; new Proyeccion(element[&#x27;idProyeccion&#x27;],element[&#x27;fecha&#x27;],element[&#x27;hora&#x27;],element[&#x27;titulo&#x27;],element[&#x27;idSala&#x27;],element[&#x27;idTarifa&#x27;]);
+        document.getElementById(&quot;fmodsesion&quot;).removeAttribute(&quot;hidden&quot;); // muestra el formulario una vez a sido seleccionada la sesion a modificar
+      }
+    });
+  } 
+  /**
+   * Envía la información necesaria para crear una sesión en la base de datos
+   * @param sin parametros
+   */
+  addSesion(){
+    if (this.faddsesion.invalid) {
+      if(this.faddsesion.get(&#x27;tituloPeliculaAS&#x27;).hasError(&#x27;required&#x27;)){
+        document.getElementById(&#x27;tituloPeliculaAS&#x27;).classList.add(&#x27;is-invalid&#x27;);
+      }
+      if(this.faddsesion.get(&#x27;fechaSesionAS&#x27;).hasError(&#x27;required&#x27;)){
+        document.getElementById(&#x27;fechaSesionAS&#x27;).classList.add(&#x27;is-invalid&#x27;);
+      }
+      if(this.faddsesion.get(&#x27;horaSesionAS&#x27;).hasError(&#x27;required&#x27;)){
+        document.getElementById(&#x27;horaSesionAS&#x27;).classList.add(&#x27;is-invalid&#x27;);
+      }
+      if(this.faddsesion.get(&#x27;salaSesionAS&#x27;).hasError(&#x27;required&#x27;)){
+        document.getElementById(&#x27;salaSesionAS&#x27;).classList.add(&#x27;is-invalid&#x27;);
+      }
+      if(this.faddsesion.get(&#x27;tarifaSesionAS&#x27;).hasError(&#x27;required&#x27;)){
+        document.getElementById(&#x27;tarifaSesionAS&#x27;).classList.add(&#x27;is-invalid&#x27;);
+      }
+
+    }else {
+      let data &#x3D;{
+        &#x27;titulo&#x27; : this.faddsesion.value.tituloPeliculaAS,
+        &#x27;fecha&#x27; : this.faddsesion.value.fechaSesionAS,
+        &#x27;hora&#x27; : this.faddsesion.value.horaSesionAS,
+        &#x27;idSala&#x27; : this.faddsesion.value.salaSesionAS,
+        &#x27;idTarifa&#x27; : this.faddsesion.value.tarifaSesionAS
+      }
+      this._peticionesServicio.addSesionServer(data).subscribe();
+
+      this.refrescar(&quot;botonAddSesion&quot;,&quot;botonAddSesion2&quot;);
+    }
+  }
+  /**
+   * Envía la información necesaria para modificar una sesión en la base de datos
+   * @param sin parametros
+   */
+  modificaSesion(){
+    if (this.faddsesion.invalid) {
+      if(this.faddsesion.get(&#x27;tituloPeliculaMS&#x27;).hasError(&#x27;required&#x27;)){
+        this.fmodpelicula.value.tituloPeliculaMS &#x3D; this.proyeccion.titulo;
+      }
+      if(this.faddsesion.get(&#x27;fechaSesionMS&#x27;).hasError(&#x27;required&#x27;)){
+        this.fmodpelicula.value.fechaSesionMS &#x3D; this.proyeccion.fecha;
+      }
+      if(this.faddsesion.get(&#x27;horaSesionMS&#x27;).hasError(&#x27;required&#x27;)){
+        this.fmodpelicula.value.horaSesionMS &#x3D; this.proyeccion.hora;
+      }
+      if(this.faddsesion.get(&#x27;salaSesionMS&#x27;).hasError(&#x27;required&#x27;)){
+        this.fmodpelicula.value.salaSesionMS &#x3D; this.proyeccion.idSala;
+      }
+      if(this.faddsesion.get(&#x27;tarifaSesionMS&#x27;).hasError(&#x27;required&#x27;)){
+        this.fmodpelicula.value.tarifaSesionMS &#x3D; this.proyeccion.idTarifa;
+      }
+
+    }
+    let data &#x3D;{
+      &#x27;idProyeccion&#x27; : this.proyeccion.idProyeccion,
+      &#x27;titulo&#x27; : this.fmodsesion.value.tituloPeliculaMS,
+      &#x27;fecha&#x27; : this.fmodsesion.value.fechaSesionMS,
+      &#x27;hora&#x27; : this.fmodsesion.value.horaSesionMS,
+      &#x27;idSala&#x27; : this.fmodsesion.value.idSalaMS,
+      &#x27;idTarifa&#x27; : this.fmodsesion.value.idTarifaMS
+    }
+    this._peticionesServicio.modificaSesionServer(data).subscribe();
+
+    this.refrescar(&quot;botonModificaSesion&quot;,&quot;botonModificaSesion2&quot;);
+
+  }
+
+  /**
+   * Envía la información necesaria para borrar una sesión en la base de datos
+   * @param sin parametros
+   */
+  deleteSesion(){
+    this._peticionesServicio.deleteSesionServer(this.borrarSesion).subscribe();
+
+    this.refrescar(&quot;botonBorraSesion&quot;,&quot;botonBorraSesion2&quot;);
+  }
+
+  // Tarifas
+  /**
+   * Obtiene todas las tarifas y las carga en una lista
+   * @param sin parametros
+   */
+  getTodasTarifas(){
+    this._peticionesServicio.getTarifasJSON().subscribe(data&#x3D;&gt;{
+      this.listaTarifas &#x3D; data;
+    });
+
+  }
+
+  /**
+   * Selecciona una tarifa y carga una lista con los datos para ser cargados en un formulario
+   * @param sin parametros
+   */
+  selectTarifa() {
+    this.listaTarifas.forEach(element &#x3D;&gt; {
+      if (element[&#x27;idTarifa&#x27;] &#x3D;&#x3D; this.tarifaSeleccionada ) {
+        this.tarifa &#x3D; new Tarifa(element[&#x27;idTarifa&#x27;],element[&#x27;nombre&#x27;],element[&#x27;descripcion&#x27;],element[&#x27;precio&#x27;]);
+        document.getElementById(&quot;fmodtarifa&quot;).removeAttribute(&quot;hidden&quot;); // muestra el formulario una vez a sido seleccionada la sesion a modificar
+      }
+    });
+  }
+
+  /**
+   * Envía la información necesaria para añadir una tarifa en la base de datos
+   * @param sin parametros
+   */
+  addTarifa(){
+    if (this.faddtarifa.invalid) {
+      if(this.faddtarifa.get(&#x27;nombreTarifaAT&#x27;).hasError(&#x27;required&#x27;)){
+        document.getElementById(&#x27;nombreTarifaAT&#x27;).classList.add(&#x27;is-invalid&#x27;);
+      }
+      if(this.faddtarifa.get(&#x27;descripcionTarifaAT&#x27;).hasError(&#x27;required&#x27;)){
+        document.getElementById(&#x27;descripcionTarifaAT&#x27;).classList.add(&#x27;is-invalid&#x27;);
+      }
+      if(this.faddtarifa.get(&#x27;precioTarifaAT&#x27;).hasError(&#x27;required&#x27;)){
+        document.getElementById(&#x27;precioTarifaAT&#x27;).classList.add(&#x27;is-invalid&#x27;);
+      }
+      
+    }else {
+      let data &#x3D;{
+        &#x27;nombre&#x27; : this.faddtarifa.value.nombreTarifaAT,
+        &#x27;descripcion&#x27; : this.faddtarifa.value.descripcionTarifaAT,
+        &#x27;precio&#x27; : this.faddtarifa.value.precioTarifaAT
+      }
+      this._peticionesServicio.addTarifaServer(data).subscribe();
+
+      this.refrescar(&quot;botonAddTarifa&quot;,&quot;botonAddTarifa2&quot;);
+    }
+  }
+
+  /**
+   * Envía la información necesaria para modificar una tarifa en la base de datos
+   * @param sin parametros
+   */
+  modificaTarifa(){
+    if (this.faddtarifa.invalid) {
+      if(this.faddtarifa.get(&#x27;nombreTarifaAT&#x27;).hasError(&#x27;required&#x27;)){
+        this.fmodtarifa.value.nombreTarifaMT &#x3D; this.tarifa.nombre;
+      }
+      if(this.faddtarifa.get(&#x27;descripcionTarifaAT&#x27;).hasError(&#x27;required&#x27;)){
+        this.fmodtarifa.value.descripcionTarifaMT &#x3D; this.tarifa.descripcion;
+      }
+      if(this.faddtarifa.get(&#x27;precioTarifaAT&#x27;).hasError(&#x27;required&#x27;)){
+        this.fmodtarifa.value.precioTarifaMT &#x3D; this.tarifa.precio;
+      }    
+    }
+    let data &#x3D;{
+      &#x27;nombre&#x27; : this.fmodtarifa.value.nombreTarifaMT,
+      &#x27;descripcion&#x27; : this.fmodtarifa.value.descripcionTarifaMT,
+      &#x27;precio&#x27; : this.fmodtarifa.value.precioTarifaMT,
+      &#x27;idTarifa&#x27; : this.tarifa.idTarifa
+    }
+    this._peticionesServicio.modificaTarifaServer(data).subscribe();
+
+    this.refrescar(&quot;botonModTarifa&quot;,&quot;botonModTarifa2&quot;);
+
+  }
+  
+  /**
+   * Envía la información necesaria para eliminar una tarifa en la base de datos
+   * @param sin parametros
+   */
+  deleteTarifa(){
+    this._peticionesServicio.deleteTarifaServer(this.tarifaBorrada).subscribe();
+    
+    this.refrescar(&quot;botonBorraTarifa&quot;,&quot;botonBorraTarifa2&quot;);
+  }
+
+  /**
+   * Genera un refresco de pantalla cuando hemos realizado una acción CRUD
+   * @param boton 
+   * @param boton2 
+   */
+  refrescar(boton,boton2){
+    document.getElementById(boton).style.display&#x3D;&quot;none&quot;;
+    document.getElementById(boton2).style.display&#x3D;&quot;inline&quot;;
+    setInterval(() &#x3D;&gt; {
+      window.location.reload();
+    },2000);
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;h1 class&#x3D;&quot;text-center mb-4&quot;&gt;Administración&lt;/h1&gt;
+&lt;nav&gt;
+    &lt;div class&#x3D;&quot;nav nav-tabs&quot; id&#x3D;&quot;nav-tab-admin&quot; role&#x3D;&quot;tablist&quot;&gt;
+        &lt;a class&#x3D;&quot;nav-item nav-link active&quot; id&#x3D;&quot;nav-peliculas-tab&quot; data-toggle&#x3D;&quot;tab&quot; href&#x3D;&quot;#nav-peliculas&quot; role&#x3D;&quot;tab&quot; aria-controls&#x3D;&quot;nav-peliculas&quot; aria-selected&#x3D;&quot;true&quot;&gt;Películas&lt;/a&gt;
+        &lt;a class&#x3D;&quot;nav-item nav-link&quot; id&#x3D;&quot;nav-sesiones-tab&quot; data-toggle&#x3D;&quot;tab&quot; href&#x3D;&quot;#nav-sesiones&quot; role&#x3D;&quot;tab&quot; aria-controls&#x3D;&quot;nav-sesiones&quot; aria-selected&#x3D;&quot;false&quot;&gt;Sesiones&lt;/a&gt;
+        &lt;a class&#x3D;&quot;nav-item nav-link&quot; id&#x3D;&quot;nav-tarifas-tab&quot; data-toggle&#x3D;&quot;tab&quot; href&#x3D;&quot;#nav-tarifas&quot; role&#x3D;&quot;tab&quot; aria-controls&#x3D;&quot;nav-tarifas&quot; aria-selected&#x3D;&quot;false&quot;&gt;Tarifas&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;
+&lt;div class&#x3D;&quot;tab-content&quot; id&#x3D;&quot;nav-tab-adminContent&quot;&gt;
+
+    &lt;!-- Administración de Películas --&gt;
+    &lt;div class&#x3D;&quot;tab-pane fade show active&quot; id&#x3D;&quot;nav-peliculas&quot; role&#x3D;&quot;tabpanel&quot; aria-labelledby&#x3D;&quot;nav-peliculas-tab&quot;&gt;
+        &lt;div class&#x3D;&quot;accordion col-md-6 mr-auto ml-auto mt-5&quot; id&#x3D;&quot;accordionPeliculas&quot;&gt;
+            &lt;!-- Comienzo de Añadir películas --&gt;
+            &lt;div class&#x3D;&quot;card&quot;&gt;
+                &lt;div class&#x3D;&quot;card-header bg-info&quot; id&#x3D;&quot;headingOnePeliculas&quot;&gt;
+                    &lt;h2 class&#x3D;&quot;mb-0&quot;&gt;
+                        &lt;button class&#x3D;&quot;btn btn-link btn-block text-left text-white font-weight-bold&quot; type&#x3D;&quot;button&quot; data-toggle&#x3D;&quot;collapse&quot; data-target&#x3D;&quot;#collapseOnePeliculas&quot; aria-expanded&#x3D;&quot;true&quot; aria-controls&#x3D;&quot;collapseOnePeliculas&quot;&gt;
+                            Añadir
+                        &lt;/button&gt;
+                    &lt;/h2&gt;
+                &lt;/div&gt;
+        
+                &lt;div id&#x3D;&quot;collapseOnePeliculas&quot; class&#x3D;&quot;collapse show&quot; aria-labelledby&#x3D;&quot;headingOnePeliculas&quot; data-parent&#x3D;&quot;#accordionPeliculas&quot;&gt;
+                    &lt;div class&#x3D;&quot;card-body&quot;&gt;
+                        &lt;form [formGroup]&#x3D;&quot;faddpelicula&quot; (ngSubmit)&#x3D;&quot;addPelicula()&quot;&gt;&lt;!--titulo, anyo, pais, genero, calificacion, duracion, estreno, sinopsis--&gt;
+                            &lt;div class&#x3D;&quot;form-group&quot;&gt;
+                                &lt;label for&#x3D;&quot;tituloPeliculaAP&quot;&gt;Título&lt;/label&gt;
+                                &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; formControlName&#x3D;&quot;tituloPeliculaAP&quot; id&#x3D;&quot;tituloPeliculaAP&quot;&gt;
+                                &lt;div class&#x3D;&quot;invalid-feedback&quot;&gt;Rellene el campo&lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class&#x3D;&quot;form-row&quot;&gt;
+                                &lt;div class&#x3D;&quot;form-group col-md-4&quot;&gt;
+                                    &lt;label for&#x3D;&quot;anyoPeliculaAP&quot;&gt;Año&lt;/label&gt;
+                                    &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; formControlName&#x3D;&quot;anyoPeliculaAP&quot; id&#x3D;&quot;anyoPeliculaAP&quot; maxlength&#x3D;&quot;4&quot;&gt;
+                                    &lt;div class&#x3D;&quot;invalid-feedback&quot;&gt;Rellene el campo&lt;/div&gt;
+                                &lt;/div&gt;
+                                &lt;div class&#x3D;&quot;form-group col-md-4&quot;&gt;
+                                    &lt;label for&#x3D;&quot;paisPeliculaAP&quot;&gt;País&lt;/label&gt;
+                                    &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; formControlName&#x3D;&quot;paisPeliculaAP&quot; id&#x3D;&quot;paisPeliculaAP&quot;&gt;
+                                    &lt;div class&#x3D;&quot;invalid-feedback&quot;&gt;Rellene el campo&lt;/div&gt;
+                                &lt;/div&gt;
+                                &lt;div class&#x3D;&quot;form-group col-md-4&quot;&gt;
+                                    &lt;label for&#x3D;&quot;generoPeliculaAP&quot;&gt;Género&lt;/label&gt;
+                                    &lt;select formControlName&#x3D;&quot;generoPeliculaAP&quot; id&#x3D;&quot;generoPeliculaAP&quot; class&#x3D;&quot;form-control&quot;&gt;
+                                        &lt;option *ngFor&#x3D;&quot;let item of this.listaGenero&quot; value&#x3D;&#x27;{{item}}&#x27;&gt;{{item}}&lt;/option&gt;
+                                    &lt;/select&gt;
+                                    &lt;div class&#x3D;&quot;invalid-feedback&quot;&gt;Seleccione un campo&lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class&#x3D;&quot;form-row&quot;&gt;
+                                &lt;div class&#x3D;&quot;form-group col-md-4&quot;&gt;
+                                    &lt;label for&#x3D;&quot;calificacionPeliculaAP&quot;&gt;Calificación&lt;/label&gt;
+                                    &lt;select formControlName&#x3D;&quot;calificacionPeliculaAP&quot; id&#x3D;&quot;calificacionPeliculaAP&quot; class&#x3D;&quot;form-control&quot;&gt;
+                                        &lt;option *ngFor&#x3D;&quot;let item of this.listaCalificacion&quot; value&#x3D;&#x27;{{item}}&#x27;&gt;{{item}}&lt;/option&gt;
+                                    &lt;/select&gt;
+                                    &lt;div class&#x3D;&quot;invalid-feedback&quot;&gt;Seleccione un campo&lt;/div&gt;
+                                &lt;/div&gt;
+                                &lt;div class&#x3D;&quot;form-group col-md-4&quot;&gt;
+                                    &lt;label for&#x3D;&quot;duracionPeliculaAP&quot;&gt;Duración&lt;/label&gt;
+                                    &lt;input type&#x3D;&quot;number&quot; min&#x3D;&quot;0&quot; class&#x3D;&quot;form-control&quot; formControlName&#x3D;&quot;duracionPeliculaAP&quot; id&#x3D;&quot;duracionPeliculaAP&quot;&gt;
+                                    &lt;div class&#x3D;&quot;invalid-feedback&quot;&gt;Rellene el campo&lt;/div&gt;
+                                &lt;/div&gt;
+                                &lt;div class&#x3D;&quot;form-group col-md-4&quot;&gt;
+                                    &lt;label for&#x3D;&quot;estrenoPeliculaAP&quot;&gt;Estreno&lt;/label&gt;
+                                    &lt;input type&#x3D;&quot;date&quot; class&#x3D;&quot;form-control&quot; formControlName&#x3D;&quot;estrenoPeliculaAP&quot; id&#x3D;&quot;estrenoPeliculaAP&quot;&gt;
+                                    &lt;div class&#x3D;&quot;invalid-feedback&quot;&gt;Rellene el campo&lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class&#x3D;&quot;form-group&quot;&gt;
+                                &lt;label for&#x3D;&quot;sinopsisPeliculaAP&quot;&gt;Sinopsis&lt;/label&gt;
+                                &lt;textarea class&#x3D;&quot;form-control&quot; formControlName&#x3D;&quot;sinopsisPeliculaAP&quot; id&#x3D;&quot;sinopsisPeliculaAP&quot; rows&#x3D;&quot;3&quot; requied&gt;&lt;/textarea&gt;
+                                &lt;div class&#x3D;&quot;invalid-feedback&quot;&gt;Rellene el campo&lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;button type&#x3D;&quot;submit&quot; class&#x3D;&quot;btn btn-success&quot; id&#x3D;&quot;botonAddPelicula&quot;&gt;Añadir&lt;/button&gt;
+                            &lt;button class&#x3D;&quot;btn btn-primary&quot; type&#x3D;&quot;button&quot; id&#x3D;&quot;botonAddPelicula2&quot; disabled style&#x3D;&quot;display: none;&quot;&gt;
+                                &lt;span class&#x3D;&quot;spinner-border spinner-border-sm&quot; role&#x3D;&quot;status&quot; aria-hidden&#x3D;&quot;true&quot;&gt;&lt;/span&gt;
+                                Añadiendo...
+                            &lt;/button&gt;
+                        &lt;/form&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;!--Fin de Añadir Películas--&gt;
+
+            &lt;!-- Inicio Modificar películas --&gt;
+            &lt;div class&#x3D;&quot;card&quot;&gt;
+                &lt;div class&#x3D;&quot;card-header bg-info&quot; id&#x3D;&quot;headingTwoPeliculas&quot;&gt;
+                    &lt;h2 class&#x3D;&quot;mb-0&quot;&gt;
+                        &lt;button class&#x3D;&quot;btn btn-link btn-block text-left text-white font-weight-bold collapsed&quot; type&#x3D;&quot;button&quot; data-toggle&#x3D;&quot;collapse&quot; data-target&#x3D;&quot;#collapseTwoPeliculas&quot; aria-expanded&#x3D;&quot;false&quot; aria-controls&#x3D;&quot;collapseTwoPeliculas&quot;&gt;
+                            Modificar
+                        &lt;/button&gt;
+                    &lt;/h2&gt;
+                &lt;/div&gt;
+                &lt;div id&#x3D;&quot;collapseTwoPeliculas&quot; class&#x3D;&quot;collapse&quot; aria-labelledby&#x3D;&quot;headingTwoPeliculas&quot; data-parent&#x3D;&quot;#accordionPeliculas&quot;&gt;
+                    &lt;div class&#x3D;&quot;card-body&quot;&gt;
+                        &lt;form #fselectpelicula&#x3D;&quot;ngForm&quot; (ngSubmit)&#x3D;&quot;selectPelicula(peliculaAModificar)&quot;&gt;
+                            &lt;div class&#x3D;&quot;row mb-3 mx-auto&quot;&gt;
+                                &lt;select class&#x3D;&quot;form-control col-4 mr-3&quot; [(ngModel)]&#x3D;&quot;peliculaAModificar&quot; [ngModelOptions]&#x3D;&quot;{standalone: true}&quot; id&#x3D;&quot;peliculaAModificar&quot;&gt;
+                                    &lt;option selected&gt;--- Selecciona una película ---&lt;/option&gt;
+                                    &lt;option *ngFor&#x3D;&quot;let item of listaPeliculas&quot; &gt;{{item.titulo}}&lt;/option&gt;
+                                &lt;/select&gt;
+                                &lt;button type&#x3D;&quot;submit&quot; class&#x3D;&quot;btn btn-info&quot; id&#x3D;&quot;selectPeliculaMod&quot;&gt;Selecciona&lt;/button&gt;
+                            &lt;/div&gt;
+                        &lt;/form&gt;
+                        &lt;form [formGroup]&#x3D;&quot;fmodpelicula&quot; (ngSubmit)&#x3D;&quot;modificaPelicula()&quot; id&#x3D;&quot;fmodpelicula&quot; hidden&gt;&lt;!--titulo, anyo, pais, genero, calificacion, duracion, estreno, sinopsis--&gt;
+                            &lt;div class&#x3D;&quot;form-group&quot;&gt;
+                                &lt;label for&#x3D;&quot;tituloPeliculaMP&quot;&gt;Título&lt;/label&gt;
+                                &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; formControlName&#x3D;&quot;tituloPeliculaMP&quot; id&#x3D;&quot;tituloPeliculaMP&quot; value&#x3D;&quot;{{this.pelicula.titulo}}&quot;&gt;
+                            &lt;/div&gt;
+                            &lt;div class&#x3D;&quot;form-row&quot;&gt;
+                                &lt;div class&#x3D;&quot;form-group col-md-4&quot;&gt;
+                                    &lt;label for&#x3D;&quot;anyoPeliculaMP&quot;&gt;Año&lt;/label&gt;
+                                    &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; formControlName&#x3D;&quot;anyoPeliculaMP&quot; id&#x3D;&quot;anyoPeliculaMP&quot; value&#x3D;&quot;{{this.pelicula.anyo}}&quot;&gt;
+                                    &lt;div class&#x3D;&quot;invalid-feedback&quot;&gt;Año no válido&lt;/div&gt;
+                                &lt;/div&gt;
+                                &lt;div class&#x3D;&quot;form-group col-md-4&quot;&gt;
+                                    &lt;label for&#x3D;&quot;paisPeliculaMP&quot;&gt;País&lt;/label&gt;
+                                    &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; formControlName&#x3D;&quot;paisPeliculaMP&quot; id&#x3D;&quot;paisPeliculaMP&quot; value&#x3D;&quot;{{this.pelicula.pais}}&quot;&gt;
+                                &lt;/div&gt;
+                                &lt;div class&#x3D;&quot;form-group col-md-4&quot;&gt;
+                                    &lt;label for&#x3D;&quot;generoPeliculaMP&quot;&gt;Género&lt;/label&gt;
+                                    &lt;select formControlName&#x3D;&quot;generoPeliculaMP&quot; id&#x3D;&quot;generoPeliculaMP&quot; value&#x3D;&quot;{{this.pelicula.genero}}&quot; class&#x3D;&quot;form-control&quot;&gt;
+                                        &lt;option *ngFor&#x3D;&quot;let item of this.listaGenero&quot; value&#x3D;&#x27;{{item}}&#x27;&gt;{{item}}&lt;/option&gt;
+                                    &lt;/select&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class&#x3D;&quot;form-row&quot;&gt;
+                                &lt;div class&#x3D;&quot;form-group col-md-4&quot;&gt;
+                                    &lt;label for&#x3D;&quot;calificacionPeliculaMP&quot;&gt;Calificación&lt;/label&gt;
+                                    &lt;select formControlName&#x3D;&quot;calificacionPeliculaMP&quot; id&#x3D;&quot;calificacionPeliculaMP&quot; class&#x3D;&quot;form-control&quot; value&#x3D;&quot;{{this.pelicula.calificacion}}&quot;&gt;
+                                        &lt;option *ngFor&#x3D;&quot;let item of this.listaCalificacion&quot; value&#x3D;&#x27;{{item}}&#x27;&gt;{{item}}&lt;/option&gt;
+                                    &lt;/select&gt;
+                                &lt;/div&gt;
+                                &lt;div class&#x3D;&quot;form-group col-md-4&quot;&gt;
+                                    &lt;label for&#x3D;&quot;duracionPeliculaMP&quot;&gt;Duración&lt;/label&gt;
+                                    &lt;input type&#x3D;&quot;number&quot; min&#x3D;&quot;0&quot; class&#x3D;&quot;form-control&quot; formControlName&#x3D;&quot;duracionPeliculaMP&quot; id&#x3D;&quot;duracionPeliculaMP&quot; value&#x3D;&quot;{{this.pelicula.duracion}}&quot;&gt;
+                                &lt;/div&gt;
+                                &lt;div class&#x3D;&quot;form-group col-md-4&quot;&gt;
+                                    &lt;label for&#x3D;&quot;estrenoPeliculaMP&quot;&gt;Estreno&lt;/label&gt;
+                                    &lt;input type&#x3D;&quot;date&quot; class&#x3D;&quot;form-control&quot; formControlName&#x3D;&quot;estrenoPeliculaMP&quot; id&#x3D;&quot;estrenoPeliculaMP&quot; value&#x3D;&quot;{{this.pelicula.estreno | date:&#x27;yyyy-MM-dd&#x27;}}&quot;&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class&#x3D;&quot;form-group&quot;&gt;
+                                &lt;label for&#x3D;&quot;sinopsisPeliculaMP&quot;&gt;Sinopsis&lt;/label&gt;
+                                &lt;textarea class&#x3D;&quot;form-control&quot; formControlName&#x3D;&quot;sinopsisPeliculaMP&quot; id&#x3D;&quot;sinopsisPeliculaMP&quot; rows&#x3D;&quot;3&quot; value&#x3D;&quot;{{this.pelicula.sinopsis}}&quot; requied&gt;&lt;/textarea&gt;
+                            &lt;/div&gt;
+                            &lt;button type&#x3D;&quot;submit&quot; class&#x3D;&quot;btn btn-warning&quot; id&#x3D;&quot;botonModificaPelicula&quot;&gt;Modificar&lt;/button&gt;
+                            &lt;button class&#x3D;&quot;btn btn-primary&quot; type&#x3D;&quot;button&quot; id&#x3D;&quot;botonModificaPelicula2&quot; disabled style&#x3D;&quot;display: none;&quot;&gt;
+                                &lt;span class&#x3D;&quot;spinner-border spinner-border-sm&quot; role&#x3D;&quot;status&quot; aria-hidden&#x3D;&quot;true&quot;&gt;&lt;/span&gt;
+                                Modificando...
+                            &lt;/button&gt;
+                        &lt;/form&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;!-- Fin de Modificar Películas--&gt;
+
+
+            &lt;!-- Inicio de Borrar películas --&gt;
+            &lt;div class&#x3D;&quot;card&quot;&gt;
+                &lt;div class&#x3D;&quot;card-header bg-info&quot; id&#x3D;&quot;headingThreePeliculas&quot;&gt;
+                    &lt;h2 class&#x3D;&quot;mb-0&quot;&gt;
+                        &lt;button class&#x3D;&quot;btn btn-link btn-block text-left text-white font-weight-bold collapsed&quot; type&#x3D;&quot;button&quot; data-toggle&#x3D;&quot;collapse&quot; data-target&#x3D;&quot;#collapseThreePeliculas&quot; aria-expanded&#x3D;&quot;false&quot; aria-controls&#x3D;&quot;collapseThreePeliculas&quot;&gt;
+                            Borrar
+                        &lt;/button&gt;
+                    &lt;/h2&gt;
+                &lt;/div&gt;
+                &lt;div id&#x3D;&quot;collapseThreePeliculas&quot; class&#x3D;&quot;collapse&quot; aria-labelledby&#x3D;&quot;headingThreePeliculas&quot; data-parent&#x3D;&quot;#accordionPeliculas&quot;&gt;
+                    &lt;div class&#x3D;&quot;card-body&quot;&gt;
+                        &lt;form (ngSubmit)&#x3D;&quot;deletePelicula(peliculaBorrada)&quot; #fborrapelicula&#x3D;&quot;ngForm&quot;&gt;
+                            &lt;div class&#x3D;&quot;row&quot;&gt;
+                                &lt;select class&#x3D;&quot;form-control col-4 mr-3&quot; [(ngModel)]&#x3D;&quot;peliculaBorrada&quot; [ngModelOptions]&#x3D;&quot;{standalone: true}&quot; id&#x3D;&quot;borrarPelicula&quot;&gt;
+                                    &lt;option selected&gt;-- Selecciona una película --&lt;/option&gt;
+                                    &lt;option *ngFor&#x3D;&quot;let item of listaPeliculas&quot; &gt;{{item.titulo}}&lt;/option&gt;
+                                &lt;/select&gt;
+                                &lt;button type&#x3D;&quot;submit&quot; class&#x3D;&quot;btn btn-danger&quot; id&#x3D;&quot;botonBorraPelicula&quot;&gt;Borrar&lt;/button&gt;
+                                &lt;button class&#x3D;&quot;btn btn-primary&quot; type&#x3D;&quot;button&quot; id&#x3D;&quot;botonBorraPelicula2&quot; disabled style&#x3D;&quot;display: none;&quot;&gt;
+                                    &lt;span class&#x3D;&quot;spinner-border spinner-border-sm&quot; role&#x3D;&quot;status&quot; aria-hidden&#x3D;&quot;true&quot;&gt;&lt;/span&gt;
+                                    Borrando...
+                                &lt;/button&gt;
+                            &lt;/div&gt;
+                        &lt;/form&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;&lt;!-- Fin de Borrar películas --&gt;
+
+    &lt;!-- Administracion de Sesiones --&gt;
+    &lt;div class&#x3D;&quot;tab-pane fade&quot; id&#x3D;&quot;nav-sesiones&quot; role&#x3D;&quot;tabpanel&quot; aria-labelledby&#x3D;&quot;nav-sesiones-tab&quot;&gt;
+        &lt;div class&#x3D;&quot;accordion col-md-6 mr-auto ml-auto mt-5&quot; id&#x3D;&quot;accordionSesiones&quot;&gt;
+            &lt;!-- Inicio añadir sesión/ proyección--&gt;
+            &lt;div class&#x3D;&quot;card&quot;&gt;
+              &lt;div class&#x3D;&quot;card-header bg-info&quot; id&#x3D;&quot;headingOneSesiones&quot;&gt;
+                &lt;h2 class&#x3D;&quot;mb-0&quot;&gt;
+                  &lt;button class&#x3D;&quot;btn btn-link btn-block text-left text-white font-weight-bold text-white font-weight-bold&quot; type&#x3D;&quot;button&quot; data-toggle&#x3D;&quot;collapse&quot; data-target&#x3D;&quot;#collapseOneSesiones&quot; aria-expanded&#x3D;&quot;true&quot; aria-controls&#x3D;&quot;collapseOneSesiones&quot;&gt;
+                    Añadir
+                  &lt;/button&gt;
+                &lt;/h2&gt;
+              &lt;/div&gt;
+          
+              &lt;div id&#x3D;&quot;collapseOneSesiones&quot; class&#x3D;&quot;collapse show&quot; aria-labelledby&#x3D;&quot;headingOneSesiones&quot; data-parent&#x3D;&quot;#accordionSesiones&quot;&gt;
+                &lt;div class&#x3D;&quot;card-body&quot;&gt;
+                    &lt;form [formGroup]&#x3D;&quot;faddsesion&quot; (ngSubmit)&#x3D;&quot;addSesion()&quot;&gt;&lt;!--fecha, hora, titulo, idSala, idTarifa--&gt;
+                        &lt;div class&#x3D;&quot;form-row&quot;&gt;
+                            &lt;div class&#x3D;&quot;form-group col-md-4&quot;&gt;
+                                &lt;label for&#x3D;&quot;fechaSesionAS&quot;&gt;Fecha&lt;/label&gt;
+                                &lt;input type&#x3D;&quot;date&quot; class&#x3D;&quot;form-control&quot; formControlName&#x3D;&quot;fechaSesionAS&quot; id&#x3D;&quot;fechaSesionAS&quot;&gt;
+                                &lt;div class&#x3D;&quot;invalid-feedback&quot;&gt;Rellene el campo&lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class&#x3D;&quot;form-group col-md-4&quot;&gt;
+                                &lt;label for&#x3D;&quot;horaSesionAS&quot;&gt;Hora&lt;/label&gt;
+                                &lt;input type&#x3D;&quot;time&quot; class&#x3D;&quot;form-control&quot; formControlName&#x3D;&quot;horaSesionAS&quot; id&#x3D;&quot;horaSesionAS&quot;&gt;
+                                &lt;div class&#x3D;&quot;invalid-feedback&quot;&gt;Rellene el campo&lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class&#x3D;&quot;form-group col-md-4&quot;&gt;
+                                &lt;label for&#x3D;&quot;tituloPeliculaAS&quot;&gt;Título&lt;/label&gt;
+                                &lt;select formControlName&#x3D;&quot;tituloPeliculaAS&quot; id&#x3D;&quot;tituloPeliculaAS&quot; class&#x3D;&quot;form-control&quot;&gt;
+                                    &lt;option *ngFor&#x3D;&quot;let item of listaPeliculas&quot; value&#x3D;&quot;{{item.titulo}}&quot;&gt;{{item.titulo}}&lt;/option&gt;
+                                &lt;/select&gt;
+                                &lt;div class&#x3D;&quot;invalid-feedback&quot;&gt;Rellene el campo&lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class&#x3D;&quot;form-row&quot;&gt;
+                            &lt;div class&#x3D;&quot;form-group col-md-4&quot;&gt;
+                                &lt;label for&#x3D;&quot;salaSesionAS&quot;&gt;Sala&lt;/label&gt;
+                                &lt;select formControlName&#x3D;&quot;salaSesionAS&quot; id&#x3D;&quot;salaSesionAS&quot; class&#x3D;&quot;form-control&quot;&gt;
+                                    &lt;option *ngFor&#x3D;&quot;let item of listaSalas&quot; value&#x3D;&quot;{{item.idSala}}&quot;&gt;{{item.idSala}}&lt;/option&gt;
+                                &lt;/select&gt;
+                                &lt;div class&#x3D;&quot;invalid-feedback&quot;&gt;Rellene el campo&lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class&#x3D;&quot;form-group col-md-4&quot;&gt;
+                                &lt;label for&#x3D;&quot;tarifaSesionAS&quot;&gt;Tarifa&lt;/label&gt;
+                                &lt;select formControlName&#x3D;&quot;tarifaSesionAS&quot; id&#x3D;&quot;tarifaSesionAS&quot; class&#x3D;&quot;form-control&quot;&gt;
+                                    &lt;option *ngFor&#x3D;&quot;let item of listaTarifas&quot; value&#x3D;&quot;{{item.idTarifa}}&quot;&gt;{{item.idTarifa+&#x27;.- &#x27;+item.nombre}}&lt;/option&gt;
+                                &lt;/select&gt;
+                                &lt;div class&#x3D;&quot;invalid-feedback&quot;&gt;Rellene el campo&lt;/div&gt;
+                            &lt;/div&gt;    
+                        &lt;/div&gt;
+                        &lt;button type&#x3D;&quot;submit&quot; class&#x3D;&quot;btn btn-success&quot; id&#x3D;&quot;botonAddSesion&quot;&gt;Añadir&lt;/button&gt;
+                        &lt;button class&#x3D;&quot;btn btn-primary&quot; type&#x3D;&quot;button&quot; id&#x3D;&quot;botonAddSesion2&quot; disabled style&#x3D;&quot;display: none;&quot;&gt;
+                            &lt;span class&#x3D;&quot;spinner-border spinner-border-sm&quot; role&#x3D;&quot;status&quot; aria-hidden&#x3D;&quot;true&quot;&gt;&lt;/span&gt;
+                            Añadiendo...
+                        &lt;/button&gt;
+                    &lt;/form&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;!-- Fin añadir sesión --&gt;
+
+            &lt;!-- Inicio modificar sesión --&gt;
+            &lt;div class&#x3D;&quot;card&quot;&gt;
+              &lt;div class&#x3D;&quot;card-header bg-info&quot; id&#x3D;&quot;headingTwoSesiones&quot;&gt;
+                &lt;h2 class&#x3D;&quot;mb-0&quot;&gt;
+                  &lt;button class&#x3D;&quot;btn btn-link btn-block text-left text-white font-weight-bold collapsed&quot; type&#x3D;&quot;button&quot; data-toggle&#x3D;&quot;collapse&quot; data-target&#x3D;&quot;#collapseTwoSesiones&quot; aria-expanded&#x3D;&quot;false&quot; aria-controls&#x3D;&quot;collapseTwoSesiones&quot;&gt;
+                    Modificar
+                  &lt;/button&gt;
+                &lt;/h2&gt;
+              &lt;/div&gt;
+              &lt;div id&#x3D;&quot;collapseTwoSesiones&quot; class&#x3D;&quot;collapse&quot; aria-labelledby&#x3D;&quot;headingTwoSesiones&quot; data-parent&#x3D;&quot;#accordionSesiones&quot;&gt;
+                &lt;div class&#x3D;&quot;card-body&quot;&gt;
+                    &lt;form (ngSubmit)&#x3D;&quot;seleccionaSesion()&quot; #fselectsesion&#x3D;&quot;ngForm&quot;&gt;
+                        &lt;div class&#x3D;&quot;form-row&quot;&gt;
+                            &lt;div class&#x3D;&quot;form-goup col-md-4&quot;&gt;
+                                &lt;label for&#x3D;&quot;fechaSelectSesion&quot;&gt;Fecha&lt;/label&gt;
+                                &lt;select class&#x3D;&quot;form-control&quot; [(ngModel)]&#x3D;&quot;fechaSelectSesion&quot; [ngModelOptions]&#x3D;&quot;{standalone: true}&quot; id&#x3D;&quot;fechaSelectSesion&quot; (ngModelChange)&#x3D;&quot;muestraSesion(fechaSelectSesion)&quot;&gt;
+                                    &lt;option *ngFor&#x3D;&quot;let item of listaFechaSesion&quot; value&#x3D;&quot;{{item}}&quot;&gt;{{item | date : &#x27;dd-MM-yyyy&#x27;}}&lt;/option&gt;
+                                &lt;/select&gt;
+                            &lt;/div&gt;
+                            &lt;div class&#x3D;&quot;form-goup col-md-4&quot;&gt;
+                                &lt;label for&#x3D;&quot;selectSesion&quot;&gt;Sesión&lt;/label&gt;
+                                &lt;select class&#x3D;&quot;form-control&quot; [(ngModel)]&#x3D;&quot;selectSesion&quot; [ngModelOptions]&#x3D;&quot;{standalone: true}&quot; id&#x3D;&quot;selectSesion&quot;&gt;
+                                    &lt;option *ngFor&#x3D;&quot;let item of listaSesionDia&quot; value&#x3D;&quot;{{item.idProyeccion}}&quot; &gt;{{item.hora+&#x27;-&#x27;+item.titulo+&#x27;- Sala:&#x27;+item.idSala}}&lt;/option&gt;
+                                &lt;/select&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;button type&#x3D;&quot;submit&quot; class&#x3D;&quot;btn btn-info&quot; id&#x3D;&quot;BotonSelectSesion&quot;&gt;Buscar&lt;/button&gt;
+                    &lt;/form&gt;
+
+                    &lt;form [formGroup]&#x3D;&quot;fmodsesion&quot; (ngSubmit)&#x3D;&quot;modificaSesion()&quot; id&#x3D;&quot;fmodsesion&quot; hidden&gt;&lt;!--fecha, hora, titulo, idSala, idTarifa--&gt;
+                        &lt;div class&#x3D;&quot;form-row&quot;&gt;
+                            &lt;div class&#x3D;&quot;form-group col-md-4&quot;&gt;
+                                &lt;label for&#x3D;&quot;fechaSesionMS&quot;&gt;Fecha&lt;/label&gt;
+                                &lt;input type&#x3D;&quot;date&quot; class&#x3D;&quot;form-control&quot; formControlName&#x3D;&quot;fechaSesionMS&quot; id&#x3D;&quot;fechaSesionMS&quot; value&#x3D;&quot;{{this.proyeccion.fecha | date : &#x27;yyyy-MM-dd&#x27;}}&quot;&gt;
+                            &lt;/div&gt;
+                            &lt;div class&#x3D;&quot;form-group col-md-4&quot;&gt;
+                                &lt;label for&#x3D;&quot;horaSesionMS&quot;&gt;Hora&lt;/label&gt;
+                                &lt;input type&#x3D;&quot;time&quot; class&#x3D;&quot;form-control&quot; formControlName&#x3D;&quot;horaSesionMS&quot; id&#x3D;&quot;horaSesionMS&quot; value&#x3D;{{this.proyeccion.hora}}&gt;
+                            &lt;/div&gt;
+                            &lt;div class&#x3D;&quot;form-group col-md-4&quot;&gt;
+                                &lt;label for&#x3D;&quot;tituloPeliculaMS&quot;&gt;Título&lt;/label&gt;
+                                &lt;select formControlName&#x3D;&quot;tituloPeliculaMS&quot; id&#x3D;&quot;tituloPeliculaMS&quot; class&#x3D;&quot;form-control&quot; value&#x3D;{{this.proyeccion.titulo}}&gt;
+                                    &lt;option *ngFor&#x3D;&quot;let item of listaPeliculas&quot; value&#x3D;&quot;{{item.titulo}}&quot;&gt;{{item.titulo}}&lt;/option&gt;
+                                &lt;/select&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class&#x3D;&quot;form-row&quot;&gt;
+                            &lt;div class&#x3D;&quot;form-group col-md-4&quot;&gt;
+                                &lt;label for&#x3D;&quot;salaSesionMS&quot;&gt;Sala&lt;/label&gt;
+                                &lt;select formControlName&#x3D;&quot;salaSesionMS&quot; id&#x3D;&quot;salaSesionMS&quot; class&#x3D;&quot;form-control&quot; value&#x3D;{{this.proyeccion.idSala}}&gt;
+                                    &lt;option *ngFor&#x3D;&quot;let item of listaSalas&quot; value&#x3D;&quot;{{item.idSala}}&quot;&gt;{{item.idSala}}&lt;/option&gt;
+                                &lt;/select&gt;
+                            &lt;/div&gt;
+                            &lt;div class&#x3D;&quot;form-group col-md-4&quot;&gt;
+                                &lt;label for&#x3D;&quot;tarifaSesionMS&quot;&gt;Tarifa&lt;/label&gt;
+                                &lt;select formControlName&#x3D;&quot;tarifaSesionMS&quot; id&#x3D;&quot;tarifaSesionMS&quot; class&#x3D;&quot;form-control&quot; value&#x3D;{{this.proyeccion.idTarifa}}&gt;
+                                    &lt;option *ngFor&#x3D;&quot;let item of listaTarifas&quot; value&#x3D;&quot;{{item.idTarifa}}&quot;&gt;{{item.idTarifa+&#x27;.- &#x27;+item.nombre}}&lt;/option&gt;
+                                &lt;/select&gt;
+                            &lt;/div&gt;    
+                        &lt;/div&gt;
+                        &lt;button type&#x3D;&quot;submit&quot; class&#x3D;&quot;btn btn-warning&quot; id&#x3D;&quot;botonModificaSesion&quot;&gt;Modificar&lt;/button&gt;
+                        &lt;button class&#x3D;&quot;btn btn-primary&quot; type&#x3D;&quot;button&quot; id&#x3D;&quot;botonModificaSesion2&quot; disabled style&#x3D;&quot;display: none;&quot;&gt;
+                            &lt;span class&#x3D;&quot;spinner-border spinner-border-sm&quot; role&#x3D;&quot;status&quot; aria-hidden&#x3D;&quot;true&quot;&gt;&lt;/span&gt;
+                            Modificando...
+                        &lt;/button&gt;
+                    &lt;/form&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;!-- Fin modificar sesión --&gt;
+
+            &lt;!-- Inicio borrar sesión --&gt;
+            &lt;div class&#x3D;&quot;card&quot;&gt;
+                &lt;div class&#x3D;&quot;card-header bg-info&quot; id&#x3D;&quot;headingThreeSesiones&quot;&gt;
+                    &lt;h2 class&#x3D;&quot;mb-0&quot;&gt;
+                    &lt;button class&#x3D;&quot;btn btn-link btn-block text-left text-white font-weight-bold collapsed&quot; type&#x3D;&quot;button&quot; data-toggle&#x3D;&quot;collapse&quot; data-target&#x3D;&quot;#collapseThreeSesiones&quot; aria-expanded&#x3D;&quot;false&quot; aria-controls&#x3D;&quot;collapseThreeSesiones&quot;&gt;
+                        Borrar
+                    &lt;/button&gt;
+                    &lt;/h2&gt;
+                &lt;/div&gt;
+                &lt;div id&#x3D;&quot;collapseThreeSesiones&quot; class&#x3D;&quot;collapse&quot; aria-labelledby&#x3D;&quot;headingThreeSesiones&quot; data-parent&#x3D;&quot;#accordionSesiones&quot;&gt;
+                    &lt;div class&#x3D;&quot;card-body&quot;&gt;
+                        &lt;form (ngSubmit)&#x3D;&quot;deleteSesion()&quot; #fborrasesion&#x3D;&quot;ngForm&quot;&gt;
+                            &lt;div class&#x3D;&quot;form-row&quot;&gt;
+                                &lt;div class&#x3D;&quot;form-goup col-md-4&quot;&gt;
+                                    &lt;label for&#x3D;&quot;fechaBorrarSesion&quot;&gt;Selecciona una fecha&lt;/label&gt;
+                                    &lt;select class&#x3D;&quot;form-control&quot; [(ngModel)]&#x3D;&quot;fechaBorrarSesion&quot; [ngModelOptions]&#x3D;&quot;{standalone: true}&quot; id&#x3D;&quot;fechaBorrarSesion&quot; (ngModelChange)&#x3D;&quot;muestraSesion(fechaBorrarSesion)&quot;&gt;
+                                        &lt;option *ngFor&#x3D;&quot;let item of listaFechaSesion&quot; value&#x3D;&quot;{{item}}&quot;&gt;{{item | date : &#x27;dd-MM-yyyy&#x27;}}&lt;/option&gt;
+                                    &lt;/select&gt;
+                                &lt;/div&gt;
+                                &lt;div class&#x3D;&quot;form-goup col-md-4&quot;&gt;
+                                    &lt;label for&#x3D;&quot;borrarSesion&quot;&gt;Selecciona una sesión&lt;/label&gt;
+                                    &lt;select class&#x3D;&quot;form-control&quot; [(ngModel)]&#x3D;&quot;borrarSesion&quot; [ngModelOptions]&#x3D;&quot;{standalone: true}&quot; id&#x3D;&quot;borrarSesion&quot;&gt;
+                                        &lt;option *ngFor&#x3D;&quot;let item of listaSesionDia&quot; value&#x3D;&quot;{{item.idProyeccion}}&quot; &gt;{{item[&#x27;hora&#x27;]+&#x27;-&#x27;+item[&#x27;titulo&#x27;]+&#x27;- Sala:&#x27;+item.idSala}}&lt;/option&gt;
+                                    &lt;/select&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;button type&#x3D;&quot;submit&quot; class&#x3D;&quot;btn btn-danger&quot; id&#x3D;&quot;botonBorraSesion&quot;&gt;Borrar&lt;/button&gt;
+                            &lt;button class&#x3D;&quot;btn btn-primary&quot; type&#x3D;&quot;button&quot; id&#x3D;&quot;botonBorraSesion2&quot; disabled style&#x3D;&quot;display: none;&quot;&gt;
+                                &lt;span class&#x3D;&quot;spinner-border spinner-border-sm&quot; role&#x3D;&quot;status&quot; aria-hidden&#x3D;&quot;true&quot;&gt;&lt;/span&gt;
+                                Borrando...
+                            &lt;/button&gt;
+                        &lt;/form&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;!-- Fin Borrar sesión--&gt;
+          &lt;/div&gt;  
+    &lt;/div&gt;
+
+    &lt;!-- Administracion de Tarifas --&gt;
+    &lt;div class&#x3D;&quot;tab-pane fade&quot; id&#x3D;&quot;nav-tarifas&quot; role&#x3D;&quot;tabpanel&quot; aria-labelledby&#x3D;&quot;nav-tarifas-tab&quot;&gt;
+        &lt;div class&#x3D;&quot;accordion col-md-6 mr-auto ml-auto mt-5&quot; id&#x3D;&quot;accordionTarifasAdmin&quot;&gt;
+            &lt;!-- Inicio Añadir tarifas--&gt;
+            &lt;div class&#x3D;&quot;card&quot;&gt;
+                &lt;div class&#x3D;&quot;card-header bg-info&quot; id&#x3D;&quot;headingOneTarifas&quot;&gt;
+                    &lt;h2 class&#x3D;&quot;mb-0&quot;&gt;
+                    &lt;button class&#x3D;&quot;btn btn-link btn-block text-left text-white font-weight-bold&quot; type&#x3D;&quot;button&quot; data-toggle&#x3D;&quot;collapse&quot; data-target&#x3D;&quot;#collapseOneTarifas&quot; aria-expanded&#x3D;&quot;true&quot; aria-controls&#x3D;&quot;collapseOneTarifas&quot;&gt;
+                        Añadir
+                    &lt;/button&gt;
+                    &lt;/h2&gt;
+                &lt;/div&gt;
+          
+                &lt;div id&#x3D;&quot;collapseOneTarifas&quot; class&#x3D;&quot;collapse show&quot; aria-labelledby&#x3D;&quot;headingOneTarifas&quot; data-parent&#x3D;&quot;#accordionTarifasAdmin&quot;&gt;
+                    &lt;div class&#x3D;&quot;card-body&quot;&gt;
+                        &lt;form [formGroup]&#x3D;&quot;faddtarifa&quot; (ngSubmit)&#x3D;&quot;addTarifa()&quot; id&#x3D;&quot;faddtarifa&quot;&gt;&lt;!--nombre,descripcion,precio--&gt;
+                            &lt;div class&#x3D;&quot;form-row&quot;&gt;
+                                &lt;div class&#x3D;&quot;form-group col-md-4&quot;&gt;
+                                    &lt;label for&#x3D;&quot;nombreTarifaAT&quot;&gt;Nombre&lt;/label&gt;
+                                    &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; formControlName&#x3D;&quot;nombreTarifaAT&quot; id&#x3D;&quot;nombreTarifaAT&quot;&gt;
+                                    &lt;div class&#x3D;&quot;invalid-feedback&quot;&gt;Rellene el campo&lt;/div&gt;
+                                &lt;/div&gt;
+                                &lt;div class&#x3D;&quot;form-group col-md-4&quot;&gt;
+                                    &lt;label for&#x3D;&quot;descripcionTarifaAT&quot;&gt;Descripción&lt;/label&gt;
+                                    &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; formControlName&#x3D;&quot;descripcionTarifaAT&quot; id&#x3D;&quot;descripcionTarifaAT&quot;&gt;
+                                    &lt;div class&#x3D;&quot;invalid-feedback&quot;&gt;Rellene el campo&lt;/div&gt;
+                                &lt;/div&gt;
+                                &lt;div class&#x3D;&quot;form-group col-md-4&quot;&gt;
+                                    &lt;label for&#x3D;&quot;precioTarifaAT&quot;&gt;Precio&lt;/label&gt;
+                                    &lt;input type&#x3D;&quot;number&quot; min&#x3D;&quot;0&quot; class&#x3D;&quot;form-control&quot; formControlName&#x3D;&quot;precioTarifaAT&quot; id&#x3D;&quot;precioTarifaAT&quot; step&#x3D;&quot;0.01&quot;&gt;
+                                    &lt;div class&#x3D;&quot;invalid-feedback&quot;&gt;Rellene el campo&lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;button type&#x3D;&quot;submit&quot; class&#x3D;&quot;btn btn-success&quot; id&#x3D;&quot;botonAddTarifa&quot;&gt;Añadir&lt;/button&gt;
+                            &lt;button class&#x3D;&quot;btn btn-primary&quot; type&#x3D;&quot;button&quot; id&#x3D;&quot;botonAddTarifa2&quot; disabled style&#x3D;&quot;display: none;&quot;&gt;
+                                &lt;span class&#x3D;&quot;spinner-border spinner-border-sm&quot; role&#x3D;&quot;status&quot; aria-hidden&#x3D;&quot;true&quot;&gt;&lt;/span&gt;
+                                Añadiendo...
+                            &lt;/button&gt;
+                        &lt;/form&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;!-- Fin Añadir tarifas--&gt;
+
+            &lt;!-- Inicio Modificar tarifas--&gt;
+            &lt;div class&#x3D;&quot;card&quot;&gt;
+                &lt;div class&#x3D;&quot;card-header bg-info&quot; id&#x3D;&quot;headingTwoTarifas&quot;&gt;
+                    &lt;h2 class&#x3D;&quot;mb-0&quot;&gt;
+                    &lt;button class&#x3D;&quot;btn btn-link btn-block text-left text-white font-weight-bold collapsed&quot; type&#x3D;&quot;button&quot; data-toggle&#x3D;&quot;collapse&quot; data-target&#x3D;&quot;#collapseTwoTarifas&quot; aria-expanded&#x3D;&quot;false&quot; aria-controls&#x3D;&quot;collapseTwoTarifas&quot;&gt;
+                        Modificar
+                    &lt;/button&gt;
+                    &lt;/h2&gt;
+                &lt;/div&gt;
+                &lt;div id&#x3D;&quot;collapseTwoTarifas&quot; class&#x3D;&quot;collapse&quot; aria-labelledby&#x3D;&quot;headingTwoTarifas&quot; data-parent&#x3D;&quot;#accordionTarifasAdmin&quot;&gt;
+                    &lt;div class&#x3D;&quot;card-body&quot;&gt;
+                        &lt;form #fselecttarifa&#x3D;&quot;ngForm&quot; (ngSubmit)&#x3D;&quot;selectTarifa()&quot;&gt;
+                            &lt;div class&#x3D;&quot;row mb-3 mx-auto&quot;&gt;
+                                &lt;select class&#x3D;&quot;form-control col-4 mr-3&quot; [(ngModel)]&#x3D;&quot;tarifaSeleccionada&quot; [ngModelOptions]&#x3D;&quot;{standalone: true}&quot; id&#x3D;&quot;tarifaSeleccionada&quot;&gt;
+                                    &lt;option *ngFor&#x3D;&quot;let item of listaTarifas&quot; value&#x3D;&quot;{{item.idTarifa}}&quot;&gt;{{item.nombre}}&lt;/option&gt;
+                                &lt;/select&gt;    
+                                &lt;button type&#x3D;&quot;submit&quot; class&#x3D;&quot;btn btn-info&quot; id&#x3D;&quot;botonSelectTarifa&quot;&gt;Selecciona&lt;/button&gt;
+                            &lt;/div&gt;
+                        &lt;/form&gt;
+                        &lt;form [formGroup]&#x3D;&quot;fmodtarifa&quot; (ngSubmit)&#x3D;&quot;modificaTarifa()&quot; id&#x3D;&quot;fmodtarifa&quot; hidden&gt;&lt;!--nombre,descripcion,precio--&gt;
+                            &lt;div class&#x3D;&quot;form-row&quot;&gt;
+                                &lt;div class&#x3D;&quot;form-group col-md-4&quot;&gt;
+                                    &lt;label for&#x3D;&quot;nombreTarifaMT&quot;&gt;Nombre&lt;/label&gt;
+                                    &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; formControlName&#x3D;&quot;nombreTarifaMT&quot; id&#x3D;&quot;nombreTarifaMT&quot; value&#x3D;&quot;{{this.tarifa.nombre}}&quot;&gt;
+                                &lt;/div&gt;
+                                &lt;div class&#x3D;&quot;form-group col-md-4&quot;&gt;
+                                    &lt;label for&#x3D;&quot;descripcionTarifaMT&quot;&gt;Descripción&lt;/label&gt;
+                                    &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; formControlName&#x3D;&quot;descripcionTarifaMT&quot; id&#x3D;&quot;descripcionTarifaMT&quot; value&#x3D;&quot;{{this.tarifa.descripcion}}&quot;&gt;
+                                &lt;/div&gt;
+                                &lt;div class&#x3D;&quot;form-group col-md-4&quot;&gt;
+                                    &lt;label for&#x3D;&quot;precioTarifaMT&quot;&gt;Precio&lt;/label&gt;
+                                    &lt;input type&#x3D;&quot;number&quot; min&#x3D;&quot;0&quot; class&#x3D;&quot;form-control&quot; formControlName&#x3D;&quot;precioTarifaMT&quot; id&#x3D;&quot;precioTarifaMT&quot; step&#x3D;&quot;0.01&quot; value&#x3D;&quot;{{this.tarifa.precio}}&quot;&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;button type&#x3D;&quot;submit&quot; class&#x3D;&quot;btn btn-success&quot; id&#x3D;&quot;botonModTarifa&quot;&gt;Añadir&lt;/button&gt;
+                            &lt;button class&#x3D;&quot;btn btn-primary&quot; type&#x3D;&quot;button&quot; id&#x3D;&quot;botonModTarifa2&quot; disabled style&#x3D;&quot;display: none;&quot;&gt;
+                                &lt;span class&#x3D;&quot;spinner-border spinner-border-sm&quot; role&#x3D;&quot;status&quot; aria-hidden&#x3D;&quot;true&quot;&gt;&lt;/span&gt;
+                                Añadiendo...
+                            &lt;/button&gt;
+                        &lt;/form&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;!-- Fin Modificar tarifas--&gt;
+
+            &lt;!-- Inicio Borrar tarifas--&gt;
+            &lt;div class&#x3D;&quot;card&quot;&gt;
+                &lt;div class&#x3D;&quot;card-header bg-info&quot; id&#x3D;&quot;headingThreeTarifas&quot;&gt;
+                    &lt;h2 class&#x3D;&quot;mb-0&quot;&gt;
+                    &lt;button class&#x3D;&quot;btn btn-link btn-block text-left text-white font-weight-bold collapsed&quot; type&#x3D;&quot;button&quot; data-toggle&#x3D;&quot;collapse&quot; data-target&#x3D;&quot;#collapseThreeTarifas&quot; aria-expanded&#x3D;&quot;false&quot; aria-controls&#x3D;&quot;collapseThreeTarifas&quot;&gt;
+                        Eliminar
+                    &lt;/button&gt;
+                    &lt;/h2&gt;
+                &lt;/div&gt;
+                &lt;div id&#x3D;&quot;collapseThreeTarifas&quot; class&#x3D;&quot;collapse&quot; aria-labelledby&#x3D;&quot;headingThreeTarifas&quot; data-parent&#x3D;&quot;#accordionTarifasAdmin&quot;&gt;
+                    &lt;div class&#x3D;&quot;card-body&quot;&gt;
+                        &lt;form (ngSubmit)&#x3D;&quot;deleteTarifa()&quot; #fborratarifa&#x3D;&quot;ngForm&quot;&gt;
+                            &lt;div class&#x3D;&quot;form-group&quot;&gt;
+                                &lt;label for&#x3D;&quot;borrarTarifa&quot;&gt;Tarifa&lt;/label&gt;
+                                &lt;select class&#x3D;&quot;form-control col-4 mr-3&quot; [(ngModel)]&#x3D;&quot;tarifaBorrada&quot; [ngModelOptions]&#x3D;&quot;{standalone: true}&quot; id&#x3D;&quot;borrarTarifa&quot;&gt;
+                                    &lt;option *ngFor&#x3D;&quot;let item of listaTarifas&quot; value&#x3D;&quot;{{item.idTarifa}}&quot;&gt;{{item.nombre}}&lt;/option&gt;
+                                &lt;/select&gt;
+                            &lt;/div&gt;    
+                            &lt;button type&#x3D;&quot;submit&quot; class&#x3D;&quot;btn btn-danger&quot; id&#x3D;&quot;botonBorraTarifa&quot;&gt;Borrar&lt;/button&gt;
+                            &lt;button class&#x3D;&quot;btn btn-primary&quot; type&#x3D;&quot;button&quot; id&#x3D;&quot;botonBorraTarifa2&quot; disabled style&#x3D;&quot;display: none;&quot;&gt;
+                                &lt;span class&#x3D;&quot;spinner-border spinner-border-sm&quot; role&#x3D;&quot;status&quot; aria-hidden&#x3D;&quot;true&quot;&gt;&lt;/span&gt;
+                                Borrando...
+                            &lt;/button&gt;
+                        &lt;/form&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;!-- Fin Borrar tarifas--&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./auth.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss"></code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Leyenda</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Elemento Html</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Componente</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Elemento Html con directiva</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><h1 class="text-center mb-4">Administración</h1><nav>    <div class="nav nav-tabs" id="nav-tab-admin" role="tablist">        <a class="nav-item nav-link active" id="nav-peliculas-tab" data-toggle="tab" href="#nav-peliculas" role="tab" aria-controls="nav-peliculas" aria-selected="true">Películas</a>        <a class="nav-item nav-link" id="nav-sesiones-tab" data-toggle="tab" href="#nav-sesiones" role="tab" aria-controls="nav-sesiones" aria-selected="false">Sesiones</a>        <a class="nav-item nav-link" id="nav-tarifas-tab" data-toggle="tab" href="#nav-tarifas" role="tab" aria-controls="nav-tarifas" aria-selected="false">Tarifas</a>    </div></nav><div class="tab-content" id="nav-tab-adminContent">    <!-- Administración de Películas -->    <div class="tab-pane fade show active" id="nav-peliculas" role="tabpanel" aria-labelledby="nav-peliculas-tab">        <div class="accordion col-md-6 mr-auto ml-auto mt-5" id="accordionPeliculas">            <!-- Comienzo de Añadir películas -->            <div class="card">                <div class="card-header bg-info" id="headingOnePeliculas">                    <h2 class="mb-0">                        <button class="btn btn-link btn-block text-left text-white font-weight-bold" type="button" data-toggle="collapse" data-target="#collapseOnePeliculas" aria-expanded="true" aria-controls="collapseOnePeliculas">                            Añadir                        </button>                    </h2>                </div>                        <div id="collapseOnePeliculas" class="collapse show" aria-labelledby="headingOnePeliculas" data-parent="#accordionPeliculas">                    <div class="card-body">                        <form [formGroup]="faddpelicula" (ngSubmit)="addPelicula()"><!--titulo, anyo, pais, genero, calificacion, duracion, estreno, sinopsis-->                            <div class="form-group">                                <label for="tituloPeliculaAP">Título</label>                                <input type="text" class="form-control" formControlName="tituloPeliculaAP" id="tituloPeliculaAP">                                <div class="invalid-feedback">Rellene el campo</div>                            </div>                            <div class="form-row">                                <div class="form-group col-md-4">                                    <label for="anyoPeliculaAP">Año</label>                                    <input type="text" class="form-control" formControlName="anyoPeliculaAP" id="anyoPeliculaAP" maxlength="4">                                    <div class="invalid-feedback">Rellene el campo</div>                                </div>                                <div class="form-group col-md-4">                                    <label for="paisPeliculaAP">País</label>                                    <input type="text" class="form-control" formControlName="paisPeliculaAP" id="paisPeliculaAP">                                    <div class="invalid-feedback">Rellene el campo</div>                                </div>                                <div class="form-group col-md-4">                                    <label for="generoPeliculaAP">Género</label>                                    <select formControlName="generoPeliculaAP" id="generoPeliculaAP" class="form-control">                                        <option *ngFor="let item of this.listaGenero" value=\'{{item}}\'>{{item}}</option>                                    </select>                                    <div class="invalid-feedback">Seleccione un campo</div>                                </div>                            </div>                            <div class="form-row">                                <div class="form-group col-md-4">                                    <label for="calificacionPeliculaAP">Calificación</label>                                    <select formControlName="calificacionPeliculaAP" id="calificacionPeliculaAP" class="form-control">                                        <option *ngFor="let item of this.listaCalificacion" value=\'{{item}}\'>{{item}}</option>                                    </select>                                    <div class="invalid-feedback">Seleccione un campo</div>                                </div>                                <div class="form-group col-md-4">                                    <label for="duracionPeliculaAP">Duración</label>                                    <input type="number" min="0" class="form-control" formControlName="duracionPeliculaAP" id="duracionPeliculaAP">                                    <div class="invalid-feedback">Rellene el campo</div>                                </div>                                <div class="form-group col-md-4">                                    <label for="estrenoPeliculaAP">Estreno</label>                                    <input type="date" class="form-control" formControlName="estrenoPeliculaAP" id="estrenoPeliculaAP">                                    <div class="invalid-feedback">Rellene el campo</div>                                </div>                            </div>                            <div class="form-group">                                <label for="sinopsisPeliculaAP">Sinopsis</label>                                <textarea class="form-control" formControlName="sinopsisPeliculaAP" id="sinopsisPeliculaAP" rows="3" requied></textarea>                                <div class="invalid-feedback">Rellene el campo</div>                            </div>                            <button type="submit" class="btn btn-success" id="botonAddPelicula">Añadir</button>                            <button class="btn btn-primary" type="button" id="botonAddPelicula2" disabled style="display: none;">                                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>                                Añadiendo...                            </button>                        </form>                    </div>                </div>            </div>            <!--Fin de Añadir Películas-->            <!-- Inicio Modificar películas -->            <div class="card">                <div class="card-header bg-info" id="headingTwoPeliculas">                    <h2 class="mb-0">                        <button class="btn btn-link btn-block text-left text-white font-weight-bold collapsed" type="button" data-toggle="collapse" data-target="#collapseTwoPeliculas" aria-expanded="false" aria-controls="collapseTwoPeliculas">                            Modificar                        </button>                    </h2>                </div>                <div id="collapseTwoPeliculas" class="collapse" aria-labelledby="headingTwoPeliculas" data-parent="#accordionPeliculas">                    <div class="card-body">                        <form #fselectpelicula="ngForm" (ngSubmit)="selectPelicula(peliculaAModificar)">                            <div class="row mb-3 mx-auto">                                <select class="form-control col-4 mr-3" [(ngModel)]="peliculaAModificar" [ngModelOptions]="{standalone: true}" id="peliculaAModificar">                                    <option selected>--- Selecciona una película ---</option>                                    <option *ngFor="let item of listaPeliculas" >{{item.titulo}}</option>                                </select>                                <button type="submit" class="btn btn-info" id="selectPeliculaMod">Selecciona</button>                            </div>                        </form>                        <form [formGroup]="fmodpelicula" (ngSubmit)="modificaPelicula()" id="fmodpelicula" hidden><!--titulo, anyo, pais, genero, calificacion, duracion, estreno, sinopsis-->                            <div class="form-group">                                <label for="tituloPeliculaMP">Título</label>                                <input type="text" class="form-control" formControlName="tituloPeliculaMP" id="tituloPeliculaMP" value="{{this.pelicula.titulo}}">                            </div>                            <div class="form-row">                                <div class="form-group col-md-4">                                    <label for="anyoPeliculaMP">Año</label>                                    <input type="text" class="form-control" formControlName="anyoPeliculaMP" id="anyoPeliculaMP" value="{{this.pelicula.anyo}}">                                    <div class="invalid-feedback">Año no válido</div>                                </div>                                <div class="form-group col-md-4">                                    <label for="paisPeliculaMP">País</label>                                    <input type="text" class="form-control" formControlName="paisPeliculaMP" id="paisPeliculaMP" value="{{this.pelicula.pais}}">                                </div>                                <div class="form-group col-md-4">                                    <label for="generoPeliculaMP">Género</label>                                    <select formControlName="generoPeliculaMP" id="generoPeliculaMP" value="{{this.pelicula.genero}}" class="form-control">                                        <option *ngFor="let item of this.listaGenero" value=\'{{item}}\'>{{item}}</option>                                    </select>                                </div>                            </div>                            <div class="form-row">                                <div class="form-group col-md-4">                                    <label for="calificacionPeliculaMP">Calificación</label>                                    <select formControlName="calificacionPeliculaMP" id="calificacionPeliculaMP" class="form-control" value="{{this.pelicula.calificacion}}">                                        <option *ngFor="let item of this.listaCalificacion" value=\'{{item}}\'>{{item}}</option>                                    </select>                                </div>                                <div class="form-group col-md-4">                                    <label for="duracionPeliculaMP">Duración</label>                                    <input type="number" min="0" class="form-control" formControlName="duracionPeliculaMP" id="duracionPeliculaMP" value="{{this.pelicula.duracion}}">                                </div>                                <div class="form-group col-md-4">                                    <label for="estrenoPeliculaMP">Estreno</label>                                    <input type="date" class="form-control" formControlName="estrenoPeliculaMP" id="estrenoPeliculaMP" value="{{this.pelicula.estreno | date:\'yyyy-MM-dd\'}}">                                </div>                            </div>                            <div class="form-group">                                <label for="sinopsisPeliculaMP">Sinopsis</label>                                <textarea class="form-control" formControlName="sinopsisPeliculaMP" id="sinopsisPeliculaMP" rows="3" value="{{this.pelicula.sinopsis}}" requied></textarea>                            </div>                            <button type="submit" class="btn btn-warning" id="botonModificaPelicula">Modificar</button>                            <button class="btn btn-primary" type="button" id="botonModificaPelicula2" disabled style="display: none;">                                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>                                Modificando...                            </button>                        </form>                    </div>                </div>            </div>            <!-- Fin de Modificar Películas-->            <!-- Inicio de Borrar películas -->            <div class="card">                <div class="card-header bg-info" id="headingThreePeliculas">                    <h2 class="mb-0">                        <button class="btn btn-link btn-block text-left text-white font-weight-bold collapsed" type="button" data-toggle="collapse" data-target="#collapseThreePeliculas" aria-expanded="false" aria-controls="collapseThreePeliculas">                            Borrar                        </button>                    </h2>                </div>                <div id="collapseThreePeliculas" class="collapse" aria-labelledby="headingThreePeliculas" data-parent="#accordionPeliculas">                    <div class="card-body">                        <form (ngSubmit)="deletePelicula(peliculaBorrada)" #fborrapelicula="ngForm">                            <div class="row">                                <select class="form-control col-4 mr-3" [(ngModel)]="peliculaBorrada" [ngModelOptions]="{standalone: true}" id="borrarPelicula">                                    <option selected>-- Selecciona una película --</option>                                    <option *ngFor="let item of listaPeliculas" >{{item.titulo}}</option>                                </select>                                <button type="submit" class="btn btn-danger" id="botonBorraPelicula">Borrar</button>                                <button class="btn btn-primary" type="button" id="botonBorraPelicula2" disabled style="display: none;">                                    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>                                    Borrando...                                </button>                            </div>                        </form>                    </div>                </div>            </div>        </div>    </div><!-- Fin de Borrar películas -->    <!-- Administracion de Sesiones -->    <div class="tab-pane fade" id="nav-sesiones" role="tabpanel" aria-labelledby="nav-sesiones-tab">        <div class="accordion col-md-6 mr-auto ml-auto mt-5" id="accordionSesiones">            <!-- Inicio añadir sesión/ proyección-->            <div class="card">              <div class="card-header bg-info" id="headingOneSesiones">                <h2 class="mb-0">                  <button class="btn btn-link btn-block text-left text-white font-weight-bold text-white font-weight-bold" type="button" data-toggle="collapse" data-target="#collapseOneSesiones" aria-expanded="true" aria-controls="collapseOneSesiones">                    Añadir                  </button>                </h2>              </div>                        <div id="collapseOneSesiones" class="collapse show" aria-labelledby="headingOneSesiones" data-parent="#accordionSesiones">                <div class="card-body">                    <form [formGroup]="faddsesion" (ngSubmit)="addSesion()"><!--fecha, hora, titulo, idSala, idTarifa-->                        <div class="form-row">                            <div class="form-group col-md-4">                                <label for="fechaSesionAS">Fecha</label>                                <input type="date" class="form-control" formControlName="fechaSesionAS" id="fechaSesionAS">                                <div class="invalid-feedback">Rellene el campo</div>                            </div>                            <div class="form-group col-md-4">                                <label for="horaSesionAS">Hora</label>                                <input type="time" class="form-control" formControlName="horaSesionAS" id="horaSesionAS">                                <div class="invalid-feedback">Rellene el campo</div>                            </div>                            <div class="form-group col-md-4">                                <label for="tituloPeliculaAS">Título</label>                                <select formControlName="tituloPeliculaAS" id="tituloPeliculaAS" class="form-control">                                    <option *ngFor="let item of listaPeliculas" value="{{item.titulo}}">{{item.titulo}}</option>                                </select>                                <div class="invalid-feedback">Rellene el campo</div>                            </div>                        </div>                        <div class="form-row">                            <div class="form-group col-md-4">                                <label for="salaSesionAS">Sala</label>                                <select formControlName="salaSesionAS" id="salaSesionAS" class="form-control">                                    <option *ngFor="let item of listaSalas" value="{{item.idSala}}">{{item.idSala}}</option>                                </select>                                <div class="invalid-feedback">Rellene el campo</div>                            </div>                            <div class="form-group col-md-4">                                <label for="tarifaSesionAS">Tarifa</label>                                <select formControlName="tarifaSesionAS" id="tarifaSesionAS" class="form-control">                                    <option *ngFor="let item of listaTarifas" value="{{item.idTarifa}}">{{item.idTarifa+\'.- \'+item.nombre}}</option>                                </select>                                <div class="invalid-feedback">Rellene el campo</div>                            </div>                            </div>                        <button type="submit" class="btn btn-success" id="botonAddSesion">Añadir</button>                        <button class="btn btn-primary" type="button" id="botonAddSesion2" disabled style="display: none;">                            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>                            Añadiendo...                        </button>                    </form>                </div>              </div>            </div>            <!-- Fin añadir sesión -->            <!-- Inicio modificar sesión -->            <div class="card">              <div class="card-header bg-info" id="headingTwoSesiones">                <h2 class="mb-0">                  <button class="btn btn-link btn-block text-left text-white font-weight-bold collapsed" type="button" data-toggle="collapse" data-target="#collapseTwoSesiones" aria-expanded="false" aria-controls="collapseTwoSesiones">                    Modificar                  </button>                </h2>              </div>              <div id="collapseTwoSesiones" class="collapse" aria-labelledby="headingTwoSesiones" data-parent="#accordionSesiones">                <div class="card-body">                    <form (ngSubmit)="seleccionaSesion()" #fselectsesion="ngForm">                        <div class="form-row">                            <div class="form-goup col-md-4">                                <label for="fechaSelectSesion">Fecha</label>                                <select class="form-control" [(ngModel)]="fechaSelectSesion" [ngModelOptions]="{standalone: true}" id="fechaSelectSesion" (ngModelChange)="muestraSesion(fechaSelectSesion)">                                    <option *ngFor="let item of listaFechaSesion" value="{{item}}">{{item | date : \'dd-MM-yyyy\'}}</option>                                </select>                            </div>                            <div class="form-goup col-md-4">                                <label for="selectSesion">Sesión</label>                                <select class="form-control" [(ngModel)]="selectSesion" [ngModelOptions]="{standalone: true}" id="selectSesion">                                    <option *ngFor="let item of listaSesionDia" value="{{item.idProyeccion}}" >{{item.hora+\'-\'+item.titulo+\'- Sala:\'+item.idSala}}</option>                                </select>                            </div>                        </div>                        <button type="submit" class="btn btn-info" id="BotonSelectSesion">Buscar</button>                    </form>                    <form [formGroup]="fmodsesion" (ngSubmit)="modificaSesion()" id="fmodsesion" hidden><!--fecha, hora, titulo, idSala, idTarifa-->                        <div class="form-row">                            <div class="form-group col-md-4">                                <label for="fechaSesionMS">Fecha</label>                                <input type="date" class="form-control" formControlName="fechaSesionMS" id="fechaSesionMS" value="{{this.proyeccion.fecha | date : \'yyyy-MM-dd\'}}">                            </div>                            <div class="form-group col-md-4">                                <label for="horaSesionMS">Hora</label>                                <input type="time" class="form-control" formControlName="horaSesionMS" id="horaSesionMS" value={{this.proyeccion.hora}}>                            </div>                            <div class="form-group col-md-4">                                <label for="tituloPeliculaMS">Título</label>                                <select formControlName="tituloPeliculaMS" id="tituloPeliculaMS" class="form-control" value={{this.proyeccion.titulo}}>                                    <option *ngFor="let item of listaPeliculas" value="{{item.titulo}}">{{item.titulo}}</option>                                </select>                            </div>                        </div>                        <div class="form-row">                            <div class="form-group col-md-4">                                <label for="salaSesionMS">Sala</label>                                <select formControlName="salaSesionMS" id="salaSesionMS" class="form-control" value={{this.proyeccion.idSala}}>                                    <option *ngFor="let item of listaSalas" value="{{item.idSala}}">{{item.idSala}}</option>                                </select>                            </div>                            <div class="form-group col-md-4">                                <label for="tarifaSesionMS">Tarifa</label>                                <select formControlName="tarifaSesionMS" id="tarifaSesionMS" class="form-control" value={{this.proyeccion.idTarifa}}>                                    <option *ngFor="let item of listaTarifas" value="{{item.idTarifa}}">{{item.idTarifa+\'.- \'+item.nombre}}</option>                                </select>                            </div>                            </div>                        <button type="submit" class="btn btn-warning" id="botonModificaSesion">Modificar</button>                        <button class="btn btn-primary" type="button" id="botonModificaSesion2" disabled style="display: none;">                            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>                            Modificando...                        </button>                    </form>                </div>              </div>            </div>            <!-- Fin modificar sesión -->            <!-- Inicio borrar sesión -->            <div class="card">                <div class="card-header bg-info" id="headingThreeSesiones">                    <h2 class="mb-0">                    <button class="btn btn-link btn-block text-left text-white font-weight-bold collapsed" type="button" data-toggle="collapse" data-target="#collapseThreeSesiones" aria-expanded="false" aria-controls="collapseThreeSesiones">                        Borrar                    </button>                    </h2>                </div>                <div id="collapseThreeSesiones" class="collapse" aria-labelledby="headingThreeSesiones" data-parent="#accordionSesiones">                    <div class="card-body">                        <form (ngSubmit)="deleteSesion()" #fborrasesion="ngForm">                            <div class="form-row">                                <div class="form-goup col-md-4">                                    <label for="fechaBorrarSesion">Selecciona una fecha</label>                                    <select class="form-control" [(ngModel)]="fechaBorrarSesion" [ngModelOptions]="{standalone: true}" id="fechaBorrarSesion" (ngModelChange)="muestraSesion(fechaBorrarSesion)">                                        <option *ngFor="let item of listaFechaSesion" value="{{item}}">{{item | date : \'dd-MM-yyyy\'}}</option>                                    </select>                                </div>                                <div class="form-goup col-md-4">                                    <label for="borrarSesion">Selecciona una sesión</label>                                    <select class="form-control" [(ngModel)]="borrarSesion" [ngModelOptions]="{standalone: true}" id="borrarSesion">                                        <option *ngFor="let item of listaSesionDia" value="{{item.idProyeccion}}" >{{item[\'hora\']+\'-\'+item[\'titulo\']+\'- Sala:\'+item.idSala}}</option>                                    </select>                                </div>                            </div>                            <button type="submit" class="btn btn-danger" id="botonBorraSesion">Borrar</button>                            <button class="btn btn-primary" type="button" id="botonBorraSesion2" disabled style="display: none;">                                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>                                Borrando...                            </button>                        </form>                    </div>                </div>            </div>            <!-- Fin Borrar sesión-->          </div>      </div>    <!-- Administracion de Tarifas -->    <div class="tab-pane fade" id="nav-tarifas" role="tabpanel" aria-labelledby="nav-tarifas-tab">        <div class="accordion col-md-6 mr-auto ml-auto mt-5" id="accordionTarifasAdmin">            <!-- Inicio Añadir tarifas-->            <div class="card">                <div class="card-header bg-info" id="headingOneTarifas">                    <h2 class="mb-0">                    <button class="btn btn-link btn-block text-left text-white font-weight-bold" type="button" data-toggle="collapse" data-target="#collapseOneTarifas" aria-expanded="true" aria-controls="collapseOneTarifas">                        Añadir                    </button>                    </h2>                </div>                          <div id="collapseOneTarifas" class="collapse show" aria-labelledby="headingOneTarifas" data-parent="#accordionTarifasAdmin">                    <div class="card-body">                        <form [formGroup]="faddtarifa" (ngSubmit)="addTarifa()" id="faddtarifa"><!--nombre,descripcion,precio-->                            <div class="form-row">                                <div class="form-group col-md-4">                                    <label for="nombreTarifaAT">Nombre</label>                                    <input type="text" class="form-control" formControlName="nombreTarifaAT" id="nombreTarifaAT">                                    <div class="invalid-feedback">Rellene el campo</div>                                </div>                                <div class="form-group col-md-4">                                    <label for="descripcionTarifaAT">Descripción</label>                                    <input type="text" class="form-control" formControlName="descripcionTarifaAT" id="descripcionTarifaAT">                                    <div class="invalid-feedback">Rellene el campo</div>                                </div>                                <div class="form-group col-md-4">                                    <label for="precioTarifaAT">Precio</label>                                    <input type="number" min="0" class="form-control" formControlName="precioTarifaAT" id="precioTarifaAT" step="0.01">                                    <div class="invalid-feedback">Rellene el campo</div>                                </div>                            </div>                            <button type="submit" class="btn btn-success" id="botonAddTarifa">Añadir</button>                            <button class="btn btn-primary" type="button" id="botonAddTarifa2" disabled style="display: none;">                                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>                                Añadiendo...                            </button>                        </form>                    </div>                </div>            </div>            <!-- Fin Añadir tarifas-->            <!-- Inicio Modificar tarifas-->            <div class="card">                <div class="card-header bg-info" id="headingTwoTarifas">                    <h2 class="mb-0">                    <button class="btn btn-link btn-block text-left text-white font-weight-bold collapsed" type="button" data-toggle="collapse" data-target="#collapseTwoTarifas" aria-expanded="false" aria-controls="collapseTwoTarifas">                        Modificar                    </button>                    </h2>                </div>                <div id="collapseTwoTarifas" class="collapse" aria-labelledby="headingTwoTarifas" data-parent="#accordionTarifasAdmin">                    <div class="card-body">                        <form #fselecttarifa="ngForm" (ngSubmit)="selectTarifa()">                            <div class="row mb-3 mx-auto">                                <select class="form-control col-4 mr-3" [(ngModel)]="tarifaSeleccionada" [ngModelOptions]="{standalone: true}" id="tarifaSeleccionada">                                    <option *ngFor="let item of listaTarifas" value="{{item.idTarifa}}">{{item.nombre}}</option>                                </select>                                    <button type="submit" class="btn btn-info" id="botonSelectTarifa">Selecciona</button>                            </div>                        </form>                        <form [formGroup]="fmodtarifa" (ngSubmit)="modificaTarifa()" id="fmodtarifa" hidden><!--nombre,descripcion,precio-->                            <div class="form-row">                                <div class="form-group col-md-4">                                    <label for="nombreTarifaMT">Nombre</label>                                    <input type="text" class="form-control" formControlName="nombreTarifaMT" id="nombreTarifaMT" value="{{this.tarifa.nombre}}">                                </div>                                <div class="form-group col-md-4">                                    <label for="descripcionTarifaMT">Descripción</label>                                    <input type="text" class="form-control" formControlName="descripcionTarifaMT" id="descripcionTarifaMT" value="{{this.tarifa.descripcion}}">                                </div>                                <div class="form-group col-md-4">                                    <label for="precioTarifaMT">Precio</label>                                    <input type="number" min="0" class="form-control" formControlName="precioTarifaMT" id="precioTarifaMT" step="0.01" value="{{this.tarifa.precio}}">                                </div>                            </div>                            <button type="submit" class="btn btn-success" id="botonModTarifa">Añadir</button>                            <button class="btn btn-primary" type="button" id="botonModTarifa2" disabled style="display: none;">                                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>                                Añadiendo...                            </button>                        </form>                    </div>                </div>            </div>            <!-- Fin Modificar tarifas-->            <!-- Inicio Borrar tarifas-->            <div class="card">                <div class="card-header bg-info" id="headingThreeTarifas">                    <h2 class="mb-0">                    <button class="btn btn-link btn-block text-left text-white font-weight-bold collapsed" type="button" data-toggle="collapse" data-target="#collapseThreeTarifas" aria-expanded="false" aria-controls="collapseThreeTarifas">                        Eliminar                    </button>                    </h2>                </div>                <div id="collapseThreeTarifas" class="collapse" aria-labelledby="headingThreeTarifas" data-parent="#accordionTarifasAdmin">                    <div class="card-body">                        <form (ngSubmit)="deleteTarifa()" #fborratarifa="ngForm">                            <div class="form-group">                                <label for="borrarTarifa">Tarifa</label>                                <select class="form-control col-4 mr-3" [(ngModel)]="tarifaBorrada" [ngModelOptions]="{standalone: true}" id="borrarTarifa">                                    <option *ngFor="let item of listaTarifas" value="{{item.idTarifa}}">{{item.nombre}}</option>                                </select>                            </div>                                <button type="submit" class="btn btn-danger" id="botonBorraTarifa">Borrar</button>                            <button class="btn btn-primary" type="button" id="botonBorraTarifa2" disabled style="display: none;">                                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>                                Borrando...                            </button>                        </form>                    </div>                </div>            </div>            <!-- Fin Borrar tarifas-->        </div>    </div></div></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AuthComponent', 'selector': 'app-auth'},{'name': 'CarteleraComponent', 'selector': 'app-cartelera'},{'name': 'CierrasesionComponent', 'selector': 'app-cierrasesion'},{'name': 'ContactoComponent', 'selector': 'app-contacto'},{'name': 'FotoComponent', 'selector': 'app-foto'},{'name': 'IndexComponent', 'selector': 'app-index'},{'name': 'IniciosesionComponent', 'selector': 'app-iniciosesion'},{'name': 'PagoComponent', 'selector': 'app-pago'},{'name': 'RegistroComponent', 'selector': 'app-registro'},{'name': 'TarifasComponent', 'selector': 'app-tarifas'},{'name': 'UserComponent', 'selector': 'app-user'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'AuthComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No hay resultados que coincidan "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'AuthComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

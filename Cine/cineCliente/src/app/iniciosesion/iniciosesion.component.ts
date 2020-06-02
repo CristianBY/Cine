@@ -23,6 +23,12 @@ export class IniciosesionComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  /**
+   * Comprueba que el usuario está registrado
+   * @param passwordIni 
+   * @param username 
+   * @returns Si está registrado lleva al usuario a su home si no lo está lo mantiene en la página y lo avisa
+   */
   getUsuario(passwordIni,username){ 
     this._peticionesServicio.getUsuariosJSON(passwordIni,username.toLowerCase()).subscribe(data=>{
       if (data.token != "No") {

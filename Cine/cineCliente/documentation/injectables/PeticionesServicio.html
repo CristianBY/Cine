@@ -1,0 +1,2030 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Cine Luna</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/postmark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">Cine Luna</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Escribe para buscar"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Inyectables</li>
+  <li>PeticionesServicio</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>Fichero</h3>
+        </p>
+        <p class="comment">
+            <code>src/servicios/peticiones.servicio.ts</code>
+        </p>
+
+
+
+
+            <section>
+    <h3 id="index">Índice</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Propiedades</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#url">url</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#urlMultimedia">urlMultimedia</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Métodos</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#addPeliculaServer">addPeliculaServer</a>
+                            </li>
+                            <li>
+                                <a href="#addSesionServer">addSesionServer</a>
+                            </li>
+                            <li>
+                                <a href="#addTarifaServer">addTarifaServer</a>
+                            </li>
+                            <li>
+                                <a href="#addUsuarioServer">addUsuarioServer</a>
+                            </li>
+                            <li>
+                                <a href="#deletePeliculaServer">deletePeliculaServer</a>
+                            </li>
+                            <li>
+                                <a href="#deleteSesionServer">deleteSesionServer</a>
+                            </li>
+                            <li>
+                                <a href="#deleteTarifaServer">deleteTarifaServer</a>
+                            </li>
+                            <li>
+                                <a href="#enviaValoracionServer">enviaValoracionServer</a>
+                            </li>
+                            <li>
+                                <a href="#getCarteleraJSON">getCarteleraJSON</a>
+                            </li>
+                            <li>
+                                <a href="#getMultimediaJSON">getMultimediaJSON</a>
+                            </li>
+                            <li>
+                                <a href="#getPeliculaJSON">getPeliculaJSON</a>
+                            </li>
+                            <li>
+                                <a href="#getReservaJSON">getReservaJSON</a>
+                            </li>
+                            <li>
+                                <a href="#getReservasNoValoradasJSON">getReservasNoValoradasJSON</a>
+                            </li>
+                            <li>
+                                <a href="#getReservasValoradasJSON">getReservasValoradasJSON</a>
+                            </li>
+                            <li>
+                                <a href="#getSalasJSON">getSalasJSON</a>
+                            </li>
+                            <li>
+                                <a href="#getSesionesJSON">getSesionesJSON</a>
+                            </li>
+                            <li>
+                                <a href="#getTarifasJSON">getTarifasJSON</a>
+                            </li>
+                            <li>
+                                <a href="#getUsuariosJSON">getUsuariosJSON</a>
+                            </li>
+                            <li>
+                                <a href="#getValoracionJSON">getValoracionJSON</a>
+                            </li>
+                            <li>
+                                <a href="#modificaPeliculaServer">modificaPeliculaServer</a>
+                            </li>
+                            <li>
+                                <a href="#modificaSesionServer">modificaSesionServer</a>
+                            </li>
+                            <li>
+                                <a href="#modificaTarifaServer">modificaTarifaServer</a>
+                            </li>
+                            <li>
+                                <a href="#resevaServer">resevaServer</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(http: <a href="https://angular.io/api/common/http/HttpClient" target="_blank">HttpClient</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="10" class="link-to-prism">src/servicios/peticiones.servicio.ts:10</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parámetros :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Nombre</td>
+                                                    <td>Tipo</td>
+                                                <td>Opcional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>http</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/common/http/HttpClient" target="_blank" >HttpClient</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    
+    <h3 id="methods">
+        Métodos
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addPeliculaServer"></a>
+                    <span class="name">
+                        <b>
+                            addPeliculaServer
+                        </b>
+                        <a href="#addPeliculaServer"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>addPeliculaServer(data)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="86"
+                            class="link-to-prism">src/servicios/peticiones.servicio.ts:86</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Envía información al servidor para añadir una película a la BD</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parámetros :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Nombre</td>
+                                    <td>Opcional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>data</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Devuelve : </b>    <code>Observable&lt;any&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addSesionServer"></a>
+                    <span class="name">
+                        <b>
+                            addSesionServer
+                        </b>
+                        <a href="#addSesionServer"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>addSesionServer(data)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="124"
+                            class="link-to-prism">src/servicios/peticiones.servicio.ts:124</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Envía información al servidor para añadir una sesión en la BD</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parámetros :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Nombre</td>
+                                    <td>Opcional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>data</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Devuelve : </b>    <code>Observable&lt;any&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addTarifaServer"></a>
+                    <span class="name">
+                        <b>
+                            addTarifaServer
+                        </b>
+                        <a href="#addTarifaServer"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>addTarifaServer(data)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="153"
+                            class="link-to-prism">src/servicios/peticiones.servicio.ts:153</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Envía información al servidor para añadir una tarifa en la BD</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parámetros :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Nombre</td>
+                                    <td>Opcional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>data</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Devuelve : </b>    <code>Observable&lt;any&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addUsuarioServer"></a>
+                    <span class="name">
+                        <b>
+                            addUsuarioServer
+                        </b>
+                        <a href="#addUsuarioServer"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>addUsuarioServer(nuevoUsuario)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="76"
+                            class="link-to-prism">src/servicios/peticiones.servicio.ts:76</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Envía al servidor los datos para el registro de un usuario nuevo</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parámetros :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Nombre</td>
+                                    <td>Opcional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>nuevoUsuario</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Devuelve : </b>    <code>Observable&lt;any&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="deletePeliculaServer"></a>
+                    <span class="name">
+                        <b>
+                            deletePeliculaServer
+                        </b>
+                        <a href="#deletePeliculaServer"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>deletePeliculaServer(titulo)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="102"
+                            class="link-to-prism">src/servicios/peticiones.servicio.ts:102</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Envía información al servidor para borrar una película de la BD</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parámetros :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Nombre</td>
+                                    <td>Opcional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>titulo</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Devuelve : </b>    <code>Observable&lt;any&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="deleteSesionServer"></a>
+                    <span class="name">
+                        <b>
+                            deleteSesionServer
+                        </b>
+                        <a href="#deleteSesionServer"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>deleteSesionServer(borrarSesion)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="140"
+                            class="link-to-prism">src/servicios/peticiones.servicio.ts:140</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Envía información al servidor para borrar una sesión de la BD</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parámetros :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Nombre</td>
+                                    <td>Opcional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>borrarSesion</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Devuelve : </b>    <code>Observable&lt;any&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="deleteTarifaServer"></a>
+                    <span class="name">
+                        <b>
+                            deleteTarifaServer
+                        </b>
+                        <a href="#deleteTarifaServer"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>deleteTarifaServer(tarifaBorrada)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="169"
+                            class="link-to-prism">src/servicios/peticiones.servicio.ts:169</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Envía información al servidor para borrar una tarifa de la BD</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parámetros :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Nombre</td>
+                                    <td>Opcional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>tarifaBorrada</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Devuelve : </b>    <code>Observable&lt;any&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="enviaValoracionServer"></a>
+                    <span class="name">
+                        <b>
+                            enviaValoracionServer
+                        </b>
+                        <a href="#enviaValoracionServer"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>enviaValoracionServer(data)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="200"
+                            class="link-to-prism">src/servicios/peticiones.servicio.ts:200</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Envía al servidor la información necesaria para añadir una valoración en la BD</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parámetros :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Nombre</td>
+                                    <td>Opcional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>data</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Devuelve : </b>    <code>Observable&lt;any&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getCarteleraJSON"></a>
+                    <span class="name">
+                        <b>
+                            getCarteleraJSON
+                        </b>
+                        <a href="#getCarteleraJSON"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getCarteleraJSON()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="44"
+                            class="link-to-prism">src/servicios/peticiones.servicio.ts:44</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Petición de la Cartelera al servidor</p>
+</div>
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Devuelve : </b>    <code>Observable&lt;any&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>Devuelve la cartelera</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getMultimediaJSON"></a>
+                    <span class="name">
+                        <b>
+                            getMultimediaJSON
+                        </b>
+                        <a href="#getMultimediaJSON"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getMultimediaJSON()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="211"
+                            class="link-to-prism">src/servicios/peticiones.servicio.ts:211</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Obtiene la información contenida en el JSON de la carpeta assets</p>
+</div>
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Devuelve : </b>    <code>Observable&lt;any&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>Devueve el JSON con la información</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getPeliculaJSON"></a>
+                    <span class="name">
+                        <b>
+                            getPeliculaJSON
+                        </b>
+                        <a href="#getPeliculaJSON"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getPeliculaJSON()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="52"
+                            class="link-to-prism">src/servicios/peticiones.servicio.ts:52</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Petición de las películas al servidor</p>
+</div>
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Devuelve : </b>    <code>Observable&lt;any&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>Devuelve las películas</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getReservaJSON"></a>
+                    <span class="name">
+                        <b>
+                            getReservaJSON
+                        </b>
+                        <a href="#getReservaJSON"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getReservaJSON(idProyeccion)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="221"
+                            class="link-to-prism">src/servicios/peticiones.servicio.ts:221</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Pide al servidor la info necesaria para realizar una reserva y generar la página de pago</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parámetros :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Nombre</td>
+                                    <td>Opcional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>idProyeccion</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Devuelve : </b>    <code>Observable&lt;any&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>Devuelve un JSON con la información</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getReservasNoValoradasJSON"></a>
+                    <span class="name">
+                        <b>
+                            getReservasNoValoradasJSON
+                        </b>
+                        <a href="#getReservasNoValoradasJSON"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getReservasNoValoradasJSON(usuario)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="192"
+                            class="link-to-prism">src/servicios/peticiones.servicio.ts:192</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Petición al servidor de las películas no valoradas</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parámetros :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Nombre</td>
+                                    <td>Opcional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>usuario</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Devuelve : </b>    <code>Observable&lt;any&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>Devuelve un JSON con las películas no valoradas</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getReservasValoradasJSON"></a>
+                    <span class="name">
+                        <b>
+                            getReservasValoradasJSON
+                        </b>
+                        <a href="#getReservasValoradasJSON"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getReservasValoradasJSON(usuario)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="183"
+                            class="link-to-prism">src/servicios/peticiones.servicio.ts:183</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Petición al servidor de las películas valoradas</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parámetros :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Nombre</td>
+                                    <td>Opcional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>usuario</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Devuelve : </b>    <code>Observable&lt;any&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>Devuelve un JSON con las películas valoradas</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getSalasJSON"></a>
+                    <span class="name">
+                        <b>
+                            getSalasJSON
+                        </b>
+                        <a href="#getSalasJSON"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getSalasJSON()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="68"
+                            class="link-to-prism">src/servicios/peticiones.servicio.ts:68</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Petición de las Salas</p>
+</div>
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Devuelve : </b>    <code>Observable&lt;any&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>Devuelve las salas</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getSesionesJSON"></a>
+                    <span class="name">
+                        <b>
+                            getSesionesJSON
+                        </b>
+                        <a href="#getSesionesJSON"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getSesionesJSON()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="116"
+                            class="link-to-prism">src/servicios/peticiones.servicio.ts:116</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Pide al servidor todas las sesiones</p>
+</div>
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Devuelve : </b>    <code>Observable&lt;any&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>devuelve un JSON con las sesiones</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getTarifasJSON"></a>
+                    <span class="name">
+                        <b>
+                            getTarifasJSON
+                        </b>
+                        <a href="#getTarifasJSON"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getTarifasJSON()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="36"
+                            class="link-to-prism">src/servicios/peticiones.servicio.ts:36</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Petición de tarifas al servidor</p>
+</div>
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Devuelve : </b>    <code>Observable&lt;any&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>Devuelve las tarifas</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getUsuariosJSON"></a>
+                    <span class="name">
+                        <b>
+                            getUsuariosJSON
+                        </b>
+                        <a href="#getUsuariosJSON"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getUsuariosJSON(password, username)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="24"
+                            class="link-to-prism">src/servicios/peticiones.servicio.ts:24</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Hace una petición para comprobar que el usuario está registrado</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parámetros :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Nombre</td>
+                                    <td>Opcional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>password</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>username</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Devuelve : </b>    <code>Observable&lt;any&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>Devuelve si está registrado o no  </p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getValoracionJSON"></a>
+                    <span class="name">
+                        <b>
+                            getValoracionJSON
+                        </b>
+                        <a href="#getValoracionJSON"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getValoracionJSON()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="60"
+                            class="link-to-prism">src/servicios/peticiones.servicio.ts:60</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Petición de las valoraciones</p>
+</div>
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Devuelve : </b>    <code>Observable&lt;any&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>Devuelve las valoraciones por película ya calculada</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="modificaPeliculaServer"></a>
+                    <span class="name">
+                        <b>
+                            modificaPeliculaServer
+                        </b>
+                        <a href="#modificaPeliculaServer"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>modificaPeliculaServer(data)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="94"
+                            class="link-to-prism">src/servicios/peticiones.servicio.ts:94</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Envía información al servidor para modificar una película de la BD</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parámetros :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Nombre</td>
+                                    <td>Opcional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>data</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Devuelve : </b>    <code>Observable&lt;any&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="modificaSesionServer"></a>
+                    <span class="name">
+                        <b>
+                            modificaSesionServer
+                        </b>
+                        <a href="#modificaSesionServer"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>modificaSesionServer(data)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="132"
+                            class="link-to-prism">src/servicios/peticiones.servicio.ts:132</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Envía información al servidor para modificar una sesión de la BD</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parámetros :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Nombre</td>
+                                    <td>Opcional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>data</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Devuelve : </b>    <code>Observable&lt;any&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="modificaTarifaServer"></a>
+                    <span class="name">
+                        <b>
+                            modificaTarifaServer
+                        </b>
+                        <a href="#modificaTarifaServer"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>modificaTarifaServer(data)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="161"
+                            class="link-to-prism">src/servicios/peticiones.servicio.ts:161</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Envía información al servidor para modificar una tarifa de la BD</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parámetros :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Nombre</td>
+                                    <td>Opcional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>data</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Devuelve : </b>    <code>Observable&lt;any&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="resevaServer"></a>
+                    <span class="name">
+                        <b>
+                            resevaServer
+                        </b>
+                        <a href="#resevaServer"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>resevaServer(data)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="232"
+                            class="link-to-prism">src/servicios/peticiones.servicio.ts:232</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Envía la información necesaria al servidor para almacenar una reserva</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parámetros :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Nombre</td>
+                                    <td>Opcional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>data</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Devuelve : </b>    <code>Observable&lt;any&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+            <section>
+    
+        <h3 id="inputs">
+            Propiedades
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="url"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            url</b>
+                            <a href="#url"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Tipo : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definido en <a href="" data-line="9" class="link-to-prism">src/servicios/peticiones.servicio.ts:9</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="urlMultimedia"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            urlMultimedia</b>
+                            <a href="#urlMultimedia"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Tipo : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definido en <a href="" data-line="10" class="link-to-prism">src/servicios/peticiones.servicio.ts:10</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;;
+import { HttpClient, HttpHeaders } from &#x27;@angular/common/http&#x27;;
+import { Observable } from &quot;rxjs&quot;;
+
+@Injectable({providedIn: &#x27;root&#x27;})
+
+export class PeticionesServicio {
+
+    public url:string;
+    public urlMultimedia:string;
+
+    constructor(private http: HttpClient) { 
+        this.url &#x3D; &quot;http://localhost:9000&quot;;
+        this.urlMultimedia &#x3D; &quot;./assets/multimedia.json&quot;;
+
+    }
+
+    /**
+     * Hace una petición para comprobar que el usuario está registrado
+     * @param password 
+     * @param username
+     * @returns Devuelve si está registrado o no  
+     */
+    getUsuariosJSON(password,username): Observable&lt;any&gt; {
+        let data &#x3D; {
+            &#x27;username&#x27; : username,
+            &#x27;password&#x27; : password
+        };
+        return this.http.post(this.url+&quot;/usuarios&quot;, data);
+    }
+
+    /**
+     * Petición de tarifas al servidor
+     * @returns Devuelve las tarifas
+     */
+    getTarifasJSON(): Observable&lt;any&gt; {
+        return this.http.get(this.url+&quot;/tarifas&quot;);
+    }
+
+    /**
+     * Petición de la Cartelera al servidor
+     * @returns Devuelve la cartelera
+     */
+    getCarteleraJSON(): Observable&lt;any&gt; {
+        return this.http.get(this.url+&quot;/cartelera&quot;);
+    }
+
+    /**
+     * Petición de las películas al servidor
+     * @returns Devuelve las películas
+     */
+    getPeliculaJSON(): Observable&lt;any&gt; {
+        return this.http.get(this.url+&quot;/cartelera/pelicula&quot;);
+    }
+
+    /**
+     * Petición de las valoraciones
+     * @returns Devuelve las valoraciones por película ya calculada
+     */
+    getValoracionJSON(): Observable&lt;any&gt; {
+        return this.http.get(this.url+&quot;/valoracion&quot;);
+    }
+
+    /**
+     * Petición de las Salas
+     * @returns Devuelve las salas
+     */
+    getSalasJSON(): Observable&lt;any&gt; {
+        return this.http.get(this.url+&quot;/sesion/sala&quot;);
+    }
+
+    /**
+     * Envía al servidor los datos para el registro de un usuario nuevo
+     * @param nuevoUsuario 
+     */
+    addUsuarioServer(nuevoUsuario): Observable&lt;any&gt; {
+        return this.http.post(this.url+&quot;/usuarios/registro&quot;,nuevoUsuario);
+    }
+
+    //Peticiones de la parte de Administración
+    //Peliculas
+    /**
+     * Envía información al servidor para añadir una película a la BD
+     * @param data 
+     */
+    addPeliculaServer(data): Observable&lt;any&gt; {
+        return this.http.post(this.url+&quot;/cartelera/add&quot;,data);
+    }
+
+    /**
+     * Envía información al servidor para modificar una película de la BD
+     * @param data 
+     */
+    modificaPeliculaServer(data): Observable&lt;any&gt; {
+        return this.http.post(this.url+&quot;/cartelera/modifica&quot;,data);
+    }
+
+    /**
+     * Envía información al servidor para borrar una película de la BD
+     * @param titulo 
+     */
+    deletePeliculaServer(titulo): Observable&lt;any&gt;{
+        let pelicula &#x3D; {
+            &#x27;titulo&#x27; : titulo
+        };
+
+        return this.http.post(this.url+&quot;/cartelera/delete&quot;,pelicula);
+    }
+
+    //Sesiones - Proyección
+
+    /**
+     * Pide al servidor todas las sesiones
+     * @returns devuelve un JSON con las sesiones
+     */
+    getSesionesJSON():Observable&lt;any&gt;{
+        return this.http.get(this.url+&quot;/sesion&quot;);
+    }
+
+    /**
+     * Envía información al servidor para añadir una sesión en la BD
+     * @param data 
+     */
+    addSesionServer(data):Observable&lt;any&gt;{
+        return this.http.post(this.url+&quot;/sesion/add&quot;,data);
+    }
+
+    /**
+     * Envía información al servidor para modificar una sesión de la BD
+     * @param data 
+     */
+    modificaSesionServer(data):Observable&lt;any&gt;{
+        return this.http.post(this.url+&quot;/sesion/modifica&quot;,data);
+    }
+
+    /**
+     * Envía información al servidor para borrar una sesión de la BD
+     * @param borrarSesion 
+     */
+    deleteSesionServer(borrarSesion):Observable&lt;any&gt;{
+        let data &#x3D; {
+            &#x27;sesion&#x27; : borrarSesion
+        };
+        return this.http.post(this.url+&quot;/sesion/delete&quot;,data);
+    }
+
+    // Tarifas
+
+    /**
+     * Envía información al servidor para añadir una tarifa en la BD
+     * @param data 
+     */
+    addTarifaServer(data):Observable&lt;any&gt;{
+        return this.http.post(this.url+&quot;/tarifas/add&quot;,data);
+    }
+
+    /**
+     * Envía información al servidor para modificar una tarifa de la BD
+     * @param data 
+     */
+    modificaTarifaServer(data):Observable&lt;any&gt;{
+        return this.http.post(this.url+&quot;/tarifas/modifica&quot;,data);
+    }
+
+    /**
+     * Envía información al servidor para borrar una tarifa de la BD
+     * @param tarifaBorrada 
+     */
+    deleteTarifaServer(tarifaBorrada):Observable&lt;any&gt;{
+        let data &#x3D; {
+            &#x27;idTarifa&#x27; : tarifaBorrada
+        };
+        return this.http.post(this.url+&quot;/tarifas/delete&quot;,data);
+    }
+
+    // Peticiones de la parte de usuario registrado
+
+    /**
+     * Petición al servidor de las películas valoradas
+     * @param usuario 
+     * @returns Devuelve un JSON con las películas valoradas
+     */
+    getReservasValoradasJSON(usuario):Observable&lt;any&gt;{
+        return this.http.get(this.url+&quot;/reserva/valorada/:&quot;+usuario);
+    }
+
+    /**
+     * Petición al servidor de las películas no valoradas
+     * @param usuario 
+     * @returns Devuelve un JSON con las películas no valoradas
+     */
+    getReservasNoValoradasJSON(usuario):Observable&lt;any&gt;{
+        return this.http.get(this.url+&quot;/reserva/novalorada/:&quot;+usuario);
+    }
+
+    /**
+     * Envía al servidor la información necesaria para añadir una valoración en la BD
+     * @param data 
+     */
+    enviaValoracionServer(data):Observable&lt;any&gt;{
+        return this.http.post(this.url+&quot;/reserva/valoracion&quot;,data);
+    }
+
+
+    // Peticiones al JSON multimedia.json
+
+    /**
+     * Obtiene la información contenida en el JSON de la carpeta assets
+     * @returns Devueve el JSON con la información
+     */
+    getMultimediaJSON():Observable&lt;any&gt;{
+        return this.http.get(this.urlMultimedia);
+    }
+
+    // Parte de pagos y reservas
+    /**
+     * Pide al servidor la info necesaria para realizar una reserva y generar la página de pago
+     * @param idProyeccion 
+     * @returns Devuelve un JSON con la información
+     */
+    getReservaJSON(idProyeccion):Observable&lt;any&gt;{
+        let data &#x3D; {
+            &#x27;idProyeccion&#x27; : idProyeccion
+        }
+        return this.http.post(this.url+&quot;/reserva&quot;,data);
+    }
+
+    /**
+     * Envía la información necesaria al servidor para almacenar una reserva
+     * @param data 
+     */
+    resevaServer(data):Observable&lt;any&gt;{
+        return this.http.post(this.url+&quot;/reserva/reservado&quot;,data);
+    }
+}</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No hay resultados que coincidan "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'PeticionesServicio.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

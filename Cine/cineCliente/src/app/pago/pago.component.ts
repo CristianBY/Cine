@@ -18,7 +18,6 @@ export class PagoComponent implements OnInit {
   public listaMeses = new Array('01','02','03','04','05','06','07','08','09','10','11','12');
   public listaAnyos = new Array();
 
-
   constructor(private _peticionesServicio: PeticionesServicio, private _usuarioSesion: UsuarioSesion, private router:Router, private fb: FormBuilder) 
   {
     this.fpaypal = this.fb.group({
@@ -46,6 +45,9 @@ export class PagoComponent implements OnInit {
     
   }
 
+  /**
+   * Crea una lista con los siguientes 6 años para la verificación de la tarjeta de crédito
+   */
   cargarAnyos(){
     let year = new Date().getFullYear();
     for (let i = 0; i < 6; i++) {
@@ -53,12 +55,18 @@ export class PagoComponent implements OnInit {
     }
   }
 
+  /**
+   * Obtiene el JSON multimedia de assets
+   */
   getMultimedia(){
     this._peticionesServicio.getMultimediaJSON().subscribe(data=>{
       this.multimediaInfo = data;
     });
   }
 
+  /**
+   * Pide la información de una reserva para generar la página (butacas disponibles, nombre película, hora, ..)
+   */
   getReserva() {
     let idProyeccion = sessionStorage.getItem('compra');
     this._peticionesServicio.getReservaJSON(idProyeccion).subscribe(data=>{
@@ -66,11 +74,18 @@ export class PagoComponent implements OnInit {
     });
   }
 
+  /**
+   * Según las entradas seleccionadas modifica el precio 
+   * @param precio 
+   */
   mostrar(precio){
-    this.entradas = parseInt((<HTMLInputElement>document.getElementById('butacaReservada')).value);
+    this.entradas = parseInt((<HTMLInputElement>document.getElementById('butacaReservada')).value); //parse en TypeScript el de JS no funciopna
     this.entradas *= parseInt(precio); 
   }
 
+  /**
+   * Formulario para el pago por paypal si todo va bien muestra una ventana simulando el pago y la conexión a Paypal
+   */
   procesoDePagoPaypal(){
     if (this.fpaypal.invalid) {
       this.fpaypal.reset();
@@ -110,6 +125,9 @@ export class PagoComponent implements OnInit {
     }
   }
 
+  /**
+   * Formulario de pago con tarjeta
+   */
   procesoDePagoTarjeta(){
     if (this.ftarjeta.invalid) {
       this.ftarjeta.reset();

@@ -3,6 +3,9 @@ import logger from 'morgan'
 import bodyParser from 'body-parser'
 import router from './router'
 
+/**
+ * @type {express}
+ */
 const app = express()
 app.disable('x-powered-by')
 

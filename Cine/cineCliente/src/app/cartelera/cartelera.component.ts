@@ -33,7 +33,12 @@ export class CarteleraComponent implements OnInit {
     }
 
   }
-
+  
+  /**
+   * Crea una lista con los 7 días de la semana incluyendo hoy
+   * @param Sin parámetros
+   * @returns
+   */
   diasSemana(){
     for (let i = 0; i < 7; i++) {
       let hoy = new Date();
@@ -41,18 +46,29 @@ export class CarteleraComponent implements OnInit {
     }
   }
 
+  /**
+   * Obtiene todas las valoraciones
+   * @param Sin parámetros
+   * @returns
+   */
   getValoracion(){
     this._peticionesServicio.getValoracionJSON().subscribe(data=>{
       this.valoracion = data;
     });
   }
 
+  /**
+   * Obtiene la info contenida en el multimedia.json 
+   */
   getMultimedia(){
     this._peticionesServicio.getMultimediaJSON().subscribe(data=>{
       this.multimediaInfo = data;
     });
   }
 
+  /**
+   * Genera la lista con los datos de la cartelera para cada uno de los 7 días
+   */
   getCarteleraDia(){
     let dia = new Date();
     let sesion;
@@ -98,18 +114,22 @@ export class CarteleraComponent implements OnInit {
     });
   }
   
+  /**
+   * Se encarga de dirigirnos al pago con la sesión que queremos adquirir
+   * @param sesion 
+   */
   procesoDeCompra(sesion){
     sessionStorage.setItem('compra',sesion);
     this.router.navigate(['pago']);
   }
 
+  /**
+   * Nos dirige a una página con las fotos de la película deseada
+   * @param titulo 
+   */
   foto(titulo){
     sessionStorage.setItem('foto',titulo);
     this.router.navigate(['foto']);
   }
 
-  trailer(titulo){
-    sessionStorage.setItem('video',titulo);
-    this.router.navigate(['trailer']);
-  }
 }

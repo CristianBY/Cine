@@ -1,0 +1,604 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Cine Luna</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/postmark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">Cine Luna</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Escribe para buscar"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Componentes</li>
+  <li>RegistroComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>Fichero</h3>
+</p>
+<p class="comment">
+    <code>src/app/registro/registro.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implementa</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Meta datos</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-registro</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./registro.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./registro.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Índice</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Propiedades</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#fregistro">fregistro</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Métodos</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#registraUsuario">registraUsuario</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(_peticionesServicio: <a href="../injectables/PeticionesServicio.html">PeticionesServicio</a>, _usuarioSesion: <a href="../injectables/UsuarioSesion.html">UsuarioSesion</a>, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>, fb: <a href="https://angular.io/api/forms/FormBuilder" target="_blank">FormBuilder</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="14" class="link-to-prism">src/app/registro/registro.component.ts:14</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parámetros :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Nombre</td>
+                                                    <td>Tipo</td>
+                                                <td>Opcional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>_peticionesServicio</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/PeticionesServicio.html" target="_self" >PeticionesServicio</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>_usuarioSesion</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/UsuarioSesion.html" target="_self" >UsuarioSesion</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>fb</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/forms/FormBuilder" target="_blank" >FormBuilder</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Métodos
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="26"
+                            class="link-to-prism">src/app/registro/registro.component.ts:26</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="registraUsuario"></a>
+                    <span class="name">
+                        <b>
+                            registraUsuario
+                        </b>
+                        <a href="#registraUsuario"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>registraUsuario()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="37"
+                            class="link-to-prism">src/app/registro/registro.component.ts:37</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Recoge la información necesaria para registrar un nuevo cliente</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Propiedades
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="fregistro"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            fregistro</b>
+                            <a href="#fregistro"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Tipo : </i>        <code><a href="https://angular.io/api/forms/FormGroup" target="_blank" >FormGroup</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definido en <a href="" data-line="14" class="link-to-prism">src/app/registro/registro.component.ts:14</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import { PeticionesServicio } from &#x27;src/servicios/peticiones.servicio&#x27;;
+import { UsuarioSesion } from &#x27;src/servicios/usuarioSesion&#x27;;
+import { Router } from &#x27;@angular/router&#x27;;
+import { FormGroup, Validators, FormBuilder } from &#x27;@angular/forms&#x27;;
+import { Usuario } from &#x27;../model/Usuario&#x27;;
+
+@Component({
+  selector: &#x27;app-registro&#x27;,
+  templateUrl: &#x27;./registro.component.html&#x27;,
+  styleUrls: [&#x27;./registro.component.css&#x27;]
+})
+export class RegistroComponent implements OnInit {
+  public fregistro: FormGroup;
+
+  constructor(private _peticionesServicio: PeticionesServicio, private _usuarioSesion: UsuarioSesion, private router:Router, private fb: FormBuilder) { 
+    this.fregistro &#x3D; this.fb.group({
+      nombreRegistro: [&#x27;&#x27;,Validators.required],
+      apellidosRegistro: [&#x27;&#x27;,Validators.required],
+      emailRegistro: [&#x27;&#x27;,[Validators.required,Validators.pattern(&#x27;[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}&#x27;)]],
+      passwordRegistro1: [&#x27;&#x27;,Validators.required],
+      passwordRegistro2: [&#x27;&#x27;,Validators.required]
+    });
+  }
+
+  ngOnInit(): void {
+
+    if (sessionStorage.getItem(&#x27;token&#x27;) !&#x3D; &quot;No&quot; &amp;&amp; sessionStorage.getItem(&#x27;token&#x27;) !&#x3D; null) {
+      this._usuarioSesion.comprobarSesion();
+    }
+  }
+
+
+  /**
+   * Recoge la información necesaria para registrar un nuevo cliente
+   */
+  registraUsuario(){
+  
+    if(this.fregistro.get(&#x27;nombreRegistro&#x27;).hasError(&#x27;required&#x27;)){
+      document.getElementById(&#x27;nombreRegistro&#x27;).classList.add(&#x27;is-invalid&#x27;);
+    }
+    if(this.fregistro.get(&#x27;apellidosRegistro&#x27;).hasError(&#x27;required&#x27;)){
+      document.getElementById(&#x27;apellidosRegistro&#x27;).classList.add(&#x27;is-invalid&#x27;);
+    }
+    if(this.fregistro.get(&#x27;emailRegistro&#x27;).hasError(&#x27;required&#x27;) || this.fregistro.get(&#x27;emailRegistro&#x27;).hasError(&#x27;pattern&#x27;)){
+      document.getElementById(&#x27;emailRegistro&#x27;).classList.add(&#x27;is-invalid&#x27;);
+      if(this.fregistro.get(&#x27;emailRegistro&#x27;).hasError(&#x27;pattern&#x27;)){
+        document.getElementById(&#x27;emailRegistro&#x27;).nextSibling.textContent&#x3D;&#x27;Formato no válido&#x27;;
+      }
+    }
+    if(this.fregistro.get(&#x27;passwordRegistro1&#x27;).hasError(&#x27;required&#x27;)){
+      document.getElementById(&#x27;passwordRegistro1&#x27;).classList.add(&#x27;is-invalid&#x27;);
+    }
+    if(this.fregistro.get(&#x27;passwordRegistro2&#x27;).hasError(&#x27;required&#x27;) || this.fregistro.value.passwordRegistro2 !&#x3D; this.fregistro.value.passwordRegistro1){
+      document.getElementById(&#x27;passwordRegistro2&#x27;).classList.add(&#x27;is-invalid&#x27;);
+      if (this.fregistro.value.passwordRegistro2 !&#x3D; this.fregistro.value.passwordRegistro1){
+        document.getElementById(&#x27;passwordRegistro2&#x27;).nextSibling.textContent&#x3D;&#x27;Las contraseñas no coinciden&#x27;;
+      }
+    }    
+    
+    if (!this.fregistro.invalid) {
+      let nuevoUsuario &#x3D; new Usuario(0,this.fregistro.value.nombreRegistro,this.fregistro.value.apellidosRegistro,this.fregistro.value.emailRegistro.toLowerCase(),this.fregistro.value.passwordRegistro1,false);
+
+      this._peticionesServicio.addUsuarioServer(nuevoUsuario).subscribe(data&#x3D;&gt;{
+        sessionStorage.clear();
+        this._peticionesServicio.getUsuariosJSON(this.fregistro.value.passwordRegistro1,this.fregistro.value.emailRegistro).subscribe(data&#x3D;&gt;{
+          if (data.token !&#x3D; &quot;No&quot;) {
+            sessionStorage.setItem(&#x27;token&#x27;,data.token);
+            sessionStorage.setItem(&#x27;idUsuario&#x27;,data.idUsuario);
+            sessionStorage.setItem(&#x27;username&#x27;,data.nombre);
+            
+            this.router.navigate([&#x27;&#x27;]);
+            }
+    
+        });
+  
+      });
+    }  
+  }
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;h1 class&#x3D;&quot;text-center mb-3&quot;&gt;Registro&lt;/h1&gt;
+
+&lt;form [formGroup]&#x3D;&quot;fregistro&quot; (ngSubmit)&#x3D;&quot;registraUsuario()&quot; id&#x3D;&quot;fregistro&quot; class&#x3D;&quot;mx-auto col-md-4&quot;&gt;
+    &lt;div class&#x3D;&quot;form-row&quot;&gt;
+        &lt;div class&#x3D;&quot;form-group md-form col-5&quot;&gt;
+            &lt;label for&#x3D;&quot;nombreRegistro&quot;&gt;Nombre&lt;/label&gt;
+            &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; formControlName&#x3D;&quot;nombreRegistro&quot; id&#x3D;&quot;nombreRegistro&quot; maxlength&#x3D;&quot;50&quot;&gt;
+            &lt;div class&#x3D;&quot;invalid-feedback&quot;&gt;Rellene el campo&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;form-group col-7&quot;&gt;
+            &lt;label for&#x3D;&quot;apellidosRegistro&quot;&gt;Apellidos&lt;/label&gt;
+            &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; formControlName&#x3D;&quot;apellidosRegistro&quot; id&#x3D;&quot;apellidosRegistro&quot; maxlength&#x3D;&quot;50&quot;&gt;
+            &lt;div class&#x3D;&quot;invalid-feedback&quot;&gt;Rellene el campo&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;form-group&quot;&gt;
+        &lt;label for&#x3D;&quot;emailRegistro&quot;&gt;Email&lt;/label&gt;
+        &lt;input type&#x3D;&quot;email&quot; class&#x3D;&quot;form-control&quot; formControlName&#x3D;&quot;emailRegistro&quot; autocomplete&#x3D;&quot;username&quot; id&#x3D;&quot;emailRegistro&quot;&gt;
+        &lt;div class&#x3D;&quot;invalid-feedback&quot;&gt;Rellene el campo&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;form-group&quot;&gt;
+        &lt;label for&#x3D;&quot;passwordRegistro1&quot;&gt;Contraseña&lt;/label&gt;
+        &lt;input type&#x3D;&quot;password&quot; class&#x3D;&quot;form-control&quot; formControlName&#x3D;&quot;passwordRegistro1&quot; autocomplete&#x3D;&quot;new-password&quot; id&#x3D;&quot;passwordRegistro1&quot;&gt;
+        &lt;div class&#x3D;&quot;invalid-feedback&quot;&gt;Rellene el campo&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;form-group&quot;&gt;
+        &lt;label for&#x3D;&quot;passwordRegistro2&quot;&gt;Verifica Contraseña&lt;/label&gt;
+        &lt;input type&#x3D;&quot;password&quot; class&#x3D;&quot;form-control&quot; formControlName&#x3D;&quot;passwordRegistro2&quot; autocomplete&#x3D;&quot;new-password&quot; id&#x3D;&quot;passwordRegistro2&quot;&gt;
+        &lt;div class&#x3D;&quot;invalid-feedback&quot;&gt;Rellene el campo&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;button type&#x3D;&quot;submit&quot; class&#x3D;&quot;btn btn-primary&quot;&gt;Registrarse&lt;/button&gt;
+&lt;/form&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./registro.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss"></code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Leyenda</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Elemento Html</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Componente</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Elemento Html con directiva</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><h1 class="text-center mb-3">Registro</h1><form [formGroup]="fregistro" (ngSubmit)="registraUsuario()" id="fregistro" class="mx-auto col-md-4">    <div class="form-row">        <div class="form-group md-form col-5">            <label for="nombreRegistro">Nombre</label>            <input type="text" class="form-control" formControlName="nombreRegistro" id="nombreRegistro" maxlength="50">            <div class="invalid-feedback">Rellene el campo</div>        </div>        <div class="form-group col-7">            <label for="apellidosRegistro">Apellidos</label>            <input type="text" class="form-control" formControlName="apellidosRegistro" id="apellidosRegistro" maxlength="50">            <div class="invalid-feedback">Rellene el campo</div>        </div>    </div>    <div class="form-group">        <label for="emailRegistro">Email</label>        <input type="email" class="form-control" formControlName="emailRegistro" autocomplete="username" id="emailRegistro">        <div class="invalid-feedback">Rellene el campo</div>    </div>    <div class="form-group">        <label for="passwordRegistro1">Contraseña</label>        <input type="password" class="form-control" formControlName="passwordRegistro1" autocomplete="new-password" id="passwordRegistro1">        <div class="invalid-feedback">Rellene el campo</div>    </div>    <div class="form-group">        <label for="passwordRegistro2">Verifica Contraseña</label>        <input type="password" class="form-control" formControlName="passwordRegistro2" autocomplete="new-password" id="passwordRegistro2">        <div class="invalid-feedback">Rellene el campo</div>    </div>    <button type="submit" class="btn btn-primary">Registrarse</button></form></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AuthComponent', 'selector': 'app-auth'},{'name': 'CarteleraComponent', 'selector': 'app-cartelera'},{'name': 'CierrasesionComponent', 'selector': 'app-cierrasesion'},{'name': 'ContactoComponent', 'selector': 'app-contacto'},{'name': 'FotoComponent', 'selector': 'app-foto'},{'name': 'IndexComponent', 'selector': 'app-index'},{'name': 'IniciosesionComponent', 'selector': 'app-iniciosesion'},{'name': 'PagoComponent', 'selector': 'app-pago'},{'name': 'RegistroComponent', 'selector': 'app-registro'},{'name': 'TarifasComponent', 'selector': 'app-tarifas'},{'name': 'UserComponent', 'selector': 'app-user'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'RegistroComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No hay resultados que coincidan "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'RegistroComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

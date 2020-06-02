@@ -20,6 +20,9 @@ export class TarifasComponent implements OnInit {
     
   }
 
+  /**
+   * Pide todas las tarifas y las carga en una lista 
+   */
   getTarifas(){ 
     this._peticionesServicio.getTarifasJSON().subscribe(data=>{
       this.datos = data;

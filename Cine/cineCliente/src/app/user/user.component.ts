@@ -35,26 +35,37 @@ export class UserComponent implements OnInit {
   }
 
 
+  /**
+   * Pide la información del multimedia.json de assets
+   */
   getMultimedia(){
     this._peticionesServicio.getMultimediaJSON().subscribe(data=>{
       this.multimediaInfo = data;
     });
   }
 
+  /**
+   * Pide las reservas valoradas por el usuario
+   */
   getReservasValoradas(){
     this._peticionesServicio.getReservasValoradasJSON(this.idUsuario).subscribe(data=>{
       this.listaReservasValoradas = data;
     });
   }
 
+  /**
+   * Pide las reservas no valoradas por el usuario
+   */
   getReservasNoValoradas(){
     this._peticionesServicio.getReservasNoValoradasJSON(this.idUsuario).subscribe(data=>{
       this.listaReservasNoValoradas = data;
     });
-    
-    
   }
 
+  /**
+   * Envía una valoración a la base de datos
+   * @param titulo 
+   */
   enviaValoracion(titulo){
     let data = {
       'titulo' : titulo,
