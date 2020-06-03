@@ -75,6 +75,20 @@ export class PagoComponent implements OnInit {
   }
 
   /**
+   * Asegura que las butacas reservadas sean las correctas
+   * @param libres 
+   */
+  butacas(libres) {
+    this.entradas = parseInt((<HTMLInputElement>document.getElementById('butacaReservada')).value);
+    if (this.entradas > libres) {
+      (<HTMLInputElement>document.getElementById('butacaReservada')).value = libres;
+    }
+    if (this.entradas <= 0) {
+      (<HTMLInputElement>document.getElementById('butacaReservada')).value = "1";
+    }
+  }
+
+  /**
    * Según las entradas seleccionadas modifica el precio 
    * @param precio 
    */

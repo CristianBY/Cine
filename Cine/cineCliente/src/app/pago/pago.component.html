@@ -13,7 +13,7 @@
         <p>Sala {{this.reserva[0].idSala}}</p>
         <div class="form-group mt-3">
             <label for="butacaReservada" class="mt-5">Entradas</label>
-            <input class="form-control col-4" type="number" name="butacaReservada" id="butacaReservada" max="{{this.reserva[0].libre}}" min="1" value="1" (change)="mostrar(this.reserva[0].precio)">
+            <input class="form-control col-4" type="number" name="butacaReservada" id="butacaReservada" max="{{this.reserva[0].libre}}" min="1" value="1" (blur)="butacas(this.reserva[0].libre)" (change)="mostrar(this.reserva[0].precio)">
         </div>
         
         <div *ngIf="(this.reserva[0].libre > 10)">
