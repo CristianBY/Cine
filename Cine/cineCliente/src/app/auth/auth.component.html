@@ -58,7 +58,7 @@
                                 </div>
                                 <div class="form-group col-md-4">
                                     <label for="duracionPeliculaAP">Duración</label>
-                                    <input type="number" min="0" class="form-control" formControlName="duracionPeliculaAP" id="duracionPeliculaAP">
+                                    <input type="number" min="0" class="form-control" formControlName="duracionPeliculaAP" id="duracionPeliculaAP" placeholder="min.">
                                     <div class="invalid-feedback">Rellene el campo</div>
                                 </div>
                                 <div class="form-group col-md-4">
@@ -111,7 +111,7 @@
                             <div class="form-row">
                                 <div class="form-group col-md-4">
                                     <label for="anyoPeliculaMP">Año</label>
-                                    <input type="text" class="form-control" formControlName="anyoPeliculaMP" id="anyoPeliculaMP" value="{{this.pelicula.anyo}}">
+                                    <input type="text" class="form-control" formControlName="anyoPeliculaMP" id="anyoPeliculaMP" value="{{this.pelicula.anyo}}" maxlength="4">
                                     <div class="invalid-feedback">Año no válido</div>
                                 </div>
                                 <div class="form-group col-md-4">
@@ -134,7 +134,8 @@
                                 </div>
                                 <div class="form-group col-md-4">
                                     <label for="duracionPeliculaMP">Duración</label>
-                                    <input type="number" min="0" class="form-control" formControlName="duracionPeliculaMP" id="duracionPeliculaMP" value="{{this.pelicula.duracion}}">
+                                    <input type="number" min="0" class="form-control" formControlName="duracionPeliculaMP" id="duracionPeliculaMP" value="{{this.pelicula.duracion}}" placeholder="min.">
+                                    <div class="invalid-feedback">Campo no válido</div>
                                 </div>
                                 <div class="form-group col-md-4">
                                     <label for="estrenoPeliculaMP">Estreno</label>
@@ -435,6 +436,7 @@
                                 <div class="form-group col-md-4">
                                     <label for="precioTarifaMT">Precio</label>
                                     <input type="number" min="0" class="form-control" formControlName="precioTarifaMT" id="precioTarifaMT" step="0.01" value="{{this.tarifa.precio}}">
+                                    <div class="invalid-feedback">Campo inválido</div>
                                 </div>
                             </div>
                             <button type="submit" class="btn btn-success" id="botonModTarifa">Añadir</button>

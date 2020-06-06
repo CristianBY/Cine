@@ -27,8 +27,8 @@ export class PagoComponent implements OnInit {
 
     this.ftarjeta = this.fb.group({
       numCuenta: ['',[Validators.required,Validators.pattern('^[0-9]{16}')]],
-      mesCaducidad: [,Validators.required],
-      anyoCaducidad: [,Validators.required],
+      mesCaducidad: ['01',Validators.required],
+      anyoCaducidad: [new Date().getFullYear(),Validators.required],
       claveCVV: ['',[Validators.required,Validators.pattern('^[0-9]{3}')]]
     });
   }
@@ -93,7 +93,7 @@ export class PagoComponent implements OnInit {
    * @param precio 
    */
   mostrar(precio){
-    this.entradas = parseInt((<HTMLInputElement>document.getElementById('butacaReservada')).value); //parse en TypeScript el de JS no funciopna
+    this.entradas = parseInt((<HTMLInputElement>document.getElementById('butacaReservada')).value); //parse en TypeScript el de JS no funciona para value
     this.entradas *= parseInt(precio); 
   }
 
@@ -144,22 +144,30 @@ export class PagoComponent implements OnInit {
    */
   procesoDePagoTarjeta(){
     if (this.ftarjeta.invalid) {
-      this.ftarjeta.reset();
+      //this.ftarjeta.reset();
       if (this.ftarjeta.get('numCuenta').hasError('required') || this.ftarjeta.get('numCuenta').hasError('pattern')) {
         document.getElementById('numCuenta').classList.add('is-invalid');
+      } else {
+        document.getElementById('numCuenta').classList.replace('is-invalid','is-valid');
       }
       if (this.ftarjeta.get('mesCaducidad').hasError('required')) {
         document.getElementById('mesCaducidad').classList.add('is-invalid');
+      } else {
+        document.getElementById('mesCaducidad').classList.replace('is-invalid','is-valid');
       }
       if (this.ftarjeta.get('anyoCaducidad').hasError('required')) {
         document.getElementById('anyoCaducidad').classList.add('is-invalid');
+      } else {
+        document.getElementById('anyoCaducidad').classList.replace('is-invalid','is-valid');
       }
 
       if (this.ftarjeta.get('claveCVV').hasError('required') || this.ftarjeta.get('claveCVV').hasError('pattern')) {
         document.getElementById('claveCVV').classList.add('is-invalid');
+      } else {
+        document.getElementById('claveCVV').classList.replace('is-invalid','is-valid');
       }
     }else{
-      let butaca = (<HTMLInputElement>document.getElementById('butacaReservada')).value;
+      let butaca = (<HTMLInputElement>document.getElementById('butacaReservada')).value; //parse en TypeScript el de JS no funciona para value
       let data = {
         'butaca' : butaca,
         'idProyeccion' : sessionStorage.getItem('compra'),

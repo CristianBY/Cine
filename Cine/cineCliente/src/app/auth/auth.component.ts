@@ -56,22 +56,22 @@ export class AuthComponent implements OnInit {
   constructor(private _peticionesServicio: PeticionesServicio,private _usuarioSesion: UsuarioSesion, private router:Router, private fb: FormBuilder) {
     this.faddpelicula = this.fb.group({
       tituloPeliculaAP: ['',Validators.required],
-      anyoPeliculaAP: ['',[Validators.required,Validators.pattern('^19\d\d|20[0-2]\d|2030')]],
+      anyoPeliculaAP: ['',[Validators.required,Validators.pattern(/^(19\d{2}|20[0-2]\d|2030)$/)]],
       paisPeliculaAP: ['',Validators.required],
       generoPeliculaAP: ['',Validators.required],
       calificacionPeliculaAP: ['',Validators.required],
-      duracionPeliculaAP: ['',Validators.required],
+      duracionPeliculaAP: ['',[Validators.required,Validators.min(0)]],
       estrenoPeliculaAP: ['',Validators.required],
       sinopsisPeliculaAP: ['',Validators.required]
     });
 
     this.fmodpelicula = this.fb.group({
       tituloPeliculaMP: ['',Validators.required],
-      anyoPeliculaMP: ['',Validators.required],
+      anyoPeliculaMP: ['',[Validators.required,Validators.pattern(/^(19\d{2}|20[0-2]\d|2030)$/)]],
       paisPeliculaMP: ['',Validators.required],
       generoPeliculaMP: ['',Validators.required],
       calificacionPeliculaMP: ['',Validators.required],
-      duracionPeliculaMP: ['',Validators.required],
+      duracionPeliculaMP: ['',[Validators.required,Validators.min(0)]],
       estrenoPeliculaMP: ['',Validators.required],
       sinopsisPeliculaMP: ['',Validators.required]
     });
@@ -95,13 +95,13 @@ export class AuthComponent implements OnInit {
     this.faddtarifa = this.fb.group({
       nombreTarifaAT: ['',Validators.required],
       descripcionTarifaAT: ['',Validators.required],
-      precioTarifaAT: ['',Validators.required]
+      precioTarifaAT: ['',[Validators.required,Validators.min(0)]]
     });
 
     this.fmodtarifa = this.fb.group({
       nombreTarifaMT: ['',Validators.required],
       descripcionTarifaMT: ['',Validators.required],
-      precioTarifaMT: ['',Validators.required]
+      precioTarifaMT: ['',[Validators.required,Validators.min(0)]]
     });
   }
 
@@ -150,30 +150,47 @@ export class AuthComponent implements OnInit {
     if (this.faddpelicula.invalid) {
       if(this.faddpelicula.get('tituloPeliculaAP').hasError('required')){
         document.getElementById('tituloPeliculaAP').classList.add('is-invalid');
+      } else {
+        document.getElementById('tituloPeliculaAP').classList.replace('is-invalid','is-valid')
       }
       if(this.faddpelicula.get('anyoPeliculaAP').hasError('required') || this.faddpelicula.get('anyoPeliculaAP').hasError('pattern')){
         document.getElementById('anyoPeliculaAP').classList.add('is-invalid');
         if (this.faddpelicula.get('anyoPeliculaAP').hasError('pattern')) {
           document.getElementById('anyoPeliculaAP').nextSibling.textContent='Año no válido';
         }
+      } else {
+        document.getElementById('anyoPeliculaAP').classList.replace('is-invalid','is-valid')
       }
+      
       if(this.faddpelicula.get('paisPeliculaAP').hasError('required')){
         document.getElementById('paisPeliculaAP').classList.add('is-invalid');
+      } else {
+        document.getElementById('paisPeliculaAP').classList.replace('is-invalid','is-valid')
       }
       if(this.faddpelicula.get('generoPeliculaAP').hasError('required')){
         document.getElementById('generoPeliculaAP').classList.add('is-invalid');
+      } else {
+        document.getElementById('generoPeliculaAP').classList.replace('is-invalid','is-valid')
       }
       if(this.faddpelicula.get('calificacionPeliculaAP').hasError('required')){
         document.getElementById('calificacionPeliculaAP').classList.add('is-invalid');
+      } else {
+        document.getElementById('calificacionPeliculaAP').classList.replace('is-invalid','is-valid')
       }
-      if(this.faddpelicula.get('duracionPeliculaAP').hasError('required')){
+      if(this.faddpelicula.get('duracionPeliculaAP').hasError('required') || this.faddpelicula.get('duracionPeliculaAP').hasError('min')){
         document.getElementById('duracionPeliculaAP').classList.add('is-invalid');
+      } else {
+        document.getElementById('duracionPeliculaAP').classList.replace('is-invalid','is-valid')
       }
       if(this.faddpelicula.get('estrenoPeliculaAP').hasError('required')){
         document.getElementById('estrenoPeliculaAP').classList.add('is-invalid');
+      } else {
+        document.getElementById('estrenoPeliculaAP').classList.replace('is-invalid','is-valid')
       }
       if(this.faddpelicula.get('sinopsisPeliculaAP').hasError('required')){
         document.getElementById('sinopsisPeliculaAP').classList.add('is-invalid');
+      } else {
+        document.getElementById('sinopsisPeliculaAP').classList.replace('is-invalid','is-valid')
       }
     }else {  
       let data ={
@@ -228,8 +245,11 @@ export class AuthComponent implements OnInit {
       if(this.fmodpelicula.get('calificacionPeliculaMP').hasError('required')){
         this.fmodpelicula.value.calificacionPeliculaMP = this.pelicula.calificacion;
       }
-      if(this.fmodpelicula.get('duracionPeliculaMP').hasError('required')){
+      if(this.fmodpelicula.get('duracionPeliculaMP').hasError('required') || this.fmodpelicula.get('duracionPeliculaMP').hasError('min')){
         this.fmodpelicula.value.duracionPeliculaMP = this.pelicula.duracion;
+        if (this.fmodpelicula.get('duracionPeliculaMP').hasError('min')) {
+          document.getElementById('duracionPeliculaMP').classList.add('is-invalid');
+        }
       }
       if(this.fmodpelicula.get('estrenoPeliculaMP').hasError('required')){
         this.fmodpelicula.value.estrenoPeliculaMP = this.pelicula.estreno;
@@ -238,7 +258,7 @@ export class AuthComponent implements OnInit {
         this.fmodpelicula.value.sinopsisPeliculaMP = this.pelicula.sinopsis;
       }
     }
-    if (!this.fmodpelicula.get('anyoPeliculaMP').hasError('pattern')) {
+    if (!this.fmodpelicula.get('anyoPeliculaMP').hasError('pattern') && !this.fmodpelicula.get('duracionPeliculaMP').hasError('min')) {
       let data ={
         'titulo' : this.peliculaAModificar,
         'tituloNuevo' : this.fmodpelicula.value.tituloPeliculaMP,
@@ -326,18 +346,28 @@ export class AuthComponent implements OnInit {
     if (this.faddsesion.invalid) {
       if(this.faddsesion.get('tituloPeliculaAS').hasError('required')){
         document.getElementById('tituloPeliculaAS').classList.add('is-invalid');
+      } else {
+        document.getElementById('tituloPeliculaAS').classList.replace('is-invalid','is-valid')
       }
       if(this.faddsesion.get('fechaSesionAS').hasError('required')){
         document.getElementById('fechaSesionAS').classList.add('is-invalid');
+      } else {
+        document.getElementById('fechaSesionAS').classList.replace('is-invalid','is-valid')
       }
       if(this.faddsesion.get('horaSesionAS').hasError('required')){
         document.getElementById('horaSesionAS').classList.add('is-invalid');
+      } else {
+        document.getElementById('horaSesionAS').classList.replace('is-invalid','is-valid')
       }
       if(this.faddsesion.get('salaSesionAS').hasError('required')){
         document.getElementById('salaSesionAS').classList.add('is-invalid');
+      } else {
+        document.getElementById('salaSesionAS').classList.replace('is-invalid','is-valid')
       }
       if(this.faddsesion.get('tarifaSesionAS').hasError('required')){
         document.getElementById('tarifaSesionAS').classList.add('is-invalid');
+      } else {
+        document.getElementById('tarifaSesionAS').classList.replace('is-invalid','is-valid')
       }
 
     }else {
@@ -433,15 +463,21 @@ export class AuthComponent implements OnInit {
     if (this.faddtarifa.invalid) {
       if(this.faddtarifa.get('nombreTarifaAT').hasError('required')){
         document.getElementById('nombreTarifaAT').classList.add('is-invalid');
+      } else {
+        document.getElementById('nombreTarifaAT').classList.replace('is-invalid','is-valid')
       }
       if(this.faddtarifa.get('descripcionTarifaAT').hasError('required')){
         document.getElementById('descripcionTarifaAT').classList.add('is-invalid');
+      } else {
+        document.getElementById('descripcionTarifaAT').classList.replace('is-invalid','is-valid')
       }
-      if(this.faddtarifa.get('precioTarifaAT').hasError('required')){
+      if(this.faddtarifa.get('precioTarifaAT').hasError('required') || this.faddtarifa.get('precioTarifaAT').hasError('min')){
         document.getElementById('precioTarifaAT').classList.add('is-invalid');
+      } else {
+        document.getElementById('precioTarifaAT').classList.replace('is-invalid','is-valid')
       }
       
-    }else {
+    } else {
       let data ={
         'nombre' : this.faddtarifa.value.nombreTarifaAT,
         'descripcion' : this.faddtarifa.value.descripcionTarifaAT,
@@ -458,26 +494,31 @@ export class AuthComponent implements OnInit {
    * @param sin parametros
    */
   modificaTarifa(){
-    if (this.faddtarifa.invalid) {
-      if(this.faddtarifa.get('nombreTarifaAT').hasError('required')){
+    if (this.fmodtarifa.invalid) {
+      if(this.fmodtarifa.get('nombreTarifaMT').hasError('required')){
         this.fmodtarifa.value.nombreTarifaMT = this.tarifa.nombre;
       }
-      if(this.faddtarifa.get('descripcionTarifaAT').hasError('required')){
+      if(this.fmodtarifa.get('descripcionTarifaMT').hasError('required')){
         this.fmodtarifa.value.descripcionTarifaMT = this.tarifa.descripcion;
       }
-      if(this.faddtarifa.get('precioTarifaAT').hasError('required')){
+      if(this.fmodtarifa.get('precioTarifaMT').hasError('required') || this.fmodtarifa.get('precioTarifaMT').hasError('min')){
         this.fmodtarifa.value.precioTarifaMT = this.tarifa.precio;
+        if (this.fmodtarifa.get('precioTarifaMT').hasError('min')) {
+          document.getElementById('precioTarifaMT').classList.add('is-invalid');
+        }
       }    
-    }
-    let data ={
-      'nombre' : this.fmodtarifa.value.nombreTarifaMT,
-      'descripcion' : this.fmodtarifa.value.descripcionTarifaMT,
-      'precio' : this.fmodtarifa.value.precioTarifaMT,
-      'idTarifa' : this.tarifa.idTarifa
-    }
-    this._peticionesServicio.modificaTarifaServer(data).subscribe();
+    } 
+    if(!this.fmodtarifa.get('precioTarifaMT').hasError('min')){
+      let data ={
+        'nombre' : this.fmodtarifa.value.nombreTarifaMT,
+        'descripcion' : this.fmodtarifa.value.descripcionTarifaMT,
+        'precio' : this.fmodtarifa.value.precioTarifaMT,
+        'idTarifa' : this.tarifa.idTarifa
+      }
+      this._peticionesServicio.modificaTarifaServer(data).subscribe();
 
-    this.refrescar("botonModTarifa","botonModTarifa2");
+      this.refrescar("botonModTarifa","botonModTarifa2");
+    }
 
   }
   

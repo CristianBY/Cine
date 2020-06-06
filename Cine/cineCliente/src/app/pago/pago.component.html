@@ -84,12 +84,12 @@
                             </div>
                             <div class="form-row mb-2">
                                 <label for="mesCaducidad" class="col-2 mt-2">Caducidad</label>
-                                <select class="form-control col-1 mr-2" formControlName="mesCaducidad" id="mesCaducidad" [(ngModel)]=this.listaMeses[0]>
+                                <select class="form-control col-1 mr-2" formControlName="mesCaducidad" id="mesCaducidad">
                                     <option value="{{item}}" *ngFor="let item of this.listaMeses">{{item}}</option>
                                 </select>
                                 <div class="invalid-feedback">Datos incorrectos</div>
                                 <p class="text-center mt-2">/</p>
-                                <select class="form-control col-1 ml-2" formControlName="anyoCaducidad" id="anyoCaducidad" [(ngModel)]="this.listaAnyos[0]">
+                                <select class="form-control col-1 ml-2" formControlName="anyoCaducidad" id="anyoCaducidad">
                                     <option value="{{item}}" *ngFor="let item of this.listaAnyos">{{item}}</option>
                                 </select>
                                 <div class="invalid-feedback">Datos incorrectos</div>
