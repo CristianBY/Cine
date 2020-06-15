@@ -19,7 +19,6 @@ export class CarteleraComponent implements OnInit {
   public token;
   public carteleraSemanal=new Array();
 
-
   constructor(private _peticionesServicio: PeticionesServicio, private _usuarioSesion: UsuarioSesion, private router:Router) { }
 
   ngOnInit(): void {

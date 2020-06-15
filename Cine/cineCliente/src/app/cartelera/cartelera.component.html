@@ -1,4 +1,4 @@
-<h1 class="text-center mb-4">Cartelera</h1>
+<h1 class="text-center my-5">Cartelera</h1>
 <nav>
     <div class="nav nav-tabs text-center" id="nav-tab" role="tablist">
         <a class="nav-item nav-link active" style="min-width: 130px;" id="nav-info-tab" data-toggle="tab" href="#nav-info" role="tab" aria-controls="nav-info" aria-selected="true">Películas</a>
@@ -45,10 +45,10 @@
                             <div class="card-text">Sinopsis <br>
                                 <small class="text-muted">{{item.sinopsis}}</small>
                             </div>
-                            <div class="card-text mt-4">
-                                <button class="btn btn-outline-info btn-sm mx-3" (click)=foto(item.titulo)>Fotos</button>
+                            <div class="card-text mt-4">      
                                 <span *ngFor="let item2 of this.multimediaInfo">
                                     <span *ngIf="item2.titulo == item.titulo">
+                                        <button class="btn btn-outline-info btn-sm mx-3" (click)=foto(item.titulo)>Fotos</button>
                                         <a href="{{item2.trailer}}" target="_blank" class="btn btn-outline-info btn-sm mx-3">Trailer</a>
                                     </span>
                                 </span>      

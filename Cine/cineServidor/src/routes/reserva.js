@@ -20,7 +20,7 @@ router.get('/', (req,res) => {
 })
 
 router.post('/', (req,res) => {
-    let consulta = 'select P.titulo, P.fecha, P.hora, P.idSala, T.precio, S.aforo-IFNULL(sum(R.butacas),0) as libre from Sala S, Proyeccion P, Tarifa T, Reserva R where P.idProyeccion=? AND S.idSala=P.idSala AND T.idTarifa=P.idTarifa AND P.idProyeccion=R.idProyeccion'
+    let consulta = 'select P.titulo, P.fecha, P.hora, P.idSala, P.idTarifa, T.precio, S.aforo-IFNULL(sum(R.butacas),0) as libre from Sala S, Proyeccion P, Tarifa T, Reserva R where P.idProyeccion=? AND S.idSala=P.idSala AND T.idTarifa=P.idTarifa AND P.idProyeccion=R.idProyeccion'
     connection.query(consulta,[req.body.idProyeccion], (err,rows) => {
         if (err) {
             throw err

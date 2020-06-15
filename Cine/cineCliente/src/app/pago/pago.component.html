@@ -1,4 +1,4 @@
-<h1 class="text-center mb-3">Proceso de compra</h1>
+<h1 class="text-center mt-5 mb-3">Proceso de compra</h1>
 <div class="row col-md-6 mx-auto">
     <div class="col-md-3">
         <div *ngFor="let item of this.multimediaInfo">
@@ -13,7 +13,7 @@
         <p>Sala {{this.reserva[0].idSala}}</p>
         <div class="form-group mt-3">
             <label for="butacaReservada" class="mt-5">Entradas</label>
-            <input class="form-control col-4" type="number" name="butacaReservada" id="butacaReservada" max="{{this.reserva[0].libre}}" min="1" value="1" (blur)="butacas(this.reserva[0].libre)" (change)="mostrar(this.reserva[0].precio)">
+            <input class="form-control col-4" type="number" name="butacaReservada" id="butacaReservada" max="{{this.reserva[0].libre}}" min="1" value="1" (blur)="butacas(this.reserva[0].libre)" (change)="mostrar(this.reserva[0].precio,this.reserva[0].idTarifa)">
         </div>
         
         <div *ngIf="(this.reserva[0].libre > 10)">
@@ -32,7 +32,7 @@
             </div>
         </div>
         
-        <p>Total Precio (IVA Incl.): <span id="precioTotal">{{this.entradas}}</span>€</p>
+        <p>Total Precio (IVA Incl.): <span id="precioTotal">{{this.total}}</span>€</p>
 
     </div>
     <div class="accordion col-md-12 my-3" id="accordionPago">

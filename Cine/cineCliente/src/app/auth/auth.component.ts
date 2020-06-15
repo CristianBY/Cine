@@ -388,31 +388,31 @@ export class AuthComponent implements OnInit {
    * @param sin parametros
    */
   modificaSesion(){
-    if (this.faddsesion.invalid) {
-      if(this.faddsesion.get('tituloPeliculaMS').hasError('required')){
-        this.fmodpelicula.value.tituloPeliculaMS = this.proyeccion.titulo;
+    console.log(this.fmodsesion.value.salaSesionMS);
+    if (this.fmodsesion.invalid) {
+      if(this.fmodsesion.get('tituloPeliculaMS').hasError('required')){
+        this.fmodsesion.value.tituloPeliculaMS = this.proyeccion.titulo;
       }
-      if(this.faddsesion.get('fechaSesionMS').hasError('required')){
-        this.fmodpelicula.value.fechaSesionMS = this.proyeccion.fecha;
+      if(this.fmodsesion.get('fechaSesionMS').hasError('required')){
+        this.fmodsesion.value.fechaSesionMS = this.proyeccion.fecha;
       }
-      if(this.faddsesion.get('horaSesionMS').hasError('required')){
-        this.fmodpelicula.value.horaSesionMS = this.proyeccion.hora;
+      if(this.fmodsesion.get('horaSesionMS').hasError('required')){
+        this.fmodsesion.value.horaSesionMS = this.proyeccion.hora;
       }
-      if(this.faddsesion.get('salaSesionMS').hasError('required')){
-        this.fmodpelicula.value.salaSesionMS = this.proyeccion.idSala;
+      if(this.fmodsesion.get('salaSesionMS').hasError('required')){
+        this.fmodsesion.value.salaSesionMS = this.proyeccion.idSala;
       }
-      if(this.faddsesion.get('tarifaSesionMS').hasError('required')){
-        this.fmodpelicula.value.tarifaSesionMS = this.proyeccion.idTarifa;
+      if(this.fmodsesion.get('tarifaSesionMS').hasError('required')){
+        this.fmodsesion.value.tarifaSesionMS = this.proyeccion.idTarifa;
       }
-
     }
     let data ={
       'idProyeccion' : this.proyeccion.idProyeccion,
       'titulo' : this.fmodsesion.value.tituloPeliculaMS,
       'fecha' : this.fmodsesion.value.fechaSesionMS,
       'hora' : this.fmodsesion.value.horaSesionMS,
-      'idSala' : this.fmodsesion.value.idSalaMS,
-      'idTarifa' : this.fmodsesion.value.idTarifaMS
+      'idSala' : this.fmodsesion.value.salaSesionMS,
+      'idTarifa' : this.fmodsesion.value.tarifaSesionMS
     }
     this._peticionesServicio.modificaSesionServer(data).subscribe();
 

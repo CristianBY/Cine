@@ -34,7 +34,7 @@ router.post('/add', (req,res) =>{
         if (err) {
             throw err
         } else {
-            console.log('Número de filas borradas: ' + results.affectedRows)
+            console.log('Número de filas añadidas: ' + results.affectedRows)
 
         }
     })

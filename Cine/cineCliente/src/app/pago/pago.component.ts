@@ -17,6 +17,7 @@ export class PagoComponent implements OnInit {
   public ftarjeta: FormGroup;
   public listaMeses = new Array('01','02','03','04','05','06','07','08','09','10','11','12');
   public listaAnyos = new Array();
+  public total: number;
 
   constructor(private _peticionesServicio: PeticionesServicio, private _usuarioSesion: UsuarioSesion, private router:Router, private fb: FormBuilder) 
   {
@@ -89,12 +90,18 @@ export class PagoComponent implements OnInit {
   }
 
   /**
-   * Según las entradas seleccionadas modifica el precio 
+   * Según las entradas seleccionadas modifica el precio a mostrar.
    * @param precio 
    */
-  mostrar(precio){
-    this.entradas = parseInt((<HTMLInputElement>document.getElementById('butacaReservada')).value); //parse en TypeScript el de JS no funciona para value
-    this.entradas *= parseInt(precio); 
+  mostrar(precio,idTarifa){
+    this.total = parseInt((<HTMLInputElement>document.getElementById('butacaReservada')).value); //parse en TypeScript el de JS no funciona para value
+    if (idTarifa == 3 && this.total%2!=0) { // Controla los 2x1 de los jueves en caso de comprar una entrada impar
+      this.total *= parseInt(precio);
+      this.total += parseInt(precio);
+    } else {
+      this.total *= parseInt(precio);
+    }
+
   }
 
   /**
