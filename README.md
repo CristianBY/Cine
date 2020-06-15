@@ -72,9 +72,8 @@ Por lo que el primer paso es crear una máquina arrancar y habilitar los puertos
 
 Acceder a la máquina a través de ssh y clonar el proyecto.
 
-~~~html
+
 <span style="color:red;">IMPORTANTE<span>
-~~~
 
 Acceder al archivo [Cine/cineCliente/src/servicios/peticiones.servicio.ts](Cine/cineCliente/src/servicios/peticiones.servicio.ts)
 
