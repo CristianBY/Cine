@@ -1,6 +1,6 @@
-# Aplicación Web de un Cine para el G.S. de Desarrollo de Aplicaciones Web
+# Aplicación Web Cine 
 
-Se trata de una aplicación web desarrolla para el Proyecto Integrado del Grado Superior de Desarrollo de Aplicaciones Web del IES Polígono Sur.
+Se trata de una aplicación web desarrollada para el Proyecto Integrado del Grado Superior de Desarrollo de Aplicaciones Web del IES Polígono Sur.
 
 La finalidad del proyecto es realizar la aplicación web de un cine que permita ver la cartelera, consultar sus tarifas por parte de un usuario no registrado,
 para un usuario registrado además de realizar las anteriores operaciones cabe la posibilidad de realizar una reserva y/o valorar una película. También dispone de un 
@@ -12,17 +12,22 @@ El proyecto se compone de un parte Front End que se encuentra en la carpeta [cin
 [cineServidor](Cine/cineServidor) y una [base de datos](Cine/DB).
 
 Para la parte del **Front End** he optado por el uso Angular, mas concretamente **Angular CLI 9.1.5**.
+
 ![Angular 9.1.5](Cine/image/angularv.png)
+
 Para la parte del **Back End** he optado por el uso de NodeJS en su versión **v12.16.1**.
+
 ![Node v12.16.1](Cine/image/nodev.png)
+
 Para la persistencia de datos he elegido usar MySQL **Ver 14.14 Distrib 5.7.30**.
+
 ![MySQL Ver 14.14 Distrib 5.7.30](Cine/image/mysqlv.png)
 
 ## Comenzando 🚀
 
-_Use el comando git_
+Las indicaciones son para un entorno Linux.
 
-Las indicaciones son para un entorno Linux
+_Use el comando git_
 
 ~~~
 $ git clone https://github.com/CristianBY/Cine.git
@@ -68,8 +73,8 @@ Por lo que el primer paso es crear una máquina arrancar y habilitar los puertos
 Acceder a la máquina a través de ssh y clonar el proyecto.
 
 ~~~diff
-- **IMPORTANTE** 
-~~~
+-**IMPORTANTE** 
+
 
 Acceder al archivo [Cine/cineCliente/src/servicios/peticiones.servicio.ts](Cine/cineCliente/src/servicios/peticiones.servicio.ts)
 
@@ -80,6 +85,8 @@ Modificar esta parte del código:
 Por esta otra:
 
 ![servidor despliegue](Cine/image/diraws.png)
+
+~~~
 
 Para implantar la App primero hay que crear la base de datos, y cargar los datos, después lanzar el servidor y por último desplegar la App.
 
