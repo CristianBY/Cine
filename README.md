@@ -12,11 +12,11 @@ El proyecto se compone de un parte Front End que se encuentra en la carpeta [cin
 [cineServidor](Cine/cineServidor) y una [base de datos](Cine/DB).
 
 Para la parte del **Front End** he optado por el uso Angular, mas concretamente **Angular CLI 9.1.5**.
-![Angular 9.1.5](Cine/imagen/angularv.png)
+![Angular 9.1.5](Cine/image/angularv.png)
 Para la parte del **Back End** he optado por el uso de NodeJS en su versión **v12.16.1**.
-![Node v12.16.1](Cine/imagen/nodev.png)
+![Node v12.16.1](Cine/image/nodev.png)
 Para la persistencia de datos he elegido usar MySQL **Ver 14.14 Distrib 5.7.30**.
-![MySQL Ver 14.14 Distrib 5.7.30](Cine/imagen/mysqlv.png)
+![MySQL Ver 14.14 Distrib 5.7.30](Cine/image/mysqlv.png)
 
 ## Comenzando 🚀
 
@@ -71,15 +71,15 @@ Acceder a la máquina a través de ssh y clonar el proyecto.
 - **IMPORTANTE** 
 ~~~
 
-Acceder al archivo [Cine/cineCliente/src/servicios/peticiones.servicio.ts](/home/cristian/Escritorio/Cine/Cine/cineCliente/src/servicios/peticiones.servicio.ts)
+Acceder al archivo [Cine/cineCliente/src/servicios/peticiones.servicio.ts](Cine/cineCliente/src/servicios/peticiones.servicio.ts)
 
 Modificar esta parte del código:
 
-![servidor dev](Cine/imagen/dirdesarrollo.png)
+![servidor dev](Cine/image/dirdesarrollo.png)
 
 Por esta otra:
 
-![servidor despliegue](Cine/imagen/diraws.png)
+![servidor despliegue](Cine/image/diraws.png)
 
 Para implantar la App primero hay que crear la base de datos, y cargar los datos, después lanzar el servidor y por último desplegar la App.
 
