@@ -72,9 +72,9 @@ Por lo que el primer paso es crear una máquina arrancar y habilitar los puertos
 
 Acceder a la máquina a través de ssh y clonar el proyecto.
 
-~~~diff
--**IMPORTANTE** 
-
+~~~html
+<span style="color:red;">IMPORTANTE<span>
+~~~
 
 Acceder al archivo [Cine/cineCliente/src/servicios/peticiones.servicio.ts](Cine/cineCliente/src/servicios/peticiones.servicio.ts)
 
@@ -86,7 +86,7 @@ Por esta otra:
 
 ![servidor despliegue](Cine/image/diraws.png)
 
-~~~
+
 
 Para implantar la App primero hay que crear la base de datos, y cargar los datos, después lanzar el servidor y por último desplegar la App.
 
