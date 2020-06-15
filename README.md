@@ -66,14 +66,9 @@ $ sudo mysql_secure_installation
 
 ## Implantación paso a paso ⚙️
 
-La implantación se va a realizar en una máquina ec2 en [aws educate](https://aws.amazon.com/es/education/awseducate/).
+La implantación se va a realizar en una máquina ec2 en [aws educate](https://aws.amazon.com/es/education/awseducate/). Por lo que el primer paso es crear una máquina, arrancar y habilitar los puertos 4200(Angular), 9000(NodeJS) y 3306(MySQL). Accedemos a la máquina a través de ssh y clonar el proyecto.
 
-Por lo que el primer paso es crear una máquina arrancar y habilitar los puertos 4200(Angular), 9000(NodeJS) y 3306(MySQL).
-
-Acceder a la máquina a través de ssh y clonar el proyecto.
-
-
-<span style="color:red;">IMPORTANTE<span>
+**PASO IMPORTANTE**
 
 Acceder al archivo [Cine/cineCliente/src/servicios/peticiones.servicio.ts](Cine/cineCliente/src/servicios/peticiones.servicio.ts)
 
@@ -85,11 +80,11 @@ Por esta otra:
 
 ![servidor despliegue](Cine/image/diraws.png)
 
-
+***
 
 Para implantar la App primero hay que crear la base de datos, y cargar los datos, después lanzar el servidor y por último desplegar la App.
 
-Orden a seguir:
+Orden a seguir e instrucciones por partes:
 
 1. La implantación de la base de datos la puedes encontrar en el siguiente [README.md](Cine/DB/README.md).
 
