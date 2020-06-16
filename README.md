@@ -8,7 +8,7 @@ apartado de administración, de la cuál se encarga un usuario con rol de admini
 
 El administrador puede añadir, modificar y eliminar: películas, sesiones y tarifas.
 
-El proyecto se compone de un parte Front End que se encuentra en la carpeta [cineCliente](Cine/cineCliente), de una parte Back End que se encuentra en la carpeta
+El proyecto se compone de una parte Front End que se encuentra en la carpeta [cineCliente](Cine/cineCliente), de una parte Back End que se encuentra en la carpeta
 [cineServidor](Cine/cineServidor) y una [base de datos](Cine/DB).
 
 Para la parte del **Front End** he optado por el uso Angular, mas concretamente **Angular CLI 9.1.5**.
@@ -41,6 +41,11 @@ $ svn checkout https://github.com/CristianBY/Cine.git
 
 ## Requisitos 📋
 
+- Tener git instalado
+
+~~~
+$ sudo apt-get install git
+~~~
 
 - Tener NodeJs instalado -> [https://nodejs.org/es/](https://nodejs.org/es/)
 
@@ -66,7 +71,7 @@ $ sudo mysql_secure_installation
 
 ## Implantación paso a paso ⚙️
 
-La implantación se va a realizar en una máquina ec2 en [aws educate](https://aws.amazon.com/es/education/awseducate/). Por lo que el primer paso es crear una máquina, arrancar y habilitar los puertos 4200(Angular), 9000(NodeJS) y 3306(MySQL). Accedemos a la máquina a través de ssh y clonar el proyecto.
+La implantación se va a realizar en una máquina ec2 en [aws educate](https://aws.amazon.com/es/education/awseducate/). Por lo que el primer paso es crear una máquina, arrancar y habilitar los puertos 4200(Angular), 9000(NodeJS) y 3306(MySQL). Accedemos a la máquina a través de ssh y clonamos el proyecto.
 
 **PASO IMPORTANTE**
 

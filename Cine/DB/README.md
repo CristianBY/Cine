@@ -2,6 +2,8 @@
 
 ## Base de datos
 
+## Implantación paso a paso ⚙️
+
 Una vez instalado MySQL procedemos a la generación de tablas y carga de información.
 
 En la terminal:
@@ -21,3 +23,6 @@ Una vez se ha accedido a consola de MySQL.
 ! OJO
 ~~~
 Las fechas de las sesiones hay que cambiarlas por las actuales.
+
+---
+Continua con la implantación de NodeJS+Express para parte Servidor [README.md](../cineServidor/README.md)
