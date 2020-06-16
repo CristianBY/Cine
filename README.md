@@ -2,16 +2,16 @@
 
 Se trata de una aplicación web desarrollada para el Proyecto Integrado del Grado Superior de Desarrollo de Aplicaciones Web del IES Polígono Sur.
 
-La finalidad del proyecto es realizar la aplicación web de un cine que permita ver la cartelera, consultar sus tarifas por parte de un usuario no registrado,
-para un usuario registrado además de realizar las anteriores operaciones cabe la posibilidad de realizar una reserva y/o valorar una película. También dispone de un 
-apartado de administración, de la cuál se encarga un usuario con rol de administrador, solo accesible para este usuario.
+La finalidad del proyecto es realizar la aplicación web de un cine que permita ver la cartelera, consultar sus tarifas por parte de un usuario no registrado.
+Para un usuario registrado además de realizar las anteriores operaciones, cabe la posibilidad de realizar una reserva y/o valorar una película. También dispone de un 
+apartado de administración, del cuál se encarga un usuario con rol de administrador, solo accesible para este usuario.
 
 El administrador puede añadir, modificar y eliminar: películas, sesiones y tarifas.
 
 El proyecto se compone de una parte Front End que se encuentra en la carpeta [cineCliente](Cine/cineCliente), de una parte Back End que se encuentra en la carpeta
 [cineServidor](Cine/cineServidor) y una [base de datos](Cine/DB).
 
-Para la parte del **Front End** he optado por el uso Angular, mas concretamente **Angular CLI 9.1.5**.
+Para la parte del **Front End** he optado por el uso de Angular, más concretamente **Angular CLI 9.1.5**.
 
 ![Angular 9.1.5](Cine/image/angularv.png)
 
@@ -19,7 +19,7 @@ Para la parte del **Back End** he optado por el uso de NodeJS en su versión **v
 
 ![Node v12.16.1](Cine/image/nodev.png)
 
-Para la persistencia de datos he elegido usar MySQL **Ver 14.14 Distrib 5.7.30**.
+Para la persistencia de datos he decidido usar MySQL **Ver 14.14 Distrib 5.7.30**.
 
 ![MySQL Ver 14.14 Distrib 5.7.30](Cine/image/mysqlv.png)
 
@@ -61,7 +61,7 @@ $ npm install -g npm@latest
 $ npm install -g @angular/cli@latest
 ~~~
 
-- Tener instalado mysql
+- Tener instalado MySQL
 
 ~~~
 $ sudo apt update
