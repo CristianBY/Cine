@@ -21,7 +21,7 @@ Para desplegar la parte cliente de la aplicación, en la terminal usaremos la si
 $ ng serve --host {aquí_escribir_la_ip_pública_de_aws}
 ~~~
 
-Para dejar la aplicación en segundo plano ejecutamos en la terminal las siguientes instrucciones:
+Para dejar la aplicación en segundo plano, ejecutamos en la terminal las siguientes instrucciones:
 
 ~~~
 $ CTRL + Z
