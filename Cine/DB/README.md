@@ -25,4 +25,4 @@ Una vez se ha accedido a consola de MySQL.
 Las fechas de las sesiones hay que cambiarlas por las actuales.
 
 ---
-Continua con la implantación de NodeJS+Express para parte Servidor [README.md](../cineServidor/README.md)
+Continua con la implantación de NodeJS+Express para la parte Servidor [README.md](../cineServidor/README.md)

@@ -4,7 +4,18 @@
 
 ## Implantación paso a paso ⚙️
 
-Para desplegar la parte cliente de la aplicación en una terminal usaremos la siguiente instrucción:
+**RECUERDA** es necesario modificar esta parte del código:
+
+![servidor dev](../image/dirdesarrollo.png)
+
+Por esta otra:
+
+![servidor despliegue](../image/diraws.png)
+
+Se encuentra en el archivo [peticiones.servicio.ts](Cine/cineCliente/src/servicios/peticiones.servicio.ts)
+
+
+Para desplegar la parte cliente de la aplicación, en una terminal usaremos la siguiente instrucción:
 
 ~~~
 $ ng serve --host {aquí_escribir_la_ip_pública_de_aws}
@@ -12,9 +23,11 @@ $ ng serve --host {aquí_escribir_la_ip_pública_de_aws}
 
 Para dejar la aplicación en segundo plano:
 
-- CTRL + Z
-- jobs (miramos que número corresponde a ng)
-- bg {número_de_ng}
+~~~
+$ CTRL + Z
+$ jobs (miramos que número corresponde a ng)
+$ bg {número_de_ng}
+~~~
 
 Con esto tendríamos nuestra app desplegada.
 ---

@@ -75,7 +75,7 @@ La implantación se va a realizar en una máquina ec2 en [aws educate](https://a
 
 **PASO IMPORTANTE**
 
-Acceder al archivo [Cine/cineCliente/src/servicios/peticiones.servicio.ts](Cine/cineCliente/src/servicios/peticiones.servicio.ts)
+Acceder al archivo [peticiones.servicio.ts](Cine/cineCliente/src/servicios/peticiones.servicio.ts)
 
 Modificar esta parte del código:
 
