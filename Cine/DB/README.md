@@ -21,7 +21,7 @@ Una vez se ha accedido a consola de MySQL.
 
 ~~~diff
 ! OJO 
-Las fechas de las sesiones hay que cambiarlas por las actuales.
+Las fechas de las proyecciones hay que cambiarlas por las actuales.
 ~~~
 
 ---
