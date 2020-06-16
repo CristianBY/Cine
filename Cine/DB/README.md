@@ -20,9 +20,9 @@ Una vez se ha accedido a consola de MySQL.
 2. Insertamos los datos en las tablas creadas, los datos los puedes encontrar en [inserccionDatosCine.sql](cine.sql)
 
 ~~~diff
-! OJO
-~~~
+! OJO 
 Las fechas de las sesiones hay que cambiarlas por las actuales.
+~~~
 
 ---
 Continua con la implantación de NodeJS+Express para la parte Servidor [README.md](../cineServidor/README.md)
