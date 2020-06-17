@@ -73,7 +73,7 @@ export class UserComponent implements OnInit {
       'idUsuario' : this.idUsuario
     }
     this._peticionesServicio.enviaValoracionServer(data).subscribe(data=>{});
-    this.router.navigate(['user']);
+    location.reload();
   }
   
 

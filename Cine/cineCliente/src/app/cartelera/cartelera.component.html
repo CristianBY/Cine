@@ -31,13 +31,13 @@
                                 </div>
                                 <div *ngFor="let val of this.valoracion">
                                     <div *ngIf="(val.titulo == item.titulo && val.media >= 7)">
-                                        <div class="col-3 text-center circulo pt-3 bg-success text-white">{{val.media}}</div>
+                                        <div class="col-3 text-center circulo pt-3 bg-success text-white">{{val.media.toFixed(1)}}</div>
                                     </div>
                                     <div *ngIf="(val.titulo == item.titulo && (val.media < 7 && val.media >= 5))">
-                                        <div class="col-3 text-center circulo pt-3 bg-warning text-white">{{val.media}}</div>
+                                        <div class="col-3 text-center circulo pt-3 bg-warning text-white">{{val.media.toFixed(1)}}</div>
                                     </div>
                                     <div *ngIf="(val.titulo == item.titulo && val.media < 5)">
-                                        <div class="col-3 text-center circulo pt-3 bg-danger text-white">{{val.media}}</div>
+                                        <div class="col-3 text-center circulo pt-3 bg-danger text-white">{{val.media.toFixed(1)}}</div>
                                     </div>
                                 </div>
                             </div>
