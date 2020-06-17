@@ -101,9 +101,9 @@ Orden a seguir e instrucciones por partes:
 
 - [Manual de usuario](/Manual_de_Usuario_Cine_Luna.pdf).
 
-- [Documentación Angular](Cine/cineCliente/documentation).
+- [Documentación Angular](https://cristianby.github.io/APIAngular.github.io/).
 
-- [Documentación NodeJS](Cine/cineServidor/docs).
+- [Documentación NodeJS](https://cristianby.github.io/APINodeJS.github.io/).
 
 ## Autor ✒️
 
