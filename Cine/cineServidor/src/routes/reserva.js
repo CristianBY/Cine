@@ -7,6 +7,9 @@ import connection from '../config/connectDB'
  */
 const router = express.Router()
 
+/**
+ * @description Recoge todas las Reservas
+ */
 router.get('/', (req,res) => {
 
     connection.query('SELECT * FROM Reserva', (err,rows) => {
@@ -19,6 +22,9 @@ router.get('/', (req,res) => {
     })
 })
 
+/**
+ * @description Devuelve los datos necesarios para carcar la página del pago.
+ */
 router.post('/', (req,res) => {
     let consulta = 'select P.titulo, P.fecha, P.hora, P.idSala, P.idTarifa, T.precio, S.aforo-IFNULL(sum(R.butacas),0) as libre from Sala S, Proyeccion P, Tarifa T, Reserva R where P.idProyeccion=? AND S.idSala=P.idSala AND T.idTarifa=P.idTarifa AND P.idProyeccion=R.idProyeccion'
     connection.query(consulta,[req.body.idProyeccion], (err,rows) => {
@@ -31,6 +37,9 @@ router.post('/', (req,res) => {
     })
 })
 
+/**
+ * @description Registra la reserva después del pago.
+ */
 router.post('/reservado', (req,res) =>{
     let consulta = 'insert into Reserva (butacas, idProyeccion, idUsuario) values (?,?,?)'
     connection.query(consulta,[req.body.butaca,req.body.idProyeccion,req.body.idUsuario],(err,rows)=>{
@@ -48,6 +57,9 @@ router.post('/reservado', (req,res) =>{
     })
 })
 
+/**
+ * @description Devuelve las películas valoradas por el usuario.
+ */
 router.get('/valorada/:usuario',(req,res)=>{
     let user = req.params.usuario.substr(1);
     let consulta = 'select distinct P.titulo, V.valoracion from Proyeccion P, Valoracion V, Reserva R where R.idProyeccion= P.idProyeccion AND R.idUsuario=V.idUsuario AND V.titulo=P.titulo AND R.idUsuario= ?'
@@ -61,6 +73,9 @@ router.get('/valorada/:usuario',(req,res)=>{
     })
 })
 
+/**
+ * @description Devuelve las películas no valoradas por el usuario
+ */
 router.get('/novalorada/:usuario',(req,res)=>{
     let user = req.params.usuario.substr(1);
     let consulta = 'select distinct P.titulo from Proyeccion P, Reserva R where R.idProyeccion = P.idProyeccion AND R.idUsuario = ? AND P.titulo NOT IN (select titulo from Valoracion Where idUsuario = ?)'
@@ -74,6 +89,9 @@ router.get('/novalorada/:usuario',(req,res)=>{
     })
 })
 
+/**
+ * @description Guarda una valoración en la base de datos
+ */
 router.post('/valoracion',(req,res)=>{
     connection.query('INSERT INTO Valoracion (valoracion, idUsuario, titulo) VALUES(?,?,?)',[req.body.valoracion,req.body.idUsuario,req.body.titulo], (err,results,fields)=>{
         if (err) {

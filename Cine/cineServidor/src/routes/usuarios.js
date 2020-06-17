@@ -8,9 +8,9 @@ import jwt from 'jsonwebtoken'
  */
 const router = express.Router()
 
+
 /**
- * Comprueba que el usuario está registrado
- * @returns Devuelve JSON con la verificación mediante JWT
+ * @description Comprueba que el usuario está registrado. Devuelve JSON con la verificación mediante JWT
  */
 router.post('/', (req,res) => {
     connection.query('SELECT * FROM Usuario WHERE email=? AND psw=?', [req.body.username,md5(req.body.password)], (err,rows) => {
@@ -42,8 +42,7 @@ router.post('/', (req,res) => {
 })
 
 /**
- * Obtiene la información de un usuario
- * @returns Devuelve la información de un usuario
+ * @description Obtiene la información de un usuario. Devuelve la información de un usuario
  */
 router.get('/', (req,res) => {
     
@@ -59,7 +58,7 @@ router.get('/', (req,res) => {
 })
 
 /**
- * Inserta un nuevo usuario en la BD
+ * @description Inserta un nuevo usuario en la BD
  */
 router.post('/registro', (req,res) => {
     let consulta = 'INSERT INTO Usuario (nombre, apellidos, psw, email, administrador) VALUES (?,?,?,?,?)'

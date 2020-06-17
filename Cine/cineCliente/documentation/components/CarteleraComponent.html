@@ -307,8 +307,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Definido en <a href="" data-line="42"
-                            class="link-to-prism">src/app/cartelera/cartelera.component.ts:42</a></div>
+                    <div class="io-line">Definido en <a href="" data-line="41"
+                            class="link-to-prism">src/app/cartelera/cartelera.component.ts:41</a></div>
                 </td>
             </tr>
 
@@ -353,8 +353,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Definido en <a href="" data-line="130"
-                            class="link-to-prism">src/app/cartelera/cartelera.component.ts:130</a></div>
+                    <div class="io-line">Definido en <a href="" data-line="129"
+                            class="link-to-prism">src/app/cartelera/cartelera.component.ts:129</a></div>
                 </td>
             </tr>
 
@@ -421,8 +421,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Definido en <a href="" data-line="72"
-                            class="link-to-prism">src/app/cartelera/cartelera.component.ts:72</a></div>
+                    <div class="io-line">Definido en <a href="" data-line="71"
+                            class="link-to-prism">src/app/cartelera/cartelera.component.ts:71</a></div>
                 </td>
             </tr>
 
@@ -462,8 +462,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Definido en <a href="" data-line="63"
-                            class="link-to-prism">src/app/cartelera/cartelera.component.ts:63</a></div>
+                    <div class="io-line">Definido en <a href="" data-line="62"
+                            class="link-to-prism">src/app/cartelera/cartelera.component.ts:62</a></div>
                 </td>
             </tr>
 
@@ -503,8 +503,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Definido en <a href="" data-line="54"
-                            class="link-to-prism">src/app/cartelera/cartelera.component.ts:54</a></div>
+                    <div class="io-line">Definido en <a href="" data-line="53"
+                            class="link-to-prism">src/app/cartelera/cartelera.component.ts:53</a></div>
                 </td>
             </tr>
 
@@ -549,8 +549,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Definido en <a href="" data-line="25"
-                            class="link-to-prism">src/app/cartelera/cartelera.component.ts:25</a></div>
+                    <div class="io-line">Definido en <a href="" data-line="24"
+                            class="link-to-prism">src/app/cartelera/cartelera.component.ts:24</a></div>
                 </td>
             </tr>
 
@@ -588,8 +588,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Definido en <a href="" data-line="121"
-                            class="link-to-prism">src/app/cartelera/cartelera.component.ts:121</a></div>
+                    <div class="io-line">Definido en <a href="" data-line="120"
+                            class="link-to-prism">src/app/cartelera/cartelera.component.ts:120</a></div>
                 </td>
             </tr>
 
@@ -881,7 +881,6 @@ export class CarteleraComponent implements OnInit {
   public token;
   public carteleraSemanal&#x3D;new Array();
 
-
   constructor(private _peticionesServicio: PeticionesServicio, private _usuarioSesion: UsuarioSesion, private router:Router) { }
 
   ngOnInit(): void {
@@ -999,7 +998,7 @@ export class CarteleraComponent implements OnInit {
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;h1 class&#x3D;&quot;text-center mb-4&quot;&gt;Cartelera&lt;/h1&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;h1 class&#x3D;&quot;text-center my-5&quot;&gt;Cartelera&lt;/h1&gt;
 &lt;nav&gt;
     &lt;div class&#x3D;&quot;nav nav-tabs text-center&quot; id&#x3D;&quot;nav-tab&quot; role&#x3D;&quot;tablist&quot;&gt;
         &lt;a class&#x3D;&quot;nav-item nav-link active&quot; style&#x3D;&quot;min-width: 130px;&quot; id&#x3D;&quot;nav-info-tab&quot; data-toggle&#x3D;&quot;tab&quot; href&#x3D;&quot;#nav-info&quot; role&#x3D;&quot;tab&quot; aria-controls&#x3D;&quot;nav-info&quot; aria-selected&#x3D;&quot;true&quot;&gt;Películas&lt;/a&gt;
@@ -1046,14 +1045,13 @@ export class CarteleraComponent implements OnInit {
                             &lt;div class&#x3D;&quot;card-text&quot;&gt;Sinopsis &lt;br&gt;
                                 &lt;small class&#x3D;&quot;text-muted&quot;&gt;{{item.sinopsis}}&lt;/small&gt;
                             &lt;/div&gt;
-                            &lt;div class&#x3D;&quot;card-text mt-4&quot;&gt;
-                                &lt;button class&#x3D;&quot;btn btn-outline-info btn-sm mx-3&quot; (click)&#x3D;foto(item.titulo)&gt;Fotos&lt;/button&gt;
+                            &lt;div class&#x3D;&quot;card-text mt-4&quot;&gt;      
                                 &lt;span *ngFor&#x3D;&quot;let item2 of this.multimediaInfo&quot;&gt;
                                     &lt;span *ngIf&#x3D;&quot;item2.titulo &#x3D;&#x3D; item.titulo&quot;&gt;
+                                        &lt;button class&#x3D;&quot;btn btn-outline-info btn-sm mx-3&quot; (click)&#x3D;foto(item.titulo)&gt;Fotos&lt;/button&gt;
                                         &lt;a href&#x3D;&quot;{{item2.trailer}}&quot; target&#x3D;&quot;_blank&quot; class&#x3D;&quot;btn btn-outline-info btn-sm mx-3&quot;&gt;Trailer&lt;/a&gt;
                                     &lt;/span&gt;
-                                &lt;/span&gt;
-                                
+                                &lt;/span&gt;      
                             &lt;/div&gt;
                         &lt;/div&gt;
                     &lt;/div&gt;
@@ -1151,7 +1149,7 @@ export class CarteleraComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><h1 class="text-center mb-4">Cartelera</h1><nav>    <div class="nav nav-tabs text-center" id="nav-tab" role="tablist">        <a class="nav-item nav-link active" style="min-width: 130px;" id="nav-info-tab" data-toggle="tab" href="#nav-info" role="tab" aria-controls="nav-info" aria-selected="true">Películas</a>        <a class="nav-item nav-link" style="min-width: 130px;" id="nav-0-tab" data-toggle="tab" href="#nav-0" role="tab" aria-controls="nav-0" aria-selected="false">{{listaDiasSemana[0] | date: \'EEEE d\'}}</a>        <a class="nav-item nav-link" style="min-width: 130px;" id="nav-1-tab" data-toggle="tab" href="#nav-1" role="tab" aria-controls="nav-1" aria-selected="false">{{listaDiasSemana[1] | date: \'EEEE d\'}}</a>        <a class="nav-item nav-link" style="min-width: 130px;" id="nav-2-tab" data-toggle="tab" href="#nav-2" role="tab" aria-controls="nav-2" aria-selected="false">{{listaDiasSemana[2] | date: \'EEEE d\'}}</a>        <a class="nav-item nav-link" style="min-width: 130px;" id="nav-3-tab" data-toggle="tab" href="#nav-3" role="tab" aria-controls="nav-3" aria-selected="false">{{listaDiasSemana[3] | date: \'EEEE d\'}}</a>        <a class="nav-item nav-link" style="min-width: 130px;" id="nav-4-tab" data-toggle="tab" href="#nav-4" role="tab" aria-controls="nav-4" aria-selected="false">{{listaDiasSemana[4] | date: \'EEEE d\'}}</a>        <a class="nav-item nav-link" style="min-width: 130px;" id="nav-5-tab" data-toggle="tab" href="#nav-5" role="tab" aria-controls="nav-5" aria-selected="false">{{listaDiasSemana[5] | date: \'EEEE d\'}}</a>        <a class="nav-item nav-link" style="min-width: 130px;" id="nav-6-tab" data-toggle="tab" href="#nav-6" role="tab" aria-controls="nav-6" aria-selected="false">{{listaDiasSemana[6] | date: \'EEEE d\'}}</a>    </div></nav><div class="tab-content" id="nav-tabContent">         <div class="tab-pane fade show active" id="nav-info" role="tabpanel" aria-labelledby="nav-info-tab">            <div class="card my-3 mx-auto col-md-9" *ngFor="let item of this.peliculas">                <div class="row no-gutters">                    <div class="col-md-2">                        <div *ngFor="let item2 of this.multimediaInfo">                            <div *ngIf="item2.titulo == item.titulo">                                <img src={{item2.portada}} class="card-img ml-n3" alt="Poster de la película {{item2.titulo}}">                            </div>                        </div>                    </div>                    <div class="col-md-10">                        <div class="card-body">                            <div class="row">                                <div class="col-9">                                    <h5 class="card-title">{{item.titulo}}</h5>                                    <div class="card-text">{{item.anyo}} {{item.pais}} {{item.genero}} {{item.duracion}} min.</div>                                </div>                                <div *ngFor="let val of this.valoracion">                                    <div *ngIf="(val.titulo == item.titulo && val.media >= 7)">                                        <div class="col-3 text-center circulo pt-3 bg-success text-white">{{val.media}}</div>                                    </div>                                    <div *ngIf="(val.titulo == item.titulo && (val.media < 7 && val.media >= 5))">                                        <div class="col-3 text-center circulo pt-3 bg-warning text-white">{{val.media}}</div>                                    </div>                                    <div *ngIf="(val.titulo == item.titulo && val.media < 5)">                                        <div class="col-3 text-center circulo pt-3 bg-danger text-white">{{val.media}}</div>                                    </div>                                </div>                            </div>                            <hr>                            <div class="card-text">Sinopsis <br>                                <small class="text-muted">{{item.sinopsis}}</small>                            </div>                            <div class="card-text mt-4">                                <button class="btn btn-outline-info btn-sm mx-3" (click)=foto(item.titulo)>Fotos</button>                                <span *ngFor="let item2 of this.multimediaInfo">                                    <span *ngIf="item2.titulo == item.titulo">                                        <a href="{{item2.trailer}}" target="_blank" class="btn btn-outline-info btn-sm mx-3">Trailer</a>                                    </span>                                </span>                                                            </div>                        </div>                    </div>                </div>            </div>        </div>        <div class="tab-pane fade" id="nav-{{index.orden}}" role="tabpanel" [attr.aria-labelledby]="\'nav-\'+index.orden+\'-tab\'" *ngFor="let index of this.carteleraSemanal">            <div class="card my-3 mx-auto col-md-9" *ngFor="let item of index.carteleraDelDia">                <div class="row no-gutters">                    <div class="col-md-2">                        <div *ngFor="let item2 of this.multimediaInfo">                            <div *ngIf="item2.titulo == item.pelicula.titulo">                                <img src={{item2.portada}} class="card-img ml-n3" alt="Poster de la película {{item2.titulo}}">                            </div>                        </div>                    </div>                    <div class="col-md-10">                        <div class="card-body">                            <div class="row">                                <div class="col-9">                                    <h5 class="card-title">{{item.pelicula.titulo}}</h5>                                    <div class="card-text">{{item.pelicula.anyo}} {{item.pelicula.pais}} {{item.pelicula.genero}} {{item.pelicula.duracion}} min.</div>                                </div>                                <div *ngFor="let val of this.valoracion">                                    <div *ngIf="(val.titulo == item.pelicula.titulo && val.media >= 7)">                                        <div class="col-3 text-center circulo pt-3 bg-success text-white">{{val.media}}</div>                                    </div>                                    <div *ngIf="(val.titulo == item.pelicula.titulo && (val.media < 7 && val.media >= 5))">                                        <div class="col-3 text-center circulo pt-3 bg-warning text-white">{{val.media}}</div>                                    </div>                                    <div *ngIf="(val.titulo == item.pelicula.titulo && val.media < 5)">                                        <div class="col-3 text-center circulo pt-3 bg-danger text-white">{{val.media}}</div>                                    </div>                                </div>                            </div>                            <hr>                            <div class="card-text">Sinopsis <br>                                <small class="text-muted">{{item.pelicula.sinopsis}}</small>                            </div>                            <span *ngFor="let sesion of item.sesiones">                                <span *ngIf="(this.token != \'No\' && this.token != null);else miboton">                                    <button class="btn btn-primary btn-lg mx-3" value={{sesion.idProyeccion}} (click)=procesoDeCompra(sesion.idProyeccion)>{{sesion.hora.substring(0,5)}}</button>                                </span>                                <ng-template #miboton>                                    <button class="btn btn-primary btn-lg mx-3" value={{sesion.idProyeccion}} disabled>{{sesion.hora.substring(0,5)}}</button>                                </ng-template>                               </span>                        </div>                    </div>                </div>            </div>        </div></div></div>'
+        var COMPONENT_TEMPLATE = '<div><h1 class="text-center my-5">Cartelera</h1><nav>    <div class="nav nav-tabs text-center" id="nav-tab" role="tablist">        <a class="nav-item nav-link active" style="min-width: 130px;" id="nav-info-tab" data-toggle="tab" href="#nav-info" role="tab" aria-controls="nav-info" aria-selected="true">Películas</a>        <a class="nav-item nav-link" style="min-width: 130px;" id="nav-0-tab" data-toggle="tab" href="#nav-0" role="tab" aria-controls="nav-0" aria-selected="false">{{listaDiasSemana[0] | date: \'EEEE d\'}}</a>        <a class="nav-item nav-link" style="min-width: 130px;" id="nav-1-tab" data-toggle="tab" href="#nav-1" role="tab" aria-controls="nav-1" aria-selected="false">{{listaDiasSemana[1] | date: \'EEEE d\'}}</a>        <a class="nav-item nav-link" style="min-width: 130px;" id="nav-2-tab" data-toggle="tab" href="#nav-2" role="tab" aria-controls="nav-2" aria-selected="false">{{listaDiasSemana[2] | date: \'EEEE d\'}}</a>        <a class="nav-item nav-link" style="min-width: 130px;" id="nav-3-tab" data-toggle="tab" href="#nav-3" role="tab" aria-controls="nav-3" aria-selected="false">{{listaDiasSemana[3] | date: \'EEEE d\'}}</a>        <a class="nav-item nav-link" style="min-width: 130px;" id="nav-4-tab" data-toggle="tab" href="#nav-4" role="tab" aria-controls="nav-4" aria-selected="false">{{listaDiasSemana[4] | date: \'EEEE d\'}}</a>        <a class="nav-item nav-link" style="min-width: 130px;" id="nav-5-tab" data-toggle="tab" href="#nav-5" role="tab" aria-controls="nav-5" aria-selected="false">{{listaDiasSemana[5] | date: \'EEEE d\'}}</a>        <a class="nav-item nav-link" style="min-width: 130px;" id="nav-6-tab" data-toggle="tab" href="#nav-6" role="tab" aria-controls="nav-6" aria-selected="false">{{listaDiasSemana[6] | date: \'EEEE d\'}}</a>    </div></nav><div class="tab-content" id="nav-tabContent">         <div class="tab-pane fade show active" id="nav-info" role="tabpanel" aria-labelledby="nav-info-tab">            <div class="card my-3 mx-auto col-md-9" *ngFor="let item of this.peliculas">                <div class="row no-gutters">                    <div class="col-md-2">                        <div *ngFor="let item2 of this.multimediaInfo">                            <div *ngIf="item2.titulo == item.titulo">                                <img src={{item2.portada}} class="card-img ml-n3" alt="Poster de la película {{item2.titulo}}">                            </div>                        </div>                    </div>                    <div class="col-md-10">                        <div class="card-body">                            <div class="row">                                <div class="col-9">                                    <h5 class="card-title">{{item.titulo}}</h5>                                    <div class="card-text">{{item.anyo}} {{item.pais}} {{item.genero}} {{item.duracion}} min.</div>                                </div>                                <div *ngFor="let val of this.valoracion">                                    <div *ngIf="(val.titulo == item.titulo && val.media >= 7)">                                        <div class="col-3 text-center circulo pt-3 bg-success text-white">{{val.media}}</div>                                    </div>                                    <div *ngIf="(val.titulo == item.titulo && (val.media < 7 && val.media >= 5))">                                        <div class="col-3 text-center circulo pt-3 bg-warning text-white">{{val.media}}</div>                                    </div>                                    <div *ngIf="(val.titulo == item.titulo && val.media < 5)">                                        <div class="col-3 text-center circulo pt-3 bg-danger text-white">{{val.media}}</div>                                    </div>                                </div>                            </div>                            <hr>                            <div class="card-text">Sinopsis <br>                                <small class="text-muted">{{item.sinopsis}}</small>                            </div>                            <div class="card-text mt-4">                                      <span *ngFor="let item2 of this.multimediaInfo">                                    <span *ngIf="item2.titulo == item.titulo">                                        <button class="btn btn-outline-info btn-sm mx-3" (click)=foto(item.titulo)>Fotos</button>                                        <a href="{{item2.trailer}}" target="_blank" class="btn btn-outline-info btn-sm mx-3">Trailer</a>                                    </span>                                </span>                                  </div>                        </div>                    </div>                </div>            </div>        </div>        <div class="tab-pane fade" id="nav-{{index.orden}}" role="tabpanel" [attr.aria-labelledby]="\'nav-\'+index.orden+\'-tab\'" *ngFor="let index of this.carteleraSemanal">            <div class="card my-3 mx-auto col-md-9" *ngFor="let item of index.carteleraDelDia">                <div class="row no-gutters">                    <div class="col-md-2">                        <div *ngFor="let item2 of this.multimediaInfo">                            <div *ngIf="item2.titulo == item.pelicula.titulo">                                <img src={{item2.portada}} class="card-img ml-n3" alt="Poster de la película {{item2.titulo}}">                            </div>                        </div>                    </div>                    <div class="col-md-10">                        <div class="card-body">                            <div class="row">                                <div class="col-9">                                    <h5 class="card-title">{{item.pelicula.titulo}}</h5>                                    <div class="card-text">{{item.pelicula.anyo}} {{item.pelicula.pais}} {{item.pelicula.genero}} {{item.pelicula.duracion}} min.</div>                                </div>                                <div *ngFor="let val of this.valoracion">                                    <div *ngIf="(val.titulo == item.pelicula.titulo && val.media >= 7)">                                        <div class="col-3 text-center circulo pt-3 bg-success text-white">{{val.media}}</div>                                    </div>                                    <div *ngIf="(val.titulo == item.pelicula.titulo && (val.media < 7 && val.media >= 5))">                                        <div class="col-3 text-center circulo pt-3 bg-warning text-white">{{val.media}}</div>                                    </div>                                    <div *ngIf="(val.titulo == item.pelicula.titulo && val.media < 5)">                                        <div class="col-3 text-center circulo pt-3 bg-danger text-white">{{val.media}}</div>                                    </div>                                </div>                            </div>                            <hr>                            <div class="card-text">Sinopsis <br>                                <small class="text-muted">{{item.pelicula.sinopsis}}</small>                            </div>                            <span *ngFor="let sesion of item.sesiones">                                <span *ngIf="(this.token != \'No\' && this.token != null);else miboton">                                    <button class="btn btn-primary btn-lg mx-3" value={{sesion.idProyeccion}} (click)=procesoDeCompra(sesion.idProyeccion)>{{sesion.hora.substring(0,5)}}</button>                                </span>                                <ng-template #miboton>                                    <button class="btn btn-primary btn-lg mx-3" value={{sesion.idProyeccion}} disabled>{{sesion.hora.substring(0,5)}}</button>                                </ng-template>                               </span>                        </div>                    </div>                </div>            </div>        </div></div></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AuthComponent', 'selector': 'app-auth'},{'name': 'CarteleraComponent', 'selector': 'app-cartelera'},{'name': 'CierrasesionComponent', 'selector': 'app-cierrasesion'},{'name': 'ContactoComponent', 'selector': 'app-contacto'},{'name': 'FotoComponent', 'selector': 'app-foto'},{'name': 'IndexComponent', 'selector': 'app-index'},{'name': 'IniciosesionComponent', 'selector': 'app-iniciosesion'},{'name': 'PagoComponent', 'selector': 'app-pago'},{'name': 'RegistroComponent', 'selector': 'app-registro'},{'name': 'TarifasComponent', 'selector': 'app-tarifas'},{'name': 'UserComponent', 'selector': 'app-user'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'CarteleraComponent'};

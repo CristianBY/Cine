@@ -7,10 +7,11 @@
     </div>
 </nav>
 <div class="tab-content" id="nav-tab-adminContent">
-
+    
     <!-- Administración de Películas -->
     <div class="tab-pane fade show active" id="nav-peliculas" role="tabpanel" aria-labelledby="nav-peliculas-tab">
-        <div class="accordion col-md-6 mr-auto ml-auto my-5" id="accordionPeliculas">
+        <h3 class="text-center my-3">Gestión de películas</h3>
+        <div class="accordion col-md-6 mr-auto ml-auto mb-5" id="accordionPeliculas">
             <!-- Comienzo de Añadir películas -->
             <div class="card">
                 <div class="card-header bg-dark" id="headingOnePeliculas">
@@ -189,8 +190,10 @@
     </div><!-- Fin de Borrar películas -->
 
     <!-- Administracion de Sesiones -->
+    
     <div class="tab-pane fade" id="nav-sesiones" role="tabpanel" aria-labelledby="nav-sesiones-tab">
-        <div class="accordion col-md-6 mr-auto ml-auto my-5" id="accordionSesiones">
+        <h3 class="text-center my-3">Gestión de sesiones</h3>
+        <div class="accordion col-md-6 mr-auto ml-auto mb-5" id="accordionSesiones">
             <!-- Inicio añadir sesión/ proyección-->
             <div class="card">
               <div class="card-header bg-dark" id="headingOneSesiones">
@@ -362,7 +365,8 @@
 
     <!-- Administracion de Tarifas -->
     <div class="tab-pane fade" id="nav-tarifas" role="tabpanel" aria-labelledby="nav-tarifas-tab">
-        <div class="accordion col-md-6 mr-auto ml-auto my-5" id="accordionTarifasAdmin">
+        <h3 class="text-center my-3">Gestión de tarifas</h3>
+        <div class="accordion col-md-6 mr-auto ml-auto mb-5" id="accordionTarifasAdmin">
             <!-- Inicio Añadir tarifas-->
             <div class="card">
                 <div class="card-header bg-dark" id="headingOneTarifas">
@@ -455,7 +459,7 @@
                 <div class="card-header bg-dark" id="headingThreeTarifas">
                     <h2 class="mb-0">
                     <button class="btn btn-link btn-block text-left text-white font-weight-bold collapsed" type="button" data-toggle="collapse" data-target="#collapseThreeTarifas" aria-expanded="false" aria-controls="collapseThreeTarifas">
-                        Eliminar
+                        Borrar
                     </button>
                     </h2>
                 </div>
@@ -464,15 +468,17 @@
                         <form (ngSubmit)="deleteTarifa()" #fborratarifa="ngForm">
                             <div class="form-group">
                                 <label for="borrarTarifa">Tarifa</label>
-                                <select class="form-control col-4 mr-3" [(ngModel)]="tarifaBorrada" [ngModelOptions]="{standalone: true}" id="borrarTarifa">
-                                    <option *ngFor="let item of listaTarifas" value="{{item.idTarifa}}">{{item.nombre}}</option>
-                                </select>
-                            </div>    
-                            <button type="submit" class="btn btn-danger" id="botonBorraTarifa">Borrar</button>
-                            <button class="btn btn-primary" type="button" id="botonBorraTarifa2" disabled style="display: none;">
-                                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-                                Borrando...
-                            </button>
+                                <div class="row">
+                                    <select class="form-control col-4 mr-3" [(ngModel)]="tarifaBorrada" [ngModelOptions]="{standalone: true}" id="borrarTarifa">
+                                        <option *ngFor="let item of listaTarifas" value="{{item.idTarifa}}">{{item.nombre}}</option>
+                                    </select>
+                                    <button type="submit" class="btn btn-danger" id="botonBorraTarifa">Borrar</button>
+                                    <button class="btn btn-primary" type="button" id="botonBorraTarifa2" disabled style="display: none;">
+                                        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                                        Borrando...
+                                    </button>
+                                </div>    
+                            </div>
                         </form>
                     </div>
                 </div>

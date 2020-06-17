@@ -1,5 +1,8 @@
 import mysql from 'mysql'
 
+/**
+ * @description Datos para la conexión a la base de datos
+ */
 const connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
@@ -8,6 +11,9 @@ const connection = mysql.createConnection({
     port: 3306
 })
 
+/**
+ * @description Establece la conexión
+ */
 connection.connect((error) => {
     if(error){
        throw error

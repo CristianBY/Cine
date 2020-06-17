@@ -38,7 +38,7 @@ export class PagoComponent implements OnInit {
     this.getMultimedia();
     this.getReserva();
     this.cargarAnyos();
-    if (sessionStorage.getItem('token') != "No" && sessionStorage.getItem('token') != null) {
+    if (sessionStorage.getItem('token') != "No" && sessionStorage.getItem('token') != null && sessionStorage.getItem('compra')!= null) {
       this._usuarioSesion.comprobarSesion();
     } else {
       this.router.navigate(['']);
@@ -138,7 +138,7 @@ export class PagoComponent implements OnInit {
         setTimeout(()=>{
           w.close();
         }, 1500);
-        
+        sessionStorage.removeItem('compra');
         setTimeout(()=>{
           this.router.navigate(['']);
         },1600);
@@ -191,7 +191,7 @@ export class PagoComponent implements OnInit {
         setTimeout(()=>{
           w.close();
         }, 1500);
-        
+        sessionStorage.removeItem('compra');
         setTimeout(()=>{
           this.router.navigate(['']);
         },1600);

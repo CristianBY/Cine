@@ -158,6 +158,10 @@
                                     <span class="modifier">Public</span>
                                 <a href="#reserva">reserva</a>
                             </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#total">total</a>
+                            </li>
                         </ul>
                     </td>
                 </tr>
@@ -170,6 +174,9 @@
                 <tr>
                     <td class="col-md-4">
                         <ul class="index-list">
+                            <li>
+                                <a href="#butacas">butacas</a>
+                            </li>
                             <li>
                                 <a href="#cargarAnyos">cargarAnyos</a>
                             </li>
@@ -214,7 +221,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Definido en <a href="" data-line="19" class="link-to-prism">src/app/pago/pago.component.ts:19</a></div>
+                                <div class="io-line">Definido en <a href="" data-line="20" class="link-to-prism">src/app/pago/pago.component.ts:20</a></div>
                             </td>
                         </tr>
 
@@ -301,6 +308,74 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
+                    <a name="butacas"></a>
+                    <span class="name">
+                        <b>
+                            butacas
+                        </b>
+                        <a href="#butacas"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>butacas(libres)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="82"
+                            class="link-to-prism">src/app/pago/pago.component.ts:82</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Asegura que las butacas reservadas sean las correctas</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parámetros :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Nombre</td>
+                                    <td>Opcional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>libres</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
                     <a name="cargarAnyos"></a>
                     <span class="name">
                         <b>
@@ -319,8 +394,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Definido en <a href="" data-line="51"
-                            class="link-to-prism">src/app/pago/pago.component.ts:51</a></div>
+                    <div class="io-line">Definido en <a href="" data-line="52"
+                            class="link-to-prism">src/app/pago/pago.component.ts:52</a></div>
                 </td>
             </tr>
 
@@ -360,8 +435,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Definido en <a href="" data-line="61"
-                            class="link-to-prism">src/app/pago/pago.component.ts:61</a></div>
+                    <div class="io-line">Definido en <a href="" data-line="62"
+                            class="link-to-prism">src/app/pago/pago.component.ts:62</a></div>
                 </td>
             </tr>
 
@@ -401,8 +476,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Definido en <a href="" data-line="70"
-                            class="link-to-prism">src/app/pago/pago.component.ts:70</a></div>
+                    <div class="io-line">Definido en <a href="" data-line="71"
+                            class="link-to-prism">src/app/pago/pago.component.ts:71</a></div>
                 </td>
             </tr>
 
@@ -435,22 +510,22 @@
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>mostrar(precio)</code>
+<code>mostrar(precio, idTarifa)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Definido en <a href="" data-line="81"
-                            class="link-to-prism">src/app/pago/pago.component.ts:81</a></div>
+                    <div class="io-line">Definido en <a href="" data-line="96"
+                            class="link-to-prism">src/app/pago/pago.component.ts:96</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Según las entradas seleccionadas modifica el precio </p>
+                    <div class="io-description"><p>Según las entradas seleccionadas modifica el precio a mostrar.</p>
 </div>
 
                     <div class="io-description">
@@ -465,6 +540,15 @@
                             <tbody>
                                 <tr>
                                     <td>precio</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>idTarifa</td>
 
                                     <td>
                                         No
@@ -510,8 +594,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Definido en <a href="" data-line="36"
-                            class="link-to-prism">src/app/pago/pago.component.ts:36</a></div>
+                    <div class="io-line">Definido en <a href="" data-line="37"
+                            class="link-to-prism">src/app/pago/pago.component.ts:37</a></div>
                 </td>
             </tr>
 
@@ -549,8 +633,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Definido en <a href="" data-line="89"
-                            class="link-to-prism">src/app/pago/pago.component.ts:89</a></div>
+                    <div class="io-line">Definido en <a href="" data-line="110"
+                            class="link-to-prism">src/app/pago/pago.component.ts:110</a></div>
                 </td>
             </tr>
 
@@ -590,8 +674,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Definido en <a href="" data-line="131"
-                            class="link-to-prism">src/app/pago/pago.component.ts:131</a></div>
+                    <div class="io-line">Definido en <a href="" data-line="152"
+                            class="link-to-prism">src/app/pago/pago.component.ts:152</a></div>
                 </td>
             </tr>
 
@@ -819,6 +903,34 @@
 
             </tbody>
         </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="total"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            total</b>
+                            <a href="#total"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Tipo : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definido en <a href="" data-line="20" class="link-to-prism">src/app/pago/pago.component.ts:20</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
 </section>
 
 </div>
@@ -844,6 +956,7 @@ export class PagoComponent implements OnInit {
   public ftarjeta: FormGroup;
   public listaMeses &#x3D; new Array(&#x27;01&#x27;,&#x27;02&#x27;,&#x27;03&#x27;,&#x27;04&#x27;,&#x27;05&#x27;,&#x27;06&#x27;,&#x27;07&#x27;,&#x27;08&#x27;,&#x27;09&#x27;,&#x27;10&#x27;,&#x27;11&#x27;,&#x27;12&#x27;);
   public listaAnyos &#x3D; new Array();
+  public total: number;
 
   constructor(private _peticionesServicio: PeticionesServicio, private _usuarioSesion: UsuarioSesion, private router:Router, private fb: FormBuilder) 
   {
@@ -854,8 +967,8 @@ export class PagoComponent implements OnInit {
 
     this.ftarjeta &#x3D; this.fb.group({
       numCuenta: [&#x27;&#x27;,[Validators.required,Validators.pattern(&#x27;^[0-9]{16}&#x27;)]],
-      mesCaducidad: [,Validators.required],
-      anyoCaducidad: [,Validators.required],
+      mesCaducidad: [&#x27;01&#x27;,Validators.required],
+      anyoCaducidad: [new Date().getFullYear(),Validators.required],
       claveCVV: [&#x27;&#x27;,[Validators.required,Validators.pattern(&#x27;^[0-9]{3}&#x27;)]]
     });
   }
@@ -864,7 +977,7 @@ export class PagoComponent implements OnInit {
     this.getMultimedia();
     this.getReserva();
     this.cargarAnyos();
-    if (sessionStorage.getItem(&#x27;token&#x27;) !&#x3D; &quot;No&quot; &amp;&amp; sessionStorage.getItem(&#x27;token&#x27;) !&#x3D; null) {
+    if (sessionStorage.getItem(&#x27;token&#x27;) !&#x3D; &quot;No&quot; &amp;&amp; sessionStorage.getItem(&#x27;token&#x27;) !&#x3D; null &amp;&amp; sessionStorage.getItem(&#x27;compra&#x27;)!&#x3D; null) {
       this._usuarioSesion.comprobarSesion();
     } else {
       this.router.navigate([&#x27;&#x27;]);
@@ -902,12 +1015,32 @@ export class PagoComponent implements OnInit {
   }
 
   /**
-   * Según las entradas seleccionadas modifica el precio 
+   * Asegura que las butacas reservadas sean las correctas
+   * @param libres 
+   */
+  butacas(libres) {
+    this.entradas &#x3D; parseInt((&lt;HTMLInputElement&gt;document.getElementById(&#x27;butacaReservada&#x27;)).value);
+    if (this.entradas &gt; libres) {
+      (&lt;HTMLInputElement&gt;document.getElementById(&#x27;butacaReservada&#x27;)).value &#x3D; libres;
+    }
+    if (this.entradas &lt;&#x3D; 0) {
+      (&lt;HTMLInputElement&gt;document.getElementById(&#x27;butacaReservada&#x27;)).value &#x3D; &quot;1&quot;;
+    }
+  }
+
+  /**
+   * Según las entradas seleccionadas modifica el precio a mostrar.
    * @param precio 
    */
-  mostrar(precio){
-    this.entradas &#x3D; parseInt((&lt;HTMLInputElement&gt;document.getElementById(&#x27;butacaReservada&#x27;)).value); //parse en TypeScript el de JS no funciopna
-    this.entradas *&#x3D; parseInt(precio); 
+  mostrar(precio,idTarifa){
+    this.total &#x3D; parseInt((&lt;HTMLInputElement&gt;document.getElementById(&#x27;butacaReservada&#x27;)).value); //parse en TypeScript el de JS no funciona para value
+    if (idTarifa &#x3D;&#x3D; 3 &amp;&amp; this.total%2!&#x3D;0) { // Controla los 2x1 de los jueves en caso de comprar una entrada impar
+      this.total *&#x3D; parseInt(precio);
+      this.total +&#x3D; parseInt(precio);
+    } else {
+      this.total *&#x3D; parseInt(precio);
+    }
+
   }
 
   /**
@@ -944,7 +1077,7 @@ export class PagoComponent implements OnInit {
         setTimeout(()&#x3D;&gt;{
           w.close();
         }, 1500);
-        
+        sessionStorage.removeItem(&#x27;compra&#x27;);
         setTimeout(()&#x3D;&gt;{
           this.router.navigate([&#x27;&#x27;]);
         },1600);
@@ -957,22 +1090,30 @@ export class PagoComponent implements OnInit {
    */
   procesoDePagoTarjeta(){
     if (this.ftarjeta.invalid) {
-      this.ftarjeta.reset();
+      //this.ftarjeta.reset();
       if (this.ftarjeta.get(&#x27;numCuenta&#x27;).hasError(&#x27;required&#x27;) || this.ftarjeta.get(&#x27;numCuenta&#x27;).hasError(&#x27;pattern&#x27;)) {
         document.getElementById(&#x27;numCuenta&#x27;).classList.add(&#x27;is-invalid&#x27;);
+      } else {
+        document.getElementById(&#x27;numCuenta&#x27;).classList.replace(&#x27;is-invalid&#x27;,&#x27;is-valid&#x27;);
       }
       if (this.ftarjeta.get(&#x27;mesCaducidad&#x27;).hasError(&#x27;required&#x27;)) {
         document.getElementById(&#x27;mesCaducidad&#x27;).classList.add(&#x27;is-invalid&#x27;);
+      } else {
+        document.getElementById(&#x27;mesCaducidad&#x27;).classList.replace(&#x27;is-invalid&#x27;,&#x27;is-valid&#x27;);
       }
       if (this.ftarjeta.get(&#x27;anyoCaducidad&#x27;).hasError(&#x27;required&#x27;)) {
         document.getElementById(&#x27;anyoCaducidad&#x27;).classList.add(&#x27;is-invalid&#x27;);
+      } else {
+        document.getElementById(&#x27;anyoCaducidad&#x27;).classList.replace(&#x27;is-invalid&#x27;,&#x27;is-valid&#x27;);
       }
 
       if (this.ftarjeta.get(&#x27;claveCVV&#x27;).hasError(&#x27;required&#x27;) || this.ftarjeta.get(&#x27;claveCVV&#x27;).hasError(&#x27;pattern&#x27;)) {
         document.getElementById(&#x27;claveCVV&#x27;).classList.add(&#x27;is-invalid&#x27;);
+      } else {
+        document.getElementById(&#x27;claveCVV&#x27;).classList.replace(&#x27;is-invalid&#x27;,&#x27;is-valid&#x27;);
       }
     }else{
-      let butaca &#x3D; (&lt;HTMLInputElement&gt;document.getElementById(&#x27;butacaReservada&#x27;)).value;
+      let butaca &#x3D; (&lt;HTMLInputElement&gt;document.getElementById(&#x27;butacaReservada&#x27;)).value; //parse en TypeScript el de JS no funciona para value
       let data &#x3D; {
         &#x27;butaca&#x27; : butaca,
         &#x27;idProyeccion&#x27; : sessionStorage.getItem(&#x27;compra&#x27;),
@@ -989,7 +1130,7 @@ export class PagoComponent implements OnInit {
         setTimeout(()&#x3D;&gt;{
           w.close();
         }, 1500);
-        
+        sessionStorage.removeItem(&#x27;compra&#x27;);
         setTimeout(()&#x3D;&gt;{
           this.router.navigate([&#x27;&#x27;]);
         },1600);
@@ -1002,7 +1143,7 @@ export class PagoComponent implements OnInit {
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;h1 class&#x3D;&quot;text-center mb-3&quot;&gt;Proceso de compra&lt;/h1&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;h1 class&#x3D;&quot;text-center mt-5 mb-3&quot;&gt;Proceso de compra&lt;/h1&gt;
 &lt;div class&#x3D;&quot;row col-md-6 mx-auto&quot;&gt;
     &lt;div class&#x3D;&quot;col-md-3&quot;&gt;
         &lt;div *ngFor&#x3D;&quot;let item of this.multimediaInfo&quot;&gt;
@@ -1017,7 +1158,7 @@ export class PagoComponent implements OnInit {
         &lt;p&gt;Sala {{this.reserva[0].idSala}}&lt;/p&gt;
         &lt;div class&#x3D;&quot;form-group mt-3&quot;&gt;
             &lt;label for&#x3D;&quot;butacaReservada&quot; class&#x3D;&quot;mt-5&quot;&gt;Entradas&lt;/label&gt;
-            &lt;input class&#x3D;&quot;form-control col-4&quot; type&#x3D;&quot;number&quot; name&#x3D;&quot;butacaReservada&quot; id&#x3D;&quot;butacaReservada&quot; max&#x3D;&quot;{{this.reserva[0].libre}}&quot; min&#x3D;&quot;1&quot; value&#x3D;&quot;1&quot; (change)&#x3D;&quot;mostrar(this.reserva[0].precio)&quot;&gt;
+            &lt;input class&#x3D;&quot;form-control col-4&quot; type&#x3D;&quot;number&quot; name&#x3D;&quot;butacaReservada&quot; id&#x3D;&quot;butacaReservada&quot; max&#x3D;&quot;{{this.reserva[0].libre}}&quot; min&#x3D;&quot;1&quot; value&#x3D;&quot;1&quot; (blur)&#x3D;&quot;butacas(this.reserva[0].libre)&quot; (change)&#x3D;&quot;mostrar(this.reserva[0].precio,this.reserva[0].idTarifa)&quot;&gt;
         &lt;/div&gt;
         
         &lt;div *ngIf&#x3D;&quot;(this.reserva[0].libre &gt; 10)&quot;&gt;
@@ -1036,7 +1177,7 @@ export class PagoComponent implements OnInit {
             &lt;/div&gt;
         &lt;/div&gt;
         
-        &lt;p&gt;Total Precio (IVA Incl.): &lt;span id&#x3D;&quot;precioTotal&quot;&gt;{{this.entradas}}&lt;/span&gt;€&lt;/p&gt;
+        &lt;p&gt;Total Precio (IVA Incl.): &lt;span id&#x3D;&quot;precioTotal&quot;&gt;{{this.total}}&lt;/span&gt;€&lt;/p&gt;
 
     &lt;/div&gt;
     &lt;div class&#x3D;&quot;accordion col-md-12 my-3&quot; id&#x3D;&quot;accordionPago&quot;&gt;
@@ -1088,12 +1229,12 @@ export class PagoComponent implements OnInit {
                             &lt;/div&gt;
                             &lt;div class&#x3D;&quot;form-row mb-2&quot;&gt;
                                 &lt;label for&#x3D;&quot;mesCaducidad&quot; class&#x3D;&quot;col-2 mt-2&quot;&gt;Caducidad&lt;/label&gt;
-                                &lt;select class&#x3D;&quot;form-control col-1 mr-2&quot; formControlName&#x3D;&quot;mesCaducidad&quot; id&#x3D;&quot;mesCaducidad&quot; [(ngModel)]&#x3D;this.listaMeses[0]&gt;
+                                &lt;select class&#x3D;&quot;form-control col-1 mr-2&quot; formControlName&#x3D;&quot;mesCaducidad&quot; id&#x3D;&quot;mesCaducidad&quot;&gt;
                                     &lt;option value&#x3D;&quot;{{item}}&quot; *ngFor&#x3D;&quot;let item of this.listaMeses&quot;&gt;{{item}}&lt;/option&gt;
                                 &lt;/select&gt;
                                 &lt;div class&#x3D;&quot;invalid-feedback&quot;&gt;Datos incorrectos&lt;/div&gt;
                                 &lt;p class&#x3D;&quot;text-center mt-2&quot;&gt;/&lt;/p&gt;
-                                &lt;select class&#x3D;&quot;form-control col-1 ml-2&quot; formControlName&#x3D;&quot;anyoCaducidad&quot; id&#x3D;&quot;anyoCaducidad&quot; [(ngModel)]&#x3D;&quot;this.listaAnyos[0]&quot;&gt;
+                                &lt;select class&#x3D;&quot;form-control col-1 ml-2&quot; formControlName&#x3D;&quot;anyoCaducidad&quot; id&#x3D;&quot;anyoCaducidad&quot;&gt;
                                     &lt;option value&#x3D;&quot;{{item}}&quot; *ngFor&#x3D;&quot;let item of this.listaAnyos&quot;&gt;{{item}}&lt;/option&gt;
                                 &lt;/select&gt;
                                 &lt;div class&#x3D;&quot;invalid-feedback&quot;&gt;Datos incorrectos&lt;/div&gt;
@@ -1165,7 +1306,7 @@ export class PagoComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><h1 class="text-center mb-3">Proceso de compra</h1><div class="row col-md-6 mx-auto">    <div class="col-md-3">        <div *ngFor="let item of this.multimediaInfo">            <div *ngIf="(item.titulo == this.reserva[0].titulo)">                <img class="col-12" src="{{item.portada}}" alt="\'Portada de \'+{{item.portada}}">            </div>        </div>    </div>    <div class="col-md-9">        <h3 class="mb-2">{{this.reserva[0].titulo}}</h3>        <p>Hora: {{this.reserva[0].hora.substring(0,5)}}</p>        <p>Sala {{this.reserva[0].idSala}}</p>        <div class="form-group mt-3">            <label for="butacaReservada" class="mt-5">Entradas</label>            <input class="form-control col-4" type="number" name="butacaReservada" id="butacaReservada" max="{{this.reserva[0].libre}}" min="1" value="1" (change)="mostrar(this.reserva[0].precio)">        </div>                <div *ngIf="(this.reserva[0].libre > 10)">            <div class="alert alert-success" role="alert">                Disponibles <span>{{this.reserva[0].libre}}</span> entradas            </div>        </div>        <div *ngIf="(this.reserva[0].libre <= 10 && this.reserva[0].libre > 0)">            <div class="alert alert-warning" role="alert">                Disponibles <span>{{this.reserva[0].libre}}</span> entradas            </div>        </div>        <div *ngIf="(this.reserva[0].libre == 0)">            <div class="alert alert-danger" role="alert">                Disponibles <span>{{this.reserva[0].libre}}</span> entradas            </div>        </div>                <p>Total Precio (IVA Incl.): <span id="precioTotal">{{this.entradas}}</span>€</p>    </div>    <div class="accordion col-md-12 my-3" id="accordionPago">        <div class="card">            <div class="card-header" id="headingOnePago">                <h2 class="mb-0">                    <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOnePago" aria-expanded="true" aria-controls="collapseOnePago">                        Paypal <i class="fa fa-paypal ml-2" aria-hidden="true"></i>                    </button>                </h2>            </div>                <div id="collapseOnePago" class="collapse show" aria-labelledby="headingOnePago" data-parent="#accordionPago">                <div class="card-body">                    <form [formGroup]="fpaypal" (ngSubmit)="procesoDePagoPaypal()" id="fpaypal" novalidate>                        <div class="form-group">                            <label for="usuarioPagoPP">Email</label>                            <input type="email" class="form-control" formControlName="usuarioPagoPP" id="usuarioPagoPP">                            <div class="invalid-feedback">Dato necesario</div>                        </div>                        <div class="form-group">                            <label for="clavePP">Contraseña</label>                            <input type="password" class="form-control" formControlName="clavePP" id="clavePP">                            <div class="invalid-feedback">Dato necesario</div>                        </div>                        <button type="submit" class="btn btn-success" id="pagoPayPal">Proceder al pago</button>                    </form>                </div>            </div>        </div>        <div class="card">            <div class="card-header" id="headingTwoPago">                <h2 class="mb-0">                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwoPago" aria-expanded="false" aria-controls="collapseTwoPago">                        Tarjeta                        <i class="fa fa-cc-visa mx-2" aria-hidden="true"></i>                        <i class="fa fa-cc-mastercard mr-2" aria-hidden="true"></i>                         <i class="fa fa-cc-amex" aria-hidden="true"></i>                    </button>                </h2>            </div>            <div id="collapseTwoPago" class="collapse" aria-labelledby="headingTwoPago" data-parent="#accordionPago">                <div class="card-body">                    <form [formGroup]="ftarjeta" (ngSubmit)="procesoDePagoTarjeta()" id="ftarjeta">                            <div class="form-group mb-2">                                <label for="numCuenta">Número de cuenta</label>                                <input type="text" class="form-control col-8" formControlName="numCuenta" id="numCuenta" maxlength="16">                                <div class="invalid-feedback">Datos incorrectos</div>                            </div>                            <div class="form-row mb-2">                                <label for="mesCaducidad" class="col-2 mt-2">Caducidad</label>                                <select class="form-control col-1 mr-2" formControlName="mesCaducidad" id="mesCaducidad" [(ngModel)]=this.listaMeses[0]>                                    <option value="{{item}}" *ngFor="let item of this.listaMeses">{{item}}</option>                                </select>                                <div class="invalid-feedback">Datos incorrectos</div>                                <p class="text-center mt-2">/</p>                                <select class="form-control col-1 ml-2" formControlName="anyoCaducidad" id="anyoCaducidad" [(ngModel)]="this.listaAnyos[0]">                                    <option value="{{item}}" *ngFor="let item of this.listaAnyos">{{item}}</option>                                </select>                                <div class="invalid-feedback">Datos incorrectos</div>                            </div>                            <div class="form-row mb-2">                                <label for="claveCVV" class="col-2 mt-2">CVV</label>                                <input type="text" class="form-control col-1" formControlName="claveCVV" id="claveCVV" maxlength="3">                                <div class="invalid-feedback">Datos incorrectos</div>                            </div>                        <button type="submit" class="btn btn-success" id="pagoTarjeta">Proceder al pago</button>                    </form>                </div>            </div>        </div>    </div>        </div></div>'
+        var COMPONENT_TEMPLATE = '<div><h1 class="text-center mt-5 mb-3">Proceso de compra</h1><div class="row col-md-6 mx-auto">    <div class="col-md-3">        <div *ngFor="let item of this.multimediaInfo">            <div *ngIf="(item.titulo == this.reserva[0].titulo)">                <img class="col-12" src="{{item.portada}}" alt="\'Portada de \'+{{item.portada}}">            </div>        </div>    </div>    <div class="col-md-9">        <h3 class="mb-2">{{this.reserva[0].titulo}}</h3>        <p>Hora: {{this.reserva[0].hora.substring(0,5)}}</p>        <p>Sala {{this.reserva[0].idSala}}</p>        <div class="form-group mt-3">            <label for="butacaReservada" class="mt-5">Entradas</label>            <input class="form-control col-4" type="number" name="butacaReservada" id="butacaReservada" max="{{this.reserva[0].libre}}" min="1" value="1" (blur)="butacas(this.reserva[0].libre)" (change)="mostrar(this.reserva[0].precio,this.reserva[0].idTarifa)">        </div>                <div *ngIf="(this.reserva[0].libre > 10)">            <div class="alert alert-success" role="alert">                Disponibles <span>{{this.reserva[0].libre}}</span> entradas            </div>        </div>        <div *ngIf="(this.reserva[0].libre <= 10 && this.reserva[0].libre > 0)">            <div class="alert alert-warning" role="alert">                Disponibles <span>{{this.reserva[0].libre}}</span> entradas            </div>        </div>        <div *ngIf="(this.reserva[0].libre == 0)">            <div class="alert alert-danger" role="alert">                Disponibles <span>{{this.reserva[0].libre}}</span> entradas            </div>        </div>                <p>Total Precio (IVA Incl.): <span id="precioTotal">{{this.total}}</span>€</p>    </div>    <div class="accordion col-md-12 my-3" id="accordionPago">        <div class="card">            <div class="card-header" id="headingOnePago">                <h2 class="mb-0">                    <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOnePago" aria-expanded="true" aria-controls="collapseOnePago">                        Paypal <i class="fa fa-paypal ml-2" aria-hidden="true"></i>                    </button>                </h2>            </div>                <div id="collapseOnePago" class="collapse show" aria-labelledby="headingOnePago" data-parent="#accordionPago">                <div class="card-body">                    <form [formGroup]="fpaypal" (ngSubmit)="procesoDePagoPaypal()" id="fpaypal" novalidate>                        <div class="form-group">                            <label for="usuarioPagoPP">Email</label>                            <input type="email" class="form-control" formControlName="usuarioPagoPP" id="usuarioPagoPP">                            <div class="invalid-feedback">Dato necesario</div>                        </div>                        <div class="form-group">                            <label for="clavePP">Contraseña</label>                            <input type="password" class="form-control" formControlName="clavePP" id="clavePP">                            <div class="invalid-feedback">Dato necesario</div>                        </div>                        <button type="submit" class="btn btn-success" id="pagoPayPal">Proceder al pago</button>                    </form>                </div>            </div>        </div>        <div class="card">            <div class="card-header" id="headingTwoPago">                <h2 class="mb-0">                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwoPago" aria-expanded="false" aria-controls="collapseTwoPago">                        Tarjeta                        <i class="fa fa-cc-visa mx-2" aria-hidden="true"></i>                        <i class="fa fa-cc-mastercard mr-2" aria-hidden="true"></i>                         <i class="fa fa-cc-amex" aria-hidden="true"></i>                    </button>                </h2>            </div>            <div id="collapseTwoPago" class="collapse" aria-labelledby="headingTwoPago" data-parent="#accordionPago">                <div class="card-body">                    <form [formGroup]="ftarjeta" (ngSubmit)="procesoDePagoTarjeta()" id="ftarjeta">                            <div class="form-group mb-2">                                <label for="numCuenta">Número de cuenta</label>                                <input type="text" class="form-control col-8" formControlName="numCuenta" id="numCuenta" maxlength="16">                                <div class="invalid-feedback">Datos incorrectos</div>                            </div>                            <div class="form-row mb-2">                                <label for="mesCaducidad" class="col-2 mt-2">Caducidad</label>                                <select class="form-control col-1 mr-2" formControlName="mesCaducidad" id="mesCaducidad">                                    <option value="{{item}}" *ngFor="let item of this.listaMeses">{{item}}</option>                                </select>                                <div class="invalid-feedback">Datos incorrectos</div>                                <p class="text-center mt-2">/</p>                                <select class="form-control col-1 ml-2" formControlName="anyoCaducidad" id="anyoCaducidad">                                    <option value="{{item}}" *ngFor="let item of this.listaAnyos">{{item}}</option>                                </select>                                <div class="invalid-feedback">Datos incorrectos</div>                            </div>                            <div class="form-row mb-2">                                <label for="claveCVV" class="col-2 mt-2">CVV</label>                                <input type="text" class="form-control col-1" formControlName="claveCVV" id="claveCVV" maxlength="3">                                <div class="invalid-feedback">Datos incorrectos</div>                            </div>                        <button type="submit" class="btn btn-success" id="pagoTarjeta">Proceder al pago</button>                    </form>                </div>            </div>        </div>    </div>        </div></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AuthComponent', 'selector': 'app-auth'},{'name': 'CarteleraComponent', 'selector': 'app-cartelera'},{'name': 'CierrasesionComponent', 'selector': 'app-cierrasesion'},{'name': 'ContactoComponent', 'selector': 'app-contacto'},{'name': 'FotoComponent', 'selector': 'app-foto'},{'name': 'IndexComponent', 'selector': 'app-index'},{'name': 'IniciosesionComponent', 'selector': 'app-iniciosesion'},{'name': 'PagoComponent', 'selector': 'app-pago'},{'name': 'RegistroComponent', 'selector': 'app-registro'},{'name': 'TarifasComponent', 'selector': 'app-tarifas'},{'name': 'UserComponent', 'selector': 'app-user'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'PagoComponent'};

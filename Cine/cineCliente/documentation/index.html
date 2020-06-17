@@ -31,20 +31,20 @@
                <div class="content getting-started">
                    <div class="content-data">
 
-<h1 id="cinecliente">CineCliente</h1>
-<p>This project was generated with <a href="https://github.com/angular/angular-cli">Angular CLI</a> version 9.1.4.</p>
-<h2 id="development-server">Development server</h2>
-<p>Run <code>ng serve</code> for a dev server. Navigate to <code>http://localhost:4200/</code>. The app will automatically reload if you change any of the source files.</p>
-<h2 id="code-scaffolding">Code scaffolding</h2>
-<p>Run <code>ng generate component component-name</code> to generate a new component. You can also use <code>ng generate directive|pipe|service|class|guard|interface|enum|module</code>.</p>
-<h2 id="build">Build</h2>
-<p>Run <code>ng build</code> to build the project. The build artifacts will be stored in the <code>dist/</code> directory. Use the <code>--prod</code> flag for a production build.</p>
-<h2 id="running-unit-tests">Running unit tests</h2>
-<p>Run <code>ng test</code> to execute the unit tests via <a href="https://karma-runner.github.io">Karma</a>.</p>
-<h2 id="running-end-to-end-tests">Running end-to-end tests</h2>
-<p>Run <code>ng e2e</code> to execute the end-to-end tests via <a href="http://www.protractortest.org/">Protractor</a>.</p>
-<h2 id="further-help">Further help</h2>
-<p>To get more help on the Angular CLI use <code>ng help</code> or go check out the <a href="https://github.com/angular/angular-cli/blob/master/README.md">Angular CLI README</a>.</p>
+<h1 id="cine">Cine</h1>
+<h2 id="parte-cliente">Parte cliente</h2>
+<h2 id="implantación-paso-a-paso-⚙️">Implantación paso a paso ⚙️</h2>
+<p><strong>RECUERDA</strong> es necesario modificar esta parte del código:</p>
+<p><img src="../image/dirdesarrollo.png" alt="servidor dev" class="img-responsive"></p>
+<p>Por esta otra:</p>
+<p><img src="../image/diraws.png" alt="servidor despliegue" class="img-responsive"></p>
+<p>Se encuentra en el archivo <a href="Cine/cineCliente/src/servicios/peticiones.servicio.ts">peticiones.servicio.ts</a></p>
+<p>Para desplegar la parte cliente de la aplicación, en la terminal usaremos la siguiente instrucción:</p>
+<div><pre class="line-numbers"><code class="language-none">$ ng serve --host {aquí_escribir_la_ip_pública_de_aws}</code></pre></div><p>Para dejar la aplicación en segundo plano, ejecutamos en la terminal las siguientes instrucciones:</p>
+<div><pre class="line-numbers"><code class="language-none">$ CTRL + Z
+$ jobs (miramos que número corresponde a ng)
+$ bg {número_de_ng}</code></pre></div><p>Con esto tendríamos nuestra App desplegada.</p>
+<hr>
 
 
 

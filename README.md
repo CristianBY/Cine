@@ -73,7 +73,7 @@ $ sudo mysql_secure_installation
 
 La implantación se va a realizar en una máquina ec2 en [aws educate](https://aws.amazon.com/es/education/awseducate/). Por lo que el primer paso es crear una máquina, arrancar y habilitar los puertos 4200(Angular), 9000(NodeJS) y 3306(MySQL). Accedemos a la máquina a través de ssh y clonamos el proyecto.
 
-**PASO IMPORTANTE**
+**PASO IMPORTANTE** ⚠️
 
 Acceder al archivo [peticiones.servicio.ts](Cine/cineCliente/src/servicios/peticiones.servicio.ts)
 
@@ -97,6 +97,13 @@ Orden a seguir e instrucciones por partes:
 
 3. La implantación de la parte cliente con Angular la puedes encontrar en el siguiente [README.md](Cine/cineCliente/README.md).
 
+## Documentación 📕
+
+- [Manual de usuario](/Manual_de_Usuario_Cine_Luna.pdf).
+
+- [Documentación Angular](Cine/cineCliente/documentation).
+
+- [Documentación NodeJS](Cine/cineServidor/docs).
 
 ## Autor ✒️
 
