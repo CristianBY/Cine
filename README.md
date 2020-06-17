@@ -2,7 +2,7 @@
 
 Se trata de una aplicación web desarrollada para el Proyecto Integrado del Grado Superior de Desarrollo de Aplicaciones Web del IES Polígono Sur.
 
-La finalidad del proyecto es realizar la aplicación web de un cine que permita ver la cartelera, consultar sus tarifas por parte de un usuario no registrado.
+La finalidad del proyecto es realizar la aplicación web de un cine que permita ver la cartelera y consultar sus tarifas por parte de un usuario no registrado.
 Para un usuario registrado además de realizar las anteriores operaciones, cabe la posibilidad de realizar una reserva y/o valorar una película. También dispone de un 
 apartado de administración, del cuál se encarga un usuario con rol de administrador, solo accesible para este usuario.
 
@@ -87,7 +87,7 @@ Por esta otra:
 
 ***
 
-Para implantar la App primero hay que crear la base de datos, y cargar los datos, después lanzar el servidor y por último desplegar la App.
+Para implantar la App, primero hay que crear la base de datos y cargar los datos. Después lanzar el servidor y por último, desplegar la App.
 
 Orden a seguir e instrucciones por partes:
 
