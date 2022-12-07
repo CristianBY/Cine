@@ -13,8 +13,8 @@
   "author": "Cristian Baños Yelmo",
   "license": "MIT",
   "dependencies": {
-    "body-parser": "^1.19.0",
-    "express": "^4.17.1",
+    "body-parser": "^1.20.1",
+    "express": "^4.18.2",
     "express-generator": "^4.16.1",
     "ink-docstrap": "1.3.2",
     "jsonwebtoken": "^8.5.1",
